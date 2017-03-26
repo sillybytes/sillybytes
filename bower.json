@@ -1,0 +1,24 @@
+{
+  "name": "sillybytes",
+  "homepage": "https://www.sillybytes.net",
+  "authors": [
+    "Daniel Campoverde [alx741] <alx@sillybytes.net>"
+  ],
+  "description": "Silly Bytes blog",
+  "main": "index.html",
+  "keywords": [
+    "blog",
+    "sillybytes"
+  ],
+  "license": "CC-BY-SA",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

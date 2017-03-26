@@ -1,8 +1,9 @@
 body {
-    color: black;
+    color: #586e75;
     font-size: 16px;
+    font-family: Verdana,Geneva,sans-serif
     margin: 0px auto 0px auto;
-    width: 600px;
+    min-width: 600px;
 }
 
 div#header {

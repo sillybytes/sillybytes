@@ -1,15 +1,11 @@
 <ul>
-    <!-- $for(posts)$ -->
-    <!--     <li> -->
-    <!--         <a href="$url$">$title$</a> - $date$ -->
-    <!--     </li> -->
-    <!-- $endfor$ -->
-
     $for(posts)$
         <div class='post-prev'>
-            <a class='post-prev-title' href="$url$">$title$</a>
-            <span class='post-prev-date'>$date$</span>
+            <a class='post-prev-title' href='$url$'>$title$</a>
             $body$
+            <div class='read-more'>
+                <a class='btn btn-default' href='$url$'>Read More</a>
+            </div>
         </div>
     $endfor$
 </ul>
