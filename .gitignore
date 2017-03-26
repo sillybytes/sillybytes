@@ -1,0 +1,6 @@
+_cache/
+.stack-work/
+*.o
+*.hi
+*.chi
+*.aux
