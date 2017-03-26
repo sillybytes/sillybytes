@@ -27,6 +27,7 @@ main = hakyllWith config $ do
     match "posts/*.md" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
@@ -35,6 +36,7 @@ main = hakyllWith config $ do
         route $ customRoute $ (flip replaceExtension "html") . joinPath
             . (drop 2) . splitPath . toFilePath
         compile $ pandocCompiler
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
@@ -42,7 +44,7 @@ main = hakyllWith config $ do
     create ["archive.html"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/**"
+            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
@@ -57,7 +59,7 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/**"
+            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Home"                `mappend`
