@@ -1,3 +1,9 @@
+html, body {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background: url("../images/wood.jpg") repeat fixed top left;
+}
+
 body {
     color: #586e75;
     font-size: 16px;
@@ -6,52 +12,61 @@ body {
     min-width: 600px;
 }
 
-div#header {
-    border-bottom: 2px solid black;
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
+
+#logo {
+    max-width: 60%;
+    max-height: 180px;
+    display: block;
+    margin: 10px auto;
+    background: transparent;
 }
 
-div#logo a {
-    color: black;
-    float: left;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-}
+/* div#header { */
+/*     border-bottom: 2px solid black; */
+/*     margin-bottom: 30px; */
+/*     padding: 12px 0px 12px 0px; */
+/* } */
 
-div#header #navigation {
-    text-align: right;
-}
+/* div#logo a { */
+/*     color: black; */
+/*     float: left; */
+/*     font-size: 18px; */
+/*     font-weight: bold; */
+/*     text-decoration: none; */
+/* } */
 
-div#header #navigation a {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+/* div#header #navigation { */
+/*     text-align: right; */
+/* } */
 
-div#footer {
-    border-top: solid 2px black;
-    color: #555;
-    font-size: 12px;
-    margin-top: 30px;
-    padding: 12px 0px 12px 0px;
-    text-align: right;
-}
+/* div#header #navigation a { */
+/*     color: black; */
+/*     font-size: 18px; */
+/*     font-weight: bold; */
+/*     margin-left: 12px; */
+/*     text-decoration: none; */
+/*     text-transform: uppercase; */
+/* } */
 
-h1 {
-    font-size: 24px;
-}
+/* div#footer { */
+/*     border-top: solid 2px black; */
+/*     color: #555; */
+/*     font-size: 12px; */
+/*     margin-top: 30px; */
+/*     padding: 12px 0px 12px 0px; */
+/*     text-align: right; */
+/* } */
 
-h2 {
-    font-size: 20px;
-}
+/* h1 { */
+/*     font-size: 24px; */
+/* } */
 
-div.info {
-    color: #555;
-    font-size: 14px;
-    font-style: italic;
-}
+/* h2 { */
+/*     font-size: 20px; */
+/* } */
+
+/* div.info { */
+/*     color: #555; */
+/*     font-size: 14px; */
+/*     font-style: italic; */
+/* } */
