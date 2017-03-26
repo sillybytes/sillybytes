@@ -17,15 +17,35 @@
 
     </head>
     <body>
-        <div id="header">
-            <a href="/">
-                <img id='logo' src='images/silly-bytes_logo.png'/>
-            </a>
+        <div id='header' class='container-fluid'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <a href="/">
+                        <img id='logo' class='image-responsive' src='/images/silly-bytes_logo.png'/>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div id="content">
-            <h1>$title$</h1>
-            $body$
+        <div id='blog' class='container-fluid'>
+            <div class='row'>
+
+                <div id='sidebar' class='hidden-xs hidden-sm col-md-3'>
+                    <div id='author'>
+                        <h2 class='sidebar-h2'>THE AUTOR</h2>
+                        <img id='author-pic' src='images/danie.jpg'>
+                        <h3 id='author-name'>Daniel Campoverde [alx741]</h3>
+                    </div>
+
+                    <h2 class='sidebar-h2'>FINDME</h2>
+                </div>
+
+                <div id='content' class='col-sm-12 col-md-9'>
+                    <h1>$title$</h1>
+                    $body$
+                </div>
+
+            </div>
         </div>
 
         <div id="footer">

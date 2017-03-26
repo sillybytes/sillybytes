@@ -12,6 +12,10 @@ body {
     min-width: 600px;
 }
 
+body h2 {
+    color: #cb4b16;
+    font-size: 2em;
+}
 
 #logo {
     max-width: 60%;
@@ -19,6 +23,34 @@ body {
     display: block;
     margin: 10px auto;
     background: transparent;
+}
+
+#blog {
+    background-color: rgba(256, 256, 256, 0.7);
+}
+
+#sidebar {
+    text-align: center;
+    height: 3000px;
+    font-size: 10px;
+    border-right: 1px solid gray;
+}
+
+#sidebar #author {
+    margin-bottom: 40px;
+}
+
+#sidebar #author-pic {
+    max-width: 130px;
+    border-radius: 100%;
+}
+
+#sidebar #author-name {
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: Droid Serif;
+    color: rgb(181, 137, 0);
 }
 
 /* div#header { */
