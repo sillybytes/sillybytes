@@ -1,12 +1,15 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
+
+import Data.Monoid (mappend)
+import Hakyll
+import Data.List (isPrefixOf, isSuffixOf)
+import System.FilePath (takeFileName)
+import System.Process (system)
 
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -65,3 +68,28 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+
+--------------------------------------------------------------------------------
+config :: Configuration
+config = Configuration
+    { destinationDirectory = "docs"
+    , storeDirectory       = "_cache"
+    , tmpDirectory         = "_cache/tmp"
+    , providerDirectory    = "."
+    , ignoreFile           = ignoreFile'
+    , deployCommand        = "echo 'No deploy command specified' && exit 1"
+    , deploySite           = system . deployCommand
+    , inMemoryCache        = True
+    , previewHost          = "127.0.0.1"
+    , previewPort          = 8000
+    }
+  where
+    ignoreFile' path
+        | "."    `isPrefixOf` fileName = True
+        | "#"    `isPrefixOf` fileName = True
+        | "~"    `isSuffixOf` fileName = True
+        | ".swp" `isSuffixOf` fileName = True
+        | otherwise                    = False
+      where
+        fileName = takeFileName path
