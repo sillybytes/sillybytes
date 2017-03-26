@@ -3,7 +3,7 @@
 import Data.Monoid (mappend)
 import Hakyll
 import Data.List (isPrefixOf, isSuffixOf)
-import System.FilePath (takeFileName)
+import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
 
 
@@ -24,8 +24,16 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    match "posts/*" $ do
+    match "posts/*.md" $ do
         route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+
+    match "posts/legacy/**" $ do
+        route $ customRoute $ (flip replaceExtension "html") . joinPath
+            . (drop 2) . splitPath . toFilePath
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
@@ -34,7 +42,7 @@ main = hakyllWith config $ do
     create ["archive.html"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll "posts/**"
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
@@ -49,7 +57,7 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- recentFirst =<< loadAll "posts/**"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Home"                `mappend`
@@ -65,9 +73,7 @@ main = hakyllWith config $ do
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
+postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
 
 
 --------------------------------------------------------------------------------
