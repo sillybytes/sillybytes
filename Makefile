@@ -10,20 +10,23 @@ TEST_COMMAND=$(TASK_RUNNER) test
 
 export TDDLIGHT_COMPORT=/dev/ttyUSB0
 
-.PHONY: build test
+.PHONY: build test css
 
-build: css/%.css
+build: css
 	tddlight y
 	$(BUILD_COMMAND) && tddlight g || tddlight r
 	tddlight y
 	$(TASK_RUNNER) exec site rebuild && tddlight g || tddlight r
 
-css/%.css:
+css:
 	cd css && stack runhaskell Gen.hs
 
 test:
 	tddlight y
 	$(TEST_COMMAND) && tddlight g || tddlight r
+
+watch:
+	while true; do make css; inotifywait -qre close_write css/*.cassius; done
 
 clean:
 	$(TASK_RUNNER) exec site clean

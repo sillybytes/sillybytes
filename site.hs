@@ -5,8 +5,6 @@ import Hakyll
 import Data.List (isPrefixOf, isSuffixOf)
 import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
-import Text.Cassius
-
 
 main :: IO ()
 main = hakyllWith config $ do
