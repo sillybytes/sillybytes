@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>My Hakyll Blog - </title>
+        <title>Silly Bytes</title>
 
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -56,14 +56,14 @@
                         </a>
 
                         <div id="findme-textual">
-                            Freenode: #vim, #archlinux, #avr, #rust, #haskell,
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
                             #yesod, #zsh, #sillybytes
                             <hr>
-                            Mailto: alx@sillybytes.net
+                            <b>Mailto:</b> alx@sillybytes.net
                             <br>
-                            GPG Key ID: 12622B78
+                            <b>GPG Key ID:</b> 12622B78
                             <hr>
-                            Chat with me <a href="#">here</a>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
                         </div>
 
 
@@ -71,6 +71,22 @@
                             <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
                         </div>
                     </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts and magic.
+                            <br>
+                            Be sure to add <b>atribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="./images/dotfiles.png">
+                        </a>
+                    </div>
+
+
                 </div>
 
 
@@ -188,7 +204,46 @@ He decidido iniciar el blog con un pequeño relato de mi vida con GNU/Linux pues
             </div>
         </div>
 
-        <div id="footer">
-        </div>
+
+
+
+        <footer>
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">PUBLIC KEY</h4>
+                    gpg --keyserver keys.gnupg.net --recv-key 12622B78
+
+                    <h4 class="footer-h4 fspaced">INTERNET DEFENSE LEAGUE</h4>
+                    <a target="_blank" href="http://internetdefenseleague.org/">
+                        <img id="idl-img" alt="Internet Defesen League" src="./images/idl.png">
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">FSF</h4>
+                    <img id="fsf-img" alt="Free Software Fundation Member" src="./images/fsf.png">
+
+                    <h4 class="footer-h4 fspaced">HASKELLERS</h4>
+                    <a target="_blank" href="http://www.haskellers.com/user/4249">
+                        <img id="haskellers-img" alt="I" m a Haskeller' src="./images/haskellers.png">
+                    </a>
+
+                    <h4 class="footer-h4 fspaced">CREATIVE COMMONS</h4>
+                    <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                        <img id="cc-img" alt="Creative Commons - SA - BY" src="./images/cc.png">
+                    </a>
+                    <p id="cc-text">
+                        Silly Bytes by Daniel Alejandro Campoverde Carrión
+                        [alx741] is licensed under a Creative Commons
+                        Attribution-ShareAlike 3.0 Unported License.
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+
     </body>
 </html>
