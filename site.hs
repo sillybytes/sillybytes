@@ -5,9 +5,9 @@ import Hakyll
 import Data.List (isPrefixOf, isSuffixOf)
 import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
+import Text.Cassius
 
 
---------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
     match "images/*" $ do
@@ -76,12 +76,9 @@ main = hakyllWith config $ do
     match "templates/*" $ compile templateBodyCompiler
 
 
---------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
 
-
---------------------------------------------------------------------------------
 config :: Configuration
 config = Configuration
     { destinationDirectory = "docs"

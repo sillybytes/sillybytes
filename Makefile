@@ -12,11 +12,14 @@ export TDDLIGHT_COMPORT=/dev/ttyUSB0
 
 .PHONY: build test
 
-build:
+build: css/%.css
 	tddlight y
 	$(BUILD_COMMAND) && tddlight g || tddlight r
 	tddlight y
 	$(TASK_RUNNER) exec site rebuild && tddlight g || tddlight r
+
+css/%.css:
+	cd css && stack runhaskell Gen.hs
 
 test:
 	tddlight y
