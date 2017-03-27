@@ -3,15 +3,20 @@
     border-radius: 10px;
     border: 1px solid #dddddd;
     color: #586e75;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin: 20px 0px;
     overflow: hidden;
     padding: 10px;
     position: relative;
 
+    .post-prev-date
+        font-size: 0.9em;
+        margin-bottom: 15px;
+        font-style: italic;
+        display: block;
+
     .post-prev-title
         display: block;
-        margin-bottom: 10px;
         color: rgb(181, 137, 0);
         font-size: 1.8em;
         font-family: Droid Serif;
