@@ -26,6 +26,8 @@ body {
 body h2 {
     color: #cb4b16;
     font-size: 2em;
+    font-weight: bold;
+    margin-top: 80px;
 }
 
 header #logo {
@@ -64,10 +66,6 @@ header #logo {
     color: rgb(181, 137, 0);
 }
 
-#sidebar #findme {
-    margin-top: 80px;
-}
-
 #sidebar #findme .icon {
     margin: 5px 1px;
     max-width: 50px;
@@ -94,6 +92,25 @@ header #logo {
 
 #sidebar #facebook-embed {
     margin: 40px 0px;
+}
+
+#sidebar #dotfiles p {
+    margin: 30px 0px;
+    font-size: 1.7em;
+    text-align: left;
+    color: #586e75;
+}
+
+#sidebar #dotfiles #dotfiles-img {
+    max-width: 80px;
+}
+
+#sidebar #dotfiles #dotfiles-img:hover {
+    filter: brightness(120%);
+}
+
+#sidebar #dotfiles a:hover {
+    text-decoration: none;
 }
 
 /* div#header { */
