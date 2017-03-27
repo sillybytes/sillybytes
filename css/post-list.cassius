@@ -5,7 +5,6 @@
     color: #586e75;
     font-size: 1.3em;
     margin: 20px 0px;
-    max-height: 450px;
     overflow: hidden;
     padding: 10px;
     position: relative;

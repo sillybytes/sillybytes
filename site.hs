@@ -48,7 +48,7 @@ main = hakyllWith config $ do
         compile $ do
             posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
             let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" teaserCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
                     defaultContext
 
@@ -63,7 +63,7 @@ main = hakyllWith config $ do
         compile $ do
             posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" teaserCtx (return posts) `mappend`
                     defaultContext
 
             getResourceBody
@@ -76,6 +76,9 @@ main = hakyllWith config $ do
 
 postCtx :: Context String
 postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
+
+teaserCtx :: Context String
+teaserCtx = teaserField "teaser" "content" `mappend` postCtx
 
 config :: Configuration
 config = Configuration
