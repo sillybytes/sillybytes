@@ -123,10 +123,20 @@ footer .footer-h4 {
     font-weight: bold;
 }
 
-footer #idl {
+footer .fspaced {
     margin-top: 40px;
 }
 
 footer #idl-img {
     max-width: 300px;
+}
+
+footer #idl-img {
+    max-width: 300px;
+}
+
+footer #cc-text {
+    margin-top: 5px;
+    font-size: 1.2em;
+    text-align: justify;
 }
