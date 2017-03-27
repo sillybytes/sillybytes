@@ -116,8 +116,17 @@ header #logo {
 footer {
     background-color: rgba(0,0,0,0.5);
     padding: 30px 50px;
+    color: white;
 }
 
 footer .footer-h4 {
-    color: white;
+    font-weight: bold;
+}
+
+footer #idl {
+    margin-top: 40px;
+}
+
+footer #idl-img {
+    max-width: 300px;
 }
