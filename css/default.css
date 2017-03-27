@@ -28,7 +28,7 @@ body h2 {
     font-size: 2em;
 }
 
-#logo {
+header #logo {
     max-width: 60%;
     max-height: 180px;
     display: block;
@@ -42,9 +42,8 @@ body h2 {
 
 #sidebar {
     text-align: center;
-    height: 3000px;
+    height: 2000px;
     font-size: 10px;
-    /* border-right: 1px solid gray; */
     box-shadow: 1px 0px 10px 1px gray;
 }
 
