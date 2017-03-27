@@ -2,7 +2,11 @@ $for(posts)$
     <div class='row'>
         <div class='post-prev col-xs-offset-1 col-xs-10'>
             <a class='post-prev-title' href='$url$'>$title$</a>
-            $teaser$
+            $if(teaser)$
+                $teaser$
+            $else$
+                $body$
+            $endif$
             <br><br>
             <div class='read-more'>
                 <a class='btn btn-default' href='$url$'>Read More</a>
