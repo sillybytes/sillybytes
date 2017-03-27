@@ -23,6 +23,7 @@ html, body
         margin-top: 80px;
 
 header
+    background-color: rgba(256, 256, 256, 0.7);
     #logo
         max-width: 60%;
         max-height: 180px;
@@ -37,7 +38,6 @@ header
     text-align: center;
     height: 2000px;
     font-size: 10px;
-    box-shadow: 1px 0px 10px 1px gray;
 
     #author
         margin: 40px 0px;
