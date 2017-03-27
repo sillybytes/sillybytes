@@ -140,3 +140,7 @@ footer #cc-text {
     font-size: 1.2em;
     text-align: justify;
 }
+
+footer a:hover {
+    text-decoration: none;
+}
