@@ -1,54 +1,195 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <title>My Hakyll Blog - Archives</title>
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>My Hakyll Blog - Archives</title>
+
         <link rel="stylesheet" href="./css/default.css" />
+        <link rel="stylesheet" href="./css/post-list.css" />
+        <link rel="stylesheet" href="./css/post.css" />
+
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <a href="./">My Hakyll Blog</a>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="./">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="./images/silly-bytes_logo.png" />
+                    </a>
+                </div>
             </div>
-            <div id="navigation">
-                <a href="./">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
-                <a href="./archive.html">Archive</a>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <h2 class="sidebar-h2">THE AUTHOR</h2>
+                        <img id="author-pic" src="./images/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="./images/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="./images/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="./images/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="./images/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="./images/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            Freenode: #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            Mailto: alx@sillybytes.net
+                            <br>
+                            GPG Key ID: 12622B78
+                            <hr>
+                            Chat with me <a href="#">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="content" class="col-sm-12 col-md-9">
+                    <h1>Archives</h1>
+                    Here you can find all my previous posts:
+
+    <div class="row">
+        <div class="post-prev col-xs-offset-1 col-xs-10">
+            <a class="post-prev-title" href="./posts/test.html">Test Post</a>
+            <p>Suspendisse pharetra ullamcorper sem et auctor. Suspendisse vitae tellus eu turpis dignissim gravida ut ut tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi aliquam sapien quis nisl sodales non aliquet nisl iaculis. Curabitur fermentum orci vel sapien pellentesque id condimentum metus vehicula. Curabitur turpis purus, scelerisque at interdum quis, placerat sit amet tortor. Aliquam erat volutpat.</p>
+<p>Integer posuere felis non arcu suscipit ullamcorper. Nam tempus risus venenatis orci sagittis eu aliquam ante tincidunt. Aenean vehicula ipsum id sapien tincidunt commodo. Aliquam erat volutpat. Curabitur vehicula libero ac turpis cursus consectetur. Praesent posuere egestas purus et dapibus. Mauris egestas, lectus vitae scelerisque ultricies, metus lorem tempor nisi, sed vehicula tortor mauris nec urna. Quisque urna tellus, facilisis at mollis eget, adipiscing in nisl. Proin quam arcu, euismod et imperdiet sed, ultricies sed orci.</p>
+<p>Nulla malesuada sem eget lectus scelerisque nec rhoncus metus interdum. In dui felis, rhoncus id scelerisque eget, vulputate id sem. Nulla facilisi. Vestibulum eleifend, metus dignissim lacinia ornare, magna nulla vehicula nisi, sed molestie mauris ipsum vel turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla urna leo, vehicula eget dignissim a, hendrerit ut risus. Fusce ultricies elementum placerat. Nam at dolor sed nisi mollis sollicitudin vitae at urna. Vestibulum iaculis adipiscing eros et mollis.</p>
+<p>Phasellus ultricies elit eu risus sagittis eu dictum ante ultrices. Nulla congue, augue ac placerat tempor, orci mi luctus nisi, at varius ipsum sem sed eros. Vivamus eget velit eget felis posuere ornare. In sed metus non est iaculis facilisis dapibus sit amet enim. Aliquam viverra tortor eget neque volutpat in auctor urna rutrum. Aliquam ligula augue, congue sit amet rutrum in, semper vel nulla. Sed tempus porttitor faucibus. Donec cursus sodales nulla, quis lacinia mi vehicula vel. Sed nec purus orci. Nam leo sapien, rutrum a ultrices quis, placerat vel ligula. Donec massa quam, pellentesque et molestie nec, hendrerit id mauris. In hac habitasse platea dictumst. Cras quis quam sem. Curabitur in arcu diam, in interdum mauris.</p>
+<p>Proin lorem sapien, iaculis et faucibus nec, dictum sed nunc. Pellentesque in purus justo. Vestibulum facilisis rutrum nisi, a egestas nunc suscipit sed. Ut quis tortor a arcu bibendum placerat non sed ante. Praesent orci sem, posuere sit amet cursus molestie, volutpat ut purus. Curabitur aliquam, purus in pharetra viverra, lorem leo aliquam tellus, vel consequat felis neque et mauris. Aliquam erat volutpat.</p>
+            <div class="read-more">
+                <a class="btn btn-default" href="./posts/test.html">Read More</a>
             </div>
         </div>
+    </div>
 
-        <div id="content">
-            <h1>Archives</h1>
-            Here you can find all my previous posts:
-<ul>
-    
-        <li>
-            <a href="./posts/2015-12-07-tu-quoque.html">Tu Quoque</a> - December  7, 2015
-        </li>
-    
-        <li>
-            <a href="./posts/2015-11-28-carpe-diem.html">Carpe Diem</a> - November 28, 2015
-        </li>
-    
-        <li>
-            <a href="./posts/2015-10-07-rosa-rosa-rosam.html">Rosa Rosa Rosam</a> - October  7, 2015
-        </li>
-    
-        <li>
-            <a href="./posts/2015-08-12-spqr.html">S.P.Q.R.</a> - August 12, 2015
-        </li>
-    
-</ul>
+    <div class="row">
+        <div class="post-prev col-xs-offset-1 col-xs-10">
+            <a class="post-prev-title" href="./2013/08/programando-pics-en-gnulinux-hardware-y.html">Programando PIC's en GNU/Linux (hardware y software)</a>
+            <p>Mi fuerte es la informática más no la electrónica… pero como se habrá podido apreciar en muchos de mis posts el objetivo de incursionar en un campo aún algo oscuro para mi es el de lograr conectar las capacidades de la informática para reflejar con ello algo en el mundo físico.</p>
+<p>Así pues mientras nos metemos de cabeza en la ciencia de la electrónica tarde o temprano usaremos un micro controlador, el cual ya es un eslabón muy intermedio entre estas dos ciencias tan intimas.</p>
+<p>La razón es que un micro controlador (uC) es un dispositivo que implementa electrónicamente una maquina de turing completa, y nos permitirá con sus prestaciones interactuar con circuitos electrónicos mediante algoritmos y programas de software, y es justamente aquí donde viene el problema…</p>
+<p>Una vez hayamos escrito el software y haberlo compilado para ejecutarse en la arquitectura de estos pequeños dispositivos tenemos que de alguna manera colocar todos esos 0’s y 1’s en la memoria no volátil del micro controlador para que este pueda ejecutarlo.</p>
+<p>Para esto usaremos el protocolo ICSP que es especifico de los micro controladores “PIC” fabricados por la empresa Microchip. Este protocolo nos permitirá comunicarnos de alguna forma desde la computadora con el uC para darle el código del programa que queremos almacene en su memoria.</p>
+<p>Para hacerlo necesitamos algo de hardware para conectar la PC y el uC, y el software que implemente debidamente el protocolo ICSP y que nos permita llevar a cabo el cometido.</p>
+<p>Así que manos a la obra!</p>
+<p>Hardware:</p>
+<p>El protocolo ICSP además de ser un protocolo digital por supuesto, se corresponde con 5 pines del uC que son:</p>
+<p>Vss (masa, tierra, negativo o GND) Vdd (Alimentación de +5V) Vpp (Alimentación de +13.2V, pero que en la mayoría de los casos nos bastara con +12V y es precisamente lo que haremos [Se usa para indicarle al uC que empezaremos a comunicarnos con él mediante ICSP]) Data (Señal de datos de entrada y salida, <TTL>) Clock (Señal de reloj, <TTL>)</p>
+<p>Estos pines los podemos identificar fácilmente en el uC que tengamos buscando su “pinout” (googleandolo), por ejemplo:</p>
+<p>En el PIC18F4550 (Podemos usar CUALQUIER PIC), tenemos su pinout:</p>
+<p>Observamos que en el pin #1 dice: “Vpp” (no tomamos en cuenta los otros datos del mismo pin), en el pin #40 dice “PGD” (Programming Data), en el pin #39 dice “PGC” (programmin Clock), en el pin #11 y #32 dice “VDD” (Usamos cualquiera de los 2, en otros PIC’s habrá solamente uno), en el pin #12 y #31 dice “VSS” (Igual que el anterior).</p>
+<p>Así que tenemos:</p>
+<p>Vpp = Pin #1 Data = Pin #40 Clock = Pin #39 Vdd = Pin #11 o #32 Vss = Pin #12 o #31</p>
+<p>Genial! :D …pero… que hacemos con esto?</p>
+<p>Pues ahora que sabemos cuales son los pines correspondientes a ICSP en nuestro PIC armaremos el hardware que conectará la PC con el uC (PIC) y tendrá 5 cables correspondientes con los pines de ICSP (vpp,vdd,vss,data,clock) y que conectaremos con los pines correspondientes en el uC (PIC) los cuales ya conocemos.</p>
+<p>El hardware hace uso del puerto paralelo de la PC, seguramente esto será un impedimento para muchos… pero existe una gran posibilidad de que si andas en estas cosas, tendrás un PC viejito y que tenga puerto paralelo, la ventaja es que el hardware que construiremos es muy barato y simple, por que si quieres uno USB existen muchos tutoriales de como montar uno o incluso puedes comprarlo en cualquier tienda de electrónica (algo caro) y usarlo casi sin mayor problema, pero nosotros estamos aquí para hacerlo de esta manera.</p>
+<p>Este es el puerto paralelo, asegurate de tener una PC que lo tenga antes de continuar.</p>
+<p>Hasta aquí todo perfecto, ahora proporciono el circuito que he obtenido tras mucha prueba y error, y tras buscar y probar todo el hardware que he encontrado, así que ya puedo asegurar que este funciona de maravilla!</p>
+<p>Ahora… que hacemos con él??</p>
+<p>Pues antes algunas aclaraciones:</p>
+<ol style="list-style-type: decimal">
+<li>En el diseño los pines en forma de triangulo de color verde etiquetados como “PPx” (donde x es un numero) corresponden con los pines del puerto paralelo, así el pin “PP2” se conecta en el pin #2 del puerto paralelo, y para saber que pin es ese en el puerto usamos un pinout:</li>
+</ol>
+<p>No hace falta que nos preocupemos en los datos que tiene, solamente en los números para saber donde conectar.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>En el diseño los pines que terminan en un pequeño circulo y que tienen una etiqueta son los “cables” que irán finalmente a los pines ICSP del uC (PIC) [Vpp,Vdd,Data,Clock] y el pin “Vss” lo conectamos de cualquiera de aquellos triángulos formados de 3 lineas como aquel que está debajo del pin verde “PP25”.</li>
+</ol>
+<p>Listo! ya lo tenemos ahora solo resta montar este circuito en un protoboard si lo preferimos y sabemos que cables van al puerto paralelo y que cables a que pines del uC (PIC).</p>
+<p>Pero en mi caso he preferido hacer un montaje para poder usarlo siempre y con mayor comodidad (lo recomiendo muchísimo), aquí las instrucciones para hacerlo:</p>
+<p>Lo montaremos es una placa pre-perforada (se puede hacer un PCB si pueden hacerlo)</p>
+<p>Usaremos también un conector “DB25” (Macho) para facilitarnos la conexión al puerto paralelo</p>
+<p>También algunos conectores para facilitarnos la conexión de alimentación y con los pines ICSP, en este caso tomaremos los +12V y +5V de una fuente de alimentación de PC, así que he tomado el conector de una lectora floppy , pero podemos usar el otro tipo de conector, tomándolo de un viejo HDD o unidad óptica, así podremos conectar facilmente una fuente de alimentación y tomaremos los +12 del cable de color amarillo y los +5V del cable de color Rojo (GND de los cables negros).</p>
+<p>Además use un conector de 5 pines que saque de una vieja impresora, así tendremos cables separados para conectarlos a los pines ICSP del uC (PIC).</p>
+<p>Aquí lo apreciamos en el circuito terminado.</p>
+<p>Con los elementos listados en el diagrama del circuito, los montamos en la placa como si de un protoboard se tratase, pero haciendo las conexiones con estaño… (soldandolas)</p>
+<p>Y obtenemos finalmente el circuito grabador conectado y listo para usarse… claro… en cuanto hayamos visto la parte del software (le fuente del PC debe estar encendida y el LED iluminado indicando que el hardware está encendido).</p>
+<p>Software:</p>
+<p>Ahora bien, tenemos el hardware construido y debidamente conectado… necesitamos el software (para sistemas *unix, GNU/Linux en nuestro caso) para interactuar con el uC (PIC) mediante el protocolo ICSP.</p>
+<p>Para esto usaremos el programa “Odyssey” que podemos descargar de aquí:</p>
+<p>Odyssey</p>
+<p>Una vez lo tengamos lo instalamos, para ello (para quienes no sepan):</p>
+<p>$ tar -jxvf odyssey-0.6.tar.bz2 $ cd odyssey-0.6 $ ./configure $ make # make install [Como ROOT]</p>
+<p>Una vez echo esto tendremos Odyssey instalado en nuestro sistema, así que procedemos a la respectiva configuración.</p>
+<p>Necesitamos indicarle a Odyssey que Drivers usar, que puerto usar, que pines del puerto usar he incluso si la lógica de algún pin está invertida…, pero que nadie se preocupe al respecto, solo tendremos que descargar el fichero de configuración que yo he preparado para trabajar con el hardware y ponerlo en el lugar correcto, así que descargamos el fichero:</p>
+<p>odyssey.conf</p>
+<p>Lo descargamos y tenemos el fichero de nombre “odyssey.conf”, ahora lo ubicamos en su lugar con:</p>
+<h1 id="mv-odyssey.conf-usrlocaletc-como-root">mv odyssey.conf /usr/local/etc/ [como ROOT]</h1>
+<p>Listo! tenemos el software instalado y configurado ahora haremos una prueba que nos ayudará a saber si todo está bien, par esto conectamos todo el hardware debidamente, a excepción del uC (PIC) en lugar de eso dejaremos sueltos los cables que van a los pines ICSP del PIC, con ayuda de un multímetro (configurado como voltímetro) conectaremos (con ayuda de un protoboard de preferencia) el cable negro del multímetro en el cable del pin Vss , y dejaremos libre el cable rojo del multímetro.</p>
+<p>En una terminal ejecutamos:</p>
+<p>$ odyssey test</p>
+<p>y obtendremos una ventana que esperará nuestras instrucciones y nos indicará que pin esta encendido (1) o apagado (0)</p>
+<p>Una vez aquí podremos probar los respectivos pines activandolos con un signo (+) y desactivandolos con un signo (-)</p>
+<p>Vpp = v Data = d Clock = c</p>
+<p>De esta forma para activar el pin Vpp usamos +v y lo desactivamos usando -v, luego colocamos el cable rojo del multímetro en el pin correspondiente que queremos probar, y este deberá marcarnos 0v (o casi 0V) cuando el pin está apagado y 5V cuando está encendido (excepto para Vpp que deberá marcar unos 12V [un poco más o un poco menos])</p>
+<p>Luego de hacer varias pruebas y estar seguros de que todo funciona como lo esperado procedemos a conectar nuestro uC (PIC) en los respectivos pines y ya podremos empezar a hacer cosas con él. Para esto debemos indicarle a Odyssey el PIC que estamos usando, por ejemplo usaremos nuevamente el PIC18F4550:</p>
+<p>Para verificar si Odyssey se comunica bien con el PIC, y si el PIC que le indicamos se corresponde con el que hemos colocado: $ odyssey PIC18F4550 check (nótese que las letras contenidas en el nombre del PIC son en mayúsculas)</p>
+<p>Para borrar el programa del PIC: $ odyssey PIC18F4550 erase</p>
+<p>Para verificar si el PIC está en blanco (vacío): $ odyssey PIC18F4550 blankcheck</p>
+<p>Para grabar un programa (programa.hex) [compilado] en el PIC: $ odyssey PIC18F4550 write programa.hex</p>
+<p>Para leer el programa que contiene el PIC: $odyssey PIC18F4550 read programa.hex (“programa.hex” es el fichero donde se escribirá el programa que leamos del PIC)</p>
+<p>Ya con esto estamos en la capacidad de hacer cualquier cosa que deseemos con un micro controlador PIC, …. claro…. asumiendo que sabemos escribir código en C o Assambly para su arquitectura, pero supongo que si desean saber como grabarlo es por que ya tendrán un programa que grabar en él.</p>
+<p>En GNU/Linux podemos escribir el código para el uC en lenguaje C y compilarlo con SDCC (Small Device C Compiler) que podemos instalar de los repositorios de nuestra distribución, el código que compilemos nos generará un fichero (programa.hex) que será el que grabemos en el uC (PIC)</p>
+<p>Esta entrada no pretende enseñar como usar un micro controlador ni enseñar como programarlo, tan solo enseñar como grabar en él nuestro programa.</p>
+            <div class="read-more">
+                <a class="btn btn-default" href="./2013/08/programando-pics-en-gnulinux-hardware-y.html">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="post-prev col-xs-offset-1 col-xs-10">
+            <a class="post-prev-title" href="./2012/03/de-fedoreano-muerte-archer-de-corazon.html">De "Fedoreano" a muerte, a "Archer" de corazón</a>
+            <p><img src="../../images/fedora-tux.png" id="thumbnail" /><br />
+He decidido iniciar el blog con un pequeño relato de mi vida con GNU/Linux puesto que el blog se centrara principalmente en este sistema.</p>
+<p>Por allá hace como un año y medio era yo un triste usuario de Windows, pero con mi afán al conocimiento sabia ya una cantidad aceptable de detalles del sistema (perspectiva de usuario) y me dedicaba a programar uno que otro virus, ya que aunque no me lo crean es la mejor forma de aprender a profundidad el funcionamiento de un sistema, pero siempre me vi limitado debido a el mismo uso de Windows… :(</p>
+<p>Así que decidí probar el sistema Unix like del que tanto se hablaba… y como en ese entonces no contaba con una conexión a Internet (cuento con ella desde hace 1 mes) salí al centro de mi ciudad y compre un CD de “Linux mint 4.0” mmm… para la fecha había salido el “mint 7” me parece, pero como no tenia la más mínima idea de todo aquello compre lo primero que vi y que decía “Linux” en la portada :) . Llegue a casa y tras instalarlo y descubrir por donde se abre un terminal lo primero que escribí fue: “help” que al ser tan ingenuo yo supuse que eso me diría ABSOLUTAMENTE TODO acerca de la consola del sistema :D (Como el terminal DOS de Windows)… y de inmediato supe que aprender el uso real seria más “emocionante” de lo que esperaba ;) .</p>
+<p>En fin tras leer, leer y leer más empecé a manejarme en la terminal, y a probar otras distribuciones de las cuales la que más me gusto fue Fedora debido a que el DVD que compre de esta distro (DVD descargado) tenia por defecto una gran cantidad de software, lo que me caía de maravilla al no contar yo con una conexión a Internet, así que fue esa la razón de mi “amor”, en esta distribución aprendí el 95% de lo que sé actualmente.</p>
+<p>Un par de días luego de obtener finalmente mi conexión a Internet estaba yo buscando que más podría aprender, y me tope con algún comentario que relataba lo “difícil”, “imposible” o “para expertos” que resulta la distribución Arch, esto me llamo la atención y decidí descargarlo para echar una “ojeada”, lo instale y me entusiasme por intentar hacerlo andar, y con un par de semanas, y mucho aprendizaje después obtuve el sistema con el que me quede desde el momento :D , por varias razones , me encanto su simpleza, pero a su vez la capacidad que tienes esta para “hacerme” aprender! y que me facilitó mucho las cosas al momento de usar las X solo cuando fuese necesario, ya que por lo general no las uso para nada amenos que necesite el explorador o libreoffice … o gimp .. O algún software que requiera de una GUI….bueno si las necesito bastante seguido :) , otra de las cosas que me enamoro de Arch fue su wiki y documentación que esta realmente echa para un tonto como yo, su gestor de paquetes “pacman” que esta fenomenal y te permite tener lo que quieres en cuanto lo quieres y de lo mas fácil, también me encetó su repositorio AUR que lo tiene todo, no creo necesitar más por ahora ;) .</p>
+<p>Esta es mi pequeña y mal redactada historia en el mundo GNU/Linux, con esto ya podre hacer publico mi aprendizaje a partir de el punto en el que estoy ahora.</p>
+            <div class="read-more">
+                <a class="btn btn-default" href="./2012/03/de-fedoreano-muerte-archer-de-corazon.html">Read More</a>
+            </div>
+        </div>
+    </div>
 
 
+
+                </div>
+
+            </div>
         </div>
 
         <div id="footer">
-            Site proudly generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
         </div>
     </body>
 </html>
