@@ -1,5 +1,6 @@
 _cache/
 .stack-work/
+css/*.css
 *.o
 *.hi
 *.chi
