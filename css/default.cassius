@@ -34,7 +34,6 @@ header
 #sidebar
     text-align: center;
     font-size: 10px;
-
     #author
         color: rgb(181, 137, 0);
         margin-top: 40px;
