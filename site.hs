@@ -3,6 +3,7 @@
 import Data.Monoid (mappend)
 import Hakyll
 import Data.List (isPrefixOf, isSuffixOf)
+import Data.Monoid
 import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
 
@@ -48,8 +49,8 @@ main = hakyllWith config $ do
         compile $ do
             posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
             let archiveCtx =
-                    listField "posts" teaserCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    listField "posts" teaserCtx (return posts) <>
+                    constField "title" "Archives"            <>
                     defaultContext
 
             makeItem ""
@@ -63,7 +64,7 @@ main = hakyllWith config $ do
         compile $ do
             posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
             let indexCtx =
-                    listField "posts" teaserCtx (return posts) `mappend`
+                    listField "posts" teaserCtx (return posts) <>
                     defaultContext
 
             getResourceBody
@@ -75,10 +76,13 @@ main = hakyllWith config $ do
 
 
 postCtx :: Context String
-postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
+postCtx =
+    dateField "date" "%B %e, %Y" <>
+    constField "author" "Daniel Campoverde" <>
+    defaultContext
 
 teaserCtx :: Context String
-teaserCtx = teaserField "teaser" "content" `mappend` postCtx
+teaserCtx = teaserField "teaser" "content" <> postCtx
 
 config :: Configuration
 config = Configuration
