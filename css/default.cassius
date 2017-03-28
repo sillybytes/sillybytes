@@ -39,17 +39,22 @@ header
 
     #author
         margin: 40px 0px;
-
-    #author-pic
-        max-width: 130px;
-        border-radius: 100%;
-
-    #author-name
-        font-size: 1.7em;
-        letter-spacing: 1px;
-        font-weight: bold;
-        font-family: Droid Serif;
         color: rgb(181, 137, 0);
+        #author-pic
+            max-width: 130px;
+            border-radius: 100%;
+        #author-name
+            font-size: 1.7em;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-family: Droid Serif;
+        #location-icon
+            max-width: 15px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        #location
+            margin-top: 10px;
+            font-size: 1.5em;
 
     #findme
         .icon
