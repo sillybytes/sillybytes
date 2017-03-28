@@ -9,10 +9,11 @@
     padding: 10px;
     position: relative;
     .post-prev-date
-        font-size: 0.9em;
-        margin-bottom: 15px;
-        font-style: italic;
+        color: #93a1a1;
         display: block;
+        font-size: 0.9em;
+        font-style: italic;
+        margin-bottom: 15px;
     .post-prev-title
         color: rgb(181, 137, 0);
         display: block;
