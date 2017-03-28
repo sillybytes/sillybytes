@@ -5,15 +5,14 @@ html, body
     font-size: 16px;
     margin: 0px 0px;
     padding: 0px 0px;
-
     a
         color: rgb(181, 137, 0);
         text-decoration: none;
-
+        outline: 0;
     a:hover, body a:active
         color: rgb(181, 137, 0);
         text-decoration: underline;
-
+        outline: 0;
     h2
         color: #cb4b16;
         font-size: 2em;
@@ -80,17 +79,15 @@ header
 
     #dotfiles
         p
-            margin: 30px 0px;
+            margin-top: 20px;
             font-size: 1.7em;
             text-align: left;
+            padding: 0px 10px;
             color: #586e75;
-
         #dotfiles-img
             max-width: 80px;
-
         #dotfiles-img:hover
             filter: brightness(120%);
-
         a:hover
             text-decoration: none;
 
@@ -135,8 +132,13 @@ footer
 
     #cc-text
         margin-top: 5px;
+        padding: 5px 50px 0px 0px;
         font-size: 1.2em;
         text-align: justify;
+        a
+            color: white
+        a:hover
+            text-decoration: underline;
 
 #archive-title
     font-size: 2em;
