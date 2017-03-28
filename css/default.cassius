@@ -18,7 +18,7 @@ html, body
         color: #cb4b16;
         font-size: 2em;
         font-weight: bold;
-        margin-top: 80px;
+        margin-top: 60px;
 
 header
     background-color: rgba(256, 256, 256, 0.7);
@@ -38,7 +38,6 @@ header
     font-size: 10px;
 
     #author
-        margin: 40px 0px;
         color: rgb(181, 137, 0);
         #author-pic
             max-width: 130px;
@@ -93,6 +92,10 @@ header
 
         a:hover
             text-decoration: none;
+
+
+#content
+    margin-top: 20px;
 
 
 footer

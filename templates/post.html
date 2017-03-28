@@ -1,8 +1,14 @@
-<div class="info">
-    Posted on $date$
-    $if(author)$
-        by $author$
-    $endif$
+<div class='row'>
+    <div class='post col-xs-offset-1 col-xs-10'>
+        <h2 class='post-title'>$title$</h2>
+        <div class='post-date-author'>
+            Posted on $date$
+            $if(author)$
+                by $author$
+            $endif$
+        </div>
+        <div class='post-content'>
+            $body$
+        </div>
+    </div>
 </div>
-
-$body$
