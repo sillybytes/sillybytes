@@ -34,7 +34,6 @@ header
 
 #sidebar
     text-align: center;
-    height: 2000px;
     font-size: 10px;
 
     #author
@@ -96,6 +95,22 @@ header
 
 #content
     margin-top: 20px;
+    #archive
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin: 20px;
+        width: 100%
+        letter-spacing: 1px;
+        color: #6c71c4;
+        padding: 10px;
+        background-color: #fdf6e3;
+        border: 2px solid #6c71c4;
+        border-radius: 5px;
+        box-shadow: 2px 2px 3px gray;
+    #archive:hover
+        box-shadow: 0px 0px 3px gray;
 
 
 footer
@@ -119,3 +134,9 @@ footer
         margin-top: 5px;
         font-size: 1.2em;
         text-align: justify;
+
+#archive-title
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #586e75;
