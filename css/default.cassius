@@ -76,6 +76,7 @@ header
 
         #facebook-embed
             margin: 40px 0px;
+            min-height: 220px;
 
     #dotfiles
         p
