@@ -38,6 +38,7 @@ header
 
     #author
         color: rgb(181, 137, 0);
+        margin-top: 40px;
         #author-pic
             max-width: 130px;
             border-radius: 100%;
@@ -95,6 +96,7 @@ header
 
 #content
     margin-top: 20px;
+    padding: 0 40px;
     #archive
         display: inline-block;
         text-align: center;
