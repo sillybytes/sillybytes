@@ -15,6 +15,9 @@ temprano usaremos un micro controlador, el cual ya es un eslabón muy intermedio
 entre estas dos ciencias tan intimas.
 
 
+<!--more-->
+
+
 La razón es que un micro controlador (uC) es un dispositivo que implementa
 electrónicamente una maquina de turing completa, y nos permitirá con sus
 prestaciones interactuar con circuitos electrónicos mediante algoritmos y

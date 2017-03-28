@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <a href="../../">
-                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../images/silly-bytes_logo.png" />
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../images/newcog.png" />
                     </a>
                 </div>
             </div>
@@ -32,9 +32,10 @@
 
                 <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
                     <div id="author">
-                        <h2 class="sidebar-h2">THE AUTHOR</h2>
                         <img id="author-pic" src="../../images/danie.jpg">
                         <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../images/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
                     </div>
 
                     <div id="findme">
@@ -85,20 +86,23 @@
                             <img id="dotfiles-img" src="../../images/dotfiles.png">
                         </a>
                     </div>
-
-
                 </div>
 
 
-                <div id="content" class="col-sm-12 col-md-9">
-                    <h1>Programando PIC's en GNU/Linux (hardware y software)</h1>
-                    <div class="info">
-    Posted on August 10, 2013
-    
-</div>
-
-<p>Mi fuerte es la informática más no la electrónica… pero como se habrá podido apreciar en muchos de mis posts el objetivo de incursionar en un campo aún algo oscuro para mi es el de lograr conectar las capacidades de la informática para reflejar con ello algo en el mundo físico.</p>
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Programando PIC's en GNU/Linux (hardware y software)</h2>
+        <div class="post-date-author">
+            Posted on August 10, 2013
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p>Mi fuerte es la informática más no la electrónica… pero como se habrá podido apreciar en muchos de mis posts el objetivo de incursionar en un campo aún algo oscuro para mi es el de lograr conectar las capacidades de la informática para reflejar con ello algo en el mundo físico.</p>
 <p>Así pues mientras nos metemos de cabeza en la ciencia de la electrónica tarde o temprano usaremos un micro controlador, el cual ya es un eslabón muy intermedio entre estas dos ciencias tan intimas.</p>
+<!--more-->
 <p>La razón es que un micro controlador (uC) es un dispositivo que implementa electrónicamente una maquina de turing completa, y nos permitirá con sus prestaciones interactuar con circuitos electrónicos mediante algoritmos y programas de software, y es justamente aquí donde viene el problema…</p>
 <p>Una vez hayamos escrito el software y haberlo compilado para ejecutarse en la arquitectura de estos pequeños dispositivos tenemos que de alguna manera colocar todos esos 0’s y 1’s en la memoria no volátil del micro controlador para que este pueda ejecutarlo.</p>
 <p>Para esto usaremos el protocolo ICSP que es especifico de los micro controladores “PIC” fabricados por la empresa Microchip. Este protocolo nos permitirá comunicarnos de alguna forma desde la computadora con el uC para darle el código del programa que queremos almacene en su memoria.</p>
@@ -162,7 +166,15 @@
 <p>Ya con esto estamos en la capacidad de hacer cualquier cosa que deseemos con un micro controlador PIC, …. claro…. asumiendo que sabemos escribir código en C o Assambly para su arquitectura, pero supongo que si desean saber como grabarlo es por que ya tendrán un programa que grabar en él.</p>
 <p>En GNU/Linux podemos escribir el código para el uC en lenguaje C y compilarlo con SDCC (Small Device C Compiler) que podemos instalar de los repositorios de nuestra distribución, el código que compilemos nos generará un fichero (programa.hex) que será el que grabemos en el uC (PIC)</p>
 <p>Esta entrada no pretende enseñar como usar un micro controlador ni enseñar como programarlo, tan solo enseñar como grabar en él nuestro programa.</p>
+        </div>
+    </div>
+</div>
 
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>

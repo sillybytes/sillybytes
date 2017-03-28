@@ -15,7 +15,7 @@ aunque no me lo crean es la mejor forma de aprender a profundidad el
 funcionamiento de un sistema, pero siempre me vi limitado debido a el mismo uso
 de Windows... :( 
 
-
+<!--more-->
 
 Así que decidí probar el sistema Unix like del que tanto se hablaba... y como en
 ese entonces no contaba con una conexión a Internet (cuento con ella desde hace
