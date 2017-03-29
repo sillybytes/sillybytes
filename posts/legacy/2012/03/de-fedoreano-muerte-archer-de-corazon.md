@@ -3,7 +3,7 @@ title: De "Fedoreano" a muerte, a "Archer" de corazón
 published: 2012-03-17
 ...
 
-![](/images/fedora/thumbnail.png){#thumbnail}\
+![](/img/fedora/thumbnail.png){#thumbnail}\
 
 He decidido iniciar el blog con un pequeño relato de mi vida con GNU/Linux
 puesto que el blog se centrara principalmente en este sistema.

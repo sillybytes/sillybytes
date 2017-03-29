@@ -3,7 +3,7 @@ title: TDD (Test-Driven Development) Physical Traffic Light
 published: 2016-08-28
 ...
 
-![](/images/tddlight/thumbnail.jpg){#thumbnail}\
+![](/img/tddlight/thumbnail.jpg){#thumbnail}\
 
 Robert C. Martin *(Uncle Bob)* said in a talk:
 
