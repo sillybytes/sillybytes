@@ -52,3 +52,28 @@
             line-height: 0.1em;
             margin-right: 0.15em;
             vertical-align: -0.4em;
+        pre
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            margin: 30px 0px;
+            code
+                color: inherit;
+                margin: 0;
+                padding: 15px;
+                width: 100%;
+                font-size: 1.2em;
+        code
+            color: #d33682;
+            background: #f7f0dd;
+            border-style: solid;
+            border-color: #e3e0c3;
+            border-width: 1px;
+            padding: 0px 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            border-radius: 5px;
+            overflow: auto;
+            position: relative;
+            bottom: -5px;
+            display: inline-block;

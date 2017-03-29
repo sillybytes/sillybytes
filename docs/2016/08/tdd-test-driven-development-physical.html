@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../images/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../images/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../images/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../images/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../images/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../images/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../images/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../images/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>atribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../images/dotfiles.png">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">TDD (Test-Driven Development) Physical Traffic Light</h2>
+        <div class="post-date-author">
+            Posted on August 28, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../images/tddlight_thumbnail.jpg" id="thumbnail" /><br />
+Robert C. Martin <em>(Uncle Bob)</em> said in a talk:</p>
+<blockquote>
+<p>Imagine you have a button that you can push, it will test your code and if everything is working a green light will come up, but if something is break, a red light will come up […]</p>
+</blockquote>
+<p>He was of course talking about TDD, but I was bored and get inspired to build this little toy.</p>
+<p>Hardware schematics, firmware and host software is available in <a href="https://github.com/alx741/tdd_traffic-light">this Github repo</a>. Along with information on how to compile and use.</p>
+<blockquote>
+<p>This is a physical toy traffic light to be used with software development TDD (and testing in general) tools. It will not boost your productivity nor make you a better programmer or TDD practitioner, but it looks cool :)</p>
+</blockquote>
+<p>Lets explain how it works, it’s very simple:</p>
+<h1 id="hardware">Hardware</h1>
+<p>The <strong>atmega328p</strong> AVR microcontroller is very popular and cheap, but if you buy them on Ebay for example, chances are it comes with an Arduino bootloader, which gets in the way because we can perfectly use the internal oscillator instead of an external 16Mhz crystal. So the first thing is to change de fuses to the default ones:</p>
+<!--more-->
+<pre class="shell"><code># avrdude -p m328p -c usbasp -U lfuse:w:0x62:m -U hfuse:w:0xd9:m</code></pre>
+<p>Now we are using the internal 1MHz oscillator, perfect!</p>
+<p>I don’t have a PCB yet (although it should be pretty easy as I made the circuit schematic using <em>kicad</em>) but the circuit is small and simple so it’s easy to build it with prototype PCB. Additionally I added some small neodymium magnets in the back to stick it easily close to my monitors.</p>
+<p><img src="img1.jpg" /> <img src="img2.jpg" /> <img src="img3.jpg" /> <img src="img4.jpg" /> <img src="img5.jpg" /> <img src="img6.jpg" /> <img src="img7.jpg" /> <img src="img8.jpg" /></p>
+<h1 id="software">Software</h1>
+<p>The firmware is no more than UART boilerplate with a baud rate of <code>4800</code> so it is stable with the 1MHz clock speed.</p>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#include </span><span class="im">&lt;avr/io.h&gt;</span>
+<span class="pp">#include </span><span class="im">&lt;util/delay.h&gt;</span>
+
+<span class="pp">#define F_CPU 1000000</span>
+<span class="pp">#define BAUD 4800</span>
+<span class="pp">#define BAUD_PRESCALE ((((F_CPU/16) + (BAUD/2)) / (BAUD)) - 1)</span>
+
+<span class="dt">char</span> getchar(<span class="dt">void</span>)
+{
+    <span class="cf">while</span> ((UCSR0A &amp; (<span class="dv">1</span> &lt;&lt; RXC0)) == <span class="dv">0</span>) {}
+    <span class="cf">return</span> UDR0;
+}</code></pre></div>
+<p>The main loop will wait for a command <code>r</code>, <code>y</code> or <code>g</code> and turn on the pin corresponding to the color LED.</p>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#include </span><span class="im">&lt;avr/io.h&gt;</span>
+<span class="pp">#include </span><span class="im">&lt;util/delay.h&gt;</span>
+
+<span class="pp">#define F_CPU 1000000</span>
+<span class="pp">#define BAUD 4800</span>
+<span class="pp">#define BAUD_PRESCALE ((((F_CPU/16) + (BAUD/2)) / (BAUD)) - 1)</span>
+
+<span class="dt">char</span> getchar(<span class="dt">void</span>)
+{
+    <span class="cf">while</span> ((UCSR0A &amp; (<span class="dv">1</span> &lt;&lt; RXC0)) == <span class="dv">0</span>) {}
+    <span class="cf">return</span> UDR0;
+}</code></pre></div>
+<p>Notice how if another character is received the output is cleared so all the LEDs are off.</p>
+<p>The host software configures the serial port with a <code>4800</code> baud rate:</p>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="dt">void</span> serial_init(<span class="dt">char</span>* port)
+{
+    <span class="cf">if</span> (COM_FD &gt; <span class="dv">0</span>)
+    {
+        <span class="cf">return</span>;
+    }
+
+    <span class="co">// Open serial port file</span>
+    <span class="dt">int</span> fd = open(port, O_RDWR | O_NOCTTY | O_NDELAY);
+
+    <span class="co">// Configure serial port</span>
+    <span class="kw">struct</span> termios config;
+    <span class="cf">if</span> (tcgetattr(fd, &amp;config) != <span class="dv">0</span>)
+    {
+        COM_FD = -<span class="dv">1</span>;
+        printf(<span class="st">&quot;Error while configing serial port&quot;</span>);
+        exit(<span class="dv">1</span>);
+    }
+
+    cfsetispeed(&amp;config, B4800);
+    cfsetospeed(&amp;config, B4800);
+
+    config.c_cflag |= (CLOCAL | CREAD | CS8);
+    config.c_cflag &amp;= ~(PARENB | PARODD);
+    config.c_iflag = <span class="dv">0</span>;
+    config.c_oflag = <span class="dv">0</span>;
+    config.c_lflag &amp;= ~(ICANON | ECHO | ECHOE | ISIG);
+    config.c_cc[VTIME] = <span class="dv">5</span>;
+    config.c_cc[VMIN] = <span class="dv">0</span>;
+
+    <span class="cf">if</span> (tcsetattr(fd, TCSANOW, &amp;config) != <span class="dv">0</span>)
+    {
+        COM_FD = -<span class="dv">1</span>;
+        printf(<span class="st">&quot;Error while configing serial port&quot;</span>);
+        exit(<span class="dv">1</span>);
+    }
+
+    COM_FD = fd;</code></pre></div>
+<p>From then controlling the LEDs is as simple as</p>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c">write(COM_FD, <span class="st">&quot;r&quot;</span>, <span class="dv">1</span>);</code></pre></div>
+<p>As I said, pretty simple… Find more information about how to use it in the <a href="https://github.com/alx741/tdd_traffic-light">Github repo</a>.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <footer>
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">PUBLIC KEY</h4>
+                    gpg --keyserver keys.gnupg.net --recv-key 12622B78
+
+                    <h4 class="footer-h4 fspaced">INTERNET DEFENSE LEAGUE</h4>
+                    <a target="_blank" href="http://internetdefenseleague.org/">
+                        <img id="idl-img" alt="Internet Defesen League" src="../../images/idl.png">
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">FSF</h4>
+                    <img id="fsf-img" alt="Free Software Fundation Member" src="../../images/fsf.png">
+
+                    <h4 class="footer-h4 fspaced">HASKELLERS</h4>
+                    <a target="_blank" href="http://www.haskellers.com/user/4249">
+                        <img id="haskellers-img" alt="I" m a Haskeller' src="../../images/haskellers.png">
+                    </a>
+
+                    <h4 class="footer-h4 fspaced">CREATIVE COMMONS</h4>
+                    <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                        <img id="cc-img" alt="Creative Commons - SA - BY" src="../../images/cc.png">
+                    </a>
+                    <p id="cc-text">
+                        Silly Bytes by Daniel Alejandro Campoverde Carrión
+                        [alx741] is licensed under a
+                        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+
+    </body>
+</html>

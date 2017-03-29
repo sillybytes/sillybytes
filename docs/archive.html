@@ -12,8 +12,13 @@
         <link rel="stylesheet" href="./css/post.css" />
 
         <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./bower_components/highlight/src/styles/solarized-light.css" />
 
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
         <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
 
     </head>
     <body>
@@ -77,8 +82,7 @@
                     <div id="dotfiles">
                         <h2 class="sidebar-h2">DOTFILES</h2>
                         <p>
-                            Software configuration, scripts and magic.
-                            <br>
+                            Software configuration, scripts, tools and magic.
                             Be sure to add <b>atribution </b> when using them
                             (fully or partially).
                         </p>
@@ -95,10 +99,10 @@
 </h3>
 
     <div class="row">
-        <div class="post-prev col-xs-12">
+        <div class="post-prev post col-xs-12">
             <a class="post-prev-title" href="./posts/test.html">Test Post</a>
             <span class="post-prev-date">March 26, 2017</span>
-            <div class="post-prev-content">
+            <div class="post-content">
                 
                     <p>Suspendisse pharetra ullamcorper sem et auctor. Suspendisse vitae tellus eu turpis dignissim gravida ut ut tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi aliquam sapien quis nisl sodales non aliquet nisl iaculis. Curabitur fermentum orci vel sapien pellentesque id condimentum metus vehicula. Curabitur turpis purus, scelerisque at interdum quis, placerat sit amet tortor. Aliquam erat volutpat.</p>
 <p>Integer posuere felis non arcu suscipit ullamcorper. Nam tempus risus venenatis orci sagittis eu aliquam ante tincidunt. Aenean vehicula ipsum id sapien tincidunt commodo. Aliquam erat volutpat. Curabitur vehicula libero ac turpis cursus consectetur. Praesent posuere egestas purus et dapibus. Mauris egestas, lectus vitae scelerisque ultricies, metus lorem tempor nisi, sed vehicula tortor mauris nec urna. Quisque urna tellus, facilisis at mollis eget, adipiscing in nisl. Proin quam arcu, euismod et imperdiet sed, ultricies sed orci.</p>
@@ -113,10 +117,39 @@
     </div>
 
     <div class="row">
-        <div class="post-prev col-xs-12">
+        <div class="post-prev post col-xs-12">
+            <a class="post-prev-title" href="./2016/08/tdd-test-driven-development-physical.html">TDD (Test-Driven Development) Physical Traffic Light</a>
+            <span class="post-prev-date">August 28, 2016</span>
+            <div class="post-content">
+                
+                    <p><img src="./images/tddlight_thumbnail.jpg" id="thumbnail" /><br />
+Robert C. Martin <em>(Uncle Bob)</em> said in a talk:</p>
+<blockquote>
+<p>Imagine you have a button that you can push, it will test your code and if everything is working a green light will come up, but if something is break, a red light will come up […]</p>
+</blockquote>
+<p>He was of course talking about TDD, but I was bored and get inspired to build this little toy.</p>
+<p>Hardware schematics, firmware and host software is available in <a href="https://github.com/alx741/tdd_traffic-light">this Github repo</a>. Along with information on how to compile and use.</p>
+<blockquote>
+<p>This is a physical toy traffic light to be used with software development TDD (and testing in general) tools. It will not boost your productivity nor make you a better programmer or TDD practitioner, but it looks cool :)</p>
+</blockquote>
+<p>Lets explain how it works, it’s very simple:</p>
+<h1 id="hardware">Hardware</h1>
+<p>The <strong>atmega328p</strong> AVR microcontroller is very popular and cheap, but if you buy them on Ebay for example, chances are it comes with an Arduino bootloader, which gets in the way because we can perfectly use the internal oscillator instead of an external 16Mhz crystal. So the first thing is to change de fuses to the default ones:</p>
+
+                
+            </div>
+            <br><br>
+            <div class="read-more">
+                <a class="btn btn-default" href="./2016/08/tdd-test-driven-development-physical.html">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="post-prev post col-xs-12">
             <a class="post-prev-title" href="./2013/08/programando-pics-en-gnulinux-hardware-y.html">Programando PIC's en GNU/Linux (hardware y software)</a>
             <span class="post-prev-date">August 10, 2013</span>
-            <div class="post-prev-content">
+            <div class="post-content">
                 
                     <p>Mi fuerte es la informática más no la electrónica… pero como se habrá podido apreciar en muchos de mis posts el objetivo de incursionar en un campo aún algo oscuro para mi es el de lograr conectar las capacidades de la informática para reflejar con ello algo en el mundo físico.</p>
 <p>Así pues mientras nos metemos de cabeza en la ciencia de la electrónica tarde o temprano usaremos un micro controlador, el cual ya es un eslabón muy intermedio entre estas dos ciencias tan intimas.</p>
@@ -131,12 +164,12 @@
     </div>
 
     <div class="row">
-        <div class="post-prev col-xs-12">
+        <div class="post-prev post col-xs-12">
             <a class="post-prev-title" href="./2012/03/de-fedoreano-muerte-archer-de-corazon.html">De "Fedoreano" a muerte, a "Archer" de corazón</a>
             <span class="post-prev-date">March 17, 2012</span>
-            <div class="post-prev-content">
+            <div class="post-content">
                 
-                    <p><img src="./images/fedora-tux.png" id="thumbnail" /><br />
+                    <p><img src="./images/fedora_thumbnail.png" id="thumbnail" /><br />
 He decidido iniciar el blog con un pequeño relato de mi vida con GNU/Linux puesto que el blog se centrara principalmente en este sistema.</p>
 <p>Por allá hace como un año y medio era yo un triste usuario de Windows, pero con mi afán al conocimiento sabia ya una cantidad aceptable de detalles del sistema (perspectiva de usuario) y me dedicaba a programar uno que otro virus, ya que aunque no me lo crean es la mejor forma de aprender a profundidad el funcionamiento de un sistema, pero siempre me vi limitado debido a el mismo uso de Windows… :(</p>
 
@@ -193,8 +226,10 @@ He decidido iniciar el blog con un pequeño relato de mi vida con GNU/Linux pues
                     </a>
                     <p id="cc-text">
                         Silly Bytes by Daniel Alejandro Campoverde Carrión
-                        [alx741] is licensed under a Creative Commons
-                        Attribution-ShareAlike 3.0 Unported License.
+                        [alx741] is licensed under a
+                        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                        </a>
                     </p>
                 </div>
 
