@@ -14,6 +14,9 @@
     margin: 20px 0px;
     padding: 10px;
     .img-responsive
+        clear: both;
+        display: block;
+        margin: 0 auto;
         padding: 40px;
     h1, h2, h3, h4, h5, h6
         color: #cb4b16;
