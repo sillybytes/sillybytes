@@ -26,7 +26,7 @@ test:
 	$(TEST_COMMAND) && tddlight g || tddlight r
 
 watch:
-	while true; do make css; inotifywait -qre close_write css/*.cassius; done
+	while true; do tddlight y; make css && tddlight g || tddlight r; inotifywait -qre close_write css/*.cassius; done
 
 clean:
 	$(TASK_RUNNER) exec site clean
