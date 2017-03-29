@@ -13,6 +13,8 @@
     font-size: 1.4em;
     margin: 20px 0px;
     padding: 10px;
+    .img-responsive
+        padding: 40px;
     h1, h2, h3, h4, h5, h6
         color: #cb4b16;
         font-weight: bold;
