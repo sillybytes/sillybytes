@@ -46,14 +46,14 @@ schematic using *kicad*) but the circuit is small and simple so it's easy to
 build it with prototype PCB. Additionally I added some small neodymium magnets
 in the back to stick it easily close to my monitors.
 
-![](img1.jpg)
-![](img2.jpg)
-![](img3.jpg)
-![](img4.jpg)
-![](img5.jpg)
-![](img6.jpg)
-![](img7.jpg)
-![](img8.jpg)
+![](/img/tddlight/img1.jpg){.img-responsive}
+![](/img/tddlight/img2.jpg){.img-responsive}
+![](/img/tddlight/img3.jpg){.img-responsive}
+![](/img/tddlight/img4.jpg){.img-responsive}
+![](/img/tddlight/img5.jpg){.img-responsive}
+![](/img/tddlight/img6.jpg){.img-responsive}
+![](/img/tddlight/img7.jpg){.img-responsive}
+![](/img/tddlight/img8.jpg){.img-responsive}
 
 
 # Software
