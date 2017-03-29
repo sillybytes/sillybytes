@@ -1,6 +1,6 @@
 ---
 title: Recuperar Arch luego de reinstalar Windows (recuperando grub)
-published: 2012-03-17
+published: 2012-03-27
 ...
 
 ![](/img/arch/thumbnail.png){#thumbnail}\
