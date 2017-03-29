@@ -1,5 +1,5 @@
 html, body
-    background: url("/img/wood.jpg") repeat fixed top left;
+    background: url("../img/wood.jpg") repeat fixed top left;
     color: #586e75;
     font-family: Verdana,Geneva,sans-serif
     font-size: 16px;
