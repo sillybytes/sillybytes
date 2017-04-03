@@ -11,7 +11,7 @@ What I'm actually trying to compare here is vim scripting vs awk, still don't
 make sense? Well lets take a look of this.
 
 
-# Study case: [Vinfo](https://www.blogger.com/www.github.com/alx741/vinfo.git)
+# Study case: [Vinfo](https://www.github.com/alx741/vinfo.git)
 
 *Vinfo* is a Vim plugin that allows you to read Info documentation files right
 in a vim session by converting the Info plain text files into Vim help-files so
