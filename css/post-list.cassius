@@ -13,11 +13,12 @@
         font-size: 1.5em;
 
     .read-more
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        width: 100%;
         background: linear-gradient(to top, #fdf6e3, rgba(255,255,255,0.8));
+        border-radius: 0px 0px 10px 10px;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        width: 100%;
         a
             margin: 10px auto;
             margin-left: 50px;
