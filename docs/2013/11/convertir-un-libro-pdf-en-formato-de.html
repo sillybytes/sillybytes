@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>atribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Convertir un libro PDF en formato de libro de mano (handbook) y ahorrar papel</h2>
+        <div class="post-date-author">
+            Posted on November  9, 2013
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/handbook/thumbnail.png" id="thumbnail" /><br />
+Por lo general solemos tener mucho más que varios libros en formato PDF, pero no hay nada mejor que leer sobre papel, además de que poder leer un libro impreso mientras vas en el transporte publico, mientras esperas que empiece la siguiente clase, o simplemente tenerlo a la mano siempre para leer en cada oportunidad es algo invaluable.</p>
+<p>Pero usualmente hay más de un problema con esto:</p>
+<p>El papel por ejemplo tiene su costo y si vamos a imprimir 20 libros de entre 500 y 2000+ páginas cada uno, tendremos que pagar una cantidad considerable (tanto si lo imprimimos en casa como si lo llevamos a un centro de impresión), esto además de que siempre es bueno usar la menor cantidad de recursos posibles, tanto por eficiencia, reducción de costos y por conciencia ecológica.</p>
+<!--more-->
+<p>El primer intento por usar menos papel es el más intuitivo: imprimir a doble cara, con lo cual conseguimos que el numero de hojas de papel usadas sea igual a la mitad de las páginas a imprimir, pero un libro del tamaño de una hoja de papel (A4) es algo grande para ser cómodo de llevar siempre a la mano o de leer en un autobús por ejemplo, además en algunos casos el uso de papel sigue siendo considerable.</p>
+<p>En un nuevo intento podríamos imprimir varias páginas por plana, hasta el punto en que sea legible (por lo general no más de 2 páginas por plana), y así conseguimos que el numero de hojas de papel empleadas se de 1/4 el numero de páginas del libro a imprimir.</p>
+<p>Perfecto! Ahora usaremos mucho menos papel, pero aún tenemos el problema de que el libro resultante es de un tamaño (A4) y simplemente no es lo bastante cómodo.</p>
+<p>Lo mejor seria poder cortar las hojas por la mitad aprovechando el hecho de que imprimimos 2 páginas por plana y luego formar el libro de un tamaño A5 el cual si que es cómodo de llevar a la mano, pero al hacerlo las páginas del libro resultan en un desorden completa y absolutamente caótico al intentar colocarlas juntas pues las páginas no se corresponden con la que cada una tiene impresa a su reverso.</p>
+<p>Para solucionarlo he aprovechado las herramientas que proporciona el paquete <em>poppler</em>, que lo podemos instalar usando el gestor de paquetes correspondiente a la distribución que usemos. (en ArchLinux: <code># pacman -S poppler</code>) y he escrito un script que se encargará de reorganizar las páginas del documento de forma apropiada para generar un documento que contiene 2 páginas por hoja de documento.</p>
+<p>El script en cuestión es este:</p>
+<p>https://github.com/alx741/pdfhbmk/blob/master/pdfhbmk.sh</p>
+<p>Lo descargamos y le damos permisos de ejecución:</p>
+<pre><code>$ chmod +x pdfhbmk.sh</code></pre>
+<p>Luego de asegurarnos de tener instalado <em>poppler</em> en nuestro sistema lo podemos usar así:</p>
+<pre><code>$ ./pdfhbmk.sh libro.pdf</code></pre>
+<p>Donde <code>libro.pdf</code> es el documento que queremos transformar.</p>
+<p>La ejecución del script nos dará como resultado un documento del tipo: <code>handbook_libro.pdf</code></p>
+<p>Lo que haremos con el será realizar una impresión a doble cara, una vez impreso cortamos todas la hojas por la mitad (a lo ancho) para obtener cada pagina separada (en tamaño A5) y en 2 montones, luego tomamos el 1er montón y lo colocamos sobre el 2do montón. Anillamos o encuadernamos el resultado y tenemos nuestro libro de mano.</p>
+<p>Será mejor traficar un poco esto…</p>
+<p>Luego de haber impreso a doble cara el resultado de ejecutar el script, hacemos:</p>
+<div class="figure">
+<img src="../../img/handbook/shot1.png" class="img-responsive" />
+
+</div>
+<p>Y así es como obtienen su libro de mano!, espero sea de utilidad para ustedes tanto como lo es para mi.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <footer>
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">PUBLIC KEY</h4>
+                    gpg --keyserver keys.gnupg.net --recv-key 12622B78
+
+                    <h4 class="footer-h4 fspaced">INTERNET DEFENSE LEAGUE</h4>
+                    <a target="_blank" href="http://internetdefenseleague.org/">
+                        <img id="idl-img" alt="Internet Defesen League" src="../../img/idl.png">
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">FSF</h4>
+                    <img id="fsf-img" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                    <h4 class="footer-h4 fspaced">HASKELLERS</h4>
+                    <a target="_blank" href="http://www.haskellers.com/user/4249">
+                        <img id="haskellers-img" alt="I" m a Haskeller' src="../../img/haskellers.png">
+                    </a>
+
+                    <h4 class="footer-h4 fspaced">CREATIVE COMMONS</h4>
+                    <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                        <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                    </a>
+                    <p id="cc-text">
+                        Silly Bytes by Daniel Alejandro Campoverde Carrión
+                        [alx741] is licensed under a
+                        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+
+    </body>
+</html>

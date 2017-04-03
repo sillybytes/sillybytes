@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>atribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Keyboard pedal for Vim</h2>
+        <div class="post-date-author">
+            Posted on August 20, 2012
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/vimpedal/thumbnail.png" id="thumbnail" /><br />
+I’ve seen a VIM USB pedal tutorial before that triggers the <code>i</code> key, so we’re able to enter in <em>Insertion</em> mode with our foot.</p>
+<p>I want to build something similar, but want to put effort in practical utility and simplicity. So i thought that trigger the <code>Esc</code> key would be more convenient due to the small, although cumbersome arm movement that requires to reach it. And you know, the <code>i</code> key is just under your finger so there’s no much of a time saving using a pedal.</p>
+<!--more-->
+<p>I’ve decided that the pedal should be directly attached to the keyboard circuitry, so here is what I’ve done.</p>
+<h1 id="materials">Materials</h1>
+<ul>
+<li>Telephone cable (4 wires inside), every kind of cable can be used (we need just 2 wires)</li>
+</ul>
+<div class="figure">
+<img src="../../img/vimpedal/shot1.jpg" class="img-responsive" />
+
+</div>
+<ul>
+<li>NA Interrupter</li>
+</ul>
+<div class="figure">
+<img src="../../img/vimpedal/shot2.jpg" class="img-responsive" />
+
+</div>
+<ul>
+<li>Cassette case</li>
+</ul>
+<div class="figure">
+<img src="../../img/vimpedal/shot3.jpg" class="img-responsive" />
+
+</div>
+<p>Of course you can change this materials with what you have in home.</p>
+<h1 id="construction">Construction</h1>
+<h2 id="software">Software</h2>
+<p>When we push a key an interrupter is activated and two contacts are connected at the keyboard integrated circuit which sends the appropriate <em>ScanCode</em>, which is then converted to a <em>KeyCode</em> that the OS can handle.</p>
+<p>Based on this we need to find out which combination of contacts at the circuitry correspond to the required key, so we have two options for this:</p>
+<ul>
+<li><p>Disassemble the keyboard en follow all the traces from the key to the circuitry (and use a marker for this), but is a little boring and annoying task.</p></li>
+<li><p>Use software that tell us what <em>KeyCode</em> has been received so we can use a wire to connect every possible combination in the keyboard circuitry until we find the correct one. I’m using GNU/Linux so the <code>showkey</code> command will come in handy for this.</p></li>
+</ul>
+<p>If you choose the first option just mark down which two contacts are the appropriate. But if you choose the second option we need no know something: The people who wrote <em>showkey</em> decided that the software should automatically close after 10 seconds after last key press, so we need to deal with this with two more options:</p>
+<ul>
+<li><p>Modify <code>showkey</code> source code to remove that timeout</p></li>
+<li><p>Execute it with a shell infinite loop (I’ve choose this one)</p></li>
+</ul>
+<p>For option number 2 here is the solution (as root):</p>
+<pre><code># while [ 1=1 ]; do showkey -k; sleep 1; done</code></pre>
+<p>This way <code>showkey</code> will show us every key press (press and release).</p>
+<div class="figure">
+<img src="../../img/vimpedal/shot4.jpg" class="img-responsive" />
+
+</div>
+<h2 id="hardware">Hardware</h2>
+<p>Now we can disassemble the keyboard (with the shell loop running), take off the circuitry and use a wire to connect every contact until the appropriate <em>keycode</em> shows up in screen, in this case we’re looking for a <em>keycode</em> <strong>1</strong>, that corresponds with <code>Esc</code> key.</p>
+<p>I’ve found it connecting pin #3 in the first row with pin #5 in the second row.</p>
+<p>Now we can scratch the pins surface a little bit to revel the copper, but just enough so we can solder the wires (a couple millimeters will be ok).</p>
+<p>(In this picture I’ve used incorrect pins. I’ve used pins 5-3 instead of 3-5, sorry..)</p>
+<div class="figure">
+<img src="../../img/vimpedal/shot5.jpg" class="img-responsive" />
+
+</div>
+<p>Now we can solder the wires to the pins:</p>
+<p><img src="../../img/vimpedal/shot6.jpg" class="img-responsive" /> <img src="../../img/vimpedal/shot7.jpg" class="img-responsive" /></p>
+<p>Ok!, now just put the circuitry back in place, and use some hot glue so the wires stay in place.</p>
+<div class="figure">
+<img src="../../img/vimpedal/shot8.jpg" class="img-responsive" />
+
+</div>
+<p>Lets take a look on the pedal side:</p>
+<p>Glue the switch in the cassette case and solder the wires in the interrupter pins.</p>
+<div class="figure">
+<img src="../../img/vimpedal/shot9.jpg" class="img-responsive" />
+
+</div>
+<p>Now we can have our fingers always in the home row while editing.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <footer>
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">PUBLIC KEY</h4>
+                    gpg --keyserver keys.gnupg.net --recv-key 12622B78
+
+                    <h4 class="footer-h4 fspaced">INTERNET DEFENSE LEAGUE</h4>
+                    <a target="_blank" href="http://internetdefenseleague.org/">
+                        <img id="idl-img" alt="Internet Defesen League" src="../../img/idl.png">
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">FSF</h4>
+                    <img id="fsf-img" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                    <h4 class="footer-h4 fspaced">HASKELLERS</h4>
+                    <a target="_blank" href="http://www.haskellers.com/user/4249">
+                        <img id="haskellers-img" alt="I" m a Haskeller' src="../../img/haskellers.png">
+                    </a>
+
+                    <h4 class="footer-h4 fspaced">CREATIVE COMMONS</h4>
+                    <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                        <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                    </a>
+                    <p id="cc-text">
+                        Silly Bytes by Daniel Alejandro Campoverde Carrión
+                        [alx741] is licensed under a
+                        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+
+    </body>
+</html>

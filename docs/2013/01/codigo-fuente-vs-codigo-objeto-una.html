@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>atribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Código Fuente vs Código Objeto, Una falsa dicotomía</h2>
+        <div class="post-date-author">
+            Posted on January 14, 2013
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p>Esta es mi traducción de una versión borrador del articulo “Source vs Object code: a false dichotomy”</p>
+<p>Por:</p>
+<blockquote>
+<p>David S. Touretzky Computer Science Departament Carnegie Mellon University</p>
+</blockquote>
+<p>Julio,2000</p>
+<p>La noción de código fuente y código objeto como clases opuestas de código de computador es una falsa dicotomía común entre no-programadores. El entendimiento publico general es que un programa de computadora es escrito como “Código Fuente” el cual es legible por humanos y no inmediatamente ejecutable por la maquina. El código fuente está supuesto a contener nombres de variables con significados claros y útiles comentarios únicamente para ser leídos por los humanos. Una pieza de software llamada “compilador” debe convertir el código fuente en código objeto para que el programa pueda ser ejecutado. El código objeto no puede ser leído por los humanos; es una secuencia de bytes que codifican una seria de instrucciones de maquina que serán ejecutadas por l microprocesador cuando este corre (ejecuta) el programa.</p>
+<!--more-->
+<p>Estas afirmaciones no son exactamente falsas; son de echo la forma usual de explicar como una computadora funciona. Sin embargo, cualquier intento de dar verdaderas distinciones entre “código fuente” y “código objeto”, o entre el código que es y que no es ejecutable, de inmediato presenta dificultades por que estas dicotomías son solo una conveniente ficción. Los científicos de la computación no ven las cosas de esta manera en lo absoluto. Estos son algunos de los problemas:</p>
+<ol style="list-style-type: decimal">
+<li>“Fuente” y “Objeto” no son clases bien definidas de código. Son términos relativos. Cuando se transforma de un tipo de código a otro, el código fuente es lo que se usa como entrada y el código objeto es lo que se obtiene como salida. El código objeto producto de una transformación es a menudo el código fuente para otro proceso de transformación. Por ejemplo los primeros compiladores C++ y Lisp producían como salida código en C. Así que su entrada es Código fuente C++ o Lisp y su salida Código C, a su vez se usa este como entrada para el compilador de C el cual arroja como salida Código en Assembly, el cual luego es entrada del Ensamblador que finalmente produce código maquina que es directamente ejecutable por un microprocesador.</li>
+</ol>
+<p>En resumen, los programas atraviesan una serie de transformaciones de lenguajes de niveles altos a niveles inferiores. El código assembly que produce un compilador de C como “código objeto” es el código fuente para el ensamblador. El compilador de C de GNU (gcc) arroja código en assembly en lugar de un binario si el usuario lo requiere con la opción -S.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Incluso el código binario maquina es perfectamente legible por humanos. Fue diseñado por humanos después de todo. Puede ser tedioso de leer, pero se puede facilitar la tarea usando un desensamblador para traducir las instrucciones a una forma simbólica en lenguaje assembly. Por ejemplo la instrucción de pentium “add 7 al registro AL” se escribe 0000010000000111 en código maquina; pero es escrito “ADD AL,7” en código simbólico.</p></li>
+<li><p>Los programas legibles por humanos no tienen necesariamente que ser compilados para poder ser ejecutados. La compilación es un proceso que transforma el programa en una forma en la que pueda ser ejecutado de forma más eficiente. Sin embargo una pieza de software llamada “interprete” puede ejecutar el código fuente directamente sin compilar. Los programas corren más lento cuando esta siendo ejecutados por un interprete que cuando son compilados en instrucciones de maquina que el microprocesador puede ejecutar directamente. Pero corren!. Y los interpretes tiene algunas ventajas: son más fáciles de escribir que los compiladores, y son mejores para propósitos de depuración.</p></li>
+</ol>
+<p>Existe un interprete de C llamado EIC disponible en: http://eic.sourceforge.net/ , también existen otros interpretes de C y C++</p>
+<ol start="4" style="list-style-type: decimal">
+<li>El código binario “de maquina” no es necesariamente ejecutable por el microprocesador de una computadora. Lenguajes como Java y Perl compilan a lo que es llamado ‘Byte Code’, o “Código de maquina virtual”. Este es código binario para un idealizado e imaginario procesador que no corresponde con la arquitectura de un procesador comercial particular, como las arquitecturas Pentium, Sparc, o PowerPC. Elcódigo de maquina virtual tiene que ser ejecutado por una pieza de software llamada “interprete de código de byte (Byte code)” el cual simula el procesador imaginario. La ventaja de este enfoque es que permite la rápida implementación de Java o Perl para nuevas arquitecturas, por que el mismo compilador puede ser usado. Solo un nuevo interprete de byte code es necesario. El interprete de byte code es más fácil de escribir que los compiladores.</li>
+</ol>
+<p>Otro enfoque tomado por algunas implementaciones es compilar una parte del byte code de Java en instrucciones nativas de maquina, cuando esta pieza se ejecuta. En este ámbito el byte code de Java se vuelve el “código fuente” y las instrucciones nativas son el “código objeto”.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>El “código binario ejecutable” algunas veces no lo es. Consideremos un ejecutable que corre bajo la arquitectura Pentium y un sistema Windows, este supuesto archivo contiene código maquina nativo y llamadas al sistema para realizar operaciones de entrada/salida. Si este archivo fuese descargado en una Sun SPARC corriendo Unix, o a una PowerPC corriendo Macintosh, no seria directamente ejecutable. Pero no todo está perdido.</li>
+</ol>
+<p>El propietario del SPARC o PowerPC puede construir un emulador de Pentium, para simular el funcionamiento de un procesador Pentium. Y además debe construir una pequeña porción de un emulador de Windows para manejar las llamadas al sistema. Y en ese punto se podría ejecutar el programa. un enfoque alternativo seria escribir un traductor para transformar las instrucciones Pentium a código nativo de SPARC o PowerPC. Esta es una bien conocida técnica en la ciencia de la computación y no es técnicamente difícil.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>El código binario ejecutable puede ser tan comprensible como el código en lenguaje simbólico, como el assembly o lenguajes de más alto nivel como C/C++ o Lisp. El apéndice A muestra un pequeño código en C para computar 5! (5 factorial). El apendice B muestra el equivalente en assembly arrojado por gcc versión 2.95.3 en una Sun UltraSparc 170 corriendo Solaris. El apendice C es la salida binaria producida por el ensamblador (Mostrado en hexadecimal). El apéndice D es el resultado de desensamblar el código, volviendo a lenguaje assembly (Nótese que la linea 20 en el apéndice D contiene una instrucción de comparación de entero, “cmp %o0, 5”. El equivalente hexadecimal es: 80a220055. El apéndice C muestra esta misma secuencia en la linea 000020. La misma instrucción, “cmp %o0, 5”, también aparece en el apéndice B, dos lineas después de “.LL3”. Y el equivalente en código C del apéndice A es “i6”. [La discrepancia 6 vs 5 entre los códigos se debe a la implementación particular de gcc del FOR loop ].</li>
+</ol>
+<p>La lección que resulta de todo esto es:</p>
+<ol style="list-style-type: decimal">
+<li><p>Todo código de computadora es legible por humanos. Algunas formas son más simples que otras para leer.</p></li>
+<li><p>Todo código de computadora es expresivo. Muchas de las ideas expresadas en C son expresadas en assembly que resulta de la compilación del código C, y lo mismo para el código maquina generado por el ensamblador. Algún contenido se perderá, como los comentarios y los nombres de variables. Pero algunas ideas que están implícitas en el código fuente serán más aparentes en el relativo código objeto. Como la expresión de secuencia de instrucciones de operaciones de procesador para obtener el mejor rendimiento.</p></li>
+<li><p>Todo código de computadora es ejecutable. En algunas formas resulta más ventajosas que otras. Pero en principio la transformación no es obligatoria.</p></li>
+<li><p>“Código Fuente” y “Código Objeto” son términos relativos, no categorías absolutas.</p></li>
+<li><p>El código en sus distintas transformaciones expresan el mismo algoritmo.</p></li>
+</ol>
+<h4 id="apéndice-a-fuente-en-c-file-fact.c">Apéndice A: Fuente en C, file fact.c</h4>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span>
+<span class="dt">void</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[]) {
+  <span class="dt">int</span> i, result;
+  result = <span class="dv">1</span>;
+  <span class="cf">for</span> (i = <span class="dv">1</span>; i&lt;<span class="dv">6</span>; i++) {
+    result = result * i;
+  }
+  printf (<span class="st">&quot;Result is:  %d.</span><span class="sc">\n</span><span class="st">&quot;</span>,result);
+}</code></pre></div>
+<h4 id="apéndice-b-assembly-file-fact.s-producido-por-gcc--s-fact.c">Apéndice B: Assembly, file fact.s (producido por: gcc -S fact.c)</h4>
+<pre><code>.file   &quot;fact.c&quot;
+gcc2_compiled.:
+        .global .umul
+.section        &quot;.rodata&quot;
+        .align 8
+.LLC0:
+        .asciz  &quot;Result is:  %d.\n&quot;
+.section        &quot;.text&quot;
+        .align 4
+        .global main
+        .type    main,#function
+        .proc   020
+main:
+        !#PROLOGUE# 0
+        save    %sp, -120, %sp
+        !#PROLOGUE# 1
+        st      %i0, [%fp+68]
+        st      %i1, [%fp+72]
+        mov     1, %o0
+        st      %o0, [%fp-24]
+        mov     1, %o0
+        st      %o0, [%fp-20]
+.LL3:
+        ld      [%fp-20], %o0
+        cmp     %o0, 5
+        ble     .LL6
+        nop
+        b       .LL4
+         nop
+.LL6:
+        ld      [%fp-24], %o0
+        ld      [%fp-20], %o1
+        call    .umul, 0
+         nop
+        st      %o0, [%fp-24]
+.LL5:
+        ld      [%fp-20], %o0
+        add     %o0, 1, %o1
+        st      %o1, [%fp-20]
+        b       .LL3
+         nop
+.LL4:
+        sethi   %hi(.LLC0), %o1
+        or      %o1, %lo(.LLC0), %o0
+        ld      [%fp-24], %o1
+        call    printf, 0
+         nop
+.LL2:
+        ret
+        restore
+.LLfe1:
+        .size    main,.LLfe1-main
+        .ident  &quot;GCC: (GNU) 2.95.2 19991024 (release)&quot;</code></pre>
+<h4 id="apéndice-c-fichero-binario-file-fact.o-producido-por-gcc--c-fact.c-extraído-por-od--x-fact.o">Apéndice C: Fichero binario, file fact.o (Producido por: gcc -c fact.c, extraído por: od -x fact.o )</h4>
+<pre><code>0000000 7f45 4c46 0102 0100 0000 0000 0000 0000
+0000020 0001 0002 0000 0001 0000 0000 0000 0000
+0000040 0000 0234 0000 0000 0034 0000 0000 0028
+0000060 0008 0001 002e 7368 7374 7274 6162 002e
+0000100 7465 7874 002e 726f 6461 7461 002e 7379
+0000120 6d74 6162 002e 7374 7274 6162 002e 7265
+0000140 6c61 2e74 6578 7400 2e63 6f6d 6d65 6e74
+0000160 0000 0000 9de3 bf88 f027 a044 f227 a048
+0000200 9010 2001 d027 bfe8 9010 2001 d027 bfec
+0000220 d007 bfec 80a2 2005 0480 0004 0100 0000
+0000240 1080 000c 0100 0000 d007 bfe8 d207 bfec
+0000260 4000 0000 0100 0000 d027 bfe8 d007 bfec
+0000300 9202 2001 d227 bfec 10bf fff2 0100 0000
+0000320 1300 0000 9012 6000 d207 bfe8 4000 0000
+0000340 0100 0000 81c7 e008 81e8 0000 0000 0000
+0000360 5265 7375 6c74 2069 733a 2020 2564 2e0a
+0000400 0000 0000 0000 0001 0000 0000 0000 0000
+0000420 0400 fff1 0000 0001 0000 0000 0000 0000
+0000440 0400 fff1 0000 0000 0000 0000 0000 0000
+0000460 0300 0003 0000 0008 0000 0000 0000 0000
+0000500 0000 0002 0000 0000 0000 0000 0000 0000
+0000520 0300 0002 0000 0017 0000 0000 0000 0000
+0000540 1000 0000 0000 001d 0000 0000 0000 0000
+0000560 1000 0000 0000 0024 0000 0000 0000 0078
+0000600 1200 0002 0066 6163 742e 6300 6763 6332
+0000620 5f63 6f6d 7069 6c65 642e 002e 756d 756c
+0000640 0070 7269 6e74 6600 6d61 696e 0000 0000
+0000660 0000 003c 0000 0507 0000 0000 0000 005c
+0000700 0000 0209 0000 0000 0000 0060 0000 020c
+0000720 0000 0000 0000 0068 0000 0607 0000 0000
+0000740 0061 733a 2057 6f72 6b53 686f 7020 436f
+0000760 6d70 696c 6572 7320 342e 3220 6465 7620
+0001000 3133 204d 6179 2031 3939 360a 0047 4343
+0001020 3a20 2847 4e55 2920 322e 3935 2e32 2031
+0001040 3939 3931 3032 3420 2872 656c 6561 7365
+0001060 2900 0000 0000 0000 0000 0000 0000 0000
+0001100 0000 0000 0000 0000 0000 0000 0000 0000
+0001120 0000 0000 0000 0000 0000 0000 0000 0001
+0001140 0000 0003 0000 0000 0000 0000 0000 0034
+0001160 0000 003d 0000 0000 0000 0000 0000 0001
+0001200 0000 0000 0000 000b 0000 0001 0000 0006
+0001220 0000 0000 0000 0074 0000 0078 0000 0000
+0001240 0000 0000 0000 0004 0000 0000 0000 0011
+0001260 0000 0001 0000 0002 0000 0000 0000 00f0
+0001300 0000 0011 0000 0000 0000 0000 0000 0008
+0001320 0000 0000 0000 0019 0000 0002 0000 0002
+0001340 0000 0000 0000 0104 0000 0080 0000 0005
+0001360 0000 0005 0000 0004 0000 0010 0000 0021
+0001400 0000 0003 0000 0002 0000 0000 0000 0184
+0001420 0000 0029 0000 0000 0000 0000 0000 0001
+0001440 0000 0000 0000 0029 0000 0004 0000 0002
+0001460 0000 0000 0000 01b0 0000 0030 0000 0004
+0001500 0000 0002 0000 0004 0000 000c 0000 0034
+0001520 0000 0001 0000 0000 0000 0000 0000 01e0
+0001540 0000 0052 0000 0000 0000 0000 0000 0001
+0001560 0000 0000
+0001564</code></pre>
+<h4 id="apéndice-d-código-desensamblado-de-fact.o-producido-por-dis-fact.o">Apéndice D: Código desensamblado de fact.o (producido por: dis fact.o)</h4>
+<pre><code>section .text
+main()
+           0:  9d e3 bf 88         save         %sp, -120, %sp
+           4:  f0 27 a0 44         st           %i0, [%fp + 68]
+           8:  f2 27 a0 48         st           %i1, [%fp + 72]
+           c:  90 10 20 01         mov          1, %o0
+          10:  d0 27 bf e8         st           %o0, [%fp - 24]
+          14:  90 10 20 01         mov          1, %o0
+          18:  d0 27 bf ec         st           %o0, [%fp - 20]
+          1c:  d0 07 bf ec         ld           [%fp - 20], %o0
+          20:  80 a2 20 05         cmp          %o0, 5
+          24:  04 80 00 04         ble          0x34
+          28:  01 00 00 00         nop
+          2c:  10 80 00 0c         ba           0x5c
+          30:  01 00 00 00         nop
+          34:  d0 07 bf e8         ld           [%fp - 24], %o0
+          38:  d2 07 bf ec         ld           [%fp - 20], %o1
+          3c:  40 00 00 00         call         0x3c
+          40:  01 00 00 00         nop
+          44:  d0 27 bf e8         st           %o0, [%fp - 24]
+          48:  d0 07 bf ec         ld           [%fp - 20], %o0
+          4c:  92 02 20 01         add          %o0, 1, %o1
+          50:  d2 27 bf ec         st           %o1, [%fp - 20]
+          54:  10 bf ff f2         ba           0x1c
+          58:  01 00 00 00         nop
+          5c:  13 00 00 00         sethi        %hi(gcc2_compiled.), %o1
+          60:  90 12 60 00         or           %o1, gcc2_compiled., %o0       ! gcc2_compiled.
+          64:  d2 07 bf e8         ld           [%fp - 24], %o1
+          68:  40 00 00 00         call         0x68
+          6c:  01 00 00 00         nop
+          70:  81 c7 e0 08         ret
+          74:  81 e8 00 00         restore</code></pre>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <footer>
+            <div class="row">
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">PUBLIC KEY</h4>
+                    gpg --keyserver keys.gnupg.net --recv-key 12622B78
+
+                    <h4 class="footer-h4 fspaced">INTERNET DEFENSE LEAGUE</h4>
+                    <a target="_blank" href="http://internetdefenseleague.org/">
+                        <img id="idl-img" alt="Internet Defesen League" src="../../img/idl.png">
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-md-6">
+                    <h4 class="footer-h4">FSF</h4>
+                    <img id="fsf-img" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                    <h4 class="footer-h4 fspaced">HASKELLERS</h4>
+                    <a target="_blank" href="http://www.haskellers.com/user/4249">
+                        <img id="haskellers-img" alt="I" m a Haskeller' src="../../img/haskellers.png">
+                    </a>
+
+                    <h4 class="footer-h4 fspaced">CREATIVE COMMONS</h4>
+                    <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                        <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                    </a>
+                    <p id="cc-text">
+                        Silly Bytes by Daniel Alejandro Campoverde Carrión
+                        [alx741] is licensed under a
+                        <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+
+    </body>
+</html>
