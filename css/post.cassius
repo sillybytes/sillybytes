@@ -27,6 +27,7 @@
         font-family: Droid Serif;
     h1
         font-size: 1.4em;
+        margin-top: 60px;
     h2
         font-size: 1.2em;
     .post-title
@@ -51,6 +52,8 @@
             color: #555;
             text-shadow: 0px 0px 10px #aaa;
             letter-spacing: 1px;
+            p
+                margin: 0px 0px;
         blockquote:before
             color: #999;
             content: "\"";
