@@ -5,6 +5,11 @@
     padding: 10px;
     max-height: 320px;
 
+.img-left
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+
 .post
     background-color: #fdf6e3;
     border-radius: 10px;
