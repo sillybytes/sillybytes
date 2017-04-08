@@ -20,7 +20,7 @@ html, body
         margin-top: 60px;
 
 header
-    background-color: rgba(256, 256, 256, 0.7);
+    background-color: rgba(256, 256, 256, 0.8);
     #logo
         max-width: 60%;
         max-height: 180px;
@@ -29,7 +29,7 @@ header
         background: transparent;
 
 #blog
-    background-color: rgba(256, 256, 256, 0.7);
+    background-color: rgba(256, 256, 256, 0.8);
 
 #sidebar
     text-align: center;
@@ -104,12 +104,10 @@ header
             margin: 10px 0px;
             min-width: 100px;
         #cc-text
-            color: inherit;
+            color: #586e75;
             margin-top: 5px;
-            font-size: 1.4em;
+            font-size: 1.5em;
             text-align: center;
-            a
-                color: black;
             a:hover
                 text-decoration: underline;
 
