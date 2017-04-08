@@ -56,7 +56,7 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
+            posts <- fmap (take 10) $ recentFirst =<< loadAllSnapshots "posts/**" "content"
             let indexCtx =
                     listField "posts" teaserCtx (return posts) <>
                     defaultContext
