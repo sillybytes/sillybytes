@@ -5,7 +5,7 @@
         display: block;
         font-size: 0.9em;
         font-style: italic;
-        margin-bottom: 15px;
+        margin-bottom: -20px;
     .post-prev-title
         color: rgb(181, 137, 0);
         display: block;
