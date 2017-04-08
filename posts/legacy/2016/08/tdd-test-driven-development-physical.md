@@ -23,7 +23,7 @@ how to compile and use.
 > you a better programmer or TDD practitioner, but it looks cool :)
 
 Lets explain how it works, it's very simple:
-
+<!--more-->
 
 # Hardware
 
@@ -32,8 +32,6 @@ them on Ebay for example, chances are it comes with an Arduino bootloader, which
 gets in the way because we can perfectly use the internal oscillator instead of
 an external 16Mhz crystal. So the first thing is to change de fuses to the
 default ones:
-
-<!--more-->
 
 ```shell
 # avrdude -p m328p -c usbasp -U lfuse:w:0x62:m -U hfuse:w:0xd9:m
