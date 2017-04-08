@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">From PIC to AVR</h2>
+        <div class="post-date-author">
+            Posted on June 17, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/picavr/thumbnail.png" id="thumbnail" /><br />
+This is my humble contribution to the <em>PIC vs AVR holy war</em>.</p>
+<p>TL;DR: I was a PIC user but decided I hate it, switched to AVR and love it!</p>
+<p><a href="https://en.wikipedia.org/wiki/PIC_microcontroller">PIC</a> from Microchip and <a href="https://en.wikipedia.org/wiki/Atmel_AVR">AVR</a> from Atmel are both wonderful microcontrollers for hobbyist and professional as well (I am a hobbyist only if you’re wondering).</p>
+<p>I used to love PIC microcontrollers and originally choose them because they are the most widely available in my location. But there are just so many annoyances that AVR solves so wonderfully! <!--more--></p>
+<h1 id="hardware">Hardware</h1>
+<p>I’m referring to programming hardware here. Then only feasible way I have to program a PIC uC currently is using my <a href="http://silly-bytes.blogspot.com/2013/08/programando-pics-en-gnulinux-hardware-y.html">parallel port PIC programmer</a> and the completely forgotten, unmaintained <em>Odyssey</em> software.</p>
+<p>The only feasible way you say? Yes!, getting a PICkit (2,3) in my location requires a $100 (USD) budget. Any other solution like PICkit clones are not much cheaper.</p>
+<p>I’ve also tried the <a href="http://www.usbpicprog.org">usbpicprog</a> but didn’t get it to work. Compiling the host software requires to build not only the CLI (the only I want) but also the bloated GUI. Burning the bootloader is easy, but burning the firmware using the bootloader requires me to use <em>piklab</em> IDE, and I <a href="http://silly-bytes.blogspot.com/2016/03/why-do-i-hate-ides.htm">hate IDE’s!!</a></p>
+<p>But the price is the least of the impediments. Using an original Microchip’s PICkit or a clone requires using the <em>pk2cmd</em> <strong>privative</strong> software and doing anything outside MPLAB is a major PITA.</p>
+<p>AVR on the other hand allows me to program chips so easily and for so cheap!, A DAPA or DASA programmer is simple, cheap, fast. A USBTiny or a USBASP is so easy and so cheap to get online, and every programmer can be easily used with the completely awesome <em>avrdude</em> CLI software.</p>
+<h1 id="software">Software</h1>
+<h2 id="programming">Programming</h2>
+<p>Yes, Microchip provides a complete, fully compatible IDE (MPLAB) that can run in Unix* systems and can use PICkit. <a href="http://silly-bytes.blogspot.com/2016/03/why-do-i-hate-ides.htm">But using an IDE bothers me</a>, and using <strong>privative</strong> software that only works with <strong>privative</strong> hardware bothers me even more!</p>
+<p>I want; I demand! A Free Software (Free as in Freedom), Command Line interface for controlling a Free (Open source is Ok for this) programmer hardware that I can build my self and doesn’t takes a shit load of money from my wallet.</p>
+<p>The <em>Odyssey</em> Unix* software that I’ve mentioned before is a bless!, but getting (Free) software for a Serial programmer, a PICkit or a PICkit clone is impossible. Nobody cares about PIC Free tooling, just go and use all the privative, restrictive stuff that Microchip pushes on you.</p>
+<p><em>Avrdude</em> solves just everything! An unified (GPL) tool that can drive any programmer with any hardware interface. I absolutely love it!</p>
+<h2 id="compiler">Compiler</h2>
+<p>The same problem here, Microchips provide a freeware (<strong>privative</strong>) compiler –that even restricts some optimization for the freeware user– and the only sane way to use it is thought the bloated IDE!</p>
+<p>The amazing <a href="http://sdcc.sourceforge.net/">SDCC</a> solves this… Almost… Look, I really like SDCC, is an excellent Free Software compiler! But the PIC port is not that good, and using it still requires you to use non-free Microchip’s header files and linker mappings.</p>
+<p>With AVR, you use <em>GCC</em>. YES! The GNU freaking C compiler!! Isn’t that completely awesome!? And you even get a fantastic fully featured GPL <a href="http://www.nongnu.org/avr-libc/">avr-libc</a> on top of that!</p>
+<h1 id="community">Community</h1>
+<p>I’ve always struggle looking for PIC information. Sure there is a lot out there, Microchip’s official documentation is very good and professional, but even in the Microchip’s forums you’re not able to get the level of community help you get from AVR’s community.</p>
+<p>AVR has a hacker/hobbyist/professional Free Software and Open Hardware centered community that makes it so much better overall.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>All that I’ve presented can vary enormously depending on what the user wants/likes to use.</p>
+<p>For me, PIC is horrible because I hate IDE’s I want to use CLI software only that I can easily script with, adapt to powerful text editors, run on remote machines over network and so on. But there is people that hate the command line interface and can’t live without an IDE, so the reasons I don’t like PIC and love AVR might be the reasons is the opposite for you.</p>
+<p>Its all about <strong>tooling</strong>. When I say “I don’t like PIC” or “I hate PIC”, what I mean is: “I don’t like PIC <strong>tooling</strong>”. Both PIC and AVR are very powerful and comparable hardware and I like a lot both <em>devices</em>. It’s just PIC tooling is hell, while AVR tooling is heaven… With LED’s… And angels… And beer… Free as in freedom beer…</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

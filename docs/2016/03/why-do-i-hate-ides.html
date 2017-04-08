@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Why I hate IDEs</h2>
+        <div class="post-date-author">
+            Posted on March 16, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/hateide/thumbnail.png" id="thumbnail" /><br />
+Lets start by taking off of the discussion some important things:</p>
+<ul>
+<li><p>Using an IDE and taking advantage of what it has to offer doesn’t mean you’re a bad programmer, and using a good text editor doesn’t mean you’re a good one.</p></li>
+<li><p>Using an IDE has the <strong>potential</strong> to turn you into a bad programmer.</p></li>
+<li><p>Relaying on an IDE can make you a bad programmer.</p></li>
+<li><p><strong>Depending</strong> on an IDE means your a bad programmer.</p></li>
+</ul>
+<p>I think a lot of people will agree with this, so lets move on.</p>
+<p>I’ll keep updating this list in the future, if you have something you’d like to be added please let me know.</p>
+<!--more-->
+<h1 id="so-what-is-wrong-with-ides">So what is wrong with IDEs?</h1>
+<h2 id="extra-layer-of-issues-and-bugs">Extra layer of issues and bugs</h2>
+<p>IDEs usually require a bit (some times a lot) of configuration to do the job, and so it becomes yet a another source of things that can go wrong.</p>
+<ul>
+<li>Does the developing server doesn’t run? Chances are it’s the IDE fault, not your code.</li>
+<li>The code doesn’t compile? Well, your code is probably fine, it’s just the IDE doesn’t know shit about the libraries, or maybe some nasty configuration is needed.</li>
+</ul>
+<h2 id="dont-mess-up-with-my-files">Don’t mess up with my files!</h2>
+<p>I know better which files should be where, or contain what. Stop making my directory tree a mess.</p>
+<h2 id="dont-mess-up-with-my-version-control-system">Don’t mess up with my version control system!</h2>
+<p>A lot of IDEs start randomly touching the version control system without the programmers consent, and end up just screwing it. Some IDEs don’t do such a thing by default, but some others do. Shame.</p>
+<h2 id="lots-of-very-basic-and-common-operations-require-a-mouse-click">Lots of very basic and common operations require a mouse click</h2>
+<p>Want to compile? Click here. Want to debug? Click over there. Want to load a file? Click here and repeat till you find the file you want.</p>
+<p>Menu-driven programming is stupid, stop it!</p>
+<p>Yes, there are usually keyboard hot keys, but that’s not always the case.</p>
+<h2 id="documentation-becomes-optional-if-the-ide-has-button-for-that">Documentation becomes optional if the IDE has button for that</h2>
+<p>When I want to use a library or do something I want documentation!, don’t just tell me “click there and it will automatically work”.</p>
+<p>Sometimes I want to create some configuration files or code snippet by my self, to say “Click here, then click there” is NOT valid documentation; I want to know <strong>how</strong> it is made from scratch, even if I’m going to automatically generate it afterwards.</p>
+<h2 id="stop-wasting-my-pixels">Stop wasting my pixels!</h2>
+<p>The code! I want the code to be the main thing in my screen, not just a tiny spot in the center.</p>
+<p>Stop using half of my screen space with useless icons to perform actions that <strong>must</strong> have a keyboard short cut.</p>
+<h2 id="bad-programming-languages-enablers">Bad programming languages enablers</h2>
+<p><a href="https://dzone.com/articles/ide-bad-programming-language">IDEs are bad programming languages enablers.</a></p>
+<p>If it’s hard to write software in a language using a text editor, and an IDE becomes vital; That tells us more about the language than the editor: needless verbosity, cumbersome syntax and import statements that are hard to write by hand are examples of problems of the <strong>language</strong>. If your language needs a big, heavy, slow and bloated piece of software to be used, then your language sucks.</p>
+<h2 id="an-editor-please-a-good-editor">An editor please! A good editor!!!</h2>
+<p>I work with text! I want and I need the text editing to be great. The code is well structured and thus it allows for neat editing features to be implemented.</p>
+<p>IDE text editing mechanisms should be better than those of a word processor.</p>
+<p>Having to use the mouse for basic tasks is already bad enough, but having to use the mouse to edit text? We can do better.</p>
+<p>Syntax checking, completion, etc. All of that is nice, but the editor is still the most important part.</p>
+<h2 id="dont-force-me-to-use-the-mouse">Don’t force me to use the mouse</h2>
+<p>Don’t use the mouse! Code is text, I want to keep my hands in the keyboard.</p>
+<p>Programming is already a mental exhausting task, there is no need to make it a <em>physically</em> exhausting task as well. Moving your hands from the keyboard to the mouse back and ford thousands of times like you’re doing cardio to reach some stupid buttons in a GUI or to accomplish text editing because the IDE’s editor sucks is just plain stupid, it hurts your arms, shoulders and back.</p>
+<h2 id="give-me-my-resources-back">Give me my resources back!</h2>
+<p>I want all that memory and CPU for the compilation and testing, not for the code editing!</p>
+<p>For me, as a rule of thumb, if the tool I use to edit code takes more than 500 milliseconds to start, it is unacceptable. If it needs more than a few MB of memory or if it consumes more than 5% of my CPU time, it’s just atrocious.</p>
+<p>In other words: if it takes more than 1 second to load, it’s stupid.</p>
+<h2 id="programmable-or-die">Programmable or die</h2>
+<p>If you don’t have something you would like to have, or you have an idea to improve your work flow you should be able to just implement it! (Emacs, Vim, Sublime and Atom are good examples).</p>
+<p>A lot of IDEs allow for a fair bit of this via plugin mechanisms, but it’s most of the time not flexible enough.</p>
+<h2 id="do-one-thing-well">Do one thing well</h2>
+<p>Combine small, well written specialized tools following the UNIX philosophy, don’t put everything in one gigantic and horrible heap of crap.</p>
+<p>If you need to format your code, lint it, compile it, do version control, search thought the codebase, or any other common task, you should leverage existing pieces of software that are good at doing specialized tasks. Don’t write one bloated program to do everything and takes half an hour to load.</p>
+<h2 id="ide-dependent-libraries">IDE dependent libraries?</h2>
+<p>How on earth is it possible for a library to work on an IDE but not on another?</p>
+<p>I’ve seen this quite a bit on C/C++ targeted IDEs. It’s already bad enough for it to be compiler dependent in some cases, but IDE dependent? You got to be kidding me!</p>
+<h2 id="dont-spam-me">Don’t spam me</h2>
+<p>Can you please stop dropping pop ups and hints to me so I can see the freaking code?</p>
+<p>Update available!, New button to click!, Want me to do <em>insert task here</em>?, Want to buy cheap Viagra?. If I want something, I will <strong>ask for it</strong>!</p>
+<p>Fast, simple and automatic is one thing; Treating the programmer as a retarded is another.</p>
+<h2 id="give-me-my-codebase-back">Give me my codebase back!</h2>
+<p>Let me compile without the IDE! Some IDEs tend to be greedy in such a way that compiling outside of the IDE becomes nearly impossible.</p>
+<p>Want to compile from your terminal? Too bad, this codebase was created with XYZ IDE and so using it is the only way to make it work.</p>
+<p>This also applies to the redistribution of software as <em>IDE projects</em>, making it useless if you’re not using the exact same IDE.</p>
+<h2 id="i-know-what-im-doing">I know what I’m doing</h2>
+<p>If the IDE knows more than you, you’re a moron. Programmers don’t like magic. Programmers’s job is to <strong>know</strong> how things work.</p>
+<p>This implies that you could be able to do your work <strong>without</strong> and IDE. This doesn’t means that you necessarily should, but if you <strong>can’t</strong>, then you’re not much of a programmer.</p>
+<p>Automation is good!, but if you must use an IDE to implement, lets say, a <em>SOAP</em> web service in a <em>JSF</em> application because there is no other way in which you don’t have to go through a traumatic process, then you are under lots of shit.</p>
+<p>If you can’t do something without an IDE, your language sucks, you suck, or both.</p>
+<p>Of course not every IDE has all those problems at the same time but just a subset of them.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

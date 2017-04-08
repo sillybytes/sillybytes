@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">PIC16F876A conversión analógica digital + UART (Ensamblador)</h2>
+        <div class="post-date-author">
+            Posted on July 14, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/picuart/thumbnail.png" id="thumbnail" /><br />
+NOTE: This post is available in Spanish only. Please use a software translator.</p>
+<p><a href="http://silly-bytes.blogspot.com/2016/06/from-pic-to-avr.html">He dejado de usar microcontroladores PIC por los motivos explicados en este post</a>; Pero voy a dedicar este post para tratar y explicar un programa sencillo escrito en ensamblador para el <strong>PIC16F876A</strong>.</p>
+<p>El objetivo es el siguiente:</p>
+<p>Se desea usar el microcontrolador para llevar a cabo la conversión analógica-digital de una tensión variable (un LDR o un potenciómetro por ejemplo) y transmitir el resultado usando la UART. Además debe ser posible recibir por la UART un byte que debe alterar la configuración del Conversor Análogo Digital (DAC) interno del microcontrolador para, por ejemplo, cambiar el canal de entrada de la señal analógica o modificar la velocidad del reloj de conversión.</p>
+<!--more-->
+<p>El código ha sido ensamblado con el ensamblador de GNU <em>gpasm</em> del juego de herramientas <a href="http://gputils.sourceforge.net/">gputils</a>, pero debería ser perfectamente compatible con las herramientas MPLAB de Microchip que no uso porque <a href="http://silly-bytes.blogspot.com/2016/03/why-do-i-hate-ides.html">odio los IDEs</a>. En cualquier caso la explicación y el 99% del código debería ser útil sin modificación alguna.</p>
+<p>Este post se deberá leer en paralelo junto con el <em>datasheet</em> del microcontrolador en cuestión <strong>PIC16F876A</strong> que se puede encontrar aquí: http://ww1.microchip.com/downloads/en/DeviceDoc/39582C.pdf</p>
+<p>Además tener en cuenta los pines del microcontrolador:</p>
+<div class="figure">
+<img src="../../img/picuart/scheme.jpg" class="img-responsive" />
+
+</div>
+<p>El código completo <a href="https://github.com/Silly-Bytes/pic_asm_uart-adc/blob/master/code.asm">se encuentra aquí</a>.</p>
+<h2 id="declaración-de-registros-y-variables">Declaración de registros y variables</h2>
+<p>Empezamos examinando y explicando el código:</p>
+<pre><code>list p=16f876A</code></pre>
+<p>La primera linea le dirá al ensamblador los mapas de memoria que el enlazador deberá usar (el microcontrolador que estamos usando).</p>
+<pre><code>; Declaración de direcciones de memoria
+; Datasheet pagina 17, figura 2-3
+PORTA      EQU 0x05
+PORTB      EQU 0x06
+TRISA      EQU H'85'
+TRISB      EQU H'86'
+TRISC      EQU H'87'
+RP0        EQU H'05'
+RP1        EQU H'06'
+STATUS     EQU H'03'
+DATO       EQU H'21'
+ADCON0     EQU H'1F'
+ADCON1     EQU H'9F'
+PIR1       EQU H'0C'
+INTCON     EQU H'0B'
+PIE1       EQU H'8C'
+ADRESH     EQU H'1E'
+ADRESL     EQU H'9E'
+SPBRG      EQU H'99'
+TXSTA      EQU H'98'
+RCSTA      EQU H'18'
+TXREG      EQU H'19'
+RCREG      EQU H'1A'
+OPTION_REG EQU H'81'
+IRP        EQU H'07'</code></pre>
+<p>En el Datasheet, pagina 17, figura 2-3 se puede ver el mapa completo de memoria del microcontrolador. En estas lineas declaramos los nombres y direcciones (en hexadecimal) de los mismos para usarlos en el código con más facilidad. La palabra <code>EQU</code> asigna el nombre de la izquierda al valor de la derecha. Para declarar un valor hexadecimal se usa el prefijo <code>0x</code>.</p>
+<h2 id="inicialización-y-configuración">Inicialización y configuración</h2>
+<pre><code>INIT
+    org 0
+
+    ; Selección BANCO 1
+    ; Datasheet pagina 16, sección 2.2
+    BSF STATUS,RP0
+    BCF STATUS,RP1</code></pre>
+<p>La palabra <code>INIT</code> es la declaración de una <em>etiqueta</em> y se puede cambiar por cualquier palabra que se desee, es el nombre con el cual nos vamos a referir a esta sección de código desde otras partes del programa y que podremos invocar usando dicha etiqueta.</p>
+<p>La directiva <code>org 0</code> indica al enlazador que el código a continuación deberá ser colocado desde la dirección <strong>0</strong> de la memoria de programa.</p>
+<p>Las instrucciones <code>BSF STATUS,RP0</code> y <code>BCF STATUS,RP1</code> hacen un cambio al <strong>banco de memoria 1</strong>. La memoria del microcontrolador está dividida en <strong>bancos</strong> y es necesario <em>cambiarnos</em> al banco donde reside el registro que queremos modificar en cada momento, con lo cual este par de instrucciones se encuentra con usar para cambiar los bancos de memoria.</p>
+<h3 id="configuración-de-los-puertos-de-entradasalida">Configuración de los puertos de entrada/salida</h3>
+<pre><code>;;; Configuración de puertos IO
+;;; Datasheet pagina 41
+; El puerto A es de entrada
+MOVLW   B'00111111'
+MOVWF   TRISA
+; El puerto B es de entrada
+MOVLW   B'00000000'
+MOVWF   TRISB
+; Puerto C: pin TX es salida, pin RX es entrada
+MOVLW   B'10001111'
+MOVWF   TRISC</code></pre>
+<p>La instrucción <code>MOVLW</code> se usa para mover un valor <strong>literal</strong> al registro de trabajo <strong>W</strong>.</p>
+<p>La instrucción <code>MOVWF</code> se usa para mover el valor que se encuentra en el registro de trabajo <strong>W</strong> a un registro.</p>
+<p>De esta forma para colocar un valor arbitrario en un registro es necesario colocarlo primero en el registro de trabajo <strong>W</strong> usando la instrucción <code>MOVLW</code> y luego moverlo al registro deseado con la instrucción <code>MOVWF</code>.</p>
+<p>Para indicar que el valor usado es <strong>binario</strong> se usa como prefijo una <strong>B</strong>.</p>
+<p>El <strong>puerto A</strong> contiene los pines del conversor ADC por lo que se configuran como entradas. El <strong>puerto B</strong> se configura como salida para, opcionalmente, colocar LEDs que sirvan como indicadores visuales. El <strong>puerto C</strong> contiene los pines <strong>TX</strong> y <strong>RX</strong> usados para la comunicación UART con lo cual se configuran para salida y entrada respectivamente.</p>
+<h3 id="configuración-del-conversor-adc">Configuración del conversor ADC</h3>
+<pre><code>;;; Configuración de puerto ADC
+; Todas las entradas son analógicas
+; Datasheet pagina 128
+MOVLW   B'10000000'
+MOVWF   ADCON1</code></pre>
+<p>La configuración del conversor ADC será recibida usando la comunicación UART, sin embargo es necesario configurar de antemano que pines serán analógicos y que pines serán digitales. No usaremos pines digitales en este puerto, así que se configuran todos como analógicos según la tabla de la pagina 128 del Datasheet.</p>
+<h3 id="configuración-de-la-uart">Configuración de la UART</h3>
+<p>La comunicación serial UART puede usarse para comunicar el microcontrolador con una computadora u otro dispositivo como un modulo bluetooth que a su vez se puede usar para comunicar con un teléfono inteligente. El dispositivo con el que se comunique es irrelevante para este post y el código es el mismo en cualquier caso.</p>
+<p>Nótese que los registros que se configuran se encuentran en bancos distintos con lo cual es necesario hacer el <em>cambio de banco</em> en cada paso.</p>
+<pre><code>;;; Configuración UART
+; Banco 1
+BSF STATUS,RP0
+BCF STATUS,RP1
+; 19200 Baudios
+; Datasheet pagina 114, tabla 10-4
+MOVLW   .12
+MOVWF   SPBRG</code></pre>
+<p>El registro <code>SPBRG</code> o “Generador de baudios” recibe un valor (listado en la tabla) dependiendo de la velocidad a la cual nos queremos comunicar, de la frecuencia a la que se use el microcontrolador y el porcentaje de error que estamos dispuestos a tolerar en la comunicación. Dada la frecuencia de un reloj de 4Mhz usado y la necesidad de una comunicación a 19200 Baudios, la tabla indica usar un valor <strong>decimal</strong> de <code>12</code>. Para indicar que el valor usado es <strong>decimal</strong> se usa como prefijo un punto <code>.</code>.</p>
+<pre><code>; Registro de transmisión
+MOVLW   B'10100100'
+MOVWF   TXSTA</code></pre>
+<p>El registro <code>TXSTA</code> de la pagina 111 se configura con los valores adecuados para configurar una comunicación de 8 bits de alta velocidad, asíncrona y para activar los mecanismos de transmisión.</p>
+<pre><code>; Banco 0
+BCF STATUS,RP0
+BCF STATUS,RP1
+; Registro de recepción
+MOVLW   B'10010000'
+MOVWF   RCSTA
+BSF RCSTA,4</code></pre>
+<p>El registro <code>RCSTA</code> (en el banco 0) de la pagina 112 se configura para una comunicación de 8 bits, asíncrona y se activan los mecanismos de recepción.</p>
+<h2 id="programa-principal">Programa principal</h2>
+<p>El programa principal deberá esperar a que un byte para configurar el conversor ADC llegue por la UART, tomar un valor de tensión y llevar a cabo la conversión para finalmente transmitir el resultado por la UART enviando primero el byte bajo <code>ADRESL</code> y luego el byte alto <code>ADRESH</code>.</p>
+<h3 id="configuración">Configuración</h3>
+<pre><code>;;; Esperar primer byte de configuración
+ESPERAR_CONFIG
+    BTFSS   PIR1,5
+    GOTO    ESPERAR_CONFIG</code></pre>
+<p>El pin numero <code>5</code> del registro <code>PIR1</code> indicará que un dato ha llegado por la UART.</p>
+<p>La instrucción <code>BTFSS</code> verificará el bit numero <code>5</code> del registro <code>PIR1</code> y se <strong>saltará</strong> la siguiente instrucción si el bit es igual a <code>1</code>. De esta forma mientras no llegue el dato necesario la instrucción <code>GOTO</code> se ejecuta y el microcontrolador se queda en un bucle, pero cuando un dato es recibido la instrucción <code>GOTO</code> es <strong>saltada</strong> y el programa puede continuar.</p>
+<pre><code>    ; Colocar byte recibido en la configuración ADCON0 del conversor ADC
+    BCF   STATUS,RP0
+    BCF   STATUS,RP1
+    MOVF  RCREG,W
+    MOVWF ADCON0
+    ; Vaciar el bit de recepción
+    BCF   PIR1,6</code></pre>
+<p>El registro <code>RCREG</code> contiene el dato recibido por la UART, el cual se coloca en el registro de trabajo <code>W</code> para luego colocarlo en el registro de configuración <code>ADCON0</code> del conversor ADC. Así el conversor quedará configurado con el canal y velocidad que se haya indicado en el dato que recibió y se puede proceder a la conversión. Usando la instrucción <code>BCF</code> se vacía el contenido del bit numero <code>6</code> del registro <code>PIR1</code> para indicar que hemos leído el dato recibido.</p>
+<h3 id="conversión">Conversión</h3>
+<pre><code>;;; Esperar tiempo de adquisición e iniciar conversión
+CONVERTIR
+    ; Instrucciones de espera
+    NOP
+    NOP
+    NOP
+    NOP
+    NOP</code></pre>
+<p>Antes de realizar la conversión es necesario esperar un tiempo para que el microcontrolador pueda recoger el valor de tensión en el pin, según la pagina 129 del Datasheet. Se puede lograr esto usando la instrucción <code>NOP</code>, aunque sería más adecuado usar un bucle que espere un tiempo más prudente, pero se mantiene de esta forma por simplicidad.</p>
+<pre><code>    ; Activar conversor
+    BSF ADCON0,2</code></pre>
+<p>Activando el bit numero <code>2</code> del registro <code>ADCON0</code> usando la instrucción <code>BSF</code> inicia la conversión.</p>
+<pre><code>ESPERAR_CONVERSION
+    BTFSS   PIR1,6
+    GOTO    ESPERAR_CONVERSION
+    BCF PIR1,6</code></pre>
+<p>La conversión toma tiempo, por lo que se entra en un bucle hasta que el bit numero 6 del registro <code>PIR1</code> indique que se ha finalizado.</p>
+<h3 id="transmitir-el-resultado">Transmitir el resultado</h3>
+<pre><code>; Transmitir el resultado mediante la UART
+TRANSMITIR_RESULTADO
+    BSF STATUS,RP0
+    BCF STATUS,RP1
+    ; Transmitir byte bajo del resultado (ADRESL)
+    MOVF    ADRESL,W
+    BCF STATUS,RP0
+    BCF STATUS,RP1
+    MOVWF   TXREG
+    BSF STATUS,RP0
+    BCF STATUS,RP1</code></pre>
+<p>El resultado de la conversión se encuetra repartido en dos bytes: <code>ADRESL</code> y <code>ADRESH</code>.</p>
+<p>Colocamos el byte <code>ADRESL</code> en el registro de trabajo <code>W</code> para luego colocarlo en el registro <code>TXREG</code> lo cual causará que sea transmitido usando al UART.</p>
+<pre><code>; Esperar que el primer byte se transmita
+ESPERAR_1
+    BTFSS   TXSTA,1
+    GOTO    ESPERAR_1
+    BCF STATUS,RP0
+    BCF STATUS,RP1
+    ; Transmitir byte alto del resultado (ADRESH)
+    MOVF    ADRESH,W
+    MOVWF   TXREG
+    BSF STATUS,RP0
+    BCF STATUS,RP1
+
+; Esperar que el segundo byte se transmita
+ESPERAR_2
+    BTFSS   TXSTA,1
+    GOTO    ESPERAR_2
+    BCF TXSTA,1</code></pre>
+<p>El bit numero <code>1</code> del registro <code>TXSTA</code> indica que el dato se ha transmitido.</p>
+<p>Esperamos en un bucle hasta que el byte bajo termine de ser transmitido y podemos repetirlo para el byte alto.</p>
+<pre><code>GOTO    CONVERTIR
+
+END</code></pre>
+<p>Finalmente se salta a la etiqueta <code>CONVERTIR</code> para convertir y transmitir datos infinitamente. El programa se termina con la directiva <code>END</code>.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

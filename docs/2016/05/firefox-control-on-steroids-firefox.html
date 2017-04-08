@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Firefox control on steroids [Firefox + Ratpoison + Mozrepl]</h2>
+        <div class="post-date-author">
+            Posted on May 27, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/mozrepl/thumbnail.png" id="thumbnail" /><br />
+I’m not going to lie to you, what you’re about to read is really cool.</p>
+<p>Controlling all sort of stuff with Ratpoison, as you can see in my previous posts, is pretty neat and you can extend it to control your browser as well.</p>
+<p>These are the current capabilities:</p>
+<p>Every command start with the Ratpoison prefix + ‘f’ like in <code>C-t f</code>:</p>
+<!--more-->
+<pre><code>**Command**     **Action**
+
+    f           Facebook
+    y           Youtube
+    r           Reddit
+    g           Github
+    o           Open a new tab
+    w           Open a new window
+    s           Search for the current content in the clipboard
+    /           Jump to the tab with url mathing a user input
+    l           Open a new tab with the lyrics of the currenlty playing song (mpd)</code></pre>
+<p>What does this do?, you might be wondering…</p>
+<p>…Well, this does a little bit more than what you’re probably thinking.</p>
+<p>Take for instance the <code>f</code> command, it has the <em>“Facebook”</em> action which means that:</p>
+<p>No matter where you are, which window currently has the focus, or even if Firefox is not currently running. Firefox will be started (if needed) and will acquire the focus.</p>
+<p>Then all your tabs will be parsed (starting from the last one), and if a Facebook tab is found then jump to it; if there is no Facebook tab opened then start a new one.</p>
+<p>The same is applied to any of the other pages available (The list can be extended to suit you needs).</p>
+<p>The <code>o</code> commands is self explanatory, the only advantage of this one is the ability to have a fast new tab no matter where you are, which window has the focus, or if Firefox is running or not.</p>
+<p>The <code>s</code> command is quite nice, here is an use case:</p>
+<p>You’re compiling some code, but the compiler complains with a cryptic message, so you use <a href="https://github.com/alx741/dotfiles/blob/master/tmux/.tmux.conf#L55-L59">tmux to copy the error message</a>, then issue the key sequence <code>C-t f /</code> and BANG!, no matter what, a new Firefox tab is just in front of you with the Google results of your error message. And this is applicable to any content in your clipboard as well!</p>
+<p>The <code>/</code> command prompts the user for a query and jumps to the tab which URL contains the query as a substring.</p>
+<p>The <code>l</code> will take the name of the currently playing song in MPD, google it, and open the first google result for the song lyrics in a new tab.</p>
+<h1 id="how-to">How to</h1>
+<p>The main dependencies of all this are:</p>
+<ul>
+<li>Firefox</li>
+<li><a href="https://github.com/bard/mozrepl">Mozrepl</a></li>
+<li>Ratpoison</li>
+<li>Expect</li>
+</ul>
+<p>You can install them all with the system package manager, except for Mozrepl which you can get from Firefox addons.</p>
+<p>This also depends on a Ratpoison <a href="https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/app_select.sh">script</a> introduced in the previous posts, so be sure to have it.</p>
+<p>Some extra <code>~/.ratpoisonrc</code> is needed for the new mappings:</p>
+<pre><code>newkmap firefox
+definekey firefox f exec ~/.scripts/ratpoison/firefox.sh select_tab facebook
+definekey firefox y exec ~/.scripts/ratpoison/firefox.sh select_tab youtube
+definekey firefox e exec ~/.scripts/ratpoison/firefox.sh select_tab evirtual
+definekey firefox r exec ~/.scripts/ratpoison/firefox.sh select_tab reddit
+definekey firefox g exec ~/.scripts/ratpoison/firefox.sh select_tab github
+definekey firefox o exec ~/.scripts/ratpoison/firefox.sh new_tab
+definekey firefox w exec ~/.scripts/ratpoison/firefox.sh new_window
+definekey firefox s exec ~/.scripts/ratpoison/firefox.sh clipboard_search
+definekey firefox l exec ~/.scripts/ratpoison/firefox.sh search_lyrics
+definekey firefox slash exec ~/.scripts/ratpoison/firefox.sh search_tab
+bind f readkey firefox</code></pre>
+<p>Most of the magic is performed thanks to the amazing <em>Mozrepl</em>. Unfortunately I couldn’t get it to load an external script, but <em>Expect</em> is needed for the communication with it anyways, so lets give it the script line by line.</p>
+<p>The <code>select_tab.js</code> <a href="https://github.com/alx741/dotfiles/blob/master/mozrepl/.mozrepl/select_tab.js">script</a> is on charge of parsing the tabs to find one that matches the query and jump to it.</p>
+<div class="sourceCode"><pre class="sourceCode js"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">selectTab</span>(page) <span class="op">{</span>
+    <span class="kw">var</span> numTabs<span class="op">=</span><span class="va">gBrowser</span>.<span class="va">browsers</span>.<span class="at">length</span><span class="op">;</span>
+    <span class="kw">var</span> url<span class="op">=</span><span class="st">&quot;&quot;</span><span class="op">;</span>
+    <span class="cf">for</span>(i<span class="op">=</span>numTabs<span class="op">-</span><span class="dv">1</span><span class="op">;</span> i<span class="op">&gt;</span><span class="dv">0</span><span class="op">;</span> i<span class="op">--</span>) <span class="op">{</span>
+        url<span class="op">=</span><span class="va">gBrowser</span>.<span class="at">browsers</span>[i].<span class="va">contentDocument</span>.<span class="va">location</span>.<span class="at">href</span><span class="op">;</span>
+        <span class="cf">if</span>(<span class="va">url</span>.<span class="at">search</span>(page) <span class="op">!=</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">{</span>
+            <span class="va">gBrowser</span>.<span class="va">tabContainer</span>.<span class="at">selectedIndex</span><span class="op">=</span>i<span class="op">;</span>
+            <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span>
+        <span class="op">}</span>
+    <span class="op">}</span>
+    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span>
+<span class="op">}</span></code></pre></div>
+<p>Use <em>Expect</em> and the <code>select_tab.expect</code> <a href="https://github.com/alx741/dotfiles/blob/master/mozrepl/.mozrepl/select_tab.expect">script</a> to perform the telnet communication with <em>Mozrepl</em> and send the script and commands as well.</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="co">#!/usr/bin/expect</span>
+<span class="kw">set</span> <span class="ex">page</span> [lindex <span class="va">$argv</span> 0]
+<span class="kw">set</span> <span class="ex">port</span> 4242
+
+<span class="kw">set</span> <span class="fu">file</span> [open <span class="st">&quot;select_tab.js&quot;</span>]
+<span class="kw">set</span> <span class="ex">content</span> [split [read <span class="va">$file</span>] <span class="st">&quot;\n&quot;</span>]
+<span class="ex">close</span> <span class="va">$file</span>
+<span class="ex">spawn</span> telnet localhost <span class="va">$port</span>
+<span class="ex">foreach</span> line <span class="va">$content</span> {
+    <span class="ex">send</span> <span class="st">&quot;</span><span class="va">$line</span><span class="st">\r&quot;</span>
+}
+<span class="ex">send</span> <span class="st">&quot;selectTab(</span><span class="dt">\&quot;</span><span class="va">$page</span><span class="dt">\&quot;</span><span class="st">);\r&quot;</span>
+<span class="ex">expect</span> <span class="st">&quot;repl2&gt; &quot;</span>
+<span class="ex">expect</span> {
+    <span class="st">&quot;true&quot;</span> <span class="kw">{</span>
+        <span class="bu">exit</span> 0
+    <span class="kw">}</span>
+    <span class="st">&quot;false&quot;</span> <span class="kw">{</span>
+        <span class="bu">exit</span> 1
+    <span class="kw">}</span>
+}</code></pre></div>
+<p>Now the <code>firefox.sh</code> <a href="https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/firefox.sh">script</a>, invoked from the Ratpoison configuration, will glue it all together.</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="co">#!/bin/bash</span>
+
+<span class="va">URL=</span><span class="st">&quot;&quot;</span>
+<span class="kw">function</span><span class="fu"> set_url</span> <span class="kw">{</span>
+    <span class="kw">case</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span><span class="kw"> in</span>
+        <span class="st">'facebook'</span><span class="kw">)</span>
+            <span class="va">URL=</span><span class="st">&quot;www.facebook.com&quot;</span>
+            <span class="kw">;;</span>
+        <span class="st">'youtube'</span><span class="kw">)</span>
+            <span class="va">URL=</span><span class="st">&quot;www.youtube.com&quot;</span>
+            <span class="kw">;;</span>
+        <span class="st">'reddit'</span><span class="kw">)</span>
+            <span class="va">URL=</span><span class="st">&quot;www.reddit.com&quot;</span>
+            <span class="kw">;;</span>
+        <span class="st">'github'</span><span class="kw">)</span>
+            <span class="va">URL=</span><span class="st">&quot;www.github.com&quot;</span>
+            <span class="kw">;;</span>
+        <span class="st">'evirtual'</span><span class="kw">)</span>
+            <span class="va">URL=</span><span class="st">&quot;evirtual.ucuenca.edu.ec&quot;</span>
+            <span class="kw">;;</span>
+    <span class="kw">esac</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> select_tab</span> <span class="kw">{</span>
+    <span class="bu">cd</span> ~/.mozrepl/
+    <span class="ex">expect</span> select_tab.expect <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="op">&gt;</span> /dev/null
+    <span class="kw">if [[</span> <span class="va">$?</span> <span class="ot">!=</span> 0<span class="kw"> ]]</span>; <span class="kw">then</span>
+        <span class="ex">set_url</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span>
+        <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$URL</span><span class="st">&quot;</span> <span class="ot">!=</span> <span class="st">&quot;&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+            <span class="ex">firefox</span> --new-tab <span class="st">&quot;</span><span class="va">$URL</span><span class="st">&quot;</span>
+        <span class="kw">fi</span>
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> search_tab</span> <span class="kw">{</span>
+    <span class="va">query=</span><span class="kw">`</span><span class="ex">ratpoison</span> -c <span class="st">&quot;prompt [Tab] &gt;  &quot;</span><span class="kw">`</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$query</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span> <span class="bu">exit</span> 0<span class="kw">;</span> <span class="kw">fi</span>
+    <span class="ex">select_tab</span> <span class="st">&quot;</span><span class="va">$query</span><span class="st">&quot;</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> clipboard_search</span> <span class="kw">{</span>
+    <span class="va">search=$(</span><span class="ex">xclip</span> -selection clipboard -o<span class="va">)</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$search</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+        <span class="bu">exit</span> 0
+    <span class="kw">fi</span>
+    <span class="va">search=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$search</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/ /+/g'</span><span class="va">)</span>
+    <span class="va">google_url=</span><span class="st">&quot;https://www.google.com/search?q=</span><span class="va">$search</span><span class="st">&quot;</span>
+    <span class="ex">firefox</span> --new-tab <span class="st">&quot;</span><span class="va">$google_url</span><span class="st">&quot;</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> search_lyrics</span> <span class="kw">{</span>
+    <span class="va">search=$(</span><span class="ex">mpc</span> <span class="kw">|</span> <span class="fu">head</span> -n 1<span class="va">)</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$search</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+        <span class="bu">exit</span> 0
+    <span class="kw">fi</span>
+    <span class="va">search+=</span><span class="st">&quot; lyrics&quot;</span>
+    <span class="va">search=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$search</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/ /+/g'</span><span class="va">)</span>
+    <span class="ex">curl</span> -A <span class="st">'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/31.0'</span>\
+        <span class="st">&quot;https://www.google.com/search?q=</span><span class="va">$search</span><span class="st">&quot;</span>\
+            <span class="op">&gt;</span> /tmp/google_search_result.html
+    <span class="va">url=$(</span><span class="fu">sed</span> <span class="st">'s/&gt;/&gt;\r\n/g'</span> /tmp/google_search_result.html\
+        <span class="kw">|</span> <span class="fu">grep</span> -m 1 <span class="st">'&lt;a href=&quot;http:.*&quot;.*&gt;'</span>\
+        <span class="kw">|</span> <span class="fu">sed</span> -e <span class="st">'s/.*href=&quot;\([^&quot;]*\)&quot;.*/\1/'</span><span class="va">)</span>
+    <span class="ex">firefox</span> --new-tab <span class="st">&quot;</span><span class="va">$url</span><span class="st">&quot;</span>
+<span class="kw">}</span>
+
+<span class="kw">case</span> <span class="va">$1</span><span class="kw"> in</span>
+    <span class="st">'select_tab'</span><span class="kw">)</span>
+        <span class="ex">~/.scripts/ratpoison/app_select.sh</span> firefox
+        <span class="ex">select_tab</span> <span class="va">$2</span>
+        <span class="kw">;;</span>
+    <span class="st">'search_tab'</span><span class="kw">)</span>
+        <span class="ex">search_tab</span>
+        <span class="kw">;;</span>
+    <span class="st">'new_tab'</span><span class="kw">)</span>
+        <span class="ex">~/.scripts/ratpoison/app_select.sh</span> firefox
+        <span class="ex">firefox</span> --new-tab <span class="st">&quot;http://www.google.com&quot;</span>
+        <span class="kw">;;</span>
+    <span class="st">'new_window'</span><span class="kw">)</span>
+        <span class="ex">ratpoison</span> -c <span class="st">&quot;nextscreen&quot;</span>
+        <span class="ex">firefox</span> --new-window <span class="st">&quot;http://www.google.com&quot;</span>
+        <span class="kw">;;</span>
+    <span class="st">'clipboard_search'</span><span class="kw">)</span>
+        <span class="ex">~/.scripts/ratpoison/app_select.sh</span> firefox
+        <span class="ex">clipboard_search</span>
+        <span class="kw">;;</span>
+    <span class="st">'search_lyrics'</span><span class="kw">)</span>
+        <span class="ex">~/.scripts/ratpoison/app_select.sh</span> firefox
+        <span class="ex">search_lyrics</span>
+        <span class="kw">;;</span>
+<span class="kw">esac</span></code></pre></div>
+<p>You can find all those scripts and configuration bits in my <a href="https://github.com/alx741/dotfiles">Dotfiles</a>.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

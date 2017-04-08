@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">How do I blog? - Blogger posts from markdown and CLI</h2>
+        <div class="post-date-author">
+            Posted on September 23, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/blogger/thumbnail.png" id="thumbnail" /><br />
+There are plans to migrate <a href="http://sillybytes.net">Silly Bytes</a> to <a href="https://jaspervdj.be/hakyll/">Hakyll</a> and GitHub pages, but till then I’m still using <a href="http://www.blogger.com">Blogger</a> and I wanted to make the posting process as painless and automatic as possible.</p>
+<p>Every post I write is currently a separate git repo hosted on the <a href="https://github.com/sillybytes">Silly Bytes GitHub organization</a>. The post is written and maintained in Markdown using Pandoc and a convenient Makefile generated by the <a href="https://github.com/alx741/made">made script</a>.</p>
+<p>Writing posts in Markdown is nice but is not very useful if you still have to mess around with Blogger’s web interface, so here is the plan:</p>
+<ul>
+<li>Write post in Markdown</li>
+<li>Use <em>made</em> to generate a Makefile</li>
+<li>Generate HTML from the Makefile post <code>$ make</code></li>
+<li>Push the HTML post to Blogger using Google APIs</li>
+</ul>
+<!--more-->
+<p>The first 3 steps are already covered so lets dig into the Blogger negotiation part.</p>
+<h2 id="api-script">API script</h2>
+<p><a href="https://developers.google.com/api-client-library/python/start/installation">Google APIs</a> come in handy here, the best language option was Python (<a href="http://www.sillybytes.net/2016/03/why-do-i-hate-java.html">I refuse tu use Java</a>). So starting from an <a href="https://github.com/google/google-api-python-client/tree/master/samples/blogger">example</a> I came up with this <sub>ugly</sub> code:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#!/usr/bin/env python</span>
+<span class="co"># -*- coding: utf-8 -*-</span>
+
+<span class="im">from</span> __future__ <span class="im">import</span> print_function
+<span class="im">from</span> googleapiclient <span class="im">import</span> discovery
+<span class="im">from</span> oauth2client <span class="im">import</span> client
+<span class="im">from</span> oauth2client <span class="im">import</span> <span class="bu">file</span>
+<span class="im">from</span> oauth2client <span class="im">import</span> tools
+<span class="im">import</span> sys
+<span class="im">import</span> os
+<span class="im">import</span> httplib2
+<span class="im">import</span> argparse
+
+SILLYBYTESID<span class="op">=</span><span class="st">&quot;1318550761233559867&quot;</span>
+
+<span class="kw">def</span> main(argv):
+    <span class="cf">if</span> (<span class="bu">len</span>(argv) <span class="op">&lt;</span> <span class="dv">3</span>):
+        <span class="bu">print</span>(<span class="st">&quot;Post title must be provided as the first argument and html file as the second&quot;</span>)
+        exit(<span class="dv">1</span>)
+
+    post_title <span class="op">=</span> argv[<span class="dv">1</span>]
+    input_file <span class="op">=</span> argv[<span class="dv">2</span>]
+
+    scope <span class="op">=</span> <span class="st">'https://www.googleapis.com/auth/blogger'</span>
+
+    parent_parsers <span class="op">=</span> [tools.argparser]
+    parent_parsers.extend([])
+    parser <span class="op">=</span> argparse.ArgumentParser(
+        description<span class="op">=</span>__doc__,
+        formatter_class<span class="op">=</span>argparse.RawDescriptionHelpFormatter,
+        parents<span class="op">=</span>parent_parsers)
+    flags <span class="op">=</span> parser.parse_args(<span class="st">&quot;&quot;</span>)
+
+    <span class="cf">try</span>:
+        client_secrets <span class="op">=</span> os.path.join(os.path.expanduser(<span class="st">&quot;~&quot;</span>) <span class="op">+</span> <span class="st">'/.sillybytes/'</span>,
+                                    <span class="st">'secrets.json'</span>)
+    <span class="cf">except</span>:
+        <span class="bu">print</span>(<span class="st">&quot;Can't find secrets.json file maybe?&quot;</span>)
+        exit(<span class="dv">1</span>)
+
+    flow <span class="op">=</span> client.flow_from_clientsecrets(client_secrets,
+                                        scope<span class="op">=</span>scope,
+                                        message<span class="op">=</span>tools.message_if_missing(client_secrets))
+
+    storage <span class="op">=</span> <span class="bu">file</span>.Storage(<span class="st">'auth_data'</span> <span class="op">+</span> <span class="st">'.dat'</span>)
+    credentials <span class="op">=</span> storage.get()
+    <span class="cf">if</span> credentials <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> credentials.invalid:
+        credentials <span class="op">=</span> tools.run_flow(flow, storage, flags)
+
+    http <span class="op">=</span> credentials.authorize(http <span class="op">=</span> httplib2.Http())
+    service <span class="op">=</span> discovery.build(<span class="st">'blogger'</span>, <span class="st">'v3'</span>, http<span class="op">=</span>http)
+
+    <span class="cf">try</span>:
+        content <span class="op">=</span> <span class="bu">open</span>(input_file, <span class="st">'r'</span>).read()
+    <span class="cf">except</span> <span class="pp">FileNotFoundError</span>:
+        <span class="bu">print</span>(<span class="st">&quot;Input file not found&quot;</span>)
+        exit(<span class="dv">1</span>)
+
+    body <span class="op">=</span> {
+        <span class="st">&quot;kind&quot;</span>: <span class="st">&quot;blogger#post&quot;</span>,
+        <span class="st">&quot;title&quot;</span>: post_title,
+        <span class="st">&quot;content&quot;</span>: content
+    }
+
+    <span class="cf">try</span>:
+        posts <span class="op">=</span> service.posts()
+        request <span class="op">=</span> posts.insert(blogId<span class="op">=</span>SILLYBYTESID, body<span class="op">=</span>body, isDraft<span class="op">=</span><span class="va">False</span>)
+        result <span class="op">=</span> request.execute()
+        <span class="bu">print</span>(<span class="st">&quot;Live: &quot;</span> <span class="op">+</span> result[<span class="st">'url'</span>])
+    <span class="cf">except</span>:
+        <span class="bu">print</span>(<span class="st">&quot;Can't execute request&quot;</span>)
+        exit(<span class="dv">1</span>)
+
+<span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:
+main(sys.argv)</code></pre></div>
+<p>The script will initiate a OAuth negotiation when needed and store the authentication tokens in the <code>auth_data.dat</code> file.</p>
+<p>Install some python dependencies (Arch):</p>
+<pre><code>$ pacman -S python-google-api-python-client
+$ pacman -S python-oauth2client</code></pre>
+<h2 id="api-project">API project</h2>
+<p>Before we’re able to use this we need to create a new <em>API project</em>, configure it and get the <code>client_secrets.json</code> that the script will use to start the OAuth negotiation.</p>
+<p>First enable the <em>Blogger</em> API at: https://console.developers.google.com/apis/library</p>
+<p>Then create a new project, create a new credential and download the JSON file from it. Don’t worry you’ll find your way in the interface. If you read the script you’ll notice my <code>client_secrets.json</code> file will be located at <code>~/.sillybytes</code>.</p>
+<p>Now doing:</p>
+<pre><code>$ python deploy.py &quot;post title&quot; &quot;post HTML&quot;</code></pre>
+<p>Will push the post to Blogger! So we’re done (?) not yet.</p>
+<h2 id="cli-tool">CLI tool</h2>
+<p>This is good enough already, we could invoke <code>deploy.py</code> from the Makefile, but it can be better.</p>
+<p>I wrote a tool: <a href="https://github.com/sillybytes/sillybytes_tool/blob/master/silly.sh">silly</a>.</p>
+<pre><code>$ silly help</code></pre>
+<div class="figure">
+<img src="../../img/blogger/shot.png" class="img-responsive" />
+
+</div>
+<p>I think the screenshot explains all by it self… Now i can create all the post boilerplate by doing <code>silly new</code> and deploying the current post with <code>silly deploy</code> how cool is that?</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

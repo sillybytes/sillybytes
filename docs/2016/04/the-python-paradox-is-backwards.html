@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">The Python Paradox is backwards</h2>
+        <div class="post-date-author">
+            Posted on April 20, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/pythonparadox/thumbnail.png" id="thumbnail" /><br />
+</p>
+<p>Paul Graham wrote a great short article back in 2004 called The <a href="http://www.paulgraham.com/pypar.html">Python Paradox</a> where he states that if you look for python programmers you will end up with the best ones. The logic behind this is as follows:</p>
+<p>Python is an esoteric language that universities and schools don’t teach, so people that knows python are self thought, they know that their python skills wouldn’t get them a better job so they do it for fun only; Considering that learning a new programming language isn’t a trivial task, and that python knowledge wouldn’t rank you higher for hiring, we can infer that it takes a really passionate person, a hacker, to learn and use python.</p>
+<!--more-->
+<p>That was very true <strong>12 years ago</strong>, but now almost every single school and university not only teaches python, but use it as the primary language, and even as the only language!. Nowadays even some non technical schools teach programming as a form of introducing their students to computers-logical thinking, which is good, but they all use python precisely because of its simplicity; They even tend to over simplify an already simple language so their less clever students can catch it with ease.</p>
+<p>This leads to the current situation: if you look for python programmers you will get quite a few good programmers, that’s for sure, but you will also get some of the very worst ones; Actually, most of them will be bad programmers. As the language gets more and more popular this disproportion continues to grow in a way that the paradox tends not only to completely fail but also to get reversed.</p>
+<p>Nowadays, everyone knows python and maybe is the only language they know because is the only language they were forced to learn in school. For others, python is the language they use the most because it was the main language of choice in college.</p>
+<p>Those excellent passionate programmers and real hackers who learned python because of fun 10 or 15+ years ago are now an infinite reduced minority buried among tons of lame programmers mass produced at <em>Phython Schools</em> which is now kind of the new Joel’s <a href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">Java Shools</a>.</p>
+<p>Mr. Graham said:</p>
+<blockquote>
+<p>I didn’t mean by this that Java programmers are dumb. I meant that Python programmers are smart.</p>
+</blockquote>
+<p>And here I’m not saying that python programmers are dumb. There are a lot of excellent programmers out there that use python as their language of choice, but if you’re going to use python as the filter described in Graham’s essay in 2016+, be prepared to end up looking for a needle in a haystack.</p>
+<p>Even though I think the Python Paradox does not longer work, I totally agree with Graham’s thoughts in a deeper way. The language of the original paradox (python) may no longer be a badge of great programmers, but because of the paradox’s time sensitivity it tends to shift towards another languages that may or may not be the newer ones.</p>
+<p>These days <em>C</em> and <em>C++</em> programming languages are very rarely used as teaching languages and students will only get lots of Python and Java in the class rooms. I acknowledge that this might be very geographical sensitive and that schools and universities in different parts of the world will take different approaches, but still, Python gets far more attention for teaching than <em>C</em> or <em>C++</em> does. Lots of students will get a <em>C/C++</em> semester or so (Over simplified <em>C/C++</em> in most cases), but then forget about it and continue to write Python or Java only.</p>
+<p>Now consider the fact that <em>C/C++</em> are by a fair amount harder to learn and use than python if it’s the first time you get in touch with computer programming, and that if you’re not doing operating systems programming you wouldn’t actually <em>need imperatively</em> to write <em>C</em> and can perfectly make a whole career using whatever language you like without ever write a line of <em>C/C++</em>.</p>
+<p>The Paradox might now point, but not be limited to <em>C/C++</em>. Take a bunch of new generation programmers out of a Python or Java School, pick those who know and like to write <em>C/C++</em> and chances are you’ll end up with passionate hackers.</p>
+<p>Take into account that the Paradox points to different languages over time, but it does not point only forward to newer languages but also to older ones, and that this pointer can actually tend to move away from the trending languages. Take Perl, Lisp, Scheme, Haskell, Rust, Go as examples; What kind of people would like to learn by themselves a <em>difficult/complex/unpopular</em> language that is not used as much as Python or Java and that will not make you more appealing for a job? - Real passionate hackers that enjoy it, and do it well, just as the paradox predicts.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

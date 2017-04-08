@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Vim Kōans [Español]</h2>
+        <div class="post-date-author">
+            Posted on May  4, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/vimkoans/thumbnail.png" id="thumbnail" /><br />
+Esta es la traducción al español de los <a href="http://blog.sanctum.geek.nz/vim-koans/">vim kōans</a> por Tom Ryder.</p>
+<p><a href="https://es.wikipedia.org/wiki/K%C5%8Dan"><strong>¿Qué es un Kōan?</strong></a></p>
+<h1 id="el-maestro-wq-y-el-desarrollador-de-windows">El maestro <em>Wq</em> y el desarrollador de Windows</h1>
+<p>El maestro <em>Wq</em> se encontraba ayudado a algunos novatos de Vim. Luego de sus enseñanzas sobre las virtudes de Vim, pregunto si habían preguntas. Un hombre joven levantó la mano.</p>
+<!--more-->
+<blockquote>
+<p>Maestro, como puedo filtrar la segunda columna de una tabla de texto plano para todas las filas que contienen la cadena ‘tcp’?</p>
+</blockquote>
+<p>El maestro <em>Wq</em> no dijo nada, se volteó al pizarrón detrás de él, y escribió:</p>
+<pre><code>:%!awk '/tcp/ {print $2}'</code></pre>
+<p>Hubo un murmullo aprobador por parte de los estudiantes.</p>
+<blockquote>
+<p>Pero yo desarrollo en Windows…</p>
+</blockquote>
+<p>Balbuceó el estudiante.</p>
+<p>El maestro <em>Wq</em> se volteó nuevamente, borró el comando, y escribió:</p>
+<pre><code>:v/tcp/d
+:g/tcp/s/\S\+\s\+\(\S\+\)\s.*/\1/</code></pre>
+<blockquote>
+<p>Qué!!? Eso es muy complicado para una tarea tan simple!</p>
+</blockquote>
+<p>Replicó el estudiante.</p>
+<p>El maestro <em>Wq</em> se volteó nuevamente, borró el comando, y escribió:</p>
+<pre><code>Microsoft Excel</code></pre>
+<p>En ese momento, el estudiante fue iluminado.</p>
+<h1 id="no-hay-diferencia">No hay diferencia</h1>
+<p>Un dia un monje visitó al maestro <em>Wq</em>, y preguntó</p>
+<blockquote>
+<p>Maestro, ¿Cómo será mi código diferente cuando haya dominado Vim?</p>
+</blockquote>
+<p>El maestro <em>Wq</em> respondió</p>
+<blockquote>
+<p>Antes de Vim: declarar, definir, procesar, imprimir. Después de Vim: declarar, definir, procesar, imprimir.</p>
+</blockquote>
+<h1 id="el-maestro-wq-y-el-acólito-de-markdown">El maestro <em>Wq</em> y el acólito de markdown</h1>
+<p>Un acólito de markdown vino al maestro <em>Wq</em> para demostrar su plugin de Vim.</p>
+<blockquote>
+<p>Mire, maestro</p>
+</blockquote>
+<p>Dijo el acólito</p>
+<blockquote>
+<p>Casi he terminado las macros de Vim que permiten traducir de Markdown a HTML. Mis funciones se entrelazan, mi parser es muy eficiente y los resultados casi perfectos. Puede decirse que he dominado el Vimscript, y mi trabajo validará Vim como un editor moderno para los desarrolladores iluminados! He hecho bien?</p>
+</blockquote>
+<p>El maestro <em>Wq</em> leyó el código del acólito por varios minutos sin decir palabra alguna. Luego abrió un documento markdown, y escribió:</p>
+<pre><code>:%!markdown</code></pre>
+<p>El buffer se llenó de HTML al instante. El acólito se echó a llorar.</p>
+<h1 id="el-maestro-wq-y-el-maestro-unix">El maestro <em>Wq</em> y el maestro Unix</h1>
+<p>Un viejo maestro Unix vino al maestro <em>Wq</em>.</p>
+<blockquote>
+<p>Estoy contrariado, <em>Wq</em>. Tu enseñas la filosofía de Vim. Vi es sagrado pero Vim no lo es, su código se desparrama, sus opciones llenan la memoria, sus binarios son vastos, su comportamiento es inconsistente. Esta no es la filosofía de Unix. Me temo que has engañado a tus estudiantes. ¿Qué se puede hacer?</p>
+</blockquote>
+<p>El maestro <em>Wq</em> asintió</p>
+<blockquote>
+<p>Estas en lo correcto. Vim está dañado. Vamos a arreglarlo.</p>
+</blockquote>
+<p>El viejo maestro Unix estuvo de acuerdo, abrió una shell y escribió:</p>
+<pre><code>$ vi vim.c</code></pre>
+<p>Empezó a modificar el código. El maestro <em>Wq</em> observó por un momento y luego preguntó:</p>
+<blockquote>
+<p>¿Qué implementación de <em>vi</em> estas usando? Nvi? Vim? Elvis?</p>
+</blockquote>
+<p>El maestro Unix respondió:</p>
+<blockquote>
+<p>No lo se, no importa.</p>
+</blockquote>
+<p>El maestro <em>Wq</em> asintió. El maestro Unix se sentó desconcertado por un momento y cerro el documento sin guardarlo.</p>
+<h1 id="no-la-mejor-herramienta">No la mejor herramienta</h1>
+<p>Una noche durante una tormenta, la casa del maestro <em>Wq</em> colapsó. A la mañana siguiente empezó a reconstruirla usando sus viejas herramientas. Su aprendiz acudió a ayudarlo, y construyeron por un momento he hicieron un buen progreso. Mientras trabajaban, el aprendiz empezó a contar al maestro <em>Wq</em> sobre sus últimos logros.</p>
+<blockquote>
+<p>Maestro, He desarrollado un grandioso script de Vim que da todo tipo de información útil sobre el documento. Cuenta palabras, sentencias, párrafos, he incluso dice sobre el tipo de documento es, usando las reglas de resaltado. Lo uso en mis pipelines todo el tiempo. Es una cosa fabulosa y estoy muy orgulloso. Realmente, Vim es la mejor herramienta.</p>
+</blockquote>
+<p>El maestro <em>Wq</em> no respondió. Pensando que había molestado a su maestro, el aprendiz permaneció en silencio y continuó trabajando.</p>
+<p>El aprendiz termino de alinear dos vigas y había posicionado un clavo listo para clavarlo en la madera, pero notó que el martillo estaba lejos de él.</p>
+<blockquote>
+<p>Me alcanzaría el martillo, maestro?</p>
+</blockquote>
+<p>El maestro <em>Wq</em> le pasó al aprendiz una cierra.</p>
+<p>En ese momento, el aprendiz fue iluminado.</p>
+<h1 id="el-sueño-del-maestro-pope">El sueño del maestro Pope</h1>
+<p><a href="https://github.com/tpopea">El maestro Pope</a> soñó una vez que era un usuario de Emacs. Cuando despertó dijo:</p>
+<blockquote>
+<p>No se si soy Tim Pope soñado que soy un usuario de Emacs, o un usuario de Emacs soñando que soy Tim Pope.</p>
+</blockquote>
+<h1 id="el-mejor-editor">El mejor editor</h1>
+<p><a href="http://vimcasts.org/">El maestro Neil</a> y <a href="http://derekwyatt.org/">el maestro Wyatt</a> gozaban de gran fama por sus instrucciones sobre la filosofía de Vim, y viajaban alrededor del país enseñando.</p>
+<p>El maestro Neil habla calmada y pausadamente, su acento se pasea sobre sus palabras. Pero el maestro Wyatt es muy entusiasta, empieza y termina, su habla es rápida y enérgica, y su alma fluye sobre sus enseñanzas.</p>
+<p>Un día un estudiante preguntó</p>
+<blockquote>
+<p>¿Cuál es la mejor forma de enseñar Vim?</p>
+</blockquote>
+<p>Los maestros Neil y Wyatt respondieron al unisono</p>
+<blockquote>
+<p>¿Cuál es el mejor editor: vi o ex?</p>
+</blockquote>
+<p>En ese momento, el estudiante fue iluminado.</p>
+<h1 id="la-desesperación-del-estudiante-lento">La desesperación del estudiante lento</h1>
+<p>El maestro <em>Wq</em> se encontraba comiendo cuando un estudiante entró en su habitación y cayó sobre sus rodillas. Lagrimas estaban en sus ojos y se veía profundamente frustrado. El maestro <em>Wq</em> dejó el plato y preguntó</p>
+<blockquote>
+<p>¿Qué te perturba tanto, hombre joven?</p>
+</blockquote>
+<blockquote>
+<p>Maestro, me doy por vencido. Jamas alcanzaré el dominio de Vim!, Nunca aprenderé la filosofía de los grandes patriarcas! Nunca alcanzaré la simplicidad brutal, la divina eficiencia del uso de Vim!</p>
+</blockquote>
+<blockquote>
+<p>¿Por qué lo dices?</p>
+</blockquote>
+<blockquote>
+<p>Soy tu peor estudiante. Mientras yo lucho escribiendo una simple macro, mis compañeros escriben macros recursivas con facilidad. Cuando yo intento recordar la expresión regular para caracteres vacíos, mis compañeros escriben test de Vimscript de gran complejidad. Soy demasiado lento, y estoy avergonzado, me temo y he fracasado.</p>
+</blockquote>
+<p>El maestro <em>Wq</em> se puso de pie y dijo</p>
+<blockquote>
+<p>Ven conmigo a la ventana</p>
+</blockquote>
+<p>El estudiante siguió al maestro <em>Wq</em> a la ventana y miró a la casa del vecino del maestro <em>Wq</em>. A través de la ventana ambos podían ver a un hombre joven en traje y corbata, trabajando sobre un documento.</p>
+<blockquote>
+<p>¿Qué vez?</p>
+</blockquote>
+<p>Pregunto el maestro <em>Wq</em>. El estudiante observó por un momento.</p>
+<blockquote>
+<p>Ese hombre está usando Microsoft Excel para generar una hoja de calculo. Esta actualizando cada celda a mano. No sabe ni siquiera como usar formulas. Escribe letras mayúsculas presionando Caps Lock, y luego presionándolo otra vez cuando escribió la letra. Es lento! No comprendo. Como puede estar tan contento?</p>
+</blockquote>
+<blockquote>
+<p>Viendo a este hombre, como puedes tu no estarlo?</p>
+</blockquote>
+<p>Respondió el maestro <em>Wq</em>.</p>
+<p>El estudiante fue inmediatamente iluminado. Su nombre era Qa, y se convirtió luego en uno de los mejores maestros.</p>
+<h1 id="dominio-de-vimscript">Dominio de Vimscript</h1>
+<p>Un estudiante pregunto al maestro <em>Wq</em></p>
+<blockquote>
+<p>¿Cuándo sabré que he dominado el Vimscrip?</p>
+</blockquote>
+<p>El maestro <em>Wq</em> respondió</p>
+<blockquote>
+<p>Cuando nunca lo uses</p>
+</blockquote>
+<h1 id="la-elegía-de-vim">La elegía de Vim</h1>
+<p>Un hombre joven suplico una audiencia con el maestro <em>Wq</em> para leer su ultimo trabajo, una elegía de las glorias de Vim. Con ojos lagrimosos leyó sus profundas palabras, vertiendo su alma en su veneración por el editor de texto.</p>
+<p>El maestro se sentó y escuchó al poeta por un momento. Luego del décimo verso, levanto su mano.</p>
+<blockquote>
+<p>Por favor, no más. Tu poema es terrible</p>
+</blockquote>
+<p>El hombre enfureció.</p>
+<blockquote>
+<p>Maestro <em>Wq</em>, seguramente tu puedes apreciar el poema, tu que conoces la gran belleza del editor. Como puedes ser tan terso, tan desdeñoso? Incluso escribí este poema en Vim!</p>
+</blockquote>
+<p>El maestro respondió</p>
+<blockquote>
+<p>Lo escribiste en Vim, pero tu métrica es dispareja, tu rítmica inconsistente, tus metáforas mezcladas. Has escrito un poema muy malo usando una herramienta muy buena. No eres un poeta, y Vim no te hará uno. Muchos estudiantes no son programadores, y Vim no les ayudara con eso tampoco.</p>
+</blockquote>
+<p>El hombre protestó</p>
+<blockquote>
+<p>Vim es eternamente bello. Merece tener una Elegía.</p>
+</blockquote>
+<blockquote>
+<p>Vim no es permanente. Nvi no es permanente. Vi mismo no es permanente, solamente la naturaleza de Vi. Emacs tiene naturaleza de Vi, nano tiene naturaleza de Vi, incluso bloc de notas tiene naturaleza de Vi. Tu visión estrecha que has desarrollado no te permite ajustarte al verdadero valor del tema de tu poema. Debes irte. Regresa cuando hayas dominado Emacs.</p>
+</blockquote>
+<p>El poeta se fue, profundamente avergonzado. No regresó nunca más.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

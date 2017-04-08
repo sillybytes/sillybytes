@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">How to write C in 2016</h2>
+        <div class="post-date-author">
+            Posted on June 19, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/clang/thumbnail.png" id="thumbnail" /><br />
+Matt wrote a very interesting and totally recommended post about <a href="https://matt.sh/howto-c">how to C (as of 2016)</a>. Keith Thompson wrote later a very detailed and rather useful <a href="https://github.com/Keith-S-Thompson/how-to-c-response/blob/master/README.md">critique</a> with some extra notes about Matt’s post.</p>
+<p>Go a head and read both articles right now!</p>
+<p>Here I would like to point out some things about tooling.</p>
+<p><img src="../../img/clang/shot1.jpg" class="img-responsive" /> <!--more--></p>
+<h1 id="use-building-tools-make-autotools-cmake">Use building tools (Make, Autotools, CMake)</h1>
+<div class="figure">
+<img src="../../img/clang/shot2.png" class="img-responsive" />
+
+</div>
+<p>This might be obvious for most C programmers, but I’ve seen quite a lot of people, novices specially, copying and pasting the compilation command on each iteration.</p>
+<p>Using a build tool will allow you to automate the building process, but also testing, distribution package generation, etc.</p>
+<p>In order to sanely write C code the bear minimum you need is to know and feel comfortable <a href="http://mrbook.org/blog/tutorials/make/">writing</a> and <a href="http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/">using</a> <em>makefiles</em>, so the compilation process can be described like in a recipe and triggered by issuing the <code>$ make</code> command.</p>
+<div class="figure">
+<img src="../../img/clang/shot3.png" class="img-responsive" />
+
+</div>
+<p>Using <a href="https://www.gnu.org/software/make/">make</a> alone by writing <em>makefiles</em> will take you pretty far, but for larger software you might want to automate even further all the software ecosystem, so your code can examine the target system for both static and dynamic libraries, binaries available and configure it self to adapt to the system and be as portable as possible. <a href="https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html">Autotools</a> to the rescue.</p>
+<p><a href="https://autotools.io/index.html">Learning</a> and <a href="https://www.sourceware.org/autobook/autobook/autobook.html#Top">using</a> <em>Autotools</em> is not much of a trivial task, but when the complexity in your code starts to get out of hand, taking the effort to use them is worth it!</p>
+<p>If your code is needs not only to be Posix systems portable, but also get compiled on Windows machines, <a href="https://cmake.org/">CMake</a> rocks!</p>
+<div class="figure">
+<img src="../../img/clang/shot4.jpg" class="img-responsive" />
+
+</div>
+<h1 id="the-standard-c-library-is-your-friend">The standard C library is your friend</h1>
+<p>You can’t get any better at writing C code if you’re not familiar enough with the <a href="https://www.gnu.org/software/libc/manual/html_node/index.html">Standard C library (libc)</a>, in particular I know a lot of people that don’t even know the libc mechanism for error reporting, so be sure you <a href="https://www.gnu.org/software/libc/manual/html_node/index.html#toc-Error-Reporting-1">know it</a>.</p>
+<h1 id="use-a-linter">Use a linter</h1>
+<div class="figure">
+<img src="../../img/clang/shot5.jpg" class="img-left" />
+
+</div>
+<p>A <em>linter</em> in case you don’t know, is a program that will statically check the <strong>source code</strong> (not the executable) to find any known non-portable constructs, vulnerabilities from common programming mistakes and/or bad practices and any other general coding mistakes that can make your program leak memory, step on segmentation faults and the like.</p>
+<p><a href="http://www.splint.org/">Splint</a> is an awesome piece of software that will tell you a <strong>lot</strong> about what your code might be doing wrong.</p>
+<p>You can use it very easily just by specifying the source files like:</p>
+<pre><code>$ splint foo.c bar.c</code></pre>
+<p>Most of the <em>splint</em> output will be more than suggestions than critical warnings, but following the <em>splint</em> recommendations with poise will make your code more robust.</p>
+<p>You can tune the level of paranoia with the <em>splint</em> argument options: <code>-weak</code>, <code>-standard</code>, <code>-cheks</code> and <code>-strict</code></p>
+<h1 id="valgrind">Valgrind</h1>
+<div class="figure">
+<img src="../../img/clang/shot6.png" class="img-responsive" />
+
+</div>
+<p><a href="http://valgrind.org/">Valgrind</a> is a profiling software with a few neat tricks up the sleeve. In contrast to <em>splint</em>, it will use your <strong>executable program</strong> and will help you finding memory leaks, make your programs faster and more correct.</p>
+<p>When compiling your program use the <code>-g</code> compiler flag so extra debugging information is include in the executable.</p>
+<p>Then you can execute you program with Valgrind like this:</p>
+<pre><code>$ valgrind foobar arg1 arg2</code></pre>
+<p>That will use the <code>Memcheck</code> tool, one of multiple <a href="http://valgrind.org/docs/manual/manual.html">Valgrind tools</a>.</p>
+<h1 id="use-a-debugger">Use a debugger</h1>
+<div class="figure">
+<img src="../../img/clang/shot7.png" class="img-responsive" />
+
+</div>
+<p>Yeah sure, you can fill up you code with <code>printf</code> calls for debugging and pretty much get away with it, but knowing how to use a debugger is always a valuable skill.</p>
+<p>Some debugging sessions will be far more easy with <a href="https://www.gnu.org/software/gdb/">GDB</a> than a bunch of <code>printf</code> lines all around, and some times it will not be the case. But for those cases it is, you’ll be a happy programmer.</p>
+<h1 id="use-a-control-version-system">Use a control version system</h1>
+<div class="figure">
+<img src="../../img/clang/shot8.jpg" class="img-responsive" />
+
+</div>
+<p>You might think you can get away keeping a ton of directories for each version of your program if it is small, but that will, eventually, byte you!</p>
+<p>A control version system will give you a few super powers for collaboration, version restoring, multi branching, proper history tracking, back up and so much more.</p>
+<p>You could use <a href="http://www.nongnu.org/cvs/">CVS</a> or <a href="https://subversion.apache.org/">SVN (Subversion)</a>, but why to do so if you can use a much more powerful control version system like <a href="https://www.mercurial-scm.org/wiki/">Mercurial</a> or even better <a href="https://git-scm.com/">Git</a>.</p>
+<p><img src="../../img/clang/shot9.png" class="img-responsive" /> <img src="../../img/clang/shot10.png" class="img-responsive" /></p>
+<p>On top of that, even if you’re working alone in a project and won’t collaborate with more people, using a repository hosting service like <a href="https://bitbucket.org/">Bitbucket</a> or <a href="https://github.com/">Github</a> is a great way to always have a backup of your code. In the future if more people join to your project, collaboration will be frictionless.</p>
+<h1 id="automated-documentation">Automated documentation</h1>
+<div class="figure">
+<img src="../../img/clang/shot11.png" class="img-responsive" />
+
+</div>
+<blockquote>
+<p>Documentation is like sex: when it is good, it is very good; and when it is bad, it is better than nothing –Dick Brandon</p>
+</blockquote>
+<p>Nobody likes to write and maintain documentation so keep it as automatized as possible!</p>
+<p>Using tools like <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> will provide you with some amazing tricks: documentation generation from source code, multi target format documentation (HTML, LATEX, PDF, TROFF Man pages, PostScript, etc).</p>
+<p>Remember tu use your abilities writing <em>Make</em> recipes to automate the documentation process as well!</p>
+<p>Always write documentation in ways that every possible aspect of it can be automatized. Don’t write documentation using MS Word!! (god dammit!). Use <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a>, <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a>, <a href="http://www.docbook.org/">DocBook</a>.</p>
+<p>If you really want a WYSIWYG tool, <a href="https://www.libreoffice.org/">Libre Office</a> has a CLI interface that allows you to generate PDF files, so you can add in your <em>Make</em> recipe something like:</p>
+<pre><code>document.pdf: document.odt
+    libreoffice --convert-to pdf $&lt;</code></pre>
+<p>You can even automatize some graphs generation using <a href="http://www.graphviz.org/doc/info/lang.html">DOT</a>.</p>
+<h1 id="unit-testing">Unit testing</h1>
+<div class="figure">
+<img src="../../img/clang/shot12.jpg" class="img-responsive" />
+
+</div>
+<p>In a <a href="https://en.wikipedia.org/wiki/Unit_testing">nutshell</a> <em>unit testing</em> is writing pieces of code that will use the functions of your software and compare the results to what it is expected to produce. Think of it as writing a program tu use your program and automatically check if it does what it’s supposed to do.</p>
+<p>You can take this approach further by doing <a href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development (TDD)</a>.</p>
+<p>Automated tests is fundamental, if you want to write C code in 2016+, start writing proper test right know! The world will end if you don’t.</p>
+<p>You could write testing functions for your code by hand or use one of the great testing frameworks there are for C out there.</p>
+<p>I like <a href="https://libcheck.github.io/check/">Check</a> in particular, it seems to be the more active one and uses the <code>make</code> <code>check</code> command so doing <code>$ make check</code> will test your software.</p>
+<p>Writing tests with <strong>Check</strong> is easy as pie:</p>
+<div class="sourceCode"><pre class="sourceCode c"><code class="sourceCode c"><span class="pp">#include </span><span class="im">&lt;check.h&gt;</span>
+<span class="pp">#include </span><span class="im">&quot;../src/foo.h&quot;</span><span class="pp">  </span><span class="co">// Contains 'multply' function</span>
+
+START_TEST (my_test)
+{
+    <span class="dt">int</span> result = multply(<span class="dv">2</span>, <span class="dv">2</span>);
+    ck_assert_int_eq(result, <span class="dv">4</span>);
+}
+END_TEST</code></pre></div>
+<p>It should be pretty obvious: the testing function will use the <code>multply</code> function (our tested code) declared in <code>src/foo.h</code> and <strong>assert</strong> that the result of multiplying <code>2</code> times <code>2</code> is equals to <code>4</code>, so next time changes are made in the <code>multply</code> function that makes it misbehave, the bug will be catch pretty fast and easily when we execute our tests. The example here is a bit dumb but you get the idea, check every possible edge case. The more robust the tests are, the more robust the end code will be.</p>
+<h1 id="learn-functional-programming">Learn functional programming</h1>
+<div class="figure">
+<img src="../../img/clang/shot13.jpg" class="img-responsive" />
+
+</div>
+<p>Learning to think functionally will improve your C code despite C being an imperative language, you’ll stop using mutable global state, and all the kind of stuff that prevent your software from being multi thread safe.</p>
+<p>If you work on embedded software, you’re probably writing in C. Considering that even relatively cheap embedded hardware today have more than one core, parallelism is pretty important and functional programming mind set will help a lot to do it well.</p>
+<p><img src="../../img/clang/shot14.png" class="img-left" /><br />
+<br />
+There are quite a few multi paradigm languages out there, like python, but if I have to give a recommendation I would say: Learn a pure functional programming language. Specially, <a href="https://www.haskell.org/">blow your mind with Haskell!</a></p>
+<h1 id="write-in-c">Write in C</h1>
+<p>Eric Raymond <a href="http://www.catb.org/esr/faqs/hacker-howto.html">said</a>:</p>
+<blockquote>
+<p>The more you can avoid programming in C the more productive you will be.</p>
+</blockquote>
+<p>And a lot of people say similar things, but I <strong>disagree</strong>. C is a great and powerful language, but with a great power comes a great responsibility. You don’t need to <strong>avoid it</strong>, instead use C when you need and can take advantage of its power and you can afford the effort it takes handling all the extra responsibility that power comes with.</p>
+<div class="figure">
+<img src="../../img/clang/shot15.png" class="img-left" />
+
+</div>
+<p>Depending on what you’re doing, some other languages would probably fit better and give you extra abstraction in exchange of some perforce decrement. In most cases when you think you need C you probably can also do it well with <a href="https://www.rust-lang.org/">Rust</a> or <a href="https://golang.org/">Go</a> (I recommend the former) and get the work done with great performance and low level management when needed.</p>
+<p>C is not a monster you have to hide from, it’s just a (wonderful) tool. You have to pick the appropriate tool depending on what you’re doing.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

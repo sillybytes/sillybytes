@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Vim + Haskell</h2>
+        <div class="post-date-author">
+            Posted on August 11, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/vimhask/thumbnail.png" id="thumbnail" /><br />
+So you’re writing in the right language using the right tool already, but lets put some extra magic under our sleeves.<br />
+<br />
+<br />
+<br />
+</p>
+<h2 id="expectations">Expectations</h2>
+<ul>
+<li>Omnicompletion</li>
+<li>Compilation and testing
+<ul>
+<li>Building</li>
+<li>Linting</li>
+<li>Testing</li>
+</ul></li>
+<li>GHCI integration</li>
+<li>Convenient mappings
+<ul>
+<li>Argument text object</li>
+<li>Jump to importations</li>
+<li>Jump between functions</li>
+</ul></li>
+<li>Ghc-mod integration
+<ul>
+<li>Type inserting</li>
+<li>Case splitting</li>
+<li>Type asserting</li>
+</ul></li>
+<li>Hlint integration
+<ul>
+<li>Linting</li>
+<li>Managing the locationlist</li>
+</ul></li>
+<li>Code formatting
+<ul>
+<li>Hindent integration</li>
+<li>Trailing white space</li>
+<li>Trailing blank lines</li>
+<li>Spaces over tabs</li>
+</ul></li>
+<li>Easy arrows generation</li>
+<li>Types abbreviations</li>
+<li>Yesod Haskell web framework</li>
+</ul>
+<!--more-->
+<p>Most of this functionality is achieved by using already available tools and already available Vim plugins for those tools. So I’ll assume you have your way to install the plugins (I’m using <a href="https://github.com/junegunn/vim-plug">vim-plug</a>).</p>
+<p>Here is my complete <a href="https://github.com/alx741/dotfiles/blob/master/nvim/.config/nvim/init.vim">.vimrc</a>.</p>
+<p><strong>Important</strong>: Every line of vimrc used should be enclosed in an <code>:h :augroup</code>:</p>
+<pre class="vim"><code>augroup ft_haskell
+    au!
+
+    ...
+
+augroup END</code></pre>
+<h3 id="omnicompletion">Omnicompletion</h3>
+<p>The <a href="https://github.com/eagletmt/neco-ghc">neco-ghc</a> plugin declares a complete omnifunction. Use it by defining the local <code>omnifunc</code>:</p>
+<pre class="vim"><code>au FileType haskell setlocal omnifunc=necoghc#omnifunc</code></pre>
+<div class="figure">
+<img src="../../img/vimhask/shot1.gif" class="img-responsive" />
+
+</div>
+<h3 id="compilation-and-testing">Compilation and testing</h3>
+<p>I’ve contributed the GHC compiler plugin to upstream Vim recently, but it may take a while before you get the latest vim runtime from your distribution. So in the meantime you can install it like any other plugin from the github repository here: https://github.com/alx741/ghc.vim</p>
+<p>Then load it for the Haskell filetype in you vimrc:</p>
+<pre class="vim"><code>au FileType haskell compiler ghc</code></pre>
+<p>Taking advantage of vim 8 asynchronous job control using the <a href="https://github.com/skywind3000/asyncrun.vim">asyncrun.vim</a> plugin, we can define some convenient mappings for building and testing using Haskell <em>stack</em>:</p>
+<pre class="vim"><code>au FileType haskell setlocal makeprg=stack
+au FileType haskell nnoremap &lt;buffer&gt; gj :write&lt;CR&gt; :exec &quot;AsyncRun &quot; . &amp;makeprg . &quot; build&quot;&lt;CR&gt;
+au FileType haskell nnoremap &lt;buffer&gt; gk :write&lt;CR&gt; :exec &quot;AsyncRun &quot; . &amp;makeprg . &quot; test&quot;&lt;CR&gt;</code></pre>
+<p>After running one of those the results will be loaded into the quickfix list.</p>
+<p>You will need the Stack tool of course and <em>hlint</em> that you can install with <code>stack install hlint</code>.</p>
+<h3 id="ghci-integration">GHCI integration</h3>
+<p>There are plugins that offer much more tight integration, but for me it is enough to start GHCI from the current vim instance in a Tmux pane loaded with the current project or Haskell source, so taking advantage of the <a href="https://github.com/benmills/vimux">vimux</a> Tmux integration plugin, lets define a function:</p>
+<pre class="vim"><code>function! RunGhci(type)
+    call VimuxRunCommand(&quot; stack ghci &amp;&amp; exit&quot;)
+    if a:type
+        call VimuxSendText(&quot;:l &quot; . bufname(&quot;%&quot;))
+        call VimuxSendKeys(&quot;Enter&quot;)
+    endif
+endfunction</code></pre>
+<p>And some mappings:</p>
+<pre class="vim"><code>au FileType haskell nmap &lt;silent&gt;&lt;buffer&gt; &lt;leader&gt;gg :call RunGhci(1)&lt;CR&gt;
+au FileType haskell nmap &lt;silent&gt;&lt;buffer&gt; &lt;leader&gt;gs :call RunGhci(0)&lt;CR&gt;</code></pre>
+<p>So doing <code>\gg</code> will start a GHCI session loaded with the current file and <code>\gs</code> will load a GHCI session for the current stack project.</p>
+<h3 id="convenient-mappings">Convenient mappings</h3>
+<p>When editing a function’s arguments we would like to have a text object so doing <code>cia</code> (change inner argument) or <code>daa</code> (delete all argument) will work; These will to the trick:</p>
+<pre class="vim"><code>au FileType haskell onoremap &lt;silent&gt; ia :&lt;c-u&gt;silent execute &quot;normal! ?-&gt;\r:nohlsearch\rwvf-ge&quot;&lt;CR&gt;
+au FileType haskell onoremap &lt;silent&gt; aa :&lt;c-u&gt;silent execute &quot;normal! ?-&gt;\r:nohlsearch\rhvEf-ge&quot;&lt;CR&gt;</code></pre>
+<p>In order to easily jump between functions we could define a function:</p>
+<pre class="vim"><code>function! JumpHaskellFunction(reverse)
+    call search('\C[[:alnum:]]*\s*::', a:reverse ? 'bW' : 'W')
+endfunction</code></pre>
+<p>And some mappings, so doing <code>[[</code> or <code>]]</code> will takes us to the previous or next function:</p>
+<pre class="vim"><code>au FileType haskell nnoremap &lt;buffer&gt;&lt;silent&gt; ]] :call JumpHaskellFunction(0)&lt;CR&gt;
+au FileType haskell nnoremap &lt;buffer&gt;&lt;silent&gt; [[ :call JumpHaskellFunction(1)&lt;CR&gt;</code></pre>
+<p>Lets add some extra convenience and use <code>gI</code> for jumping to the first <em>import</em> statement and <code>gC</code> to edit the <em>.cabal</em> file:</p>
+<pre class="vim"><code>au FileType haskell nnoremap &lt;buffer&gt; gI gg /\cimport&lt;CR&gt;&lt;ESC&gt;:noh&lt;CR&gt;
+au FileType haskell nnoremap &lt;buffer&gt; gC :e *.cabal&lt;CR&gt;</code></pre>
+<h3 id="ghc-mod-integration">Ghc-mod integration</h3>
+<p><a href="https://hackage.haskell.org/package/ghc-mod">ghc-mod</a> is the <em>Happy Haskell Programming package</em>! With a whole bunch of functionality, here we will be using just a few:</p>
+<ul>
+<li>Type inserting</li>
+<li>Case splitting</li>
+<li>Type asserting</li>
+</ul>
+<p>You need the <em>ghc-mod</em> package: <code>stack install ghc-mod</code> and the <a href="https://github.com/eagletmt/ghcmod-vim">ghcmod-vim plugin</a>.</p>
+<pre class="vim"><code>au FileType haskell nnoremap &lt;silent&gt;&lt;buffer&gt; git :GhcModTypeInsert&lt;CR&gt;
+au FileType haskell nnoremap &lt;silent&gt;&lt;buffer&gt; gfs :GhcModSplitFunCase&lt;CR&gt;
+au FileType haskell nnoremap &lt;silent&gt;&lt;buffer&gt; gtt :GhcModType&lt;CR&gt;</code></pre>
+<p><code>git</code> (<em>g insert type</em>) will insert the missing type declaration of an expression, take for instance this Haskell code:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Hello</span> <span class="kw">where</span>
+
+f (<span class="dt">Just</span> a) <span class="fu">=</span> <span class="dt">Left</span> a
+f <span class="dt">Nothing</span> <span class="fu">=</span> <span class="dt">Right</span> ()</code></pre></div>
+<p>With the cursor in the first <code>f</code> (the function name) using the <code>tt</code> mapping will produce:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Hello</span> <span class="kw">where</span>
+
+<span class="ot">f ::</span> <span class="dt">Maybe</span> a <span class="ot">-&gt;</span> <span class="dt">Either</span> a ()
+f (<span class="dt">Just</span> a) <span class="fu">=</span> <span class="dt">Left</span> a
+f <span class="dt">Nothing</span> <span class="fu">=</span> <span class="dt">Right</span> ()</code></pre></div>
+<div class="figure">
+<img src="../../img/vimhask/shot2.gif" class="img-responsive" />
+
+</div>
+<p>Neat!, go ahead and play around with the other mappings, you’ll be not disappointed.</p>
+<h3 id="hlint-integration">Hlint integration</h3>
+<p>By default <a href="https://github.com/neomake/neomake">Neomake</a> will use <em>hlint</em> on the current file when the <code>:Neomake</code> command is invoked on a Haskell source file, so by adding a mapping:</p>
+<pre class="vim"><code>au FileType haskell nnoremap &lt;buffer&gt; gll :Neomake&lt;CR&gt;</code></pre>
+<p><code>gll</code> will open the location list with the lints, which takes us to some convenience mappings:</p>
+<pre class="vim"><code>au FileType haskell nnoremap &lt;buffer&gt;&lt;silent&gt; gl&lt;space&gt; :call ToggleLocationList()&lt;CR&gt;
+au FileType haskell nnoremap &lt;buffer&gt;&lt;silent&gt; glc :sign unplace *&lt;CR&gt;</code></pre>
+<p>So now is possible to toggle the location list with <code>gl&lt;space&gt;</code> and clear it with <code>glc</code>.</p>
+<h3 id="code-formatting-and-beautifying">Code formatting and beautifying</h3>
+<p><em>Hindent</em> allows to beautify Haskell code, you could used it by setting the <code>formatprg</code> option and then trigger it with the <code>=</code> command, but there is a problem: if your code happens to have any syntax errors, it will be replaced with a nasty error message. To handle this we’re going to use the <a href="https://github.com/alx741/vim-hindent">vim-hindent</a> plugin instead, so each time we save a Haskell source file it will be automatically beatified.</p>
+<p>Don’t forget to configure it:</p>
+<pre class="vim"><code>let g:hindent_on_save = 1
+let g:hindent_line_length = 80
+let g:hindent_indent_size = 4</code></pre>
+<p>One extra thing left is to align stuff in the code so it looks nicer</p>
+<pre class="vim"><code>au FileType haskell nmap &lt;silent&gt;&lt;buffer&gt; g&lt;space&gt; vii&lt;ESC&gt;:silent!'&lt;,'&gt; EasyAlign /-&gt;/&lt;CR&gt;</code></pre>
+<p>Take for instance this very dumb example for the sake of the argument:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Test</span> <span class="kw">where</span>
+
+<span class="ot">f ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+f x <span class="fu">=</span> <span class="kw">case</span> x <span class="kw">of</span>
+    <span class="dv">1</span>   <span class="ot">-&gt;</span> <span class="st">&quot;1&quot;</span>
+    <span class="dv">2</span> <span class="ot">-&gt;</span>   <span class="st">&quot;2&quot;</span>
+    <span class="dv">3</span> <span class="ot">-&gt;</span> <span class="st">&quot;3&quot;</span></code></pre></div>
+<p>Using <code>g&lt;space&gt;</code> we got:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Test</span> <span class="kw">where</span>
+
+<span class="ot">f ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">String</span>
+f x <span class="fu">=</span>
+  <span class="kw">case</span> x <span class="kw">of</span>
+    <span class="dv">1</span> <span class="ot">-&gt;</span> <span class="st">&quot;1&quot;</span>
+    <span class="dv">2</span> <span class="ot">-&gt;</span> <span class="st">&quot;2&quot;</span>
+    <span class="dv">3</span> <span class="ot">-&gt;</span> <span class="st">&quot;3&quot;</span></code></pre></div>
+<div class="figure">
+<img src="../../img/vimhask/shot3.gif" class="img-responsive" />
+
+</div>
+<p>So much better!</p>
+<h3 id="easy-arrows-generation">Easy arrows generation</h3>
+<p>In Haskell, operators like <code>-&gt;</code> and <code>=&gt;</code> are very common and I find it cumbersome to type them manually. Lets define a function:</p>
+<pre class="vim"><code>function! Make_arrow(type)
+    if a:type
+        if (matchstr(getline('.'), '\%' . col('.') . 'c.') ==? ' ')
+            exe &quot;norm! a-&gt;  &quot;
+        else
+            exe &quot;norm! a -&gt;  &quot;
+        endif
+        exe &quot;startreplace&quot;
+    else
+        if (matchstr(getline('.'), '\%' . col('.') . 'c.') ==? ' ')
+            exe &quot;norm! a=&gt;  &quot;
+        else
+            exe &quot;norm! a =&gt;  &quot;
+        endif
+        exe &quot;startreplace&quot;
+    endif
+endfunction</code></pre>
+<p>And some insert mode mappings:</p>
+<pre class="vim"><code>au FileType haskell inoremap &lt;buffer&gt; ;; &lt;ESC&gt;:call Make_arrow(1)&lt;CR&gt;
+au FileType haskell inoremap &lt;buffer&gt; ;: &lt;ESC&gt;:call Make_arrow(0)&lt;CR&gt;</code></pre>
+<p>So while in insert mode typing <code>;;</code> or <code>;:</code> will insert <code>-&gt;</code> or <code>=&gt;</code> respectively. Additionally it will avoid duplicated spaces between the types and the arrows.</p>
+<h3 id="types-abbreviations">Types abbreviations</h3>
+<p>Maybe I’m a terrible typist, but writing the first upper case letter of the most common types hurts my pinkie. So by using some insert mode abbreviations:</p>
+<pre class="vim"><code>au FileType haskell inoreab &lt;buffer&gt; int Int
+au FileType haskell inoreab &lt;buffer&gt; integer Integer
+au FileType haskell inoreab &lt;buffer&gt; string String
+au FileType haskell inoreab &lt;buffer&gt; double Double
+au FileType haskell inoreab &lt;buffer&gt; float Float
+au FileType haskell inoreab &lt;buffer&gt; true True
+au FileType haskell inoreab &lt;buffer&gt; false False
+au FileType haskell inoreab &lt;buffer&gt; maybe Maybe
+au FileType haskell inoreab &lt;buffer&gt; just Just
+au FileType haskell inoreab &lt;buffer&gt; nothing Nothing
+au FileType haskell inoreab &lt;buffer&gt; io IO ()</code></pre>
+<p>Now I can type all lower case without having to bother with the <em>shift</em> key and the capitalized version will be inserted instead.</p>
+<h3 id="yesod-haskell-web-framework">Yesod Haskell web framework</h3>
+<p>Some neat integration with Yesod can be achieved by using the <a href="https://github.com/alx741/vim-yesod">vim-yesod</a> plugin which, by default, gives you some mappings:</p>
+<p><code>gh</code> - Jump to the handler of the route under the cursor in the <code>config/routes</code> file.</p>
+<p><code>gH</code> - Create a new handler for the route under the cursor in the <code>config/routes</code> file.</p>
+<p><code>gm</code> - Jump to or create the i18n message under the cursor in a template file.</p>
+<p><em>vim-yesod</em> gives you <code>config/routes</code>, <code>config/models</code> and i18n <code>messages/</code> syntax highlighting, but it doesn’t support shakesperean templates syntax so be sure to install the <a href="https://github.com/pbrisbin/vim-syntax-shakespeare">vim-syntax-shakespeare</a> as well.</p>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

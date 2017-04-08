@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Seamlessly Vim-Tmux-WindowManager-Monitor navigator</h2>
+        <div class="post-date-author">
+            Posted on June 24, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <div class="figure">
+<img src="../../img/navigator/thumbnail.jpg" class="img-responsive" />
+
+</div>
+<p><a href="https://robots.thoughtbot.com/seamlessly-navigate-vim-and-tmux-splits">This Thoughtbot post</a> describes how to make Vim and Tmux <em>work together in Harmony</em> based on <a href="https://github.com/christoomey/vim-tmux-navigator">this crhistoomey plugin</a>, allowing you to traverse both your Vim and Tmux windows and panes respectively.</p>
+<!--more-->
+<p>Having the ability to traverse Vim and Tmux splits without having to think about it using <code>ctrl-h</code>, <code>ctrl-j</code>, <code>ctrl-k</code>, <code>ctrl-l</code> is fantastic! But I still had an annoyance source from the window manager (Ratpoison) and the multi monitor setup.</p>
+<p>So I took the same concept and extend it to those uses cases, so now I use <code>ctrl-h</code>, <code>ctrl-j</code>, <code>ctrl-k</code>, <code>ctrl-l</code> to move through my <strong>Window Manager splits</strong>, my <strong>Tmux panes</strong>, my <strong>Vim windows</strong> and my <strong>Monitors</strong> with minimum mental overhead. Here is how.</p>
+<p>Some of the scripts are a bit of complex, so instead of explaining them in detail the general algorithm is described.</p>
+<h1 id="frame-monitor-navigation">Frame-Monitor Navigation</h1>
+<div class="figure">
+<img src="../../img/navigator/shot1.jpg" class="img-left" />
+
+</div>
+<p>When traversing frames (Ratpoison splits) it stops at the end of the current monitor, so first I needed to change to the left or right monitor when a movement command is triggered at the edge of the current one.</p>
+<p>The script <a href="https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/frame-mon_navigator.sh">frame-mon_navigator.sh</a> calculates if the current frame is the rightmost or the leftmost in the current monitor, if it is, it goes to the next of previous monitor depending on the movement command.</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="co">#!/bin/sh</span>
+
+<span class="ex">ratpoison</span> -c <span class="st">'fdump'</span><span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/,/\n/g'</span> <span class="kw">|</span> <span class="fu">awk</span> <span class="st">'{print $5&quot; &quot;$19}'</span> <span class="op">&gt;</span> /tmp/ratpoison_frame_monitor_navigator
+
+<span class="co"># Calculate X coordinate for rightmost frame</span>
+<span class="va">greater_x_coordinate=</span>0
+<span class="kw">while</span> <span class="bu">read</span> <span class="va">frame</span>; <span class="kw">do</span>
+    <span class="va">coordinate=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$frame</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f1<span class="va">)</span>
+    <span class="kw">if [[</span> <span class="va">$coordinate</span> <span class="ot">-gt</span> <span class="va">$greater_x_coordinate</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="va">greater_x_coordinate=$coordinate</span>
+    <span class="kw">fi</span>
+<span class="kw">done</span> <span class="op">&lt;</span> <span class="ex">/tmp/ratpoison_frame_monitor_navigator</span>
+
+
+<span class="co"># Calculate current frame X coordinate</span>
+<span class="va">x_coordinate=$(</span><span class="fu">head</span> -n1 /tmp/ratpoison_frame_monitor_navigator <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f1<span class="va">)</span>
+<span class="va">last_access=$(</span><span class="fu">head</span> -n1 /tmp/ratpoison_frame_monitor_navigator <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f2<span class="va">)</span>
+<span class="kw">while</span> <span class="bu">read</span> <span class="va">frame</span>; <span class="kw">do</span>
+    <span class="va">access=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$frame</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f2<span class="va">)</span>
+    <span class="kw">if [[</span> <span class="va">$access</span> <span class="ot">-gt</span> <span class="va">$last_access</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="va">last_access=$access</span>
+        <span class="va">x_coordinate=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$frame</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f1<span class="va">)</span>
+    <span class="kw">fi</span>
+<span class="kw">done</span> <span class="op">&lt;</span> <span class="ex">/tmp/ratpoison_frame_monitor_navigator</span>
+
+<span class="kw">function</span><span class="fu"> is_leftmost</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="va">$x_coordinate</span> <span class="ot">-eq</span> 0<span class="kw"> ]]</span>; <span class="kw">then</span>
+        <span class="bu">return</span> 0
+    <span class="kw">else</span>
+        <span class="bu">return</span> 1
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> is_rightmost</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="va">$x_coordinate</span> <span class="ot">-eq</span> <span class="va">$greater_x_coordinate</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+        <span class="bu">return</span> 0
+    <span class="kw">else</span>
+        <span class="bu">return</span> 1
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="co"># Go to previous screen if currently if leftmost frame</span>
+<span class="co"># Go to next screen if currently if rightmost frame</span>
+<span class="co"># Execute frame focus otherwise</span>
+<span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;left&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+    <span class="kw">if</span> <span class="ex">is_leftmost</span><span class="kw">;</span> <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'prevscreen'</span>
+    <span class="kw">else</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'focusleft'</span>
+    <span class="kw">fi</span>
+<span class="kw">elif [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;right&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+    <span class="kw">if</span> <span class="ex">is_rightmost</span><span class="kw">;</span> <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'nextscreen'</span>
+    <span class="kw">else</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'focusright'</span>
+    <span class="kw">fi</span>
+<span class="kw">fi</span></code></pre></div>
+<h1 id="ratpoison-tmux-navigator">Ratpoison-Tmux Navigator</h1>
+<div class="figure">
+<img src="../../img/navigator/shot2.jpg" class="img-left" />
+
+</div>
+<p>We need a way to pass movement commands to Tmux so Vim-Tmux navigation works as always, but we also need to pass movement commands from Tmux to Ratpoison when a movement command is triggered from Tmux edge pane.</p>
+<p>The script <a href="https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/rat_tmux-navigator.sh">rat_tmux-navigator.sh</a> is able to tell if the terminal emulator (Urxvt) is currently focused and, if so, send the movement commands to Tmux so it can handle panes traversing as usual. It also define functions that Tmux can use to know if a edge pane is reached and send the movement commands to Ratpoison through the <strong>frame-mon_navigator.sh</strong> script so Frame-Monitor navigation is included in the process.</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="co">#!/bin/bash</span>
+
+<span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;rat&quot;</span><span class="kw"> ]]</span>; <span class="kw">then</span>
+<span class="va">current_window=$(</span><span class="ex">ratpoison</span> -c <span class="st">'info'</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">'s/(.*).*(\(.*\))/\1/'</span>\
+                <span class="kw">|</span> <span class="fu">tr</span> <span class="st">'[:upper:]'</span> <span class="st">'[:lower:]'</span><span class="va">)</span>
+
+<span class="kw">elif [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;tmux&quot;</span><span class="kw"> ]]</span>;<span class="kw">then</span>
+    <span class="va">window_bottom=$(</span><span class="ex">tmux</span> list-panes -F <span class="st">&quot;#{window_height}&quot;</span> <span class="kw">|</span> <span class="fu">head</span> -n1<span class="va">)</span>
+    <span class="va">window_right=$(</span><span class="ex">tmux</span> list-panes -F <span class="st">&quot;#{window_width}&quot;</span> <span class="kw">|</span> <span class="fu">head</span> -n1<span class="va">)</span>
+    <span class="va">window_bottom=$(($window_bottom</span> - 1<span class="va">))</span>
+    <span class="va">window_right=$(($window_right</span> - 1<span class="va">))</span>
+    <span class="va">pane=$(</span><span class="ex">tmux</span> list-panes -F <span class="st">&quot;#{pane_left} #{pane_right} #{pane_top} #{pane_bottom} #{pane_active}&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">'.* 1$'</span><span class="va">)</span>
+    <span class="va">pane_left=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$pane</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f 1<span class="va">)</span>
+    <span class="va">pane_right=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$pane</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f 2<span class="va">)</span>
+    <span class="va">pane_top=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$pane</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f 3<span class="va">)</span>
+    <span class="va">pane_bottom=$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">$pane</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">' '</span> -f 4<span class="va">)</span>
+<span class="kw">fi</span>
+
+<span class="kw">function</span><span class="fu"> rat_up</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$current_window</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;urxvt&quot;</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'meta C-k'</span>
+    <span class="kw">else</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'focusup'</span>
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> rat_down</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$current_window</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;urxvt&quot;</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'meta C-j'</span>
+    <span class="kw">else</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'focusdown'</span>
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> rat_right</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$current_window</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;urxvt&quot;</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'meta C-l'</span>
+    <span class="kw">else</span>
+        <span class="ex">~/.scripts/ratpoison/frame-mon_navigator.sh</span> right
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> rat_left</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$current_window</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;urxvt&quot;</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'meta C-h'</span>
+    <span class="kw">else</span>
+        <span class="ex">~/.scripts/ratpoison/frame-mon_navigator.sh</span> left
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> tmux_up</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="va">$pane_top</span>  <span class="ot">-eq</span> 0<span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'focusup'</span>
+    <span class="kw">else</span>
+        <span class="ex">tmux</span> select-pane -U
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> tmux_down</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="va">$pane_bottom</span>  <span class="ot">-eq</span> <span class="va">$window_bottom</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">ratpoison</span> -c <span class="st">'focusdown'</span>
+    <span class="kw">else</span>
+        <span class="ex">tmux</span> select-pane -D
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> tmux_right</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="va">$pane_right</span>  <span class="ot">-eq</span> <span class="va">$window_right</span><span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">~/.scripts/ratpoison/frame-mon_navigator.sh</span> right
+    <span class="kw">else</span>
+        <span class="ex">tmux</span> select-pane -R
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+<span class="kw">function</span><span class="fu"> tmux_left</span>
+<span class="kw">{</span>
+    <span class="kw">if [[</span> <span class="va">$pane_left</span>  <span class="ot">-eq</span> 0<span class="kw"> ]]</span>;
+    <span class="kw">then</span>
+        <span class="ex">~/.scripts/ratpoison/frame-mon_navigator.sh</span> left
+    <span class="kw">else</span>
+        <span class="ex">tmux</span> select-pane -L
+    <span class="kw">fi</span>
+<span class="kw">}</span>
+
+
+<span class="kw">if [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;rat&quot;</span><span class="kw"> ]]</span>;<span class="kw">then</span>
+    <span class="kw">case</span> <span class="st">&quot;</span><span class="va">$2</span><span class="st">&quot;</span><span class="kw"> in</span>
+        <span class="st">'up'</span><span class="kw">)</span>
+            <span class="ex">rat_up</span>
+            <span class="kw">;;</span>
+        <span class="st">'down'</span><span class="kw">)</span>
+            <span class="ex">rat_down</span>
+            <span class="kw">;;</span>
+        <span class="st">'right'</span><span class="kw">)</span>
+            <span class="ex">rat_right</span>
+            <span class="kw">;;</span>
+        <span class="st">'left'</span><span class="kw">)</span>
+            <span class="ex">rat_left</span>
+            <span class="kw">;;</span>
+    <span class="kw">esac</span>
+
+<span class="kw">elif [[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">==</span> <span class="st">&quot;tmux&quot;</span><span class="kw"> ]]</span>;<span class="kw">then</span>
+    <span class="kw">case</span> <span class="st">&quot;</span><span class="va">$2</span><span class="st">&quot;</span><span class="kw"> in</span>
+        <span class="st">'up'</span><span class="kw">)</span>
+            <span class="ex">tmux_up</span>
+            <span class="kw">;;</span>
+        <span class="st">'down'</span><span class="kw">)</span>
+            <span class="ex">tmux_down</span>
+            <span class="kw">;;</span>
+        <span class="st">'right'</span><span class="kw">)</span>
+            <span class="ex">tmux_right</span>
+            <span class="kw">;;</span>
+        <span class="st">'left'</span><span class="kw">)</span>
+            <span class="ex">tmux_left</span>
+            <span class="kw">;;</span>
+    <span class="kw">esac</span>
+<span class="kw">fi</span></code></pre></div>
+<h1 id="vim-tmux-navigator">Vim-Tmux Navigator</h1>
+<p>Modifying Tmux mappings to use above scripts will make it work for Tmux-Ratpoison traversing but when a Vim instance is on an Tmux edge pane it will not jump to the appropriate Ratpoison split. To solve it I forked the <code>vim-tmux-navigator</code> project and made the right changes to it in the <a href="https://github.com/alx741/vim-tmux-navigator/tree/vim-tmux-wm-monitor">vim-tmux-wm-monitor branch</a></p>
+<p>Then using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> I install it in my <code>.vimrc</code> with:</p>
+<pre><code>Plug 'alx741/vim-tmux-navigator', { 'branch': 'vim-tmux-wm-monitor' }</code></pre>
+<h1 id="mappings">Mappings</h1>
+<p>Putting all together requires the appropriate mappings for Ratpoison and Tmux. Vim is already configured with the forked plugin.</p>
+<h2 id="ratpoison">Ratpoison</h2>
+<p>These lines on <code>.ratpoisonrc</code> will do the top level handling. Take into account the path to the <code>rat_tmux-navigator.sh</code> script.</p>
+<pre><code>definekey top C-k exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat up
+definekey top C-j exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat down
+definekey top C-l exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat right
+definekey top C-h exec ~/.scripts/ratpoison/rat_tmux-navigator.sh rat left</code></pre>
+<h2 id="tmux">Tmux</h2>
+<p>Finally these lines on <code>.tmux.conf</code> are basically modified versions of the <code>vim-tmux-navigator</code> plugin ones.</p>
+<pre><code>is_vim=&quot;ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'&quot;
+bind-key C-h if-shell &quot;$is_vim&quot; &quot;send-keys C-h&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux left'&quot;
+bind-key C-j if-shell &quot;$is_vim&quot; &quot;send-keys C-j&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux down'&quot;
+bind-key C-k if-shell &quot;$is_vim&quot; &quot;send-keys C-k&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux up'&quot;
+bind-key C-l if-shell &quot;$is_vim&quot; &quot;send-keys C-l&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux right'&quot;
+bind-key -n C-h if-shell &quot;$is_vim&quot; &quot;send-keys C-h&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux left'&quot;
+bind-key -n C-j if-shell &quot;$is_vim&quot; &quot;send-keys C-j&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux down'&quot;
+bind-key -n C-k if-shell &quot;$is_vim&quot; &quot;send-keys C-k&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux up'&quot;
+bind-key -n C-l if-shell &quot;$is_vim&quot; &quot;send-keys C-l&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux right'&quot;
+bind-key h if-shell &quot;$is_vim&quot; &quot;send-keys C-h&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux left'&quot;
+bind-key j if-shell &quot;$is_vim&quot; &quot;send-keys C-j&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux down'&quot;
+bind-key k if-shell &quot;$is_vim&quot; &quot;send-keys C-k&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux up'&quot;
+bind-key l if-shell &quot;$is_vim&quot; &quot;send-keys C-l&quot;  &quot;run '~/.scripts/ratpoison/rat_tmux-navigator.sh tmux right'&quot;</code></pre>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

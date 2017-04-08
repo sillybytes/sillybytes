@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Silly Bytes</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../css/default.css" />
+        <link rel="stylesheet" href="../../css/post-list.css" />
+        <link rel="stylesheet" href="../../css/post.css" />
+
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../bower_components/highlight/src/styles/solarized-light.css" />
+
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../bower_components/highlight/src/highlight.pack.js"></script>
+
+        <script> hljs.initHighlightingOnLoad(); </script>
+
+    </head>
+    <body>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="../../">
+                        <img alt="Silly Bytes" id="logo" class="image-responsive" src="../../img/newcog.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="blog" class="container-fluid">
+            <div class="row">
+
+                <div id="sidebar" class="hidden-xs hidden-sm col-md-3">
+                    <div id="author">
+                        <img id="author-pic" src="../../img/danie.jpg">
+                        <h3 id="author-name">Daniel Campoverde [alx741]</h3>
+                        <img id="location-icon" src="../../img/location_icon.png">
+                        <span id="location">Cuenca, Ecuador</span>
+                    </div>
+
+                    <div id="findme">
+                        <h2 class="sidebar-h2">FIND ME</h2>
+                        <a target="_blank" href="https://github.com/alx741">
+                            <img class="icon" src="../../img/github.png">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/alx741alx">
+                            <img class="icon" src="../../img/twitter.png">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/sillybytes/">
+                            <img class="icon" src="../../img/facebook.png">
+                        </a>
+                        <a target="_blank" href="https://plus.google.com/116038619580828681039">
+                            <img class="icon" src="../../img/google.png">
+                        </a>
+                        <a target="_blank" href="https://www.joindiaspora.com/u/alx741">
+                            <img class="icon" src="../../img/diaspora.png">
+                        </a>
+
+                        <div id="findme-textual">
+                            <b>Freenode:</b> #vim, #archlinux, #avr, #rust, #haskell,
+                            #yesod, #zsh, #sillybytes
+                            <hr>
+                            <b>Mailto:</b> alx@sillybytes.net
+                            <br>
+                            <b>GPG Key ID:</b> 12622B78
+                            <hr>
+                            <b>Chat</b> with me <a target="_blank" href="http://webchat.freenode.net/?channels=sillybytes">here</a>
+                        </div>
+
+
+                        <div id="facebook-embed" class="embed-responsive embed-responsive-16by9">
+                            <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsillybytes&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="yes" style="border:none; overflow:hidden; height:290px;" allowtransparency="false" frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div id="dotfiles">
+                        <h2 class="sidebar-h2">DOTFILES</h2>
+                        <p>
+                            Software configuration, scripts, tools and magic.
+                            Be sure to add <b>attribution </b> when using them
+                            (fully or partially).
+                        </p>
+                        <a target="_blank" href="https://github.com/alx741/dotfiles#readme">
+                            <img id="dotfiles-img" src="../../img/dotfiles.png">
+                        </a>
+                    </div>
+
+                    <div id="about">
+                        <h2 class="sidebar-h2">ABOUT</h2>
+
+                        <a target="_blank" href="http://www.haskellers.com/user/4249">
+                            <img id="haskellers-img" class="badge" alt="I'm a Haskeller" src="../../img/haskellers.png">
+                        </a>
+
+                        <img id="fsf-img" class="badge" alt="Free Software Fundation Member" src="../../img/fsf.png">
+
+                        <a target="_blank" href="http://internetdefenseleague.org/">
+                            <img id="idl-img" class="badge" alt="Internet Defesen League" src="../../img/idl.png">
+                        </a>
+                    </div>
+
+
+                    <div id="license">
+                        <h2 class="sidebar-h2">LICENSE</h2>
+
+                        <a target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                            <img id="cc-img" alt="Creative Commons - SA - BY" src="../../img/cc.png">
+                        </a>
+                        <p id="cc-text">
+                            Silly Bytes by Daniel Alejandro Campoverde Carrión
+                            [alx741] is licensed under a
+                            <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                                Creative Commons Attribution-ShareAlike 3.0 Unported License.
+                            </a>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div id="content" class="col-xs-12 col-md-9">
+                    <div class="row">
+    <div class="post col-xs-12">
+        <h2 class="post-title">Why I hate Java</h2>
+        <div class="post-date-author">
+            Posted on March 28, 2016
+            
+                by Daniel Campoverde
+            
+        </div>
+        <div class="post-content">
+            <p><img src="../../img/hatejava/thumbnail.jpg" id="thumbnail" /><br />
+</p>
+<h1 id="everything-is-an-object">Everything is an object…</h1>
+<p>… No, it’s not!</p>
+<p>Not everything is a object. Have you ever carefully read Java code? It’s full of actions disguised like objects: <em>Mutator</em>, <em>Traverser</em>, <em>Factory</em>, <em>Maker</em>, <em>Creator</em>, <em>Generator</em>, <em>Mediator</em>. So you don’t <em>mutate</em>, <em>traverse</em>, <em>make</em>, <em>create</em> or <em>generate</em> anything, instead you force an object that can do that.</p>
+<p>Ok some of that stuff can be useful for well used design patterns and a good design, but most of the time is not!</p>
+<!--more-->
+<p>Classes are good when they fit, and a good language has <em>OOP</em> as a <strong>feature</strong>. But forcing objects everywhere is bad.</p>
+<p>As Steve Yegge puts it in his article: <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">Execution in kingdom of nouns</a>, verbs should not be second class citizens.</p>
+<p>Java stupidity causes lots of <a href="http://www.j-paine.org/objects/objects/objects.html">astonishment and improper behaviors that you are forced to get used to</a>.</p>
+<h1 id="s.o.s">S.O.S</h1>
+<p>Ok, you hit a problem, <em>javac</em> is throwing a completely incomprehensible error and, of course, you go to Google/Duckduckgo hoping you get some answers, and you do:</p>
+<ul>
+<li>Click that button</li>
+<li>A pop up widow appears</li>
+<li>Fill up those text fields</li>
+<li>Mark that check box</li>
+<li>Click the yellow icon</li>
+<li>Click “ok”</li>
+<li>Then restart your IDE</li>
+</ul>
+<blockquote>
+<p>Are you kidding me?</p>
+</blockquote>
+<p>The freaking 99% of “solutions” you find, are a sequence of clicks and actions in a graphical user interface of an IDE, What if I’m not using that specific IDE? What if I’m not using an IDE at all!!??</p>
+<p>Are you people stupid? I’m probably not even in a Xorg server session and writing the code comfortably in my preferred text editor in a nice tmux or screen session in a remote machine, how I’m I supposed to “click” here and there? I have no icons! And this is a perfectly valid scenario.</p>
+<p>How is that, an error produced because Java can’t find a library or something similar, requires a sequence of GUI actions using a mouse? And worse, how is that the ONLY way to fix it!?</p>
+<p>You guys are aware that code is plain text right?… RIGHT??</p>
+<h1 id="use-and-ide">Use and IDE!</h1>
+<p>James Gosling (aka Java’s father) says: <a href="http://www.computerworld.com.au/article/207799/don_t_use_emacs_says_java_father/">Don’t use Emacs</a>.</p>
+<p>Yes, if you’re writing Java and you’re not using an IDE, but a good text editor instead, you’re going to have some hard times, but for a good reason. Java programming gets hard with Vim or Emacs because Java sucks very hard, and this symptom tells more about the language than it says about de editors.</p>
+<p>The language needs, and is dependent on, a huge, bloated and slow specific tailored program to use it. The IDE becomes a really big support to hold everything where the language fails.</p>
+<p>So the language is not aimed for humans, it requires an extra layer, an interface (the IDE) for the user to actually use.</p>
+<p>More on that in: <a href="http://www.sillybytes.net/2016/03/why-do-i-hate-ides.html">Why I hate IDEs</a>.</p>
+<h1 id="ide-dependent-projects">IDE dependent projects</h1>
+<p>If your project use, lets say, Eclipse, the other person will have to use it as well if she doesn’t want to die trying to maintain it in Netbeans for example.</p>
+<p>Yes it is possible, but you get way to many headaches.</p>
+<p>Found a nice example in the internet about something you need? Great! Lets hope it uses the exact same IDE you use though… Otherwise, keep looking.</p>
+<p>Have you tried to compile an IDE generated project without the IDE? If your not feeling extremely adventurous or not willing to do it with lots of horrible hacks, then you better go and install that stupid IDE.</p>
+<p>IDE dependent projects is already too bad, but projects that are dependent on the IDE specific version?? Yeah… You might as well go and shoot yourself in the head now.</p>
+<h1 id="why-documentation-when-you-have-a-mouse">Why documentation when you have a mouse?</h1>
+<p>Real documentation is almost nonexistent if the IDE has an <em>automagical</em> GUI button for doing that, so if you have to do it, you must use the IDE so you can press the goddamn button!</p>
+<p>Trying to write a SOAP interface for a JSF application? No problem just click here and there!. But if you don’t use the IDE you’re pretty screwed, because good documentation about how to actually write it is stupid or nonexistent.</p>
+<h1 id="conclusion">Conclusion</h1>
+<ul>
+<li>There are lots of stupid programmers, and Java is one of the things to <a href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">blame</a>.</li>
+<li>If you can’t easily write software in a language without an IDE, then the language sucks.</li>
+<li>Because of the Java dependency on IDEs as <a href="https://dzone.com/articles/ide-bad-programming-language">bad programming language enablers</a>, lots of the problems with Java are just the intersection with IDE’s problems.</li>
+</ul>
+        </div>
+    </div>
+</div>
+
+                    <div class="row">
+                        <div class="col-xs-offset-2 col-xs-8">
+                            <a id="archive" href="../../archive.html">Read Older Posts</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
