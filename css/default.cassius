@@ -140,4 +140,9 @@ header
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    color: #586e75;
+    color: #cb4b16;
+
+.post-list-title
+    color: rgb(181, 137, 0);
+    font-family: Droid Serif;
+    font-size: 1.5em;
