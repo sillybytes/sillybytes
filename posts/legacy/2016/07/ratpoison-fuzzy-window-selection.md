@@ -6,7 +6,7 @@ published: 2016-07-13
 ![](/img/ratfuzzy/thumbnail.png){#thumbnail}\
 
 A nice feature to have is the ability to jump to an arbitrary window by
-performing a quick fuzzy searching whit just a few characters. We can achieve
+performing a quick fuzzy search with just a few characters. We can achieve
 this by using Ratpoison's flexibility and the fantastic [FZF
 tool](https://github.com/junegunn/fzf).
 
