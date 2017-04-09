@@ -28,7 +28,7 @@ header
         margin: 10px auto;
         background: transparent;
 
-#blog
+#blog, footer
     background-color: rgba(256, 256, 256, 0.8);
 
 #sidebar
@@ -74,7 +74,10 @@ header
 
         #facebook-embed
             margin: 40px 0px;
-            min-height: 220px;
+            max-width: 100%;
+            overflow: hidden;
+            iframe
+                min-height: 230px;
 
     #dotfiles
         p
