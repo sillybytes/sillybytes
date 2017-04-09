@@ -1,4 +1,5 @@
 .post-prev
+    overflow: hidden;
     position: relative;
     .post-prev-date
         color: #93a1a1;
