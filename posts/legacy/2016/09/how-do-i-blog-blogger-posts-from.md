@@ -153,7 +153,7 @@ This is good enough already, we could invoke `deploy.py` from the Makefile, but
 it can be better.
 
 I wrote a tool:
-[silly](https://github.com/sillybytes/sillybytes_tool/blob/master/silly.sh).
+[silly](https://github.com/sillybytes/sillybytes_tool/tree/blogger).
 
     $ silly help
 
