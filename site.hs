@@ -29,6 +29,14 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
+    match "drafts/*.md" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+
     match "posts/legacy/**" $ do
         route $ customRoute $ (flip replaceExtension "html") . joinPath
             . (drop 2) . splitPath . toFilePath
@@ -57,6 +65,20 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             posts <- fmap (take 10) $ recentFirst =<< loadAllSnapshots "posts/**" "content"
+            let indexCtx =
+                    listField "posts" teaserCtx (return posts) <>
+                    defaultContext
+
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= relativizeUrls
+
+
+    match "drafts.html" $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAllSnapshots "drafts/**" "content"
             let indexCtx =
                     listField "posts" teaserCtx (return posts) <>
                     defaultContext
