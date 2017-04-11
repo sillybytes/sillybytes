@@ -1,6 +1,6 @@
 ---
 title: From Blogger to Hakyll
-published: 2017-04-09
+published: 2017-04-10
 ...
 
 ![](/img/bloggerhakyll/thumbnail.png){#thumbnail}\
@@ -8,7 +8,7 @@ published: 2017-04-09
 [Hakyll](https://jaspervdj.be/hakyll/) is an amazing static site generator
 written in Haskell, it allows for blog posts to be written in *markdown*, that
 are then compiled with *pandoc*, and is very well suited to be used with *GitHub
-pages*, it's everything I wanted and more.
+pages*; It's everything I wanted and more.
 
 [Silly Bytes](http://www.sillybytes.net) went through its first 5 years of
 existence hosted on Google's [Blogger](https://www.blogger.com) service, and it
@@ -28,7 +28,7 @@ In this post I will describe the process of porting an existing Blogger blog to
 
 # Expectations
 
-So this is what I want instead:
+So here is what I want instead:
 
 1. Completely port *Silly Bytes* to *Hakyll* and *GitHub pages*
 
@@ -155,6 +155,8 @@ No need for esoteric spells here.
 
 # Don't shatter my links!
 
+![](/img/bloggerhakyll/links.png){.img-responsive}
+
 It is imperative to preserve the links to my previous posts that were originally
 published on Blogger, so they keep pointing to the right post.
 
@@ -236,3 +238,25 @@ The porting process is as follows:
 
 Any newer posts that are created after the porting can live in the `posts`
 directory, there is no need to keep the `year/month/post.html` any more.
+
+
+# The migration
+
+![](/img/bloggerhakyll/migration.jpg){.img-responsive}
+
+The only thing that is left is the actual migration by pointing the domain name
+to the new location.
+
+This arises a bigger problem though, given that we are serving the blog from
+`sillybytes/docs` we'll need a *URL Redirect* record pointing to
+`sillybytes.github.io/sillybytes` rather than a *CNAME* to just
+`sillybytes.github.io`. If you're fine with that, then you're done.
+
+I really wanted a proper *CNAME* record, so I had to change the setup a
+bit:
+
+* Have two repositories: `sillybytes` for the sources, and
+    `sillybytes.github.io` for the generated page.
+* A *deployment* consists of copying the content of the `docs` directory to the
+    `sillybytes.github.io` repository.
+* Point the domain name with a *CNAME* record to `sillybytes.github.io`.
