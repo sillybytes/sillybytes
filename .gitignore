@@ -1,4 +1,5 @@
 _cache/
+_site/
 .stack-work/
 css/*.css
 *.o

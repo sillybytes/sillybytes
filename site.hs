@@ -103,26 +103,3 @@ postCtx =
 
 teaserCtx :: Context String
 teaserCtx = teaserField "teaser" "content" <> postCtx
-
-config :: Configuration
-config = Configuration
-    { destinationDirectory = "docs"
-    , storeDirectory       = "_cache"
-    , tmpDirectory         = "_cache/tmp"
-    , providerDirectory    = "."
-    , ignoreFile           = ignoreFile'
-    , deployCommand        = "echo 'No deploy command specified' && exit 1"
-    , deploySite           = system . deployCommand
-    , inMemoryCache        = True
-    , previewHost          = "127.0.0.1"
-    , previewPort          = 8000
-    }
-  where
-    ignoreFile' path
-        | "."    `isPrefixOf` fileName = True
-        | "#"    `isPrefixOf` fileName = True
-        | "~"    `isSuffixOf` fileName = True
-        | ".swp" `isSuffixOf` fileName = True
-        | otherwise                    = False
-      where
-        fileName = takeFileName path
