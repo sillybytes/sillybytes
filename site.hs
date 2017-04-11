@@ -8,7 +8,11 @@ import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
 
 main :: IO ()
-main = hakyllWith config $ do
+main = hakyll $ do
+    match "CNAME" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "img/**" $ do
         route   idRoute
         compile copyFileCompiler
