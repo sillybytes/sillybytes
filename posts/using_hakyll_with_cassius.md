@@ -10,7 +10,7 @@ and love the
 [Cassius](https://www.stackage.org/haddock/lts-8.4/shakespeare-2.0.12.1/Text-Cassius.html#v:cassius)
 CSS templating language, although its reliance on Template Haskell is meant to
 fit better with the Yesod's needs and makes it a bit cumbersome to use
-everywhere else, I still like the templating language itself and its features
+everywhere else, I still like the templating language itself and its features a
 lot.
 
 That's why I used it for the styles generation for [Silly
