@@ -1,6 +1,6 @@
 ---
 title: Using Cassius (Shakespearean template) with Hakyll
-published: 2017-12-31
+published: 2017-04-11
 ...
 
 ![](/img/hakyllcassius/thumbnail.png){#thumbnail}\
