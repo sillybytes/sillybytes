@@ -260,3 +260,26 @@ bit:
 * A *deployment* consists of copying the content of the `docs` directory to the
     `sillybytes.github.io` repository.
 * Point the domain name with a *CNAME* record to `sillybytes.github.io`.
+
+
+# New CLI tool
+
+![](/img/bloggerhakyll/shot.png){.img-responsive}
+
+The [CLI tool](https://github.com/sillybytes/sillybytes_tool) I was
+using before for Blogger deployment is no longer useful, but I can still adapt
+it to the new deployment schema:
+
+```sh
+cp -rfv _site/* ../sillybytes.github.io/
+cd ../sillybytes.github.io
+display_info "Deploying..."
+git add .
+git commit -m "Deploy"
+git push origin master
+display_success "Deployed!"
+```
+
+As well as aliasing common *Hakyll* commands:
+
+![](/img/bloggerhakyll/shot1.png){.img-responsive}
