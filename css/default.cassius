@@ -119,13 +119,12 @@ header
     margin-top: 20px;
     padding: 0 40px;
     #archive
-        display: inline-block;
+        display: block;
         text-align: center;
         font-weight: bold;
         font-size: 1.4em;
         margin: 20px;
         margin-bottom: 50px;
-        width: 100%
         letter-spacing: 1px;
         color: #6c71c4;
         padding: 10px;
