@@ -83,7 +83,7 @@ header
         p
             margin-top: 20px;
             font-size: 1.7em;
-            text-align: left;
+            text-align: center;
             padding: 0px 10px;
             color: #586e75;
         #dotfiles-img
