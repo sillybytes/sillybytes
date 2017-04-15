@@ -1,6 +1,6 @@
 ---
 title: What's wrong with Java?
-published: 2017-12-31
+published: 2017-04-14
 ...
 
 ![](/img/javawrong/thumbnail.png){#thumbnail}\
