@@ -244,6 +244,10 @@ and you must force them into existent to do anything. OOP is usually bad in
 general, although useful in certain contexts; Java makes it soul up from
 everything that is wrong with OOP.
 
+Those and more are the common pains of Javaland, that Steve Yegge describes
+wonderfully in [Execution in the Kingdom of
+Nouns](http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html).
+
 
 
 # Performance
