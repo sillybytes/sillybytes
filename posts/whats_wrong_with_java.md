@@ -46,8 +46,8 @@ Having no means to manipulate an object other than via *references* weakens data
 locality (a problem that other high level languages actually does manage to
 solve), and thus cache misses become bread and butter for a Java programmer
 which, most likely, isn't aware of it or don't even know what I'm talking about
-or how is it important. Which takes us to the problems of Java as a programming
-learning language.
+or how is it important. Which takes us to the problems of Java as a first
+programming language, but we'll talk about that latter.
 
 
 ## NullPointerException
@@ -62,15 +62,15 @@ possibility of *NULL* in a high level language that supposedly doesn't have
 pointers.
 
 In *C* or *C++,* when you dereference a *NULL* pointer, you get a *Segmentation
-Fault* and your program crashes. In Java, when you try tu use a *NULL* reference
+Fault* and your program crashes. In Java, when you try to use a *NULL* reference
 you get a
 [NullPointerException](https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html)
 and your program crashes as well. So what gives?
 
-You may say that the sources of this crashes are different, the *Segmentation
+You may say that the sources of these crashes are different, the *Segmentation
 Fault* comes from the OS trying to stop you from crashing the entire system,
 while the *NullPointerException* comes from the JVM that... Well, has nothing
-left to do but crash... I don't see how that is any better.
+left to do but crash... I don't see how is that any better.
 
 *NullPointerException* are terribly common in Java, and you have to hunt them
 down just as any null pointer dereference bug. And if you're thinking the actual
@@ -91,7 +91,7 @@ But pointers in Java percolates in even more creative ways, take for instance
 the Equality comparison problem: When you perform equality comparison `==` what
 you're actually comparing is *pointers equality*, not *values equality* for
 which you need a special method `equal()`, this is a low level language trait as
-its best, not to mention terribly counter intuitive.
+its best, not to mention terribly counterintuitive.
 
 
 
@@ -124,7 +124,7 @@ Most of the Java ugly verbosity is attributed to its static, strong typing
 discipline, that force you to annotate the types of everything, everywhere. But
 this is not the type discipline fault.
 
-In Java you declare, for instance, a vector of integers:
+In Java, you declare, for instance, a vector of integers:
 
 ```Java
 Vector<Integer> vector = new Vector<Integer>();
@@ -202,7 +202,7 @@ catch(yetAnotherExcetption e) {
 }
 ```
 
-The usual alternative is to just:
+The usual alternative is just:
 
 ```Java
 try {
@@ -252,9 +252,9 @@ Java is both fast and slow, depending on what language you compare it with. When
 you compare it with higher level languages, Java is reasonably faster, but when
 you compare it with C or C++, Java is miserably slow and heavy on resources.
 
-Taking into account that Java is more a low level language rather than a higher
-level one as we have seen, it should be compared to is closes cousins C and C++,
-in which case you inevitably conclude it's just slow, very slow.
+Taking into account that Java is more of a low level language rather than a
+high level one as we have seen, it should be compared to is closes cousins C
+and C++, in which case you inevitably conclude it's just slow, very slow.
 
 
 
