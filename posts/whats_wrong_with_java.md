@@ -5,14 +5,16 @@ published: 2017-12-31
 
 ![](/img/javawrong/thumbnail.png){#thumbnail}\
 
-I've spitted out quite a bit of rant about Java before in [this post](), in
+I've spitted out quite a bit of rant about Java before in [this
+post](http://www.sillybytes.net/2016/03/why-do-i-hate-java.html), in
 which I basically list the annoyances that the ecosystem around Java imposes and
 how those problems are pretty much a big intersection with the problems of IDEs.
 
 Here I'd like to talk about the problems of Java as a language. Although there
 are a few problems with Java as a language I can live with them if I have no
-other option but to write Java code; My *hate* to Java doesn't really arise
-from Java being a bad *language* but rather from its [surroundings]().
+other option but to write Java code; My *hate* to Java doesn't really arise from
+Java being a bad *language* but rather from its
+[surroundings](http://www.sillybytes.net/2016/03/why-do-i-hate-java.html).
 
 <!--more-->
 
