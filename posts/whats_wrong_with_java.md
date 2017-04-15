@@ -98,6 +98,8 @@ its best, not to mention terribly counter intuitive.
 Java have a lot of additional traits that make it not only a low level language
 in disguise, but also a bad language in general.
 
+![](/img/javawrong/good_bad_ugly.jpg){.img-responsive}
+
 ## Portability
 
 People usually get confused by the "Java is portable" thing. When we say that
@@ -162,6 +164,8 @@ problem is, this works for memory only!
 Whenever you initialize a socket, or a database connection, or open a file, you
 still need to *close* it at the right time; So you still can and will have
 resources leakage.
+
+![](/img/javawrong/leak.jpg){.img-responsive}
 
 *C++* solves all of those problems beautifully by using [Resource Acquisition Is
 Initialization](http://en.cppreference.com/w/cpp/language/raii) or RAII for
@@ -260,8 +264,11 @@ high level language and fails miserably.
 
 This leads to the current situation:
 
-![](/img/javawrong/spot.png){.img-responsive}
+```
+| C | C++ | Rust | Java | Ruby | Python | PHP | Perl | Earlang | OCaml | Haskell
 
+|--- Low Level --| ???  |---                  Hight Level                   ---|
+```
 
 ## Java is a bad low level language
 
