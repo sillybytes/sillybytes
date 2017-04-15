@@ -16,32 +16,6 @@ from Java being a bad *language* but rather from its [surroundings]().
 
 <!--more-->
 
-# Everything is an object
-
-OOP has a lot of problems on its own, and it deserves its own post. Here I'm
-talking about the way Java forces OOP.
-
-... no they're not, as i mentioned in my rant post...
-
-# Stupid programmers abstract factory
-
-In 2008 the U.S. DOD's Center Software Technology Support published in the
-"Journal of Defense Software Engineering" an article discussing the
-unsuitableness of Java as first learned programming language in education.
-Disadvantages given for Java as first language were that students "had no
-feeling for the relationship between the source program and what the hardware
-would actually do" and the impossibility "to develop a sense of the run-time
-cost of what is written because it is extremely hard to know what any method
-call will eventually execute".[8] Similarly Joel Spolsky in 2005, criticised
-Java as overfocused part of universities' curriculum in his essay The Perils of
-JavaSchools.[9] Others, like Ned Batchelder, disagree with Spolsky for
-criticizing the parts of the language that he found difficult to understand,
-making Spolsky's commentary more of a 'subjective rant'.[10]
-
-
-
-
-
 # Pointers, Pointers everywhere
 
 Java claims to be a *pointers free language*. Pointers, although elegant and
@@ -87,8 +61,9 @@ pointers.
 
 In *C* or *C++,* when you dereference a *NULL* pointer, you get a *Segmentation
 Fault* and your program crashes. In Java, when you try tu use a *NULL* reference
-you get a *NullPointerException* and your program crashes as well. So what
-gives?
+you get a
+[NullPointerException](https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html)
+and your program crashes as well. So what gives?
 
 You may say that the sources of this crashes are different, the *Segmentation
 Fault* comes from the OS trying to stop you from crashing the entire system,
@@ -199,31 +174,141 @@ close files, sockets, database connections or anything else. Java is supposed to
 be a higher level language than *C++* isn't it?
 
 
+## Exceptions Driven Programming
+
+*C++* and a lot of other imperative and OOP languages suffer form the
+*Exceptions* problems as well, but Java manages to screw it up even further.
+
+The heavy use of exceptions forces the programmer to write tons of
+
+```java
+try {
+    ...
+}
+catch(someExcetption e) {
+    ...
+}
+catch(someOtherExcetption e) {
+    ...
+}
+catch(yetAnotherExcetption e) {
+    ...
+}
+```
+
+The usual alternative is to just:
+
+```Java
+try {
+    ...
+}
+catch(Excetption e) {
+    System.out.println("An exception has occurred, sorry ¯\_(ツ)_/¯");
+}
+```
+
+The result of this is that the code that matters, the actual logic we're
+trying to encode in the program gets deeply buried in there, making it hard to
+read, hard to understand, hard to maintain, hard to modify and awfully ugly.
+Although most languages suffer from a variant of this issue, some other
+languages handle it gracefully by encoding the possibility of failure in the
+type system.
 
 
-## Stop the lies
 
-The type system sucks
+# Everything is an object
 
-The type system lies to me
-    You're telling me that if I pass an Integer it will giveme an Integer back,
-    but some times it will just explode in my face with a huge stack trace that
-    nobody understands or care about
+As I have already said in my [previous
+post](http://www.sillybytes.net/2016/03/why-do-i-hate-java.html), No, not
+everything is a object. OOP has a lot of problems on its own, and it deserves
+its own post. Here I'm talking about the way Java forces OOP.
+
+Most OOP languages have this paradigm as a *feature*, but still allow for free
+functions, free data and so on. The problem with Java being strictly OOP is that
+it forces objects even when they don't fit, even when they adversely affect
+compostability, modularity or readability.
+
+> The problem with object-oriented languages is they’ve got all this implicit
+> environment that they carry around with them. You wanted a banana but what you
+> got was a gorilla holding the banana and the entire jungle. – Joe Armstrong
+
+In most languages you can perform *actions*, but in Java, having objects as the
+only mean of abstraction, you must have *"actioners"* to perform any *actions*,
+and you must force them into existent to do anything. OOP is usually bad in
+general, although useful in certain contexts; Java makes it soul up from
+everything that is wrong with OOP.
 
 
 
-## Performance
-    Java is both fast and slow, depending on which language you compare it with.
-    When you compare Java with higher level languages, Java is reasonably
-    faster, but when you compare it with C or C++ Java is miserably slow and
-    heavy on resources. Taking into account that Java is more a low level
-    language rather than a higher level one, it should be compared to is closes
-    cousins C and C++, in which case you conclude it is just slow, very slow.
+# Performance
+
+Java is both fast and slow, depending on what language you compare it with. When
+you compare it with higher level languages, Java is reasonably faster, but when
+you compare it with C or C++, Java is miserably slow and heavy on resources.
+
+Taking into account that Java is more a low level language rather than a higher
+level one as we have seen, it should be compared to is closes cousins C and C++,
+in which case you inevitably conclude it's just slow, very slow.
+
+
 
 # Java sits in a dead spot
 
-Java can be replaced by low level languages, or high level languages
+As we've seen, Java is mostly a low level programming language that doesn't
+really provides the benefits of one, while at the same time it pretends to be a
+high level language and fails miserably.
 
-Java uses most of the syntax and semantics of *C* and *C++* and allows the same
-constructs that you can build in *C++*
+This leads to the current situation:
 
+![](/img/javawrong/spot.png){.img-responsive}
+
+
+## Java is a bad low level language
+
+From the low level languages, Java can perfectly be replaced byp *C++*, *RUST*
+and others. Both of these languages provides low level capabilities (like
+writing operating systems, real time systems and such), while at the same time
+providing better high level traits like *C++*'s RAII or *RUST*'s statically
+guaranteed thread safety, both of these languages will avoid Java's stupid
+`NullPointerException`.
+
+
+## Java is a bad high level language
+
+From the high level languages, Java can be replaced by virtually **any** other
+language. Almost any other language will provide a nicer syntax, better and more
+powerful ways of abstraction, more terseness, better tooling, better everything.
+
+This makes Java completely replaceable by any other language, it serves no
+particular purpose and is particularly good at nothing.
+
+
+
+# Stupid programmers abstractFactory
+
+Professors in computer science Robert B.K. Dewar and Edmond Schonberg, published
+[an
+article](http://static1.1.sqspcdn.com/static/f/702523/9242013/1288741087497/200801-Dewar.pdf?token=%2B5Thxkc7TmMcmP0qpas4Xaozf%2Bg%3D)
+in the "Journal of Defense Software Engineering" discussing how Java is a bad
+programming language for CS education, and how it produces programmers that are
+incapable of doing actual problem solving.
+
+Java produces programmers that have no idea about how the computer actually
+works, how to face complex problems, and the intrinsic need of an IDE only makes
+the problem 10 times worst. These people will be completely incompetent if
+their IDEs would be taken away for one second.
+
+Moreover, programmers that are only capable of writing Java are notoriously
+ignorant in programming languages theory or even CS in general for that matter,
+no computation theory knowledge, no algorithms knowledge, no nothing. The issue
+goes much more further into the same direction when you take into account IDE.
+
+As Joel puts it in his article ["The Perils of
+JavaSchools"](https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/)
+
+> I’ve seen that the 100% Java schools have started churning out quite a few CS
+> graduates who are simply not smart enough to work as programmers on anything
+> more sophisticated than Yet Another Java Accounting Applications
+
+Ah... Java Accounting Applications... It pretty much sums up the skills of
+Java-only programmers.
