@@ -79,6 +79,9 @@ to remember to manually free memory, then you're wrong, there are ways to
 statically take care of that, without having the *GC* behemoth eating your CPU
 time every time, but I'll get to that in a moment.
 
+By the way, Tony Hoare himself calls *NULL* the ["Billion-Dollar
+mistake"](https://en.wikipedia.org/wiki/Nullable_type#Compared_with_null_pointers).
+
 
 ## Useless pointers
 
