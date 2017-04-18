@@ -223,6 +223,10 @@ Although most languages suffer from a variant of this issue, some other
 languages handle it gracefully by encoding the possibility of failure in the
 type system.
 
+Most programming languages break equational reasoning, but that's pretty much
+normal; Exceptions go further by even breaking the imperative sequentiality
+(*cough* GOTO *cough*).
+
 
 
 # Everything is an object
