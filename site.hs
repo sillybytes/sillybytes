@@ -92,6 +92,15 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx <> bodyField "description"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/**" "content"
+            renderAtom feedConfig feedCtx posts
+
+
     match "templates/*" $ compile templateBodyCompiler
 
 
@@ -103,3 +112,13 @@ postCtx =
 
 teaserCtx :: Context String
 teaserCtx = teaserField "teaser" "content" <> postCtx
+
+
+feedConfig :: FeedConfiguration
+feedConfig = FeedConfiguration
+    { feedTitle       = "Silly Bytes"
+    , feedDescription = "Silly Bytes blog posts"
+    , feedAuthorName  = "Daniel Campoverde [alx741]"
+    , feedAuthorEmail = "alx@sillybytes.net"
+    , feedRoot        = "http://www.sillybytes.net"
+    }
