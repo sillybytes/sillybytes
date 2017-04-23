@@ -72,6 +72,9 @@ header
             color: #586e75;
             hr
                 border: 1px solid gray;
+            #rss-img
+                max-width: 25px;
+                margin-left: 15px;
 
         #facebook-embed
             margin: 40px 0px;
