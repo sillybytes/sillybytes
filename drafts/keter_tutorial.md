@@ -1,6 +1,6 @@
 ---
 title: Deploying Yesod applications with Keter
-published: 2017-04-29
+published: 2017-05-01
 ...
 
 ![](/img/keter/thumbnail.png){#thumbnail}\
@@ -75,7 +75,8 @@ So create it, copy the binary to `/opt/keter/bin`, and make sure
 While you could just execute `/opt/keter/bin/keter` directly, it's better to
 register it as a job in your Init System.
 
-### Sysmted (RedHat, Fedora, CentOS, Arch, openSUSE, etc)
+
+#### Sysmted (RedHat, Fedora, CentOS, Arch, openSUSE, etc)
 
 Create a file `/etc/systemd/system/keter.service`, with the contents:
 
@@ -101,7 +102,8 @@ the *keter* configuration file):
 
     $ sudo systemctl start keter
 
-### Upstart (Debian, Ubuntu, etc)
+
+#### Upstart (Debian, Ubuntu, etc)
 
 Create a file `/etc/init/keter.con`, with the contents:
 
@@ -123,6 +125,53 @@ the *keter* configuration file):
 # Configuration
 
 ## Server Side
+
+The *Keter* configuration on `/opt/keter/etc/keter-config.yaml` is pretty
+straight forward:
+
+```
+root: ..
+
+listeners:
+    # HTTP
+    - host: "*4" # Listen on all IPv4 hosts
+      port: 80
+    # HTTPS
+    #- host: "*4"
+      #port: 443
+      #key: key.pem
+      #certificate: certificate.pem
+
+# env:
+#    key: value
+```
+
+The `root` option points, as expected, to `/opt/keter`.
+
+Make sure to change the `port` option if you're reverse forwarding from a
+fronted server like *Nginx* or *Apache* (more on this later).
+
+If you're serving your application over SSL (and you should), uncomment the
+*HTTPS* section, then point the `key` option to your `privkey.pem` file, and the
+`certificate` option to your `fullchain.pem` file.
+
+The `env` option, keeps pairs of *keys* and *values*. The main set of values
+you'll need here are your Database credentials. You've probably already
+configured database credentials in the `database` section on the
+`config/settings.yaml` file, so you'll notice you need some environment
+variables like `MYSQL_USER`, `MYSQL_PASSWORD`, etc. If you're using
+MySQL/MariaDB; Or `PGUSER`, `PGPASS`, etc. If you're using PostgreSQL. You
+get the idea.
+
+This is how it will look like for a PostgreSQL Database where only the user and
+password are different between the development and production servers (be sure
+to keep the quotes!).
+
+```
+env:
+    PGUSER: "user"
+    PGPASSWORD: "password"
+```
 
 ## Yesod application side
 
@@ -156,7 +205,7 @@ or IP address doesn't exactly match one of the hosts provided in the `hosts`
 option.
 
 If you're serving only one application and using *Keter* as the main server
-listening on port `80` then having your domain name in `hosts` will pretty much
+listening on port `80`, then having your domain name in `hosts` will pretty much
 suffice, BUT most of the time, even if your serving only one application, you're
 probably using a frontend server like *Nginx* or *Apache*, in which case you
 have to consider the port the reverse proxy is pointing to.
@@ -224,19 +273,20 @@ Then be completely sure to have `www.example.com` in the `hosts` option of the
 message.
 
 
-# Extra source of errors
+# Another source of errors
 
 If you're still reaching this error:
 
 ![](/img/keter/shot1.png){.img-responsive}
 
 Unfortunately, the same error message appears if an application that responds to
-that host is found, but is failing to start.
+that host is actually found, but is failing to start.
 
-Check the `/opt/keter/log/app-app/current.log` log file, chances are you have
-changes in your persistent models that can't be reflected in your database
+Check the `/opt/keter/log/app-yourapp/current.log` log file, chances are you
+have changes in your persistent models that can't be reflected in your database
 without user intervention, so be sure to manually fix them the same way you have
 to do in your development database.
 
-Is common to forget this after deploying, so if the latest deployed changes seem
-to not take effect, this can also be the source of the problem.
+It is pretty common to forget this after deploying, so if the latest deployed
+changes seem to **not take effect** or if you reach the error message above,
+this can also be the source of the problem.
