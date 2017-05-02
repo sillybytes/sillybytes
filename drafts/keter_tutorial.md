@@ -126,7 +126,7 @@ the *keter* configuration file):
 
 ## Server Side
 
-The *Keter* configuration on `/opt/keter/etc/keter-config.yaml` is pretty
+The *Keter* configuration at `/opt/keter/etc/keter-config.yaml` is pretty
 straight forward:
 
 ```
@@ -157,7 +157,7 @@ If you're serving your application over SSL (and you should), uncomment the
 
 The `env` option, keeps pairs of *keys* and *values*. The main set of values
 you'll need here are your Database credentials. You've probably already
-configured database credentials in the `database` section on the
+configured database credentials in the `database` section in the
 `config/settings.yaml` file, so you'll notice you need some environment
 variables like `MYSQL_USER`, `MYSQL_PASSWORD`, etc. If you're using
 MySQL/MariaDB; Or `PGUSER`, `PGPASS`, etc. If you're using PostgreSQL. You
@@ -175,8 +175,9 @@ env:
 
 ## Yesod application side
 
-The Keter configuration file for your Yesod application lives in `config/keter`.
-Set `user-edited` to `true`, so you're able to execute `yesod keter` later on.
+The Keter configuration file for your Yesod application lives in
+`config/keter.yml`. Set `user-edited` to `true`, so you're able to execute
+`yesod keter` later on.
 
 Locate the `copy-to` option and configure it to use the `keter` user and your
 server domain (or IP address):
@@ -210,7 +211,7 @@ suffice, BUT most of the time, even if your serving only one application, you're
 probably using a frontend server like *Nginx* or *Apache*, in which case you
 have to consider the port the reverse proxy is pointing to.
 
-Take for instance this *Nginx* reverse proxy configuration for a app that lives
+Take for instance this *Nginx* reverse proxy configuration for an app that lives
 on `blog.example.com`
 
 ```
@@ -219,7 +220,6 @@ server {
     server_name blog.example.com;
     location / {
             proxy_pass http://127.0.0.1:4321;
-            proxy_pass http://blog.example.com:4321;
     }
 ```
 
@@ -258,7 +258,7 @@ effect and redeploy the application:
 #### Redirections
 
 If you're going to use the `redirect` stanza to automatically redirect any
-connection to, lets say `.example.bom` to `wwww.example.com`:
+connection to, lets say `example.com` to `wwww.example.com`:
 
 ```
 - type: redirect
