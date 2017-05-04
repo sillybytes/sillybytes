@@ -22,7 +22,7 @@ to write Java code; My *hate* to Java doesn't really arise from Java being a bad
 
 Java claims to be a *pointers free language*. Pointers, although elegant and
 very powerful, are a low level construct that should not be present in a higher
-level language, that's for sure. Most of the time I want to be as far as
+level language, that's for sure. Most of the time I want to be as far away as
 possible from pointers when programming unless I really need them, in which case
 I will just write in *C*.
 
