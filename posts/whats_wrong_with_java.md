@@ -26,7 +26,7 @@ level language, that's for sure. Most of the time I want to be as far away as
 possible from pointers when programming unless I really need them, in which case
 I will just write in *C*.
 
-The problem is Java does have pointers; Moreover it manages to keep most of the
+The problem is Java does have pointers; Moreover, it manages to keep most of the
 inconveniences of having pointers while giving almost none of the benefits of
 not having them. If you're not giving me the power of pointers, at least be kind
 enough to remove the problems they arise!
