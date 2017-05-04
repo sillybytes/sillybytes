@@ -1,6 +1,6 @@
 ---
 title: Deploying Yesod applications with Keter
-published: 2017-05-01
+published: 2017-05-04
 ...
 
 ![](/img/keter/thumbnail.png){#thumbnail}\
@@ -16,11 +16,11 @@ applications and web frameworks, here I'm going to assume you're using it to
 deploy Yesod applications. Moreover, I'll assume you're using Yesod's
 scaffolding, as it is the preferred way to write production ready applications.
 
+<!--more-->
+
 I'm also taking for granted that you've already installed on your server system
 whatever DBMS that your Yesod app needs, and have also created the app's
 databases.
-
-<!--more-->
 
 # Installing Keter on the server
 
@@ -273,7 +273,9 @@ Then be completely sure to have `www.example.com` in the `hosts` option of the
 message.
 
 
-# Another source of errors
+# Other sources of error
+
+## "Welcome to Keter"
 
 If you're still reaching this error:
 
@@ -287,6 +289,11 @@ have changes in your persistent models that can't be reflected in your database
 without user intervention, so be sure to manually fix them the same way you have
 to do in your development database.
 
-It is pretty common to forget this after deploying, so if the latest deployed
-changes seem to **not take effect** or if you reach the error message above,
-this can also be the source of the problem.
+## Changes in new deployed version not taking effect
+
+It is pretty common to forget changes in persistent models that need manual user
+intervention after deploying, similarly to the error above, this will prevent
+the app to start. If you currently have a version of your app working, *Keter*
+will use it instead of the new one if it fails to start, so if the latest
+deployed changes seem to not be taking effect, this can also be the source of
+the problem.
