@@ -170,7 +170,7 @@ to keep the quotes!).
 ```
 env:
     PGUSER: "user"
-    PGPASSWORD: "password"
+    PGPASS: "password"
 ```
 
 ## Yesod application side
