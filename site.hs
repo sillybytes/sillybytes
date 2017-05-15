@@ -119,6 +119,6 @@ feedConfig = FeedConfiguration
     { feedTitle       = "Silly Bytes"
     , feedDescription = "Silly Bytes blog posts"
     , feedAuthorName  = "Daniel Campoverde [alx741]"
-    , feedAuthorEmail = "alx@sillybytes.net"
+    , feedAuthorEmail = "alx741@riseup.net"
     , feedRoot        = "http://www.sillybytes.net"
     }
