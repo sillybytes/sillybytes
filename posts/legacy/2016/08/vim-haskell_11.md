@@ -18,9 +18,9 @@ put some extra magic under our sleeves.
 * Omnicompletion
 * Compilation and testing
     * Building
-    * Linting
     * Testing
 * GHCI integration
+* Hoogle integration
 * Convenient mappings
     * Argument text object
     * Jump to importations
@@ -80,10 +80,10 @@ au FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 I've contributed the GHC compiler plugin to upstream Vim recently, but it may
 take a while before you get the latest vim runtime from your distribution. So in
-the meantime you can install it like any other plugin from the github repository
+the meantime you can install it like any other plugin from the GitHub repository
 here: https://github.com/alx741/ghc.vim
 
-Then load it for the Haskell filetype in you vimrc:
+Then load it for the Haskell *filetype* in you *vimrc*:
 
 ```vim
 au FileType haskell compiler ghc
@@ -99,11 +99,7 @@ au FileType haskell nnoremap <buffer> gj :write<CR> :exec "AsyncRun " . &makeprg
 au FileType haskell nnoremap <buffer> gk :write<CR> :exec "AsyncRun " . &makeprg . " test"<CR>
 ```
 
-After running one of those the results will be loaded into the quickfix list.
-
-You will need the Stack tool of course and *hlint* that you can install with
-`stack install hlint`.
-
+After running one of those the results will be loaded into the *quickfix* list.
 
 ### GHCI integration
 
@@ -133,6 +129,21 @@ au FileType haskell nmap <silent><buffer> <leader>gs :call RunGhci(0)<CR>
 So doing `\gg` will start a GHCI session loaded with the current file and `\gs`
 will load a GHCI session for the current stack project.
 
+### Hoogle integration
+
+Vim uses `K` (upper case k) to lookup a keyword under the cursor, so we can
+leverage that and just define the right `keywordprg`:
+
+```vim
+au FileType haskell set kp=hoogle
+```
+
+Or, if you prefer having your results within Vim, you can use the
+[vim-hoogle](https://github.com/Twinside/vim-hoogle] plugin, and remap `K`:
+
+```vim
+au FileType haskell nnoremap K :HoogleInfo<CR>
+```
 
 ### Convenient mappings
 
@@ -236,6 +247,9 @@ au FileType haskell nnoremap <buffer><silent> glc :sign unplace *<CR>
 
 So now is possible to toggle the location list with `gl<space>` and clear it
 with `glc`.
+
+You will need the Stack tool of course, and *hlint* that you can install with
+`stack install hlint`.
 
 
 ### Code formatting and beautifying
