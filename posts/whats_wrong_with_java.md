@@ -175,7 +175,7 @@ resources leakage.
 *C++* solves all of those problems beautifully by using [Resource Acquisition Is
 Initialization](http://en.cppreference.com/w/cpp/language/raii) or RAII for
 short. And by the way, if you hit the same kind of problems you face in *C* with
-`mallow()` and `free()` but with *C++*'s `new` and `delete`, then you're doing
+`malloc()` and `free()` but with *C++*'s `new` and `delete`, then you're doing
 it wrong.
 
 By using *C++*'s RAII mechanisms you'll never have to remember to free memory,
