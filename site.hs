@@ -1,11 +1,16 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE DeriveGeneric #-}
 
-import Data.Monoid (mappend)
+import Data.Monoid
+import GHC.Generics
 import Hakyll
 import Data.List (isPrefixOf, isSuffixOf)
 import Data.Monoid
 import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
+import Data.ByteString.Lazy (ByteString)
+import Data.Aeson
+import Debug.Trace
 
 main :: IO ()
 main = hakyll $ do
@@ -42,8 +47,8 @@ main = hakyll $ do
             >>= relativizeUrls
 
     match "posts/legacy/**" $ do
-        route $ customRoute $ (flip replaceExtension "html") . joinPath
-            . (drop 2) . splitPath . toFilePath
+        route $ customRoute $ flip replaceExtension "html" . joinPath
+            . drop 2 . splitPath . toFilePath
         compile $ pandocCompiler
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
@@ -101,8 +106,14 @@ main = hakyll $ do
             renderAtom feedConfig feedCtx posts
 
 
-    match "templates/*" $ compile templateBodyCompiler
+    create ["postsList.json"] $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
+            postsListCompiler posts postCtx
 
+
+    match "templates/*" $ compile templateBodyCompiler
 
 postCtx :: Context String
 postCtx =
@@ -122,3 +133,26 @@ feedConfig = FeedConfiguration
     , feedAuthorEmail = "alx@sillybytes.net"
     , feedRoot        = "http://www.sillybytes.net"
     }
+
+
+data Post = Post { title :: String, url :: String} deriving Generic
+
+instance ToJSON Post where
+    toEncoding = genericToEncoding defaultOptions
+
+postsListCompiler :: [Item String] -> Context String -> Compiler (Item ByteString)
+postsListCompiler posts ctx = do
+    posts' <- fmap encode $ sequence $ fmap (getPost ctx) posts
+    makeItem posts'
+    where
+        getPost :: Context String -> Item String -> Compiler Post
+        getPost ctx itemPost = Post
+            <$> getField "title" ctx itemPost
+            <*> getField "url" ctx itemPost
+
+        getField :: String -> Context String -> Item String -> Compiler String
+        getField field ctx post = do
+            field <- unContext ctx field [] post
+            case field of
+                StringField a -> return a
+                _ -> error "Unsoported postsList field"

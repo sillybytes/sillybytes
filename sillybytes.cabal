@@ -9,6 +9,9 @@ executable site
                   , hakyll == 4.9.*
                   , filepath
                   , process
+                  , text
+                  , bytestring
+                  , aeson
 
   ghc-options:      -threaded
   default-language: Haskell2010
