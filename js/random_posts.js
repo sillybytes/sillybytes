@@ -1,12 +1,15 @@
-showRandomPosts(5, function(){});
+var numberOfPosts = 5;
+var minutesBetween = 2;
+
+showRandomPosts(numberOfPosts, function(){});
 setInterval(function(){
 $('#random-posts').slideUp(800, function(){
     $('#random-posts ul').empty();
-    showRandomPosts(5, function(){
+    showRandomPosts(numberOfPosts, function(){
         $('#random-posts').slideDown(800);
     });
 });
-}, 10000);
+}, minutesBetween*10000);
 showBanner();
 
 function showRandomPosts(n, callback)
