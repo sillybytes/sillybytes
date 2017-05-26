@@ -43,7 +43,24 @@
 
                 <div id='content' class='col-xs-12 col-md-9'>
                     $body$
-                    <a id='archive' href='/archive.html'>Read Older Posts</a>
+
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                            $if(previousPageNum)$
+                                <a class='archive' href="$previousPageUrl$">◀ Newer Entries</a>
+                            $endif$
+                        </div>
+
+                        <div class='col-sm-4'>
+                            <a class='archive' href='/archive.html'>Archive</a>
+                        </div>
+
+                        <div class='col-sm-4'>
+                            $if(nextPageNum)$
+                                <a class='archive' href="$nextPageUrl$">Older Entries ▶</a>
+                            $endif$
+                        </div>
+                    </div>
                 </div>
 
             </div>

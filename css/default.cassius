@@ -88,14 +88,15 @@ header
             padding: 0px;
         li
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: all 0.5s;
             border: 1px solid #bdc6c6;
             font-size: 1.8em;
             list-style-type: none;
             margin: 8px 0px;
             padding: 5px;
         li:hover
-            background: rgba(255, 255, 255, 0.8);
+            color: white;
+            background: rgb(181, 137, 0);
         a:hover
             text-decoration: none;
         a:active
@@ -142,22 +143,25 @@ header
 #content
     margin-top: 20px;
     padding: 0 40px;
-    #archive
+    .archive
         display: block;
         text-align: center;
         font-weight: bold;
         font-size: 1.4em;
         margin: 20px;
-        margin-bottom: 50px;
         letter-spacing: 1px;
         color: #6c71c4;
-        padding: 10px;
+        padding: 5px;
         background-color: #fdf6e3;
         border: 2px solid #6c71c4;
         border-radius: 5px;
         box-shadow: 2px 2px 3px gray;
-    #archive:hover
+        transition: all 0.5s;
+    .archive:hover
+        color: #fdf6e3;
+        background-color: #6c71c4;
         box-shadow: 0px 0px 3px gray;
+        text-decoration: none;
 
 
 #archive-title
