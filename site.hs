@@ -89,7 +89,6 @@ main = hakyll $ do
 
 
     paginate <- buildPaginateWith pagesGrouper "posts/**" makePageId
-
     paginateRules paginate $ \page pattern -> do
         route idRoute
         compile $ do
@@ -124,6 +123,11 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
+
+----------
+-- Context
+----------
+
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" <>
@@ -134,6 +138,10 @@ teaserCtx :: Context String
 teaserCtx = teaserField "teaser" "content" <> postCtx
 
 
+--------
+-- Feeds
+--------
+
 feedConfig :: FeedConfiguration
 feedConfig = FeedConfiguration
     { feedTitle       = "Silly Bytes"
@@ -143,6 +151,10 @@ feedConfig = FeedConfiguration
     , feedRoot        = "http://www.sillybytes.net"
     }
 
+
+-----------------
+-- postsList.json
+-----------------
 
 data Post = Post { title :: String, url :: String} deriving Generic
 
@@ -166,6 +178,10 @@ postsListCompiler posts ctx = do
                 StringField a -> return a
                 _ -> error "Unsoported postsList field"
 
+
+-------------
+-- Pagination
+-------------
 
 makePageId :: PageNumber -> Identifier
 makePageId n = fromFilePath $ case n of
