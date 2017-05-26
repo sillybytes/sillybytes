@@ -58,6 +58,7 @@ header
         .icon
             margin: 5px 1px;
             max-width: 50px;
+            transition: all 0.5s;
 
         .icon:hover
             filter: brightness(130%);
@@ -70,11 +71,15 @@ header
             font-size: 1.7em;
             text-align: left;
             color: #586e75;
+            a:hover
+                text-decoration: underline;
             hr
                 border: 1px solid gray;
             #rss-img
                 max-width: 25px;
                 margin-left: 15px;
+            #rss-img:hover
+                filter: brightness(120%);
 
         #facebook-embed
             margin: 40px 0px;
