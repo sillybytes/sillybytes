@@ -59,19 +59,19 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
---    create ["archive.html"] $ do
---        route idRoute
---        compile $ do
---            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
---            let archiveCtx =
---                    listField "posts" teaserCtx (return posts) <>
---                    constField "title" "Archives"            <>
---                    defaultContext
---
---            makeItem ""
---                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
---                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
---                >>= relativizeUrls
+    create ["archive.html"] $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
+            let archiveCtx =
+                    listField "posts" teaserCtx (return posts) <>
+                    constField "title" "Archives"            <>
+                    defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= relativizeUrls
 
 
 --    match "index.html" $ do
@@ -107,33 +107,33 @@ main = hakyll $ do
     paginateRules paginate $ \page pattern -> do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< (loadAllSnapshots "posts/**" "content" :: Compiler [Item String])
+            posts <- recentFirst =<< (loadAllSnapshots pattern "content" :: Compiler [Item String])
             let indexCtx =
-                    constField "title" "always the same" <>
                     listField "posts" teaserCtx (return posts) <>
                     paginateContext paginate page <>
                     defaultContext
 
             makeItem ""
                 >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/post-list.html" indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
 
---    create ["atom.xml"] $ do
---        route idRoute
---        compile $ do
---            let feedCtx = postCtx <> bodyField "description"
---            posts <- fmap (take 10) . recentFirst =<<
---                loadAllSnapshots "posts/**" "content"
---            renderAtom feedConfig feedCtx posts
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx <> bodyField "description"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/**" "content"
+            renderAtom feedConfig feedCtx posts
 
 
---    create ["postsList.json"] $ do
---        route idRoute
---        compile $ do
---            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
---            postsListCompiler posts postCtx
+    create ["postsList.json"] $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
+            postsListCompiler posts postCtx
 
 
     match "templates/*" $ compile templateBodyCompiler
