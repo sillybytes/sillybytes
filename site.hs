@@ -74,20 +74,6 @@ main = hakyll $ do
                 >>= relativizeUrls
 
 
---    match "index.html" $ do
---        route idRoute
---        compile $ do
---            posts <- fmap (take 10) $ recentFirst =<< loadAllSnapshots "posts/**" "content"
---            let indexCtx =
---                    listField "posts" teaserCtx (return posts) <>
---                    defaultContext
---
---            getResourceBody
---                >>= applyAsTemplate indexCtx
---                >>= loadAndApplyTemplate "templates/default.html" indexCtx
---                >>= relativizeUrls
-
-
     match "drafts.html" $ do
         route idRoute
         compile $ do
@@ -124,7 +110,7 @@ main = hakyll $ do
         route idRoute
         compile $ do
             let feedCtx = postCtx <> bodyField "description"
-            posts <- fmap (take 10) . recentFirst =<<
+            posts <- fmap (take 15) . recentFirst =<<
                 loadAllSnapshots "posts/**" "content"
             renderAtom feedConfig feedCtx posts
 
@@ -187,4 +173,4 @@ makePageId n = fromFilePath $ case n of
         _ -> show n ++ "/index.html"
 
 pagesGrouper :: MonadMetadata m => [Identifier] -> m [[Identifier]]
-pagesGrouper = liftM (paginateEvery 10) . sortRecentFirst
+pagesGrouper = liftM (paginateEvery 15) . sortRecentFirst
