@@ -2,6 +2,7 @@
 {-# LANGUAGE DeriveGeneric #-}
 
 import Data.Monoid
+import Control.Monad
 import GHC.Generics
 import Hakyll
 import Data.List (isPrefixOf, isSuffixOf)
@@ -10,7 +11,6 @@ import System.FilePath (takeFileName, splitPath, joinPath, replaceExtension)
 import System.Process (system)
 import Data.ByteString.Lazy (ByteString)
 import Data.Aeson
-import Debug.Trace
 
 main :: IO ()
 main = hakyll $ do
@@ -59,33 +59,33 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    create ["archive.html"] $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
-            let archiveCtx =
-                    listField "posts" teaserCtx (return posts) <>
-                    constField "title" "Archives"            <>
-                    defaultContext
+--    create ["archive.html"] $ do
+--        route idRoute
+--        compile $ do
+--            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
+--            let archiveCtx =
+--                    listField "posts" teaserCtx (return posts) <>
+--                    constField "title" "Archives"            <>
+--                    defaultContext
+--
+--            makeItem ""
+--                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+--                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+--                >>= relativizeUrls
 
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-                >>= relativizeUrls
 
-
-    match "index.html" $ do
-        route idRoute
-        compile $ do
-            posts <- fmap (take 10) $ recentFirst =<< loadAllSnapshots "posts/**" "content"
-            let indexCtx =
-                    listField "posts" teaserCtx (return posts) <>
-                    defaultContext
-
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= relativizeUrls
+--    match "index.html" $ do
+--        route idRoute
+--        compile $ do
+--            posts <- fmap (take 10) $ recentFirst =<< loadAllSnapshots "posts/**" "content"
+--            let indexCtx =
+--                    listField "posts" teaserCtx (return posts) <>
+--                    defaultContext
+--
+--            getResourceBody
+--                >>= applyAsTemplate indexCtx
+--                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+--                >>= relativizeUrls
 
 
     match "drafts.html" $ do
@@ -101,20 +101,39 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
-    create ["atom.xml"] $ do
+
+    paginate <- buildPaginateWith pagesGrouper "posts/**" makePageId
+
+    paginateRules paginate $ \page pattern -> do
         route idRoute
         compile $ do
-            let feedCtx = postCtx <> bodyField "description"
-            posts <- fmap (take 10) . recentFirst =<<
-                loadAllSnapshots "posts/**" "content"
-            renderAtom feedConfig feedCtx posts
+            posts <- recentFirst =<< (loadAllSnapshots "posts/**" "content" :: Compiler [Item String])
+            let indexCtx =
+                    constField "title" "always the same" <>
+                    listField "posts" teaserCtx (return posts) <>
+                    paginateContext paginate page <>
+                    defaultContext
+
+            makeItem ""
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= relativizeUrls
 
 
-    create ["postsList.json"] $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
-            postsListCompiler posts postCtx
+--    create ["atom.xml"] $ do
+--        route idRoute
+--        compile $ do
+--            let feedCtx = postCtx <> bodyField "description"
+--            posts <- fmap (take 10) . recentFirst =<<
+--                loadAllSnapshots "posts/**" "content"
+--            renderAtom feedConfig feedCtx posts
+
+
+--    create ["postsList.json"] $ do
+--        route idRoute
+--        compile $ do
+--            posts <- recentFirst =<< loadAllSnapshots "posts/**" "content"
+--            postsListCompiler posts postCtx
 
 
     match "templates/*" $ compile templateBodyCompiler
@@ -160,3 +179,12 @@ postsListCompiler posts ctx = do
             case field of
                 StringField a -> return a
                 _ -> error "Unsoported postsList field"
+
+
+makePageId :: PageNumber -> Identifier
+makePageId n = fromFilePath $ case n of
+        1 -> "index.html"
+        _ -> show n ++ "/index.html"
+
+pagesGrouper :: MonadMetadata m => [Identifier] -> m [[Identifier]]
+pagesGrouper = liftM (paginateEvery 10) . sortRecentFirst
