@@ -13,7 +13,7 @@
         font-family: Droid Serif;
         font-size: 1.5em;
 
-    .read-more
+    .continue-reading
         background: linear-gradient(to top, #fdf6e3, rgba(255,255,255,0.8));
         border-radius: 0px 0px 10px 10px;
         bottom: 0px;
