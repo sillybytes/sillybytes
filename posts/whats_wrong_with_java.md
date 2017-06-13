@@ -77,7 +77,7 @@ down just as any null pointer dereference bug. And if you're thinking the actual
 benefit of this is having the *GC* taking care of the memory instead of having
 to remember to manually free memory, then you're wrong, there are ways to
 statically take care of that, without having the *GC* behemoth eating your CPU
-time every time, but I'll get to that in a moment.
+time, but I'll get to that in a moment.
 
 By the way, Tony Hoare himself calls *NULL* the ["Billion-Dollar
 mistake"](https://en.wikipedia.org/wiki/Nullable_type#Compared_with_null_pointers).
@@ -157,7 +157,7 @@ compiler do it for you.
 
 ## Resources un-safety
 
-One the main Java selling points is *Memory Safety*, you see, in *C* you have to
+One of the main Java selling points is *Memory Safety*, you see, in *C* you have to
 free your memory with `free()` in the right place, at the right time after every
 memory allocation with `malloc()` and friends. If you forget to free your memory
 you'll have memory leaks, if you free it twice, or if you free it at the wrong
