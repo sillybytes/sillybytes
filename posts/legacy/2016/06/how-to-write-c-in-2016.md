@@ -70,9 +70,9 @@ it](https://www.gnu.org/software/libc/manual/html_node/index.html#toc-Error-Repo
 
 ![](/img/clang/shot5.jpg){.img-left}
 
-A *linter* in case you don't know, is a program that will statically check the
+A *linter*, in case you don't know, is a program that will statically check the
 **source code** (not the executable) to find any known non-portable constructs,
-vulnerabilities from common programming mistakes and/or bad practices and any
+vulnerabilities from common programming mistakes or bad practices and any
 other general coding mistakes that can make your program leak memory, step on
 segmentation faults and the like.
 
