@@ -7,9 +7,9 @@ published: 2016-07-14
 
 NOTE: This post is available in Spanish only. Please use a software translator.
 
-[He dejado de usar microcontroladores PIC por los motivos explicados en este
-post](http://silly-bytes.blogspot.com/2016/06/from-pic-to-avr.html); Pero voy a
-dedicar este post para tratar y explicar un programa sencillo escrito en
+He dejado de usar microcontroladores PIC por los motivos explicados
+[aquí](http://www.sillybytes.net/2016/06/from-pic-to-avr.html); Pero voy a
+dedicar este post para escribir y explicar un programa sencillo escrito en
 ensamblador para el **PIC16F876A**.
 
 El objetivo es el siguiente:
@@ -108,8 +108,7 @@ colocado desde la dirección **0** de la memoria de programa.
 Las instrucciones `BSF STATUS,RP0` y `BCF STATUS,RP1` hacen un cambio al **banco
 de memoria 1**. La memoria del microcontrolador está dividida en **bancos** y es
 necesario *cambiarnos* al banco donde reside el registro que queremos modificar
-en cada momento, con lo cual este par de instrucciones se encuentra con
-usar para cambiar los bancos de memoria.
+en cada momento.
 
 
 ### Configuración de los puertos de entrada/salida
@@ -119,7 +118,7 @@ usar para cambiar los bancos de memoria.
     ; El puerto A es de entrada
     MOVLW   B'00111111'
     MOVWF   TRISA
-    ; El puerto B es de entrada
+    ; El puerto B es de salida
     MOVLW   B'00000000'
     MOVWF   TRISB
     ; Puerto C: pin TX es salida, pin RX es entrada
