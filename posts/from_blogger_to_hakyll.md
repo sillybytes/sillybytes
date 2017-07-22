@@ -18,7 +18,7 @@ interface or pasting the HTML output is one of the bigger pain points of it. I
 solved most of that by writing a [CLI
 tool](http://www.sillybytes.net/2016/09/how-do-i-blog-blogger-posts-from.html)
 that allows me to write my posts offline in *markdown*, compile them, and deploy
-them from my terminal leveraging the Blogger's convenient API, but I still have
+them from my terminal leveraging the Blogger's convenient API. But I still have
 the feeling that it isn't good enough.
 
 In this post I will describe the process of porting an existing Blogger blog to
