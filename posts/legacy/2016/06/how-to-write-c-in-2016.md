@@ -9,9 +9,7 @@ Matt wrote a very interesting and totally recommended post about [how to C (as
 of 2016)](https://matt.sh/howto-c). Keith Thompson wrote later a very detailed
 and rather useful
 [critique](https://github.com/Keith-S-Thompson/how-to-c-response/blob/master/README.md)
-with some extra notes about Matt's post.
-
-Go a head and read both articles right now!
+with some extra notes about Matt's post. Go ahead and read both articles now.
 
 Here I would like to point out some things about tooling.
 
