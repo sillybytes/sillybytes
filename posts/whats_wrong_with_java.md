@@ -72,7 +72,7 @@ Fault* comes from the OS trying to stop you from crashing the entire system,
 while the *NullPointerException* comes from the JVM that... Well, has nothing
 left to do but crash... I don't see how is that any better.
 
-*NullPointerException* are terribly common in Java, and you have to hunt them
+*NullPointerException*s are terribly common in Java, and you have to hunt them
 down just as any null pointer dereference bug. And if you're thinking the actual
 benefit of this is having the *GC* taking care of the memory instead of having
 to remember to manually free memory, then you're wrong, there are ways to
@@ -100,7 +100,7 @@ its best, not to mention terribly counterintuitive.
 
 # The bad, the worst and the ugly
 
-Java have a lot of additional traits that make it not only a low level language
+Java has a lot of additional traits that make it not only a low level language
 in disguise, but also a bad language in general.
 
 ![](/img/javawrong/good_bad_ugly.jpg){.img-responsive}
@@ -118,13 +118,13 @@ look at [Gimp](https://www.gimp.org/), [GCC](https://gcc.gnu.org/) and
 When you distribute *C/C++* software for multiple platforms you distribute the
 binaries compiled for each platform, while with Java you just distribute one
 *Bytecode* executable for every platform, sure, it is a benefit, but no where
-near a big one.
+near enough to make up for the inconvenience of having to write Java.
 
 
 ## Awful Verbosity
 
 Most of the Java ugly verbosity is attributed to its static, strong typing
-discipline, that force you to annotate the types of everything, everywhere. But
+discipline that forces you to annotate the types of everything, everywhere. But
 this is not the type discipline fault.
 
 In Java, you declare, for instance, a vector of integers:
@@ -280,12 +280,12 @@ This leads to the current situation:
 ```
 | C | C++ | Rust | Java | Ruby | Python | PHP | Perl | Earlang | OCaml | Haskell
 
-|--- Low Level --| ???  |---                  Hight Level                   ---|
+|--- Low Level --| ???  |---                  High Level                    ---|
 ```
 
 ## Java is a bad low level language
 
-From the low level languages, Java can perfectly be replaced byp *C++*, *RUST*
+From the low level languages, Java can perfectly be replaced by *C++*, *RUST*
 and others. Both of these languages provides low level capabilities (like
 writing operating systems, real time systems and such), while at the same time
 providing better high level traits like *C++*'s RAII or *RUST*'s statically
