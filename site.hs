@@ -14,10 +14,6 @@ import Data.Aeson
 
 main :: IO ()
 main = hakyll $ do
-    match "CNAME" $ do
-        route   idRoute
-        compile copyFileCompiler
-
     match "img/**" $ do
         route   idRoute
         compile copyFileCompiler
