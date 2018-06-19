@@ -22,7 +22,7 @@ them from my terminal leveraging the Blogger's convenient API. But I still have
 the feeling that it isn't good enough.
 
 In this post I will describe the process of porting an existing Blogger blog to
-*Hakyll* and *GitHub pages* using *Silly Bytes* itself as the study case.
+*Hakyll* and *GitHub pages* using *Silly Bytes* itself as a case study.
 
 <!--more-->
 

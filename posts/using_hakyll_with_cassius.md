@@ -13,7 +13,7 @@ fit better with the Yesod's needs and makes it a bit cumbersome to use
 everywhere else, I still like the templating language itself and its features a
 lot.
 
-That's why I used it for the styles generation for [Silly
+That's why I used it for styles generation in [Silly
 Bytes](http://www.sillybytes.net) together with
 [Hakyll](https://jaspervdj.be/hakyll/). In this post I will describe the
 process.
