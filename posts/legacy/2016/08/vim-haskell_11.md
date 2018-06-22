@@ -5,7 +5,7 @@ published: 2016-08-11
 
 ![](/img/vimhask/thumbnail.png){#thumbnail}\
 
-So you're writing in the right language using the right tool already, but lets
+So you're writing in the right language using the right tool already, but let's
 put some extra magic under our sleeves.
 \
 \
@@ -164,7 +164,7 @@ function! JumpHaskellFunction(reverse)
 endfunction
 ```
 
-And some mappings, so doing `[[` or `]]` will takes us to the previous or next
+And some mappings, so doing `[[` or `]]` will take us to the previous or next
 function:
 
 ```vim
@@ -172,7 +172,7 @@ au FileType haskell nnoremap <buffer><silent> ]] :call JumpHaskellFunction(0)<CR
 au FileType haskell nnoremap <buffer><silent> [[ :call JumpHaskellFunction(1)<CR>
 ```
 
-Lets add some extra convenience and use `gI` for jumping to the first *import*
+Let's add some extra convenience and use `gI` for jumping to the first *import*
 statement and `gC` to edit the *.cabal* file:
 
 ```vim
@@ -183,7 +183,7 @@ au FileType haskell nnoremap <buffer> gC :e *.cabal<CR>
 ### Ghc-mod integration
 
 [ghc-mod](https://hackage.haskell.org/package/ghc-mod) is the *Happy Haskell
-Programming package*! With a whole bunch of functionality, here we will be using
+Programming package*! With a bunch of functionality, here we will be using
 just a few:
 
 * Type inserting
@@ -229,7 +229,7 @@ disappointed.
 
 ### Hlint integration
 
-By default [Neomake](https://github.com/neomake/neomake) will use *hlint* on the
+By default, [Neomake](https://github.com/neomake/neomake) will use *hlint* on the
 current file when the `:Neomake` command is invoked on a Haskell source file, so
 by adding a mapping:
 
@@ -254,7 +254,7 @@ You will need the Stack tool of course, and *hlint* that you can install with
 
 ### Code formatting and beautifying
 
-*Hindent* allows to beautify Haskell code, you could used it by setting the
+*Hindent* allows beautifying Haskell code, you could use it by setting the
 `formatprg` option and then trigger it with the `=` command, but there is a
 problem: if your code happens to have any syntax errors, it will be replaced
 with a nasty error message. To handle this we're going to use the
@@ -308,7 +308,7 @@ So much better!
 ### Easy arrows generation
 
 In Haskell, operators like `->` and `=>` are very common and I find it
-cumbersome to type them manually. Lets define a function:
+cumbersome to type them manually. Let's define a function:
 
 ```vim
 function! Make_arrow(type)
@@ -338,7 +338,7 @@ au FileType haskell inoremap <buffer> ;: <ESC>:call Make_arrow(0)<CR>
 ```
 
 So while in insert mode typing `;;` or `;:` will insert `->` or `=>`
-respectively. Additionally it will avoid duplicated spaces between the types and
+respectively. Additionally, it will avoid duplicated spaces between the types and
 the arrows.
 
 
