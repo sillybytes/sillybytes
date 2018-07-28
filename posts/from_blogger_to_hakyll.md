@@ -42,7 +42,7 @@ still some aspects that doesn't quite fit what I want.
 3. Preserve all the links to my previous posts
 
 There are quite a few links to my posts all over the place: Reddit, Taringa,
-ElHacker.net, Facebook, etc. I want them to keep working just fine.
+ElHacker.net, Facebook, etc. I want them to keep them working just fine.
 
 
 # The initial setup
