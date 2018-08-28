@@ -7,7 +7,7 @@ published: 2017-05-04
 
 [Keter](https://github.com/snoyberg/keter) is the
 [Yesod](http://www.yesodweb.com/)'s deployment system, fully featured and a joy
-to use, but the are a couple trapdoors that the documentation doesn't cover, and
+to use, but the are some pitfalls that the documentation doesn't cover, and
 that the user has to find out for her self; So I'll try to give them away here
 together with a walk-through tutorial.
 
