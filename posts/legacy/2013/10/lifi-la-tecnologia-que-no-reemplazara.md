@@ -9,7 +9,7 @@ Se ha estado escuchando mucho últimamente sobre la nueva y revolucionara
 tecnología **LiFi**, que sin duda aplastará y reemplazará a la "obsoleta"
 tecnología **WiFi**... O no lo hará?
 
-Pero que es el *LiFi*, como funciona y por qué puede ser considerado un
+Pero qué es el *LiFi*, cómo funciona y por qué puede ser considerado un
 reemplazo al *Wifi*? (o no tanto?)
 
 Me limitaré a hablar de los detalles oportunos para la explicación, pues esto
@@ -26,12 +26,12 @@ Esta tecnología funciona emitiendo información digital bidireccional usando
 ondas electromagnéticas en una banda de 2.45Ghz.
 
 El reciente LiFi  por otra parte funciona transmitiendo información digital
-mediante la luz, encendiendo y apagando ésta de manera muy rápida (e
+mediante luz visible, encendiendo y apagando ésta de manera muy rápida (e
 imperceptible para el ojo humano). Supongamos una situación tal que:
 
-Reemplazamos nuestras bombillas (focos) que iluminan las salas de nuestras
-habitaciones, oficinas, etc. Por bombillas LED que se encienden y apagan para
-generar bits digitales que transportan información digital.
+Reemplazamos las bombillas que iluminan las salas de nuestras habitaciones,
+oficinas, etc. Por bombillas LED que se encienden y apagan para generar bits
+digitales que transportan información digital.
 
 De esa forma podríamos conectarnos a Internet y hacerlo a una velocidad muy
 superior, debido a altas frecuencias que permite.
@@ -39,23 +39,23 @@ superior, debido a altas frecuencias que permite.
 ![](/img/lifi/shot.jpg){.img-responsive}
 
 Está es la información que encontramos en todos lados y viéndolo así resulta
-evidente que esta tecnología  podría reemplazar al WiFi actual, pero funciona
-realmente? O tiene alguna desventaja?
+evidente que esta tecnología  podría reemplazar al WiFi actual, pero, ¿funciona
+realmente, o tiene alguna desventaja?
 
 Una de las primeras desventajas, que resulta más que evidente, es que el LiFi no
-puede traspasar las paredes, es decir que si no contamos con una bombilla LED
+puede traspasar las paredes. Es decir que si no contamos con una bombilla LED
 transmisora en cada lugar que queramos acceso no podremos conectarnos. Aunque
-claro esta podría ser una ventaja de seguridad, pero creo que sería más un
+claro está, podría ser una ventaja de seguridad, pero creo que sería más un
 problema que una ventaja.
 
-El WiFi, claro, no presenta este problema pues la frecuencia (banda
-electromagnética) en la que trabaja puede atravesar objetos y obstáculos físicos
-en cierta medida, es por esta razón que podemos colocar un típico punto de
-acceso de prestaciones hogareñas en algún lugar de nuestra casa y usar nuestra
-conexión a Internet de forma inalámbrica en cualquier parte de esta.
+El WiFi, no presenta este problema pues la frecuencia (banda electromagnética)
+en la que trabaja puede atravesar objetos y obstáculos físicos en cierta medida,
+es por esta razón que podemos colocar un típico punto de acceso de prestaciones
+hogareñas en algún lugar de nuestra casa y usar nuestra conexión a Internet de
+forma inalámbrica en cualquier parte de esta.
 
 Además de esto existe un problema fundamental y la razón por la cual el LiFi es
-INVIABLE. Exacto ,no es posible conectarnos a Internet usando esta tecnología, o
+INVIABLE. Exacto, no es posible conectarnos a Internet usando esta tecnología, o
 al menos no como se la plantea.
 
 > ¿Por qué? Pero si yo he visto varias demostraciones!!
