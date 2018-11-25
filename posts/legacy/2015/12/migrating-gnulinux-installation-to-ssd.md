@@ -53,7 +53,7 @@ connecting the old HDD with a SATA-USB converter.
 # Backup
 
 DO NOT remove, nor modify the old HDD partition structure before the system is
-ported AND tested in the SSD, you don't want to loose your system or data, do
+ported AND tested in the SSD, you don't want to lose your system or data, do
 you?
 
 While playing with your storage devices is a good idea to keep a completely
@@ -79,7 +79,7 @@ hard drive like so:
 
 The `-a` option will preserve all the meta data your system needs, use it! Now
 put this hard drive safe in a drawer and don't touch it until you are completely
-sure you haven't loose any data in the process.
+sure you haven't lose any data in the process.
 
 
 # Partitioning
