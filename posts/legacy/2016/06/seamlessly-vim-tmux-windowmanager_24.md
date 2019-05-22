@@ -1,5 +1,5 @@
 ---
-title: Seamlessly Vim-Tmux-WindowManager-Monitor navigator
+title: Seamlessly Vim-Tmux-WindowManager-Monitor navigation
 published: 2016-06-24
 ...
 
