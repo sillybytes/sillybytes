@@ -8,8 +8,8 @@ published: 2016-06-24
 [This Thoughtbot
 post](https://robots.thoughtbot.com/seamlessly-navigate-vim-and-tmux-splits)
 describes how to make Vim and Tmux *work together in Harmony* based on [this
-crhistoomey plugin](https://github.com/christoomey/vim-tmux-navigator), allowing
-you to traverse both your Vim and Tmux windows and panes respectively.
+crhistoomey's plugin](https://github.com/christoomey/vim-tmux-navigator),
+allowing you to traverse both your Vim and Tmux windows and panes respectively.
 
 <!--more-->
 Having the ability to traverse Vim and Tmux splits without having to think about
