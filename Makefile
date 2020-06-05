@@ -4,7 +4,7 @@
 # Dependencies:
 # 	tddlight (https://github.com/alx741/tdd_traffic-light)
 
-TASK_RUNNER=stack
+TASK_RUNNER=cabal
 BUILD_COMMAND=$(TASK_RUNNER) build
 TEST_COMMAND=$(TASK_RUNNER) test
 
@@ -19,7 +19,7 @@ build: css
 	$(TASK_RUNNER) exec site rebuild && tddlight g || tddlight r
 
 css:
-	cd css && stack runhaskell Gen.hs
+	cd css && cabal runhaskell Gen.hs
 
 test:
 	tddlight y
