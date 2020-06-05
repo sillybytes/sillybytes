@@ -1,5 +1,6 @@
 _cache/
 _site/
+dist-newstyle/
 .stack-work/
 css/*.css
 *.o

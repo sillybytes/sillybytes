@@ -184,5 +184,5 @@ makePageId n = fromFilePath $ case n of
         1 -> "index.html"
         _ -> show n ++ "/index.html"
 
-pagesGrouper :: MonadMetadata m => [Identifier] -> m [[Identifier]]
+pagesGrouper :: (MonadFail m, MonadMetadata m) => [Identifier] -> m [[Identifier]]
 pagesGrouper = liftM (paginateEvery 15) . sortRecentFirst
