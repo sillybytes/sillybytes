@@ -30,6 +30,18 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "public_key.asc" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    match "about.md" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= saveSnapshot "content"
+            >>= loadAndApplyTemplate "templates/about.html"   postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+
     match "posts/*.md" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
