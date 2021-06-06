@@ -12,13 +12,11 @@
         <link rel="stylesheet" href="/css/default.css" />
         <link rel="stylesheet" href="/css/post-list.css" />
         <link rel="stylesheet" href="/css/post.css" />
-
-        <!-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/> -->
-        <!-- <link rel="stylesheet" href="/bower_components/highlight/src/styles/solarized-light.css"/> -->
-
         <!-- <script> hljs.initHighlightingOnLoad(); </script> -->
 
     </head>
+
+
     <body>
 
         <header>
@@ -34,45 +32,23 @@
                     <a class="navbar-item">About</a>
                 </div>
             </navbar>
-
         </header>
+
 
         <div id="main" class="container is-max-desktop">
             $body$
+
+            <nav class='pagination is-medium'>
+                $if(previousPageNum)$
+                    <a href="$previousPageUrl$" class='pagination-previous'>Previous</a>
+                $endif$
+
+                $if(nextPageNum)$
+                    <a href="$nextPageUrl$" class='pagination-next'>Next page</a>
+                $endif$
+            </nav>
         </div>
 
-        <!-- <div id='blog' class='container-fluid'> -->
-        <!--     <div class='row'> -->
-
-        <!--         <div id='sidebar' class='hidden-xs hidden-sm col-md-3'> -->
-        <!--             $partial("templates/about.html")$ -->
-        <!--         </div> -->
-
-        <!--         <div id='content' class='col-xs-12 col-md-9'> -->
-        <!--             $body$ -->
-
-        <!--             <div class='row'> -->
-        <!--                 <div class='col-sm-4'> -->
-        <!--                     $if(previousPageNum)$ -->
-        <!--                         <a class='archive' href="$previousPageUrl$">◀ Newer Posts</a> -->
-        <!--                     $endif$ -->
-        <!--                 </div> -->
-
-        <!--                 <div class='col-sm-4'> -->
-        <!--                     <a class='archive' href='/archive.html'>Archive</a> -->
-        <!--                 </div> -->
-
-        <!--                 <div class='col-sm-4'> -->
-        <!--                     $if(nextPageNum)$ -->
-        <!--                         <a class='archive' href="$nextPageUrl$">Older Posts ▶</a> -->
-        <!--                     $endif$ -->
-        <!--                 </div> -->
-        <!--             </div> -->
-        <!--         </div> -->
-
-        <!--     </div> -->
-        <!-- </div> -->
-
-
     </body>
+
 </html>
