@@ -3,8 +3,6 @@ title: What's wrong with Java?
 published: 2017-04-14
 ...
 
-![](/img/javawrong/thumbnail.png){#thumbnail}\
-
 I've spitted out quite a bit of rant about Java before in [this
 post](http://www.sillybytes.net/2016/03/why-do-i-hate-java.html), in
 which I basically list the annoyances that the ecosystem around Java imposes and

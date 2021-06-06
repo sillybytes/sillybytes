@@ -3,8 +3,6 @@ title: From Blogger to Hakyll
 published: 2017-04-10
 ...
 
-![](/img/bloggerhakyll/thumbnail.png){#thumbnail}\
-
 [Hakyll](https://jaspervdj.be/hakyll/) is an amazing static site generator
 written in Haskell, it allows for blog posts to be written in *markdown*, that
 are then compiled with *pandoc*, and is very well suited to be used with *GitHub

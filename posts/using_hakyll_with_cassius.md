@@ -3,8 +3,6 @@ title: Using Cassius (Shakespearean template) with Hakyll
 published: 2017-04-11
 ...
 
-![](/img/hakyllcassius/thumbnail.png){#thumbnail}\
-
 As a user of the [Yesod](http://www.yesodweb.com/) framework, I've came to know
 and love the
 [Cassius](https://www.stackage.org/haddock/lts-8.4/shakespeare-2.0.12.1/Text-Cassius.html#v:cassius)

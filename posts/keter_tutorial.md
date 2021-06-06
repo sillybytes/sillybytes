@@ -3,8 +3,6 @@ title: Deploying Yesod applications with Keter
 published: 2017-05-04
 ...
 
-![](/img/keter/thumbnail.png){#thumbnail}\
-
 [Keter](https://github.com/snoyberg/keter) is the
 [Yesod](http://www.yesodweb.com/)'s deployment system, fully featured and a joy
 to use, but there are some pitfalls that the documentation doesn't cover, and
