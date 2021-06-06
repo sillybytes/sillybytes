@@ -3,21 +3,15 @@ title: Using Cassius (Shakespearean template) with Hakyll
 published: 2017-04-11
 ...
 
-As a user of the [Yesod](http://www.yesodweb.com/) framework, I've came to know
+As a user of the [Yesod](http://www.yesodweb.com/) framework, I've come to know
 and love the
 [Cassius](https://www.stackage.org/haddock/lts-8.4/shakespeare-2.0.12.1/Text-Cassius.html#v:cassius)
 CSS templating language, although its reliance on Template Haskell is meant to
-fit better with the Yesod's needs and makes it a bit cumbersome to use
-everywhere else, I still like the templating language itself and its features a
-lot.
-
-That's why I used it for styles generation in [Silly
-Bytes](http://www.sillybytes.net) together with
-[Hakyll](https://jaspervdj.be/hakyll/). In this post I will describe the
-process.
-\
-\
-\
+fit better with Yesod's needs and makes it a bit cumbersome to use everywhere
+else, I still like the templating language itself and its features a lot. That's
+why I used it for styles generation in [Silly Bytes](https://sillybytes.net)
+together with [Hakyll](https://jaspervdj.be/hakyll/). In this post I will
+describe the process.
 
 <!--more-->
 
@@ -75,5 +69,5 @@ watch:
 ```
 
 This way, we can execute `make watch` and it will recompile the *Cassius* files
-when needed. A normal `stack exec site watch` can be running along the side to
-take care of everything else.
+when needed. A normal `stack exec site watch` can be running alongside to take
+care of everything else.

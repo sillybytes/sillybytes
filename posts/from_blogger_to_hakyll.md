@@ -4,22 +4,22 @@ published: 2017-04-10
 ...
 
 [Hakyll](https://jaspervdj.be/hakyll/) is an amazing static site generator
-written in Haskell, it allows for blog posts to be written in *markdown*, that
-are then compiled with *pandoc*, and is very well suited to be used with *GitHub
-pages*; It's everything I wanted and more.
+written in Haskell, it allows for blog posts to be written in *markdown* and
+then compiled with *pandoc*. It's very well suited to be used with *GitHub
+pages*. It's everything I wanted and more.
 
 [Silly Bytes](http://www.sillybytes.net) went through its first 5 years of
 existence hosted on Google's [Blogger](https://www.blogger.com) service, and it
 did well. Although Blogger offers a fair amount of flexibility, you can't have
-total control over it, and having to write posts with the built in *WYSIWYG*
-interface or pasting the HTML output is one of the bigger pain points of it. I
-solved most of that by writing a [CLI
+total control over it, and having to write posts with the built-in *WYSIWYG*
+interface or pasting the HTML output is the biggest pain point of it. I solved
+most of that by writing a [CLI
 tool](http://www.sillybytes.net/2016/09/how-do-i-blog-blogger-posts-from.html)
-that allows me to write my posts offline in *markdown*, compile them, and deploy
-them from my terminal leveraging the Blogger's convenient API. But I still have
-the feeling that it isn't good enough.
+that allows me to write posts offline in *markdown*, compile them, and deploy
+them from the terminal leveraging Blogger's API. But that's still too much of a
+flex.
 
-In this post I will describe the process of porting an existing Blogger blog to
+In this post I'll describe the process of porting an existing Blogger blog to
 *Hakyll* and *GitHub pages* using *Silly Bytes* itself as a case study.
 
 <!--more-->
@@ -28,20 +28,14 @@ In this post I will describe the process of porting an existing Blogger blog to
 
 So here is what I want instead:
 
-1. Completely port *Silly Bytes* to *Hakyll* and *GitHub pages*
+1. Completely port *Silly Bytes* to *Hakyll* and *GitHub pages*. Write every
+post in *markdown* only, and have them automatically generated.
 
-Write every post in *markdown* only, and have them generated automatically.
+2. Further customize the design. While I've managed to get pretty far with
+Blogger's custom CSS option, there are still some aspects that doesn't quite fit
+what I want.
 
-2. Further customize the design
-
-While I've managed to get pretty far with Blogger's custom CSS option, there are
-still some aspects that doesn't quite fit what I want.
-
-3. Preserve all the links to my previous posts
-
-There are quite a few links to my posts all over the place: Reddit, Taringa,
-ElHacker.net, Facebook, etc. I want them to keep them working just fine.
-
+3. Preserve all the links to previous posts
 
 # The initial setup
 
@@ -50,21 +44,18 @@ when we finally change where the domain name points to.
 
 ## GitHub page
 
-*GitHub pages* will host the blog, so we must first create a repository that
-will keep it.
-
 The *GitHub pages* [naming
 convections](https://help.github.com/articles/user-organization-and-project-pages/)
 state that, in order to create a dedicated repo for a personal or organizational
 page, we must have a repository named `user.github.io` or
 `organization.github.io` respectively, this way GitHub will read and serve any
 *index* file in the repository root; This supposes a problem though, We want to
-keep our generated site inside a directory to keep them isolated from the
-sources files.
+keep our generated site inside a directory to keep compiled files separated from
+the sources.
 
 There are a couple of solutions for this, but they all use some Git branches
-trickery, juggling with a CI service, or both; It feels to hacky to me, not to
-say that my solution is more elegant, but it just fits better to the work flow
+trickery, juggling with a CI service, or both; It feels way to hacky to me, not
+saying that my solution is better, but it just fits better with the work flow
 I'm looking for.
 
 *GitHub pages* offers project specific pages as well, those are served from a
@@ -89,8 +80,8 @@ By default, Hakyll outputs the generated site in a `_site` directory, but
 *GitHub pages* will read the site from a `docs` directory, so let's fix that by
 editing the `site.hs` file.
 
-The default `main` function in `site.hs` uses the `hakyll` function, which uses
-the default configuration, so we must change that to use a custom one:
+The `main` function in `site.hs` uses the `hakyll` function with the default
+configuration, so we need to swap that with a custom one:
 
 ```haskell
 main = hakyllWith config $ do
@@ -153,9 +144,7 @@ No need for esoteric spells here.
 
 # Don't shatter my links!
 
-![](/img/bloggerhakyll/links.png){.img-responsive}
-
-It is imperative to preserve the links to my previous posts that were originally
+It is imperative to preserve the links to previous posts that were originally
 published on Blogger, so they keep pointing to the right post.
 
 ## Preserve legacy paths
@@ -166,9 +155,8 @@ Every post is on the corresponding *year* and *month* of publication name space
 like `year/month/post.html`. So we must preserve this structure at least for the
 legacy posts.
 
-In order to achieve this, keep a `legacy` directory inside the `posts`
-directory, that will keep a directory tree for every year and month where posts
-exist.
+In order to achieve this keep a `legacy` directory inside `posts`, that will in
+turn contain a directory tree for every year and month when posts exist.
 
 ```
 sillybytes/posts/legacy
@@ -219,9 +207,9 @@ preserved on the resulting generated site.
 
 ## Port legacy posts
 
-From here, a pretty much manual porting process is required. Most of my legacy
-posts were originally published right in the Blogger interface, so the must
-first be ported to *markdow*.
+From here, a pretty much manual porting process is required. Most of the legacy
+posts were originally published right in the Blogger interface, so some rewrite
+to *markdow* is needed.
 
 The porting process is as follows:
 
@@ -231,26 +219,24 @@ The porting process is as follows:
 3. Create a *markdown* file with the same name as it appears in the URL, but
     with the `.md` extension.
 4. Create a dedicated directory for the post inside the `images` directory and
-    put all the post images on it.
+    put all the post images in it.
 5. Paste and format the post content in the *markdown* file.
 
 Any newer posts that are created after the porting can live in the `posts`
-directory, there is no need to keep the `year/month/post.html` any more.
+directory, there is no need to keep the `year/month/post.html` scheme any more.
 
 
 # The migration
 
-![](/img/bloggerhakyll/migration.jpg){.img-responsive}
+The only thing left is the actual migration by pointing the domain name to the
+new site.
 
-The only thing that is left is the actual migration by pointing the domain name
-to the new location.
-
-This arises a bigger problem though, given that we are serving the blog from
+At this point a bigger problem arises. Given that we are serving the blog from
 `sillybytes/docs` we'll need a *URL Redirect* record pointing to
 `sillybytes.github.io/sillybytes` rather than a *CNAME* to just
 `sillybytes.github.io`. If you're fine with that, then you're done.
 
-I really wanted a proper *CNAME* record, so I had to change the setup a
+I really wanted a proper *CNAME* record though, so I had to change the set up a
 bit:
 
 * Have two repositories: `sillybytes` for the sources, and
@@ -264,9 +250,9 @@ bit:
 
 ![](/img/bloggerhakyll/shot.png){.img-responsive}
 
-The [CLI tool](https://github.com/sillybytes/sillybytes_tool) I was
-using before for Blogger deployment is no longer useful, but I can still adapt
-it to the new deployment schema:
+The [CLI tool](https://github.com/sillybytes/sillybytes_tool) I was using before
+for Blogger deployment is no longer useful, but I can still adapt it to the new
+deployment schema:
 
 ```sh
 cp -rfv _site/* ../sillybytes.github.io/
@@ -281,3 +267,6 @@ display_success "Deployed!"
 As well as aliasing common *Hakyll* commands:
 
 ![](/img/bloggerhakyll/shot1.png){.img-responsive}
+
+
+That's some comfy blogging right there.

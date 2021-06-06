@@ -4,12 +4,9 @@ Hey! I'm Daniel Campoverde, a systems engineer based in Cuenca, Ecuador.
 
 I develop full stack. Really mean that: from hardware design & firmware
 development, to systems programming, all the way up to web & mobile development,
-and everything in between. I just love everything that can go *beep beep boop*:
-electronics, computers, software, and also like my maths and stats as well.
-
-Also, I advocate [Free Software for a Free
-Society](https://www.gnu.org/philosophy/fsfs/rms-essays.pdf) and always strive
-for the [hacker attitude](http://catb.org/~esr/faqs/hacker-howto.html#attitude).
+system administration and everything in between. I just love everything that can
+go *beep beep boop*: electronics, computers, software, and also like my maths
+and stats as well.
 
 
 
@@ -36,7 +33,7 @@ languages, Vim, command line interfaces, near-metal firmware, native mobile,
 
 Love to write Haskell for most things, including web development, but also enjoy
 writing C & Rust for embedded systems and Kotlin & Swift for native mobile
-development.
+development. Security and system administration on GNU/Linux and FreeBSD too.
 
 Like to make simple illustrations and vector graphics for my projects as well,
 not exactly an artist, but a sprinkle of amateur art here and there really makes
@@ -45,9 +42,9 @@ things come to life.
 
 ## Projects
 
-Have worked on [a lot of
-stuff](https://github.com/alx741?tab=repositories&q=&sort=stargazers), but some
-things I quite like are:
+Have worked on [many
+things](https://github.com/alx741?tab=repositories&q=&sort=stargazers), but some
+I quite like are:
 
 ### The Venabili keyboard
 
