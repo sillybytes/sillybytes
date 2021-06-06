@@ -3,34 +3,34 @@ title: TDD (Test-Driven Development) Physical Traffic Light
 published: 2016-08-28
 ...
 
-![](/img/tddlight/thumbnail.jpg){#thumbnail}\
-
 Robert C. Martin *(Uncle Bob)* said in a talk:
 
 > Imagine you have a button that you can push, it will test your code and if
 > everything is working a green light will come up, but if something is broken,
 > a red light will come up [...]
 
-He was of course talking about TDD. I got inspired to build this little toy.
+He was of course talking about TDD. It got me inspired to build this little
+tool.
 
-Hardware schematics, firmware and host software is available in [this Github
-repo](https://github.com/alx741/tdd_traffic-light). Along with information on
-how to compile and use.
+Hardware schematics, firmware and host software is available in [this GitHub
+repository](https://github.com/alx741/tdd_traffic-light). Along with information
+on how to compile and use.
 
 > This is a physical toy traffic light to be used with software development TDD
 > (and testing in general) tools. It will not boost your productivity nor make
 > you a better programmer or TDD practitioner, but it looks cool :)
 
-Lets explain how it works, it's very simple:
+Let's explain how it works, it's very simple:
+
 <!--more-->
 
 # Hardware
 
 The **atmega328p** AVR microcontroller is very popular and cheap, but if you buy
-them on Ebay for example, chances are it comes with an Arduino bootloader, which
-gets in the way because we can perfectly use the internal oscillator instead of
-an external 16Mhz crystal. So the first thing to do is change the fuses to the
-default ones:
+them on Ebay for example, chances are it comes with the Arduino bootloader,
+which gets in the way because we can perfectly use the internal oscillator
+instead of an external 16Mhz crystal. So the first thing to do is change the
+fuses to the default ones:
 
 ```shell
 # avrdude -p m328p -c usbasp -U lfuse:w:0x62:m -U hfuse:w:0xd9:m
@@ -38,10 +38,9 @@ default ones:
 
 Now we are using the internal 1MHz oscillator, perfect!
 
-I don't have a PCB yet (although it should be pretty easy as I made the circuit
-schematic using *kicad*) but the circuit is small and simple so it's easy to
-build it with prototype PCB. Additionally I added some small neodymium magnets
-in the back to stick it easily close to my monitors.
+The circuit is simple enough to mount in some perfboard. Additionally, I added
+some small neodymium magnets in the back to stick it easily close to my
+monitors.
 
 ![](/img/tddlight/img1.jpg){.img-responsive}
 ![](/img/tddlight/img2.jpg){.img-responsive}
@@ -55,8 +54,8 @@ in the back to stick it easily close to my monitors.
 
 # Software
 
-The firmware is no more than UART boilerplate with `4800` baud rate so it is
-stable with at 1MHz clock speed.
+The firmware is no more than some UART boilerplate with `4800` baud rate, so
+it's stable with at 1MHz clock speed.
 
 ``` C
 #include <avr/io.h>
@@ -138,11 +137,11 @@ void serial_init(char* port)
 
 ```
 
-From then controlling the LEDs is as simple as
+With that, controlling the LEDs is as simple as:
 
 ``` C
 write(COM_FD, "r", 1);
 ```
 
-Find more information about how to use it in the
-[Github repo](https://github.com/alx741/tdd_traffic-light).
+Find more information about how to use it in the [GitHub
+repository](https://github.com/alx741/tdd_traffic-light).
