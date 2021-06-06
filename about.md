@@ -12,6 +12,7 @@ Society](https://www.gnu.org/philosophy/fsfs/rms-essays.pdf) and always strive
 for the [hacker attitude](http://catb.org/~esr/faqs/hacker-howto.html#attitude).
 
 
+
 ## Find me
 
 - Email: [alx@sillybytes.net](mailto:alx@sillybytes.net)
