@@ -1,19 +1,19 @@
 $for(posts)$
-    <div class='row'>
-        <div class='post-prev post col-xs-12'>
-            <a class='post-prev-title' href='$url$'>$title$</a>
-            <span class='post-prev-date'>$date$</span>
-            <div class='post-content'>
-                $if(teaser)$
-                    $teaser$
-                $else$
-                    $body$
-                $endif$
-            </div>
-            <br><br>
-            <div class='continue-reading'>
-                <a class='btn btn-default' href='$url$'>Continue Reading</a>
-            </div>
-        </div>
-    </div>
+
+<article class="post-teaser">
+    <h2 class="is-size-3 has-text-weight-medium has-text-left">$title$</h2>
+    <aside class="date has-text-left">$date$</aside>
+
+    <section>
+        $if(teaser)$
+            $teaser$
+        $else$
+            $body$
+        $endif$
+    </section>
+
+    <a class="continue-reading-link" href='$url$'>Continue Reading</a>
+
+</article>
+
 $endfor$

@@ -1,33 +1,53 @@
-.post-prev
-    overflow: hidden;
-    position: relative;
-    .post-prev-date
-        color: #93a1a1;
-        display: block;
-        font-size: 0.9em;
-        font-style: italic;
-        margin-bottom: -20px;
-    .post-prev-title
-        color: rgb(181, 137, 0);
-        display: block;
-        font-family: Droid Serif;
-        font-size: 1.5em;
+@import "palette.sass";
 
-    .continue-reading
-        background: linear-gradient(to top, #fdf6e3, rgba(255,255,255,0.8));
-        border-radius: 0px 0px 10px 10px;
-        bottom: 0px;
-        left: 0px;
-        position: absolute;
-        width: 100%;
-        a
-            margin: 10px auto;
-            margin-left: 50px;
-            background-color: rgb(255, 230, 179);
-            color: #002b36;
-            box-shadow: 3px 3px 3px #888;
-            border-radius: 10px;
-        a:hover
-            text-decoration: none;
-            color: #073642;
-            box-shadow: 1px 1px 1px #aaa;
+.post-teaser
+  margin: 40px;
+
+section
+  padding: 30px 0px;
+  font-size: 18px;
+  text-align: justify;
+
+h2
+  color: $color-accent;
+
+.date
+  color: $color-gray;
+
+.continue-reading-link
+  color: $color-accent;
+  font-style: italic;
+
+// .post-prev
+//     overflow: hidden;
+//     position: relative;
+//     .post-prev-date
+//         color: #93a1a1;
+//         display: block;
+//         font-size: 0.9em;
+//         font-style: italic;
+//         margin-bottom: -20px;
+//     .post-prev-title
+//         color: rgb(181, 137, 0);
+//         display: block;
+//         font-family: Droid Serif;
+//         font-size: 1.5em;
+
+//     .continue-reading
+//         background: linear-gradient(to top, #fdf6e3, rgba(255,255,255,0.8));
+//         border-radius: 0px 0px 10px 10px;
+//         bottom: 0px;
+//         left: 0px;
+//         position: absolute;
+//         width: 100%;
+//         a
+//             margin: 10px auto;
+//             margin-left: 50px;
+//             background-color: rgb(255, 230, 179);
+//             color: #002b36;
+//             box-shadow: 3px 3px 3px #888;
+//             border-radius: 10px;
+//         a:hover
+//             text-decoration: none;
+//             color: #073642;
+//             box-shadow: 1px 1px 1px #aaa;

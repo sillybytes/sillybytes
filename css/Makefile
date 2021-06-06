@@ -3,12 +3,12 @@
 #
 
 
-INPUTS = $(shell find . -type f -name '*.sass')
+INPUTS = $(shell find . -maxdepth 1 -type f -name '*.sass')
 OUTPUTS = $(foreach input, $(INPUTS), $(input:.sass=.css))
 
 all: $(OUTPUTS)
 
-%.css: %.sass
+%.css: %.sass palette.css
 	sassc $< $@
 
 clean:

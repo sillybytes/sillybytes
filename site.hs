@@ -26,7 +26,7 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "bower_components/**" $ do
+    match "node_modules/**" $ do
         route   idRoute
         compile copyFileCompiler
 

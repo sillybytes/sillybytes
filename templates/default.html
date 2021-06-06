@@ -13,69 +13,66 @@
         <link rel="stylesheet" href="/css/post-list.css" />
         <link rel="stylesheet" href="/css/post.css" />
 
-        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="/bower_components/highlight/src/styles/solarized-light.css"/>
+        <!-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/> -->
+        <!-- <link rel="stylesheet" href="/bower_components/highlight/src/styles/solarized-light.css"/> -->
 
-        <script src="/bower_components/jquery/dist/jquery.min.js"/>
-        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"/>
-        <script src="/bower_components/highlight/src/highlight.pack.js"/>
-
-        <script> hljs.initHighlightingOnLoad(); </script>
+        <!-- <script> hljs.initHighlightingOnLoad(); </script> -->
 
     </head>
     <body>
-        <header class='container-fluid'>
-            <div class='row'>
-                <div class='col-xs-12'>
-                    <a href="/">
-                        <img alt='Silly Bytes' id='logo' class='image-responsive' src='/img/silly-bytes_logo.png'/>
+
+        <header>
+            <navbar class='navbar' role='navigation' aria-label='main navigation'>
+                <div class='navbar-brand'>
+                    <a class='navbar-item' href="/">
+                        <b>Silly Bytes</b>
                     </a>
                 </div>
-            </div>
+
+                <div class="navbar-end">
+                    <a class="navbar-item">Home</a>
+                    <a class="navbar-item">About</a>
+                </div>
+            </navbar>
+
         </header>
 
-        <div id='blog' class='container-fluid'>
-            <div class='row'>
-
-                <div id='sidebar' class='hidden-xs hidden-sm col-md-3'>
-                    $partial("templates/about.html")$
-                </div>
-
-                <div id='content' class='col-xs-12 col-md-9'>
-                    $body$
-
-                    <div class='row'>
-                        <div class='col-sm-4'>
-                            $if(previousPageNum)$
-                                <a class='archive' href="$previousPageUrl$">◀ Newer Posts</a>
-                            $endif$
-                        </div>
-
-                        <div class='col-sm-4'>
-                            <a class='archive' href='/archive.html'>Archive</a>
-                        </div>
-
-                        <div class='col-sm-4'>
-                            $if(nextPageNum)$
-                                <a class='archive' href="$nextPageUrl$">Older Posts ▶</a>
-                            $endif$
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div id="main" class="container is-max-desktop">
+            $body$
         </div>
 
+        <!-- <div id='blog' class='container-fluid'> -->
+        <!--     <div class='row'> -->
 
-        <footer class='container-fluid'>
-            <div class='row'>
-                <div id='sidebar' class='visible-xs visible-sm col-xs-12'>
-                    $partial("templates/about.html")$
-                </div>
-            </div>
-        </footer>
+        <!--         <div id='sidebar' class='hidden-xs hidden-sm col-md-3'> -->
+        <!--             $partial("templates/about.html")$ -->
+        <!--         </div> -->
 
-        <script type="text/javascript" src="/js/random_posts.js"></script>
+        <!--         <div id='content' class='col-xs-12 col-md-9'> -->
+        <!--             $body$ -->
+
+        <!--             <div class='row'> -->
+        <!--                 <div class='col-sm-4'> -->
+        <!--                     $if(previousPageNum)$ -->
+        <!--                         <a class='archive' href="$previousPageUrl$">◀ Newer Posts</a> -->
+        <!--                     $endif$ -->
+        <!--                 </div> -->
+
+        <!--                 <div class='col-sm-4'> -->
+        <!--                     <a class='archive' href='/archive.html'>Archive</a> -->
+        <!--                 </div> -->
+
+        <!--                 <div class='col-sm-4'> -->
+        <!--                     $if(nextPageNum)$ -->
+        <!--                         <a class='archive' href="$nextPageUrl$">Older Posts ▶</a> -->
+        <!--                     $endif$ -->
+        <!--                 </div> -->
+        <!--             </div> -->
+        <!--         </div> -->
+
+        <!--     </div> -->
+        <!-- </div> -->
+
 
     </body>
 </html>
