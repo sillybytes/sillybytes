@@ -3,8 +3,6 @@ title: El teclado es tu amigo
 published: 2014-12-04
 ...
 
-![](/img/keyboard/thumbnail.png){#thumbnail}\
-
 Cualquier persona que se dedique a actividades relacionadas con la informática
 (y hoy en día prácticamente cualquier persona independientemente de sus
 actividades) está plenamente consciente que su principal interfaz con una
