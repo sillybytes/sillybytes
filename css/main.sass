@@ -1,0 +1,126 @@
+@import "palette.sass";
+@import "bulma.sass";
+
+html, body
+    background-color: $color-white;
+    color: $color-black;
+    font-family: roboto,verdana,sans-serif
+    font-size: 18px;
+
+    a
+        color: $color-accent;
+        text-decoration: none;
+        outline: 0;
+
+    a:hover
+      color: $color-accent-hover;
+
+    a:active
+      color: $color-accent-active;
+
+
+#about-content
+  text-align: justify;
+
+  p
+    margin: 20px 0px;
+
+  h1, h2, h3, h4, h5, h6
+    color: $color-black;
+    margin-top: 40px;
+    font-weight: bold;
+
+  h1
+    font-size: 2rem;
+
+  h2
+    font-size: 1.5rem;
+
+  h3, h4, h5, h6
+    font-size: 1.25rem;
+
+
+.post
+    margin: 80px 0px;
+
+    h1, h2
+      color: $color-accent;
+      line-height: 3rem;
+
+    .date
+      color: $color-gray;
+
+    section
+      padding: 10px 0px;
+      font-size: 18px;
+      text-align: justify;
+
+    .continue-reading-link
+      color: $color-accent;
+      font-style: italic;
+
+    .post-content,#post-content
+        text-align: justify;
+
+        p
+          margin: 20px 0px;
+
+        h1, h2, h3, h4, h5, h6
+          color: $color-black;
+          margin-top: 40px;
+          font-weight: bold;
+
+        h1
+          font-size: 2rem;
+          line-height: 3rem;
+
+        h2
+          font-size: 1.5rem;
+
+        h3, h4, h5, h6
+          font-size: 1.25rem;
+
+        pre
+            padding: 0;
+            border: 0;
+            font-family: lucida console, monaco, monospace;
+            color: $color-black;
+            background-color: $color-white-accent;
+            margin: 30px 0px;
+            code
+                font-family: inherit;
+                color: inherit;
+                margin: 0;
+                padding: 15px;
+                width: 100%;
+
+        code
+            color: $color-black;
+            font-family: lucida console, monaco, monospace;
+            background-color: $color-white-accent;
+            padding: 0px 5px;
+            margin-left: 1px;
+            margin-right: 1px;
+            overflow: auto;
+            position: relative;
+            bottom: -5px;
+            display: inline-block;
+
+        blockquote
+            border: 0px;
+            margin: 2em auto;
+            color: #555;
+            letter-spacing: 1px;
+            font-style: italic;
+            p
+                margin: 0px 0px;
+                padding-left: 40px;
+
+        blockquote:before
+            color: #999;
+            content: "\"";
+            font-size: 3.5em;
+            font-style: italic;
+            line-height: 0.1em;
+            margin-right: 0.15em;
+            vertical-align: -0.4em;
