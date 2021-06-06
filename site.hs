@@ -22,14 +22,6 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match "js/**" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "node_modules/**" $ do
-        route   idRoute
-        compile copyFileCompiler
-
     match "public_key.asc" $ do
         route   idRoute
         compile copyFileCompiler
