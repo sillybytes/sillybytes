@@ -1,14 +1,8 @@
-<div class='row'>
-    <div class='post col-xs-12'>
-        <h2 class='post-title'>$title$</h2>
-        <div class='post-date-author'>
-            Posted on $date$
-            $if(author)$
-                by $author$
-            $endif$
-        </div>
-        <div class='post-content'>
-            $body$
-        </div>
-    </div>
-</div>
+<article class="post">
+    <h2 class="is-size-3 has-text-weight-medium has-text-left">$title$</h2>
+    <aside class="date has-text-left">$date$</aside>
+
+    <section>
+        $body$
+    </section>
+</article>

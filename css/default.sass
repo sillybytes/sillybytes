@@ -4,7 +4,7 @@
 html, body
     background-color: $color-white;
     color: $color-black;
-    // font-family: Verdana,Geneva,sans-serif
+    font-family: Verdana,Geneva,sans-serif
     font-size: 18px;
     // margin: 0px 0px;
     // padding: 0px 0px;
@@ -14,23 +14,29 @@ html, body
         text-decoration: none;
         outline: 0;
 
-    // a:hover, body a:active
-    //     color: rgb(181, 137, 0);
-    //     text-decoration: underline;
-    //     outline: 0;
-    // h2
-    //     color: #cb4b16;
-    //     font-size: 1.8em;
-    //     font-weight: bold;
-    //     margin-top: 60px;
+    a:hover
+      color: $color-accent-hover;
 
-// header,navbar,.navbar
-//     background-color: $color-accent;
-//     color: $color-white;
-    // height: 80px;
+    a:active
+      color: $color-accent-active;
 
-footer
-    background-color: $color-accent;
+.post-teaser,.post
+  margin: 80px 0px;
+
+  h2
+    color: $color-accent;
+
+  .date
+    color: $color-gray;
+
+  section
+    padding: 30px 0px;
+    font-size: 18px;
+    text-align: justify;
+
+  .continue-reading-link
+    color: $color-accent;
+    font-style: italic;
 
     // #logo
     //     max-width: 100%;

@@ -1,7 +1,9 @@
 $for(posts)$
 
 <article class="post-teaser">
-    <h2 class="is-size-3 has-text-weight-medium has-text-left">$title$</h2>
+    <h2 class="is-size-3 has-text-weight-medium has-text-left">
+        <a href='$url$'>$title$</a>
+    </h2>
     <aside class="date has-text-left">$date$</aside>
 
     <section>
@@ -12,8 +14,7 @@ $for(posts)$
         $endif$
     </section>
 
-    <a class="continue-reading-link" href='$url$'>Continue Reading</a>
-
+    <a class="continue-reading-link" href='$url$'>Continue Reading →</a>
 </article>
 
 $endfor$
