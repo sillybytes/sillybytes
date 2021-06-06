@@ -17,8 +17,8 @@ for the [hacker attitude](http://catb.org/~esr/faqs/hacker-howto.html#attitude).
 
 - Email: [alx@sillybytes.net](mailto:alx@sillybytes.net)
 
-- Github:  [github/alx741](https://github.com/alx741)
-- Gitlab:  [gitlab/alx741](https://gitlab.com/alx741)
+- GitHub:  [github/alx741](https://github.com/alx741)
+- GitLab:  [gitlab/alx741](https://gitlab.com/alx741)
 - Twitter: [\@alx741alx](https://twitter.com/alx741alx)
 
 - Libera (and Freenode):  *#vim*, *#archlinux*, *#freebsd*, *#avr*, *#haskell*, *#yesod*
