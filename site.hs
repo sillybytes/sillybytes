@@ -26,6 +26,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "daniel_campoverde-cv.pdf" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "about.md" $ do
         route $ setExtension "html"
         compile $ pandocCompiler

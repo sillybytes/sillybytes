@@ -21,6 +21,8 @@ software, and also like my maths and stats as well.
 
 - GPG public key: [EB0E776276450F22](/public_key.asc)
 
+- CV: [daniel_campoverde-cv.pdf](/daniel_campoverde-cv.pdf)
+
 
 # Things I do and like
 
