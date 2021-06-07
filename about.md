@@ -4,10 +4,9 @@ Hey! I'm Daniel Campoverde, a systems engineer based in Cuenca, Ecuador.
 
 I develop full stack. Really mean that: from hardware design & firmware
 development, to systems programming, all the way up to web & mobile development,
-system administration and everything in between. I just love everything that can
-go *beep beep boop*: electronics, computers, software, and also like my maths
-and stats as well.
-
+machine & deep learning, pure functional programming and everything in between.
+I just love everything that can go *beep beep boop*: electronics, computers,
+software, and also like my maths and stats as well.
 
 
 ## Find me
@@ -69,7 +68,7 @@ Currently working on [this one](https://github.com/runeisnot-email), pretty exci
 ![](https://raw.githubusercontent.com/runeisnot-email/rune-artwork/main/logo/brand_mark-brand_name-strapline.svg)
 
 
-### Libraries and such
+### Libraries and plugins
 
 Particularly for Haskell:
 [Currencies](https://github.com/alx741/currencies#readme),
@@ -107,7 +106,7 @@ Check them out, pretty neat stuff in there:
 
 # Subscribe
 
-Here, have [an atom feed](http://www.sillybytes.net/atom.xml)
+Here, have [an atom feed](https://sillybytes.net/atom.xml)
 
 
 # License
