@@ -3,9 +3,8 @@ title: PIC16F876A conversión analógica digital + UART (Ensamblador)
 published: 2016-07-14
 ...
 
-![](/img/picuart/thumbnail.png){#thumbnail}\
-
-NOTE: This post is available in Spanish only. Please use a software translator.
+*Note:* This post is available in Spanish only. Please use a software
+translator.
 
 He dejado de usar microcontroladores PIC por los motivos explicados
 [aquí](http://www.sillybytes.net/2016/06/from-pic-to-avr.html); Pero voy a

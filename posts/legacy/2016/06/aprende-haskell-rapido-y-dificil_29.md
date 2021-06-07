@@ -3,21 +3,20 @@ title: Aprende Haskell rápido y difícil
 published: 2016-06-29
 ...
 
-![](/img/haskellhard/thumbnail.jpg){#thumbnail}\
-
 Esta es la traducción al español del artículo [Haskell the hard
 way](http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/) por Yann
 Esposito.
 
 TL;DR\*: Un corto y denso tutorial para aprender Haskell.
 
-# Asómbrate con Haskell
+Asómbrate con Haskell. De verdad pienso que todos los desarrolladores deberían
+aprender Haskell. No creo que todos necesitan convertirse en ninjas de Haskell,
+pero deberían al menos descubrir que es lo que Haskell tiene para ofrecer.
+Aprender Haskell abre tu mente.
 
-De verdad pienso que todos los desarrolladores deberían aprender Haskell. No
-creo que todos necesitan convertirse en ninjas de Haskell, pero deberían al
-menos descubrir que es lo que Haskell tiene para ofrecer. Aprender Haskell abre
-tu mente.
 <!--more-->
+
+![](/img/haskellhard/thumbnail.jpg)
 
 Los lenguajes comunes comparten los mismos fundamentos:
 
@@ -69,7 +68,7 @@ El artículo contiene cinco partes:
 
     Nota: El código de ejemplo se almacena en ficheros con un nombre
     específico que termina en la extensión `.hs` (Haskell), y por eso en los
-    ejemplos se escribre la ejecución de los mismos como `$ runhaskell
+    ejemplos se escribe la ejecución de los mismos como `$ runhaskell
     algo.hs` pero el nombre puede ser cualquiera.
 
 
@@ -77,7 +76,7 @@ El artículo contiene cinco partes:
 
 ## Instalación
 
-![](/img/haskellhard/shot1.jpg){.img-responsive}\
+![](/img/haskellhard/shot1.jpg)
 
 * [La plataforma de Haskell](https://www.haskell.org/platform/) es la forma
   estándar de instalar Haskell.
@@ -92,7 +91,7 @@ Herramientas:
 
 ## No tengas miedo
 
-![](/img/haskellhard/shot2.jpg){.img-responsive}\
+![](/img/haskellhard/shot2.jpg)
 
 Muchos libros/artículos sobre Haskell empiezan por introducir alguna formula
 esotérica (quick sort, Fibonacci, etc...). Yo lo haré justamente al revés. Al
@@ -164,7 +163,7 @@ imperativos populares.
 
 ## Haskell básico
 
-![](/img/haskellhard/shot3.jpg){.img-responsive}\
+![](/img/haskellhard/shot3.jpg)
 
 Antes de continuar debes ser advertido sobre algunas propiedades
 esenciales de Haskell.
@@ -460,7 +459,7 @@ transformación de un tipo al otro por ti, deberías ver este fantástico
 
 # Haskell esencial
 
-![](/img/haskellhard/shot4.jpg){.img-responsive}\
+![](/img/haskellhard/shot4.jpg)
 
 Sugiero que leas con ligereza esta parte. Mírala como una referencia. Haskell
 tiene un montón de características. Regresa aquí cada vez que la notación
@@ -648,7 +647,7 @@ La parte difícil puede empezar ahora.
 
 ## Estilo funcional
 
-![](/img/haskellhard/shot5.jpg){.img-responsive}\
+![](/img/haskellhard/shot5.jpg)
 
 En esta sección, proporcionaré un ejemplo corto de la impresionante habilidad
 para refactorizar de Haskell. Seleccionaremos un problema y los resolveremos en
@@ -901,7 +900,7 @@ evenSum = accumSum 0
 
 ### Funciones de orden superior
 
-![](/img/haskellhard/shot6.jpg){.img-responsive}\
+![](/img/haskellhard/shot6.jpg)
 
 Para mejorarlo aún más podemos usar funciones de orden superior. Qué son esas
 bestias? Las funciones de orden superior son funciones que toman funciones
@@ -1112,7 +1111,7 @@ sobre otro aspecto esencial de Haskell: Tipos.
 
 ## Tipos
 
-![](/img/haskellhard/shot7.jpg){.img-responsive}\
+![](/img/haskellhard/shot7.jpg)
 
 TL;DR\*:
 
@@ -1377,7 +1376,7 @@ Esto imprime:
 
 ### Arboles
 
-![](/img/haskellhard/shot8.jpg){.img-responsive}\
+![](/img/haskellhard/shot8.jpg)
 
 Otro ejemplo estándar: arboles binarios.
 
@@ -1565,7 +1564,7 @@ print ( treeFromList
 
 Por eso elegí poner un `:` en cada linea del árbol (excepto en la raíz).
 
-![](/img/haskellhard/shot9.jpg){.img-responsive}\
+![](/img/haskellhard/shot9.jpg)
 
 
 ```Haskell
@@ -1628,7 +1627,7 @@ incluso hacer un árbol que contenga arboles de arboles!
 
 ## Estructuras infinitas
 
-![](/img/haskellhard/shot10.jpg){.img-responsive}\
+![](/img/haskellhard/shot10.jpg)
 
 Es común escuchar que Haskell es perezoso.
 
@@ -1799,7 +1798,7 @@ gratificantes.
 
 ## Lidiando con IO (Entrada/Salida)
 
-![](/img/haskellhard/shot11.jpg){.img-responsive}\
+![](/img/haskellhard/shot11.jpg)
 
 
 *TL;DR*:
@@ -2051,7 +2050,7 @@ Estas son las principales cosas que hay que recordar.
 
 ## El truco de la entrada/salida (IO) explicado
 
-![](/img/haskellhard/shot12.jpg){.img-responsive}\
+![](/img/haskellhard/shot12.jpg)
 
 
 TL;DR\*:
@@ -2283,7 +2282,7 @@ let (_,w1) = action1 w0 in
 let (y,w2) = action2 w1 in
 ```
 
-![](/img/haskellhard/shot13.jpg){.img-responsive}\
+![](/img/haskellhard/shot13.jpg)
 
 Ahora, haremos un truco de magia. Haremos que el símbolo del mundo temporal
 "desaparezca". Haremos un `bind` a las dos lineas. Dinamos la función
@@ -2516,7 +2515,7 @@ Imagina como se vería sin el `(>>)` y `(>>=)`.
 
 ## Monads
 
-![](/img/haskellhard/shot14.jpg){.img-responsive}\
+![](/img/haskellhard/shot14.jpg)
 
 Ahora el secreto puede ser revelado: `IO` es un *monad*.
 Ser un monad significa que se tiene acceso a azúcar sintáctica con la
@@ -2695,7 +2694,7 @@ El monad `Maybe` probó ser útil en este ejemplo. Vimos la utilidad de el monad
 
 ### El monad lista
 
-![](/img/haskellhard/shot15.jpg){.img-responsive}\
+![](/img/haskellhard/shot15.jpg)
 
 El monad lista ayuda a simular cómputos no determinístico:
 

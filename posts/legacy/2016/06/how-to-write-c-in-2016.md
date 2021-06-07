@@ -3,22 +3,22 @@ title: How to write C in 2016
 published: 2016-06-19
 ...
 
-![](/img/clang/thumbnail.png){#thumbnail}\
-
 Matt wrote a very interesting and totally recommended post about [how to C (as
 of 2016)](https://matt.sh/howto-c). Keith Thompson wrote later a very detailed
 and rather useful
 [critique](https://github.com/Keith-S-Thompson/how-to-c-response/blob/master/README.md)
-with some extra notes about Matt's post. Go ahead and read both articles now.
+with some extra notes about Matt's post. I urge you to go ahead and read both
+articles.
 
-Here I would like to point out some things about tooling.
+Here I'd like to point out some things about tooling.
 
-![](/img/clang/shot1.jpg){.img-responsive}
 <!--more-->
+
+![](/img/clang/shot1.jpg)
 
 # Use building tools (Make, Autotools, CMake)
 
-![](/img/clang/shot2.png){.img-responsive}
+![](/img/clang/shot2.png)
 
 This might be obvious for most C programmers, but I've seen quite a lot of
 people, novices specially, copying and pasting the compilation command on each
@@ -33,7 +33,7 @@ comfortable [writing](http://mrbook.org/blog/tutorials/make/) and
 *makefiles*, so the compilation process can be described like in a recipe and
 triggered by issuing the `$ make` command.
 
-![](/img/clang/shot3.png){.img-responsive}
+![](/img/clang/shot3.png)
 
 Using [make](https://www.gnu.org/software/make/) alone by writing *makefiles*
 will take you pretty far, but for larger software you might want to automate
@@ -51,7 +51,7 @@ starts to get out of hand, taking the effort to use them is worth it!
 If your code is needs not only to be Posix systems portable, but also get
 compiled on Windows machines, [CMake](https://cmake.org/) rocks!
 
-![](/img/clang/shot4.jpg){.img-responsive}
+![](/img/clang/shot4.jpg)
 
 
 # The standard C library is your friend
@@ -93,7 +93,7 @@ You can tune the level of paranoia with the *splint* argument options: `-weak`,
 
 # Valgrind
 
-![](/img/clang/shot6.png){.img-responsive}
+![](/img/clang/shot6.png)
 
 [Valgrind](http://valgrind.org/) is a profiling software with a few neat tricks
 up the sleeve. In contrast to *splint*, it will use your **executable program**
@@ -113,7 +113,7 @@ tools](http://valgrind.org/docs/manual/manual.html).
 
 # Use a debugger
 
-![](/img/clang/shot7.png){.img-responsive}
+![](/img/clang/shot7.png)
 
 Yeah sure, you can fill up you code with `printf` calls for debugging and pretty
 much get away with it, but knowing how to use a debugger is always a valuable
@@ -127,7 +127,7 @@ you'll be a happy programmer.
 
 # Use a control version system
 
-![](/img/clang/shot8.jpg){.img-responsive}
+![](/img/clang/shot8.jpg)
 
 You might think you can get away keeping a ton of directories for each version
 of your program if it is small, but that will, eventually, byte you!
@@ -142,8 +142,8 @@ much more powerful control version system like
 [Mercurial](https://www.mercurial-scm.org/wiki/) or even better
 [Git](https://git-scm.com/).
 
-![](/img/clang/shot9.png){.img-responsive}
-![](/img/clang/shot10.png){.img-responsive}
+![](/img/clang/shot9.png)
+![](/img/clang/shot10.png)
 
 On top of that, even if you're working alone in a project and won't collaborate
 with more people, using a repository hosting service like
@@ -154,7 +154,7 @@ your project, collaboration will be frictionless.
 
 # Automated documentation
 
-![](/img/clang/shot11.png){.img-responsive}
+![](/img/clang/shot11.png)
 
 > Documentation is like sex: when it is good, it is very good; and when it is
 > bad, it is better than nothing
@@ -190,7 +190,7 @@ You can even automatize some graphs generation using
 
 # Unit testing
 
-![](/img/clang/shot12.jpg){.img-responsive}
+![](/img/clang/shot12.jpg)
 
 In a [nutshell](https://en.wikipedia.org/wiki/Unit_testing) *unit testing* is
 writing pieces of code that will use the functions of your software and compare
@@ -235,7 +235,7 @@ the tests are, the more robust the end code will be.
 
 # Learn functional programming
 
-![](/img/clang/shot13.jpg){.img-responsive}
+![](/img/clang/shot13.jpg)
 
 Learning to think functionally will improve your C code despite C being an
 imperative language, you'll stop using mutable global state, and all the kind of

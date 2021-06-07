@@ -1,35 +1,32 @@
 ---
-title: Seamlessly Vim-Tmux-WindowManager-Monitor navigation
+title: Seamless Vim-Tmux-WindowManager-Monitor navigation
 published: 2016-06-24
 ...
 
-![](/img/navigator/thumbnail.jpg){.img-responsive}
-
 [This Thoughtbot
 post](https://robots.thoughtbot.com/seamlessly-navigate-vim-and-tmux-splits)
-describes how to make Vim and Tmux *work together in Harmony* based on [this
+describes how to make Vim and Tmux work together in Harmony based on [this
 crhistoomey's plugin](https://github.com/christoomey/vim-tmux-navigator),
 allowing you to traverse both your Vim and Tmux windows and panes respectively.
 
-<!--more-->
 Having the ability to traverse Vim and Tmux splits without having to think about
-it using `ctrl-h`, `ctrl-j`, `ctrl-k`, `ctrl-l` is fantastic! But I still had an
+it using `ctrl-h`, `ctrl-j`, `ctrl-k`, `ctrl-l` is brilliant! But I still had an
 annoyance source from the window manager (Ratpoison) and the multi monitor
 setup.
 
-So I took the same concept and extend it to those uses cases, so now I use
+So I took the same concept and extend it to those uses cases. Now I use
 `ctrl-h`, `ctrl-j`, `ctrl-k`, `ctrl-l` to move through my **Window Manager
 splits**, my **Tmux panes**, my **Vim windows** and my **Monitors** with minimum
 mental overhead. Here is how.
 
-Some of the scripts are a bit of complex, so instead of explaining them in
-detail the general algorithm is described.
+<!--more-->
 
-
+Some scripts are a bit of complex, so instead of explaining them in detail, the
+general algorithm is described.
 
 # Frame-Monitor Navigation
 
-![](/img/navigator/shot1.jpg){.img-left}
+![](/img/navigator/thumbnail.jpg)
 
 When traversing frames (Ratpoison splits) it stops at the end of the current
 monitor, so first I needed to change to the left or right monitor when a
@@ -88,8 +85,8 @@ function is_rightmost
     fi
 }
 
-# Go to previous screen if currently if leftmost frame
-# Go to next screen if currently if rightmost frame
+# Go to previous screen if currently in leftmost frame
+# Go to next screen if currently in rightmost frame
 # Execute frame focus otherwise
 if [[ "$1" == "left" ]]; then
     if is_leftmost; then
@@ -118,8 +115,8 @@ movement command is triggered from Tmux edge pane.
 The script
 [rat_tmux-navigator.sh](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/rat_tmux-navigator.sh)
 is able to tell if the terminal emulator (Urxvt) is currently focused and, if
-so, send the movement commands to Tmux so it can handle panes traversing as
-usual. It also define functions that Tmux can use to know if a edge pane is
+so, send the movement commands to Tmux, so it can handle panes traversing as
+usual. It also defines functions that Tmux can use to know if an edge pane is
 reached and send the movement commands to Ratpoison through the
 **frame-mon_navigator.sh** script so Frame-Monitor navigation is included in the
 process.
@@ -263,8 +260,8 @@ fi
 # Vim-Tmux Navigator
 
 Modifying Tmux mappings to use above scripts will make it work for
-Tmux-Ratpoison traversing but when a Vim instance is on an Tmux edge pane it
-will not jump to the appropriate Ratpoison split. To solve it I forked the
+Tmux-Ratpoison traversing but when a Vim instance is on a Tmux edge pane it will
+not jump to the appropriate Ratpoison split. To solve it I forked the
 `vim-tmux-navigator` project and made the right changes to it in the
 [vim-tmux-wm-monitor
 branch](https://github.com/alx741/vim-tmux-navigator/tree/vim-tmux-wm-monitor)
@@ -294,7 +291,7 @@ the path to the `rat_tmux-navigator.sh` script.
 
 ## Tmux
 
-Finally these lines on `.tmux.conf` are basically modified versions of the
+Finally, these lines on `.tmux.conf` are basically modified versions of the
 `vim-tmux-navigator` plugin ones.
 
     is_vim="ps -o state= -o comm= -t '#{pane_tty}' \

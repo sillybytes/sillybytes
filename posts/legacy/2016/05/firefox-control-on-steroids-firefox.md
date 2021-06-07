@@ -3,8 +3,6 @@ title: Firefox control on steroids [Firefox + Ratpoison + Mozrepl]
 published: 2016-05-27
 ...
 
-![](/img/mozrepl/thumbnail.png){#thumbnail}\
-
 I'm not going to lie to you, what you're about to read is really cool.
 
 Controlling all sort of stuff with Ratpoison, as you can see in my previous

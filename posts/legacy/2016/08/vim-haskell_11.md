@@ -3,17 +3,10 @@ title: Vim + Haskell
 published: 2016-08-11
 ...
 
-![](/img/vimhask/thumbnail.png){#thumbnail}\
+So you're writing in the right language using the right tool already, let's put
+some extra magic under your sleeves.
 
-So you're writing in the right language using the right tool already, but let's
-put some extra magic under our sleeves.
-\
-\
-\
-\
-
-
-## Expectations
+This is what we expect to accomplish:
 
 * Omnicompletion
 * Compilation and testing
@@ -31,7 +24,7 @@ put some extra magic under our sleeves.
     * Type asserting
 * Hlint integration
     * Linting
-    * Managing the locationlist
+    * Managing the location list
 * Code formatting
     * Hindent integration
     * Trailing white space
@@ -73,7 +66,7 @@ omnifunction. Use it by defining the local `omnifunc`:
 au FileType haskell setlocal omnifunc=necoghc#omnifunc
 ```
 
-![](/img/vimhask/shot1.gif){.img-responsive}
+![](/img/vimhask/shot1.gif)
 
 
 ### Compilation and testing
@@ -81,7 +74,8 @@ au FileType haskell setlocal omnifunc=necoghc#omnifunc
 I've contributed the GHC compiler plugin to upstream Vim recently, but it may
 take a while before you get the latest vim runtime from your distribution. So in
 the meantime you can install it like any other plugin from the GitHub repository
-here: https://github.com/alx741/ghc.vim
+here: https://github.com/alx741/ghc.vim. **Update:** It's been merged into vim's
+runtime, you should have it by default now.
 
 Then load it for the Haskell *filetype* in you *vimrc*:
 
@@ -103,7 +97,7 @@ After running one of those the results will be loaded into the *quickfix* list.
 
 ### GHCI integration
 
-There are plugins that offer much more tight integration, but for me it is
+There are plugins that offer much more tight integration but for me, it is
 enough to start GHCI from the current vim instance in a Tmux pane loaded with
 the current project or Haskell source, so taking advantage of the
 [vimux](https://github.com/benmills/vimux) Tmux integration plugin, lets define
@@ -131,7 +125,7 @@ will load a GHCI session for the current stack project.
 
 ### Hoogle integration
 
-Vim uses `K` (upper case k) to lookup a keyword under the cursor, so we can
+Vim uses `K` (upper case k) to look up a keyword under the cursor, so we can
 leverage that and just define the right `keywordprg`:
 
 ```vim
@@ -164,7 +158,7 @@ function! JumpHaskellFunction(reverse)
 endfunction
 ```
 
-And some mappings, so doing `[[` or `]]` will take us to the previous or next
+And some mappings such that `[[` or `]]` will take us to the previous and next
 function:
 
 ```vim
@@ -199,7 +193,6 @@ au FileType haskell nnoremap <silent><buffer> gfs :GhcModSplitFunCase<CR>
 au FileType haskell nnoremap <silent><buffer> gtt :GhcModType<CR>
 ```
 
-
 `git` (*g insert type*) will insert the missing type declaration of an
 expression, take for instance this Haskell code:
 
@@ -221,17 +214,17 @@ f (Just a) = Left a
 f Nothing = Right ()
 ```
 
-![](/img/vimhask/shot2.gif){.img-responsive}
+![](/img/vimhask/shot2.gif)
 
-Neat!, go ahead and play around with the other mappings, you'll be not
+Neat!, go ahead and play around with the other mappings, you won't be
 disappointed.
 
 
 ### Hlint integration
 
-By default, [Neomake](https://github.com/neomake/neomake) will use *hlint* on the
-current file when the `:Neomake` command is invoked on a Haskell source file, so
-by adding a mapping:
+By default, [Neomake](https://github.com/neomake/neomake) will use *hlint* on
+the current file when the `:Neomake` command is invoked on a Haskell source
+file, so by adding a mapping:
 
 ```vim
 au FileType haskell nnoremap <buffer> gll :Neomake<CR>
@@ -275,7 +268,7 @@ One extra thing left is to align stuff in the code so it looks nicer
 au FileType haskell nmap <silent><buffer> g<space> vii<ESC>:silent!'<,'> EasyAlign /->/<CR>
 ```
 
-Take for instance this very dumb example for the sake of the argument:
+Take for instance this simple example for the sake of the argument:
 
 ```Haskell
 module Test where
@@ -300,14 +293,14 @@ f x =
     3 -> "3"
 ```
 
-![](/img/vimhask/shot3.gif){.img-responsive}
+![](/img/vimhask/shot3.gif)
 
 So much better!
 
 
 ### Easy arrows generation
 
-In Haskell, operators like `->` and `=>` are very common and I find it
+In Haskell, operators like `->` and `=>` are very common, and I find it
 cumbersome to type them manually. Let's define a function:
 
 ```vim
@@ -338,8 +331,8 @@ au FileType haskell inoremap <buffer> ;: <ESC>:call Make_arrow(0)<CR>
 ```
 
 So while in insert mode typing `;;` or `;:` will insert `->` or `=>`
-respectively. Additionally, it will avoid duplicated spaces between the types and
-the arrows.
+respectively. Additionally, it will avoid duplicated spaces between the types
+and the arrows.
 
 
 ### Types abbreviations
@@ -368,8 +361,8 @@ the capitalized version will be inserted instead.
 ### Yesod Haskell web framework
 
 Some neat integration with Yesod can be achieved by using the
-[vim-yesod](https://github.com/alx741/vim-yesod) plugin which, by default, gives
-you some mappings:
+[vim-yesod](https://github.com/alx741/vim-yesod) plugin which, by default, it
+gives you some mappings:
 
 `gh` - Jump to the handler of the route under the cursor in the `config/routes`
 file.
