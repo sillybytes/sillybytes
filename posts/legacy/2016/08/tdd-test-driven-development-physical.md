@@ -20,27 +20,21 @@ on how to compile and use.
 > (and testing in general) tools. It will not boost your productivity nor make
 > you a better programmer or TDD practitioner, but it looks cool :)
 
-Let's explain how it works, it's very simple:
-
 <!--more-->
 
 # Hardware
 
-The **atmega328p** AVR microcontroller is very popular and cheap, but if you buy
-them on Ebay for example, chances are it comes with the Arduino bootloader,
-which gets in the way because we can perfectly use the internal oscillator
-instead of an external 16Mhz crystal. So the first thing to do is change the
-fuses to the default ones:
+The *atmega328p* AVR chip is very popular and cheap, so much so, that chances
+are high you got it with the Arduino bootloader, which gets in the way as we can
+perfectly use the internal oscillator at 1Mhz instead of an external 16Mhz
+crystal. Fix this by changing the fuses:
 
 ```shell
 # avrdude -p m328p -c usbasp -U lfuse:w:0x62:m -U hfuse:w:0xd9:m
 ```
 
-Now we are using the internal 1MHz oscillator, perfect!
-
 The circuit is simple enough to mount in some perfboard. Additionally, I added
-some small neodymium magnets in the back to stick it easily close to my
-monitors.
+some small neodymium magnets in the back for mounting purposes.
 
 ![](/img/tddlight/img1.jpg){.img-responsive}
 ![](/img/tddlight/img2.jpg){.img-responsive}
@@ -54,8 +48,8 @@ monitors.
 
 # Software
 
-The firmware is no more than some UART boilerplate with `4800` baud rate, so
-it's stable with at 1MHz clock speed.
+The firmware is no more than some UART boilerplate with a `4800` baud rate so
+that it's stable at 1MHz.
 
 ``` C
 #include <avr/io.h>
@@ -90,8 +84,7 @@ char getchar(void)
 }
 ```
 
-Notice how if another character is received the output is cleared so all the
-LEDs are off.
+Notice how if any other character is received the output gets cleared.
 
 The host software configures the serial port with a `4800` baud rate:
 

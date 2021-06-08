@@ -1,18 +1,9 @@
 ---
-title: Firefox control on steroids [Firefox + Ratpoison + Mozrepl]
+title: Firefox control on steroids (Firefox + Ratpoison + Mozrepl)
 published: 2016-05-27
 ...
 
-I'm not going to lie to you, what you're about to read is really cool.
-
-Controlling all sort of stuff with Ratpoison, as you can see in my previous
-posts, is pretty neat and you can extend it to control your browser as well.
-
-These are the current capabilities:
-
-Every command start with the Ratpoison prefix + 'f' like in `C-t f`:
-
-<!--more-->
+Here is what We expect to achieve. Every command starts with Ratpoison's prefix + 'f' like in `C-t f`:
 
     **Command**     **Action**
 
@@ -26,47 +17,43 @@ Every command start with the Ratpoison prefix + 'f' like in `C-t f`:
         /           Jump to the tab with url mathing a user input
         l           Open a new tab with the lyrics of the currenlty playing song (mpd)
 
-What does this do?, you might be wondering...
+<!--more-->
 
-...Well, this does a little bit more than what you're probably thinking.
+This does a bit more than what you're probably thinking. Take for instance the
+`f` command with the *"Facebook"* action, it will afford you this:
 
-Take for instance the `f` command, it has the *"Facebook"* action which means
-that:
+No matter where you are, which window has the focus, or even if Firefox is
+currently running or not. Firefox will be started (if needed) and acquire the
+focus, then all your tabs will be parsed (starting from the last one), and if a
+Facebook tab is found then jump to it, if there is no Facebook tab then start a
+new one.
 
-No matter where you are, which window currently has the focus, or even if
-Firefox is not currently running. Firefox will be started (if needed) and will
-acquire the focus.
-
-Then all your tabs will be parsed (starting from the last one), and if a
-Facebook tab is found then jump to it; if there is no Facebook tab opened then
-start a new one.
-
-The same is applied to any of the other pages available (The list can be
+The same is extended to any of the other sites available (The list can be
 extended to suit you needs).
 
-The `o` commands is self explanatory, the only advantage of this one is the
-ability to have a fast new tab no matter where you are, which window has the
+The `o` commands is self-explanatory, the only advantage of this one is the
+ability to quickly get a new tab no matter where you are, which window has the
 focus, or if Firefox is running or not.
 
-The `s` command is quite nice, here is an use case:
+The `s` command is quite nice, imagine this:
 
-You're compiling some code, but the compiler complains with a cryptic message,
-so you use [tmux to copy the error
+You're trying to compile some code, but the compiler complains with a cryptic
+message, so you use [tmux to copy the error
 message](https://github.com/alx741/dotfiles/blob/master/tmux/.tmux.conf#L55-L59),
-then issue the key sequence `C-t f /` and BANG!, no matter what, a new Firefox
-tab is just in front of you with the Google results of your error message. And
-this is applicable to any content in your clipboard as well!
+then issue the key sequence `C-t f /` and BANG!, you get a new Firefox tab in
+front of you with the search engine results for the error message. And this is
+applicable to any content in your clipboard as well!
 
-The `/` command prompts the user for a query and jumps to the tab which URL
-contains the query as a substring.
+The `/` command prompts the user for a query and jumps to the tab with a URL
+that contains the query as a substring.
 
-The `l` will take the name of the currently playing song in MPD, google it, and
-open the first google result for the song lyrics in a new tab.
+The `l` command will take the name of the currently playing song in MPD, search
+for it, and open the first result for the song lyrics in a new tab.
 
 
 # How to
 
-The main dependencies of all this are:
+So you're sold, let's make it happen. The main dependencies are:
 
 * Firefox
 * [Mozrepl](https://github.com/bard/mozrepl)
@@ -78,7 +65,7 @@ which you can get from Firefox addons.
 
 This also depends on a Ratpoison
 [script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/app_select.sh)
-introduced in the previous posts, so be sure to have it.
+introduced in a previous post, so make sure to get that first.
 
 Some extra `~/.ratpoisonrc` is needed for the new mappings:
 
@@ -96,9 +83,9 @@ Some extra `~/.ratpoisonrc` is needed for the new mappings:
     bind f readkey firefox
 
 
-Most of the magic is performed thanks to the amazing *Mozrepl*. Unfortunately I
-couldn't get it to load an external script, but *Expect* is needed for the
-communication with it anyways, so lets give it the script line by line.
+Most of the magic is performed by *Mozrepl*. Unfortunately, I couldn't get it to
+load an external script, though *Expect* is needed for the communication with it
+anyways, so let's use it to hand the script line by line.
 
 The `select_tab.js`
 [script](https://github.com/alx741/dotfiles/blob/master/mozrepl/.mozrepl/select_tab.js)
@@ -154,7 +141,7 @@ expect {
 
 Now the `firefox.sh`
 [script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/firefox.sh),
-invoked from the Ratpoison configuration, will glue it all together.
+invoked from Ratpoison, will glue it all together.
 
 ```sh
 #!/bin/bash
@@ -249,7 +236,6 @@ case $1 in
         ;;
 esac
 ```
-
 
 You can find all those scripts and configuration bits in my
 [Dotfiles](https://github.com/alx741/dotfiles).
