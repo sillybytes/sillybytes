@@ -7,13 +7,13 @@ published: 2016-07-14
 translator.
 
 He dejado de usar microcontroladores PIC por los motivos explicados
-[aquí](http://www.sillybytes.net/2016/06/from-pic-to-avr.html); Pero voy a
+[aquí](https://sillybytes.net/2016/06/from-pic-to-avr.html), pero voy a
 dedicar este post para escribir y explicar un programa sencillo escrito en
-ensamblador para el **PIC16F876A**.
+ensamblador para el *PIC16F876A*.
 
 El objetivo es el siguiente:
 
-Se desea usar el microcontrolador para llevar a cabo la conversión
+Se pretende usar el microcontrolador para llevar a cabo la conversión
 analógica-digital de una tensión variable (un LDR o un potenciómetro por
 ejemplo) y transmitir el resultado usando la UART. Además debe ser posible
 recibir por la UART un byte que debe alterar la configuración del Conversor
@@ -23,23 +23,15 @@ conversión.
 
 <!--more-->
 
-El código ha sido ensamblado con el ensamblador de GNU *gpasm* del juego de
+El código ha sido ensamblado con el "ensamblador de GNU" (*gpasm*) del juego de
 herramientas [gputils](http://gputils.sourceforge.net/), pero debería ser
-perfectamente compatible con las herramientas MPLAB de Microchip que no uso
-porque [odio los
-IDEs](http://silly-bytes.blogspot.com/2016/03/why-do-i-hate-ides.html). En
-cualquier caso la explicación y el 99% del código debería ser útil sin
-modificación alguna.
+perfectamente compatible con las herramientas MPLAB de Microchip. En cualquier
+caso, la explicación y el 99% del código debería ser útil sin modificación
+alguna.
 
-Este post se deberá leer en paralelo junto con el *datasheet* del
-microcontrolador en cuestión **PIC16F876A** que se puede encontrar aquí:
+Este post se debería leer en paralelo junto con el *datasheet* del
+microcontrolador en cuestión *PIC16F876A* que se puede encontrar aquí:
 http://ww1.microchip.com/downloads/en/DeviceDoc/39582C.pdf
-
-Además tener en cuenta los pines del microcontrolador:
-
-![](/img/picuart/scheme.jpg){.img-responsive}
-
-
 
 El código completo [se encuentra
 aquí](https://github.com/Silly-Bytes/pic_asm_uart-adc/blob/master/code.asm).
@@ -51,7 +43,7 @@ Empezamos examinando y explicando el código:
     list p=16f876A
 
 La primera linea le dirá al ensamblador los mapas de memoria que el enlazador
-deberá usar (el microcontrolador que estamos usando).
+deberá usar.
 
     ; Declaración de direcciones de memoria
     ; Datasheet pagina 17, figura 2-3
@@ -79,12 +71,11 @@ deberá usar (el microcontrolador que estamos usando).
     OPTION_REG EQU H'81'
     IRP        EQU H'07'
 
-En el Datasheet, pagina 17, figura 2-3 se puede ver el mapa completo de memoria
-del microcontrolador. En estas lineas declaramos los nombres y direcciones (en
-hexadecimal) de los mismos para usarlos en el código con más facilidad. La
-palabra `EQU` asigna el nombre de la izquierda al valor de la derecha. Para
-declarar un valor hexadecimal se usa el prefijo `0x`.
-
+En el *datasheet*, pagina 17, figura 2-3 se puede encontrar el mapa completo de
+memoria del microcontrolador. En estas lineas declaramos los nombres y
+direcciones (en hexadecimal) de los mismos, para usarlos en el código con más
+facilidad. El mnemónico `EQU` asigna el nombre de la izquierda al valor de la
+derecha. Para declarar un valor hexadecimal se usa el prefijo `0x`.
 
 ## Inicialización y configuración
 
@@ -96,16 +87,15 @@ declarar un valor hexadecimal se usa el prefijo `0x`.
         BSF STATUS,RP0
         BCF STATUS,RP1
 
-La palabra `INIT` es la declaración de una *etiqueta* y se puede cambiar por
-cualquier palabra que se desee, es el nombre con el cual nos vamos a referir a
-esta sección de código desde otras partes del programa y que podremos invocar
-usando dicha etiqueta.
+el mnemónico `INIT` es la declaración de una *etiqueta* (la misma que se puede
+cambiar por cualquier palabra que se desee), es el nombre con el cual nos vamos
+a referir a esta sección de código desde otras partes del programa.
 
 La directiva `org 0` indica al enlazador que el código a continuación deberá ser
-colocado desde la dirección **0** de la memoria de programa.
+colocado desde la dirección *0* de la memoria de programa.
 
-Las instrucciones `BSF STATUS,RP0` y `BCF STATUS,RP1` hacen un cambio al **banco
-de memoria 1**. La memoria del microcontrolador está dividida en **bancos** y es
+Las instrucciones `BSF STATUS,RP0` y `BCF STATUS,RP1` hacen un cambio al *banco
+de memoria 1*. La memoria del microcontrolador está dividida en *bancos* y es
 necesario *cambiarnos* al banco donde reside el registro que queremos modificar
 en cada momento.
 
@@ -124,22 +114,22 @@ en cada momento.
     MOVLW   B'10001111'
     MOVWF   TRISC
 
-La instrucción `MOVLW` se usa para mover un valor **literal** al registro de
-trabajo **W**.
+La instrucción `MOVLW` se usa para mover un valor literal al registro de trabajo
+`W`.
 
 La instrucción `MOVWF` se usa para mover el valor que se encuentra en el
-registro de trabajo **W** a un registro.
+registro de trabajo `W` a un registro.
 
-De esta forma para colocar un valor arbitrario en un registro es necesario
-colocarlo primero en el registro de trabajo **W** usando la instrucción `MOVLW`
+De esta forma, para colocar un valor arbitrario en un registro es necesario
+colocarlo primero en el registro de trabajo `W` usando la instrucción `MOVLW`
 y luego moverlo al registro deseado con la instrucción `MOVWF`.
 
-Para indicar que el valor usado es **binario** se usa como prefijo una **B**.
+Para indicar que el valor usado es binario se usa como prefijo una `B`.
 
-El **puerto A** contiene los pines del conversor ADC por lo que se configuran
-como entradas. El **puerto B** se configura como salida para, opcionalmente,
-colocar LEDs que sirvan como indicadores visuales. El **puerto C** contiene los
-pines **TX** y **RX** usados para la comunicación UART con lo cual se configuran
+El `puerto A` contiene los pines del conversor ADC, por lo que se configuran
+como entradas. El `puerto B` se configura como salida para, opcionalmente,
+colocar LEDs que sirvan como indicadores visuales. El `puerto C` contiene los
+pines `TX` y `RX` usados para la comunicación UART, de forma que se configuran
 para salida y entrada respectivamente.
 
 
@@ -152,18 +142,18 @@ para salida y entrada respectivamente.
     MOVWF   ADCON1
 
 La configuración del conversor ADC será recibida usando la comunicación UART,
-sin embargo es necesario configurar de antemano que pines serán analógicos y que
-pines serán digitales. No usaremos pines digitales en este puerto, así que se
-configuran todos como analógicos según la tabla de la pagina 128 del Datasheet.
+sin embargo, es necesario configurar de antemano qué pines serán analógicos y
+qué pines serán digitales. No usaremos pines digitales en este puerto, así que
+se configuran todos como analógicos según la tabla de la pagina 128 del
+*datasheet*.
 
 
 ### Configuración de la UART
 
 La comunicación serial UART puede usarse para comunicar el microcontrolador con
-una computadora u otro dispositivo como un modulo bluetooth que a su vez se
-puede usar para comunicar con un teléfono inteligente. El dispositivo con el que
-se comunique es irrelevante para este post y el código es el mismo en cualquier
-caso.
+una computadora u otro dispositivo que a su vez se puede usar para comunicar con
+un teléfono inteligente. El dispositivo con el que se comunique es irrelevante
+para este post y el código es el mismo en cualquier caso.
 
 Nótese que los registros que se configuran se encuentran en bancos distintos con
 lo cual es necesario hacer el *cambio de banco* en cada paso.
@@ -183,8 +173,8 @@ tabla) dependiendo de la velocidad a la cual nos queremos comunicar, de la
 frecuencia a la que se use el microcontrolador y el porcentaje de error que
 estamos dispuestos a tolerar en la comunicación. Dada la frecuencia de un reloj
 de 4Mhz usado y la necesidad de una comunicación a 19200 Baudios, la tabla
-indica usar un valor **decimal** de `12`. Para indicar que el valor usado es
-**decimal** se usa como prefijo un punto `.`.
+indica usar un valor decimal de `12`. Para indicar que el valor usado es decimal
+se usa como prefijo un punto `.`.
 
 
     ; Registro de transmisión
@@ -212,7 +202,7 @@ comunicación de 8 bits, asíncrona y se activan los mecanismos de recepción.
 
 El programa principal deberá esperar a que un byte para configurar el conversor
 ADC llegue por la UART, tomar un valor de tensión y llevar a cabo la conversión
-para finalmente transmitir el resultado por la UART enviando primero el byte
+para finalmente transmitir el resultado por la UART, enviando primero el byte
 bajo `ADRESL` y luego el byte alto `ADRESH`.
 
 
@@ -227,10 +217,10 @@ El pin numero `5` del registro `PIR1` indicará que un dato ha llegado por la
 UART.
 
 La instrucción `BTFSS` verificará el bit numero `5` del registro `PIR1` y se
-**saltará** la siguiente instrucción si el bit es igual a `1`. De esta forma
+*saltará* la siguiente instrucción si el bit es igual a `1`. De esta forma
 mientras no llegue el dato necesario la instrucción `GOTO` se ejecuta y el
 microcontrolador se queda en un bucle, pero cuando un dato es recibido la
-instrucción `GOTO` es **saltada** y el programa puede continuar.
+instrucción `GOTO` es *saltada* y el programa puede continuar.
 
 
         ; Colocar byte recibido en la configuración ADCON0 del conversor ADC
@@ -242,7 +232,7 @@ instrucción `GOTO` es **saltada** y el programa puede continuar.
         BCF   PIR1,6
 
 El registro `RCREG` contiene el dato recibido por la UART, el cual se coloca en
-el registro de trabajo `W` para luego colocarlo en el registro de configuración
+el registro de trabajo `W` para luego llevarse al registro de configuración
 `ADCON0` del conversor ADC. Así el conversor quedará configurado con el canal y
 velocidad que se haya indicado en el dato que recibió y se puede proceder a la
 conversión. Usando la instrucción `BCF` se vacía el contenido del bit numero `6`
@@ -261,8 +251,8 @@ del registro `PIR1` para indicar que hemos leído el dato recibido.
         NOP
 
 Antes de realizar la conversión es necesario esperar un tiempo para que el
-microcontrolador pueda recoger el valor de tensión en el pin, según la pagina
-129 del Datasheet. Se puede lograr esto usando la instrucción `NOP`, aunque
+microcontrolador pueda recoger el valor de tensión en el pin, acorde a la pagina
+129 del *datasheet*. Se puede lograr esto usando la instrucción `NOP`, aunque
 sería más adecuado usar un bucle que espere un tiempo más prudente, pero se
 mantiene de esta forma por simplicidad.
 
@@ -296,11 +286,11 @@ numero 6 del registro `PIR1` indique que se ha finalizado.
         BSF STATUS,RP0
         BCF STATUS,RP1
 
-El resultado de la conversión se encuetra repartido en dos bytes: `ADRESL` y
+El resultado de la conversión se encuentra repartido en dos bytes: `ADRESL` y
 `ADRESH`.
 
 Colocamos el byte `ADRESL` en el registro de trabajo `W` para luego colocarlo en
-el registro `TXREG` lo cual causará que sea transmitido usando al UART.
+el registro `TXREG`, lo cual causará que sea transmitido usando al UART.
 
 
     ; Esperar que el primer byte se transmita
