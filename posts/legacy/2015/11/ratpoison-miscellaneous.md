@@ -3,18 +3,10 @@ title: Ratpoison, Miscellaneous
 published: 2015-11-07
 ...
 
-![](/img/ratmisc/thumbnail.png){#thumbnail}\
-
 This is the fifth post about the [Ratpoison window
 manager](http://www.nongnu.org/ratpoison/).
 
-These are a few extra things I use in Ratpoison to make my life more comfortable
-that can fit in a single post, so here you go.
-\
-\
-\
-\
-
+Here are a few extra things I use in Ratpoison to make it comfy.
 
 <!--more-->
 
@@ -45,11 +37,9 @@ We can easily control the volume with these commands (after `C-t`):
 ```
 
 
-This is achieved using the `volume_control.sh` script.
-
-The script depends on *amixer*. And you can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/volume_control.sh).
-
+This is achieved using the [`volume_control.sh`
+script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/volume_control.sh).
+It depends on *amixer*.
 
 # Vi like bindings
 
@@ -68,8 +58,8 @@ bind s vsplit
 bind v hsplit
 ```
 
-Now we can move between splits with `{h,j,k,l}`, exchange splits with
-`{H,J,K,L}` and create horizontal and vertical splits with `{s,v}` respectively.
+Now we can move between splits with `{h,j,k,l}`, swap splits with `{H,J,K,L}`
+and create horizontal and vertical splits with `{s,v}` respectively.
 
 
 # Fast application switching
@@ -87,10 +77,8 @@ We can now fast switch to them with:
 `C-s c`     Terminal emulator
 
 
-This is achieved using the `app_select.sh` script.
-
-You can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/volume_control.sh).
+This is achieved using the [`app_select.sh`
+script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/app_select.sh).
 
 
 # Interactive window selection
@@ -100,26 +88,23 @@ Using this Ratpoison configuration:
     bind w exec window_select.sh
 
 
-We can interactive select and change windows from a nice menu:
+We can interactively select and change windows from a menu:
 
-![](/img/ratmisc/shot.png){.img-responsive}
+![](/img/ratmisc/shot.png)
 
-This is achieved using the `window_select` script.
-
-The script depends on *ratmen* And you can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/volume_control.sh).
+This is achieved using the [`window_select`
+script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/window_select.sh).
 
 
-# Screen shots
+# Screenshots
 
 Using this Ratpoison configuration:
 
     bind at exec scrot -u -z -q 100 -e 'mv $f ~/.shots/'
 
 
-We can take screen shots with `C-t @` that will be saved in `~/.shots`
-
-This is achieved using *scrot* so be sure you have it installed.
+We can take screenshots with `C-t @` that will be saved in `~/.shots`. This is
+achieved using *scrot*.
 
 
 # Fast calculator
@@ -130,12 +115,8 @@ Using this Ratpoison configuration:
 
 We can get a prompt for arithmetic operations.
 
-This is achieved using the `calculator.sh` script.
-
-The script depends on *calc* so be sure you have it installed.
-
-And you can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/volume_control.sh).
+This is achieved using the [`calculator.sh`
+script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/calculator.sh).
 
 
 # Backlight control
@@ -149,7 +130,7 @@ bind underscore exec backlight_control.sh toggle
 bind S exec xset dpms force off
 ```
 
-We can now control backlight with (after `C-t`):
+We can control the backlight with (after `C-t`):
 
 ```
 )     Increment backlight
@@ -159,14 +140,8 @@ S     Turn off the screen
 ```
 
 
-This is achieved using the `backlight_control.sh` script.
+This is achieved using the [`backlight_control.sh`
+script](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/backlight_control.sh).
 
-You can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/volume_control.sh).
-
-
-You can find a lot of extra little things in my
-[.ratpoison.rc](https://github.com/alx741/dotfiles/blob/master/ratpoison/.ratpoisonrc).
-
-To try it out be sure to define your Ratpoison bindings referencing the right
-location of the scripts.
+You can find a lot of additional handy stuff in my [.ratpoisonrc
+file](https://github.com/alx741/dotfiles/blob/master/ratpoison/.ratpoisonrc).

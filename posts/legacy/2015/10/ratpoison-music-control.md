@@ -3,29 +3,23 @@ title: Ratpoison, Music Control
 published: 2015-10-23
 ...
 
-![](/img/ratmusic/thumbnail.png){#thumbnail}\
-
 This is the first of a series of posts about the [Ratpoison window
 manager](http://www.nongnu.org/ratpoison/).
 
-Ratpoison brings great flexibility and allows us to do pretty amazing things
-binding custom keys and running external programs and scripts; I'm going to talk
-about some of the ones i use in the next posts. For the first one, lets talk
-about music.
+Ratpoison's ability to bind custom keys and run external scripts affords us some
+pretty neat flexibility. Let's start with music and go further in future posts.
 
-Some people use a graphical music player like *Amarok* or just play some
+Some people use a graphical music players like *Amarok* or just play some
 *Youtube* videos, others prefer text players like *MOC* or *CMUS*, but we can
-reach the top of flexibility using a music daemon like *MPD* and use our
-preferred client (*MPC*, *Ncmpcpp*, *Vimpc*). All this options have something in
-common: you usually interact with an interface you have to switch to,
-interrupting your work flow in order to control your music, but we can do
-better.
+reach the apex of flexibility by using a music daemon like *MPD*. Although you
+can reach out for a client like *MPC*, *Ncmpcpp* or *Vimpc*, you still need to
+interact with its interface, and that means briefly interrupting your workflow
+to control your music. We can do better.
 
 <!--more-->
 
-Using the Ratpoison key maps functionality we can define a sub mapping bounded
-to a master key, So using the key `m` we can define a whole keymap for music
-control like this:
+Using Ratpoison's key mapping functionality, we can define a sub-map bounded to
+a master key, so using the key `m` a range of music commands becomes available:
 
 ```
 newkmap music
@@ -49,17 +43,16 @@ definekey music question help music
 bind m readkey music
 ```
 
+This snippet appears in my [`.ratpoisonrc`
+file](https://github.com/alx741/dotfiles/blob/master/ratpoison/.ratpoisonrc).
 
-This snippet appears in my `.ratpoisonrc` file, that you can read entirely
-[here](https://github.com/alx741/dotfiles/blob/master/ratpoison/.ratpoisonrc).
 
-
-Here we define a keymap `music` and, at the end, bind it to `m` key so we can
-get to it by triggering:
+Here we define a keymap `music` and, at the end, bind it to the `m` key, so we
+can get to it with:
 
     C-t m
 
-Note that `C-t` is the default Ratpoison escape sequence.
+Note that `C-t` is Ratpoison's default escape sequence.
 
 And then pressing the respective music command:
 
@@ -84,12 +77,12 @@ c       Toggle -consume-
 ```
 
 
-So, for instance, we could visualize the current playing song, and modes states
-by doing:
+So, for instance, we could visualize the current playing song, and modes state
+with:
 
     C-t m i
 
-![](/img/ratmusic/shot.png){.img-responsive}
+![](/img/ratmusic/shot.png)
 
 Here, the first line represents the playing status:
 
@@ -98,14 +91,5 @@ Here, the first line represents the playing status:
 
 
 The second line is the song currently playing/paused. The third line is the song
-number in the playlist and the time played/remaining. The forth line Marks with
-an `*` the enabled modes.
-
-The script depends on
-[ratmen](http://www.update.uu.se/~zrajm/programs/ratmen/?M=D).
-
-And you can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/music_control.sh)
-
-To try it out be sure to define your Ratpoison bindings referencing the right
-location of the script.
+number in the playlist and the time played/remaining. The fourth line displays
+the modes state.

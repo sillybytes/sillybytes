@@ -3,8 +3,8 @@ title: Vim Kōans
 published: 2016-05-04
 ...
 
-Esta es la traducción al español del arículo [vim
-kōans](http://blog.sanctum.geek.nz/vim-koans/) por Tom Ryder.
+Esta es la traducción al español del artículo ["vim
+kōans"](http://blog.sanctum.geek.nz/vim-koans/) por Tom Ryder.
 
 [**¿Qué es un Kōan?**](https://es.wikipedia.org/wiki/K%C5%8Dan)
 

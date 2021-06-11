@@ -3,20 +3,16 @@ title: Vim vs AWK
 published: 2015-03-06
 ...
 
-What!? Vim is a text editor and Awk a text processing scripting language, how do
-you even compare them!? Yes, I'm aware of it, but trust me, I have something to
-compare here, so take a breath and continue reading...
+Vim is a text editor and Awk a text processing language, I wouldn't blame you
+for believing that trying to compare them is bonkers, but trust me, I have
+something to compare here.
 
-What I'm actually trying to compare here is vim scripting vs awk, still don't
-make sense? Well lets take a look of this.
-
-
-# Study case: [Vinfo](https://www.github.com/alx741/vinfo.git)
+# Case study: [Vinfo](https://www.github.com/alx741/vinfo.git)
 
 *Vinfo* is a Vim plugin that allows you to read Info documentation files right
-in a vim session by converting the Info plain text files into Vim help-files so
-you get a nice syntax highlighting and very convenient tags for jumping between
-the file contents. Lets examine how it does its job.
+in a vim session by converting Info plain text files into Vim help-files, so you
+get nice syntax highlighting and convenient tags for jumping between the file
+contents. Let's examine how it does its job.
 
 <!--more-->
 
@@ -31,12 +27,12 @@ or something.
 1. Title
 ********
 
-This section refer to bla bla
-and is great because of bla bla...
+This section refers to blah blah
+and is great because of blah blah...
 ```
 
 
-And here is what we need, with titles underlined using `=`:
+And here is what we need. Titles underlined using `=`:
 
 ```markdown
 Some context lines here
@@ -46,134 +42,110 @@ or something.
 1. Title
 ========
 
-This section refer to bla bla
-and is great because of bla bla...
+This section refers to blah blah
+and is great because of blah blah...
 ```
 
+It appears to be an easy task, but its actually not.
 
-It appears to be a very easy task!, but its actually not.
-
-Now, why is this difficult using Awk? Or even other tools like grep, sed? Or a
+So why is this difficult using Awk? Or even other tools like grep, sed? Or a
 combination of all these?
 
-It's because of the context! In the file we have other lines that starts with
-`=` that we don't care about, and we are looking for the lines that starts with
-`=` that are under a line that starts with a number followed by a dot and
-followed by a word, that have a blank line separation and a paragraph above and
-below that are not start/end of nodes but some sort of description text. That is
-a difficult match!.
+It's because of the context! In this same file we have many other lines that
+start with `=` and that we don't care about; We are actually looking for the
+lines that start with `=` and are under a line that starts with a number
+followed by a dot and followed by a word that has a blank line separation and a
+paragraph above and below that are not the beginning/end of nodes but some sort
+of description text... Now that's a difficult match!.
 
-It is actually possible to do it using only Awk, but it requires code for handle
-the state of context, and so the code rapidly grows and increase in complexity
-that, we'll see, can be easily handled using Vim script.
+It is technically possible to accomplish this using Awk, but it requires some
+complicated logic for handling the state of the context, and it grows out of
+hand really quickly.
 
-Lets see how this is done using Vim script (from Vinfo code):
+Let's see how this is done using Vim script (from Vinfo code):
 
 ```vim
 g/\v^$\n.+\n\=+\n^$\n/norm! jjvg_r-\<Esc>
 ```
 
+One line. It looks scary, but it wasn't written from scratch. The commands were
+obtained by performing normal live editing on the text.
 
-On simple line that wasn't even written from scratch, because the normal
-commands were obtained by doing a normal live edition on the text.
-
-We could say that one of the reasons for this kind of task to become complex
-using Awk is because of its -per line processing- nature.
+It could be said that one of the reasons for this kind of task to become too
+complex using Awk, is because of its *per-line processing* nature.
 
 > But in Awk you can use the RS variable in order to handle multi line matches
 
-Yes you can, but it doesn't mean that things will become much more easier,
-you'll need to assume a constant and formatted stream of records OR dynamically
-change RS variable to adjust it when need it. If you have a non-homogeneous text
-with multi line matches and very context prone, complexity will rapidly becomes
-a real pain to handle.
+I hear you protest. Yes, you can, but it doesn't mean that it will become much
+easier, you still need to assume a constant and formatted stream of records OR
+dynamically change the RS variable to adjust it when needed. If you have a
+non-homogeneous text with multi-line matches that are very context prone,
+complexity will rapidly become a real pain to handle.
 
 
-# Vim goes one step further (a really big one).
+## Vim goes further
 
-When it comes to text processing Vim script puts a rocket under your feet!
+With Vim, you can open the target text file and just start doing the editing
+while Vim itself is recording your moves (`:h q`). Then you can paste the
+recorded commands and moves in a vim script and bang! The script for your
+complex editing is written.
 
-You can open the target text and just start doing the edition while Vim is
-recording your moves (`:h q`), then you just go and paste the recorded movements
-in your vim-script and bang! The script code for your edition is done.
-
-When writing a Awk script you need various try-fail cycles testing your regular
-expressions and see if you are catching what is supposed and verify if the
-editions are successful, nothing uncommon when programming right?
-
-But in vim you can visually test all your regular expressions, make quick
-changes, improvements and then just paste them in the vim script when they work.
-And that's nothing compared to the ability of making the changes as a normal Vim
-editing session and then directly putting that moves in your final script so you
-actually don't even need to think "how to manipulate this to become that", so
-the process is natural and pretty damn fast.
+When writing an Awk script you need multiple trial and fail iterations to test
+your regular expressions. With vim, however, you can visually test all your
+regular expressions, make quick changes, improvements and then just paste them
+in a vim script when they happen to work.
 
 
-# Vim regular expressions engine
+### Vim regular expressions engine
 
-You can use a regular expression programmatically in a language like Perl for
-complex tasks, or you can use Vim's regular expressions engine goodness to
+You can use a regular, convoluted, expression programmatically in a language
+like Perl for complex tasks, or you can use Vim's regular expressions engine to
 collapse a lot of logic into one single regex.
 
-Lets say you want to process some text in the middle of a line without touching
-anything else in the line, you can do this in Vim by using the `\%V` atom in
-order to work with a visual selected area.
-
-There are even expression atoms that gives you clarity, take for instance the
-`\zs` and `\ze` atoms that you can use instead of `( )` expression groups, it
-may appear not a big deal but there are situations where it's so much clearer.
-Take a look of `:h pattern`.
+Let's say you want to process some text in the middle of a line without touching
+anything else in that same line, you can do this in Vim by using the `\%V` atom
+in order to work with a visual selected area.
 
 > But, obviously, Vim is going to be slower than an Awk script
 
-Actually it can be, but just in a few milliseconds processing a huge file, and
-we really should prefer to lose a few milliseconds of processing over a few
-extra hours (or even days!) of Awk scripting.
+Actually, it can be, but many milliseconds processing a large file is something
+I would prefer over a couple of hours (or days!) of Awk scripting.
 
-> But Vim cannot handle multi threading so when executing a big text processing
-> it hangs until it ends and I have no option but wait for it before continue
+> But Vim cannot do multi-threading, so when processing large files it hangs
+> until it's done, and I have no option but to wait for it before I can continue
 > working!
 
-That's very truth!, BUT this will only be a problem if the text processing is
-meant to be executed while working in a vim session.
-
-When you execute a Awk script in your shell you must wait for it to end or open
-a new terminal session in order to continue working. The exact same thing
-happens here, if you wrote a Vim script for a concrete text processing you
-should execute it and wait for it or get another terminal while the processing
-takes place (or send it to the background of course). In both cases you'll use a
-terminal for the -long time- processing and then get another one for continue
-working, whether if it implies using Vim or not.
+That's correct, But this will only be a problem if the text processing is meant
+to be executed while working in a vim session. When you execute an Awk script in
+your shell you must wait for it or open a new terminal session in order to
+continue working. The exact same thing happens here. If you wrote a Vim script
+for a specific text processing task, you should execute it and wait for it or
+get another terminal while the processing takes place (or send it to the
+background of course).
 
 > But I'm not a Vim user and don't know how to use it
 
-Great!, now you have a good reason for learning Vim, even if you will not use it
-as your main text editor :)
+Perfect!, now you have a good reason for learning Vim, even if you're not
+planning to use it as your main text editor.
 
 > So should I completely forget about Awk?
 
-Of course not!, Awk is an awesome tool and allows you to do awesome things, you
+Of course not!, Awk is an awesome tool that allows you to do awesome things, you
 should learn it if you don't know it already!. I still use *grep*, *sed*, *tr*,
-etc to perform basic tasks, Awk will always be there to save the day. You can
-use it for *one line command* processing or write down a proper script if
-needed. Being able to use it in conjunction with other tools is great too...
-Which leads us to...
+etc, to perform basic tasks. Awk will always be there to save the day. You can
+use it for a quick *one liner* or write down a proper script if needed too.
+Being able to use it in combination with other tools is great, which leads us
+to...
 
-> Vim cannot be used in conjunction with other tools, because of its nature
+> Vim cannot be used in combination with other tools using pipes
 
-Well.. It actually can!, you just need to use the `-` (dash) option, consider
-the following:
+But it can!, you just need to use the `-` (dash) option, consider the following:
 
-    echo file | grep -i hello | vim -c scriptCommand -
+    cat file | grep -i hello | vim -c scriptCommand -
 
-In this example `echo` pipes a "file" file into Vim, which in turn execute
-"scriptCommand", and do the text processing. So notice that you can use all the
-mentioned tools to do big team work! Just by standard piping, because now you
-know you can do it with Vim!
+In this contrived example, `cat` pipes a file into grep, that pipes a result
+into Vim, which in turn executes "scriptCommand" and perform the text
+processing. So really you can use all the tools with normal piping, including
+Vim.
 
     echo text.txt | tr ... | sed ... | awk { print $2 } | vim -c Script -
-
-# Conclusion
-
-You shouldn't take the title so literally and put Vim against Awk because you
-can still use all this tools cooperatively and conquer the *text* world :)

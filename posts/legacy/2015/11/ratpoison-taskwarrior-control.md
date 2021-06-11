@@ -3,19 +3,16 @@ title: Ratpoison, Task Warrior Control
 published: 2015-11-06
 ...
 
-![](/img/rattask/thumbnail.png){#thumbnail}\
-
 This is the fourth post about the [Ratpoison window
 manager](http://www.nongnu.org/ratpoison/).
 
-When managing tasks there is no better interface than task warrior CLI, that's
+When managing tasks there is no better interface than task warrior's CLI, that's
 for sure, but sometimes having a few-strokes-interface for listing the current
 tasks or adding a new simple one comes in handy.
 
-Lets use Ratpoison goodies for this.
-<!--more-->
+Let's use Ratpoison goodies for this.
 
-![](/img/rattask/shot.png){.img-responsive}
+<!--more-->
 
 We can create a new mapping for the letter `t` and assign some bindings for it
 using the following Ratpoison configuration snippet:
@@ -29,10 +26,10 @@ definekey task question help task
 bind t readkey task
 ```
 
-This snippet appears in my `.ratpoisonrc` file that you can read entirely
-[here](https://github.com/alx741/dotfiles/blob/master/ratpoison/.ratpoisonrc).
+This snippet appears in my [`.ratpoisonrc`
+file](https://github.com/alx741/dotfiles/blob/master/ratpoison/.ratpoisonrc).
 
-Now triggering the keymap with `C-t t` and one of the commands:
+Now, triggering the keymap with `C-t t` and one of the commands:
 
     l       List task
     p       Lists projects
@@ -40,13 +37,6 @@ Now triggering the keymap with `C-t t` and one of the commands:
     ?       Print binded keys help
 
 
-The Add task feature is achieved using a script that prompts for a string that
-is passed straight forward to task warrior CLI, so think of it as introducing a
-new task with the CLI without invoking task as the command but only its
-arguments.
-
-And you can get it from my
-[Dotfiles](https://github.com/alx741/dotfiles/blob/master/scripts/.scripts/ratpoison/et_phone_home.sh).
-
-To try it out be sure to define your Ratpoison bindings referencing the right
-location of the script.
+The `Add task` feature is achieved using a script that prompts for a string that
+then goes straight to task warrior's CLI, so think of it as introducing a new
+task with the CLI without invoking task as the command but only its arguments.

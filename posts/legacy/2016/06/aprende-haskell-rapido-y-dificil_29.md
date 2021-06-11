@@ -3,8 +3,8 @@ title: Aprende Haskell rápido y difícil
 published: 2016-06-29
 ...
 
-Esta es la traducción al español del artículo [Haskell the hard
-way](http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/) por Yann
+Esta es la traducción al español del artículo ["Haskell the hard
+way"](http://yannesposito.com/Scratch/en/blog/Haskell-the-Hard-Way/) por Yann
 Esposito.
 
 TL;DR\*: Un corto y denso tutorial para aprender Haskell.

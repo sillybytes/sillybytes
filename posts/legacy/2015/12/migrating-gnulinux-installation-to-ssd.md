@@ -1,19 +1,11 @@
 ---
-title: Migrating GNU/Linux installation to a SSD
+title: Migrating GNU/Linux installation to an SSD
 published: 2015-12-17
 ...
 
-![](/img/ssd/thumbnail.png){#thumbnail}\
-
-I recently bought a 120GB SSD (yes, a small one) to replace the 500GB HDD in my
-laptop so I can benefit from the extra speed and just keep my bulk data in the
-old HDD.
-
-Once your new SSD arrives you are probably very exited, you want that boost up
-for your system. BUT! You don't want to reinstall your whole system on it, you
-want to preserve it right?. Ok let's do so.
-
-<!--more-->
+When your new SSD arrives you're probably very exited and want to boost your
+system's speed, but don't quite feel like reinstalling your whole system on it,
+so let's migrate it instead.
 
 Note: I use Gentoo, but this is perfectly applicable to every distribution.
 
@@ -27,12 +19,14 @@ Device     Boot     Start       End   Sectors   Size Id Type
 /dev/sda4       358615040 976773167 618158128 294.8G 83 Linux
 ```
 
-* */dev/sda1* is a 1GB swap
-* */dev/sda2* is the GNU/Linux system installation (including boot)
-* */dev/sda3* is currently unused
-* */dev/sda4* is my /home partition with all my data
+<!--more-->
 
-The partitioning scheme I want for the new SSD would be:
+- */dev/sda1* is a 1GB swap
+- */dev/sda2* is the GNU/Linux system installation (including boot)
+- */dev/sda3* is currently unused
+- */dev/sda4* is my /home partition with all the critical data
+
+The partitioning scheme I want for the new SSD is:
 
 ```
 Device     Boot   Size Id Type
@@ -41,26 +35,27 @@ Device     Boot   Size Id Type
 /dev/sda3          50G 83 Linux
 ```
 
-* */dev/sda1* is a 1GB swap
-* */dev/sda2* is the GNU/Linux system installation
-* */dev/sda3* is my /home partition (with just the more important data)
+- */dev/sda1* is a 1GB swap
+- */dev/sda2* is the GNU/Linux system installation
+- */dev/sda3* is my /home partition (with just the more important data)
 
 
-This way I can keep my system as it was before, and the new smaller */home* will
-contain the data of daily use. Videos, music, books, etc; Could be used
-connecting the old HDD with a SATA-USB converter.
+This way I can keep my system as it was before, and the new (smaller) */home*
+will contain the data of daily use. Other stuff like videos, music, books, etc,
+will remain in the old HDD.
+
 
 # Backup
 
-DO NOT remove, nor modify the old HDD partition structure before the system is
+DO NOT delete, nor modify the old HDD partition structure before the system is
 ported AND tested in the SSD, you don't want to lose your system or data, do
 you?
 
 While playing with your storage devices is a good idea to keep a completely
 separate and isolated backup so your data will survive if you mess something up.
 
-I made a backup for my `/home` and `/` partitions using a 1TB external (USB)
-hard drive like so:
+I made a backup for my `/home` and `/` partitions using a 1TB external USB drive
+like so:
 
 ```
 /mnt/
@@ -76,7 +71,6 @@ hard drive like so:
     --exclude /proc --exclude /tmp --exclude /sys --exclude /dev
 ```
 
-
 The `-a` option will preserve all the meta data your system needs, use it! Now
 put this hard drive safe in a drawer and don't touch it until you are completely
 sure you haven't lose any data in the process.
@@ -84,8 +78,8 @@ sure you haven't lose any data in the process.
 
 # Partitioning
 
-You can connect the SSD to another SATA port if you're using a desktop, but I
-used a SATA-USB converter.
+You can connect the SSD to another SATA port if you're using a desktop, but can
+also use a SATA-USB converter.
 
 Using *cfdisk* the resulting partitioning is:
 
@@ -111,9 +105,9 @@ Now give the partitions the appropriate file systems:
 
 # Migration
 
-![](/img/ssd/shot.png){.img-responsive}
+![](/img/ssd/shot.png)
 
-Lets mount the future `/` and migrate the current system to it:
+Let's mount the future `/` and migrate the current system to it:
 
 ```
 # moutn /dev/sdb2 /mnt
@@ -123,8 +117,8 @@ Lets mount the future `/` and migrate the current system to it:
 ```
 
 
-Now mount the new `/home` and copy all the information you need into the
-new home selectively, but remember to copy all the dotfiles:
+Now mount the new `/home` and copy all the information you need into it
+selectively. Remember to copy all the dotfiles:
 
 ```
 # umount /mnt
@@ -149,7 +143,6 @@ Then install your bootloader in the SSD, assuming *GRUB2*:
 # grub2-install /dev/sdb
 # exit
 ```
-
 
 Shutdown your system and replace the HDD with the SSD.
 
