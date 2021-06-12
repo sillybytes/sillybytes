@@ -1,19 +1,10 @@
 ---
-title: Código Fuente vs Código Objeto, Una falsa dicotomía
+title: Código fuente vs código objeto, una falsa dicotomía
 published: 2013-01-14
 ...
 
-Esta es mi traducción de una versión borrador del articulo "Source vs Object
-code: a false dichotomy"
-
-Por:
-
-> David S.  Touretzky
-> Computer Science Departament
-> Carnegie Mellon University
-
-
-Julio,2000
+Esta es la traducción al español del articulo "Source vs Object
+code: a false dichotomy" por David S. Touretzky.
 
 La noción de código fuente y código objeto como clases opuestas de código de
 computador es una falsa dicotomía común entre no-programadores. El entendimiento
