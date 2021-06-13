@@ -33,13 +33,17 @@
         <div id="main" class="container is-max-desktop">
             $body$
 
-            <nav class='pagination is-medium'>
+            <nav class='pagination' role="navigatio" aria-label="pagination">
                 $if(previousPageNum)$
                     <a href="$previousPageUrl$" class='pagination-previous'>Previous</a>
+                $else$
+                    <a class='pagination-previous' title='This is the first page' disabled>Previous</a>
                 $endif$
 
                 $if(nextPageNum)$
                     <a href="$nextPageUrl$" class='pagination-next'>Next page</a>
+                $else$
+                    <a class='pagination-previous' title='This is the last page' disabled>Next page</a>
                 $endif$
             </nav>
         </div>
