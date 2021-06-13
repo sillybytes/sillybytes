@@ -3,22 +3,9 @@ title: Controlando un auto Radio Control con la PC
 published: 2012-10-14
 ...
 
-![](/img/rccar/thumbnail.png){#thumbnail}\
-
-Como todo buen geek, de pequeño me fascinaban los autos RC (radio control), no
-tanto por el entretenimiento que supone jugar con ellos si no por la fascinación
-de averiguar su funcionamiento y todo lo que se puede hacer desarmando uno para
-convertir su mecanismo en algo completamente distinto.
-
-Así pues hoy he visto en mi repisa el ultimo que me quedaba sin desarmar y pensé
-que ya era hora de decidir cual sería su destino, lo que hice fue adaptarlo para
-poder controlarlo desde la PC usando las teclas de dirección del teclado (como
-si de un juego se tratase), nuevamente, con miras ha hacer con ello algo un poco
-más interesante.
-
-Para empezar cabe aclarar que dentro de la gran variedad de diseños, formas y
-sabores de los autos RC yo he hecho esto adaptado al mio, pero resulta trivial
-hacerlo para el auto que tengas a la mano.
+Hoy he visto en una repisa el último auto RC de mi infancia que aún quedaba sin
+desarmar para convertir en algo diferente. Su destino fue adaptarlo para poder
+controlarlo desde la PC usando las teclas de dirección del teclado.
 
 <!--more-->
 
@@ -27,41 +14,34 @@ hacerlo para el auto que tengas a la mano.
 En la imagen pueden ver al auto y su control, el cual tomaremos y desarmaremos
 para sacar por completo su placa de circuito.
 
-![](/img/rccar/shot1.jpg){.img-responsive}
+Desarmamos y extraemos la circuitería del juguete en cuestión:
+
+![](/img/rccar/shot1.jpg)
+
+![](/img/rccar/shot2.jpg)
 
 
-Para retirarlo sacaremos todos los tornillos y cortaremos los cables del
-conector de la batería (dejando estos en el circuito), el resultado es este:
+Soldamos cables en los puntos de alimentación, y sobre cada uno de los 4
+contactos de los actuadores metálicos.
 
-![](/img/rccar/shot2.jpg){.img-responsive}
-
-
-Ahora podemos soldar alambres más cómodos para la protoboard en los cables de
-alimentación eliminando aquel interruptor.
-
-Como se puede observar el funcionamiento de esta placa consiste en 4
-interruptores metálicos que al empujarse cierran unos contactos, así que lo que
-hice fue soldar un cable en cada contacto como se aprecia en la imagen.
+![](/img/rccar/shot3.jpg)
+![](/img/rccar/shot4.jpg)
+![](/img/rccar/shot5.jpg)
 
 
-![](/img/rccar/shot3.jpg){.img-responsive}
-![](/img/rccar/shot4.jpg){.img-responsive}
-![](/img/rccar/shot5.jpg){.img-responsive}
-
-
-Básicamente lo que haremos será tomar la señal emitida por el puerto paralelo de
-la PC para saturar un transistor, el cual "unirá" a través de estos cables los
-contactos del interruptor del control, que a su vez accionara el auto.
+Tomaremos la señal emitida por el puerto paralelo de la PC para saturar un
+transistor, el cual "unirá" a través de estos cables los contactos del
+interruptor del control, que a su vez accionara el auto.
 
 El esquema de conexión es el siguiente:
 
-![](/img/rccar/scheme1.png){.img-responsive}
+![](/img/rccar/scheme1.png)
 
 
-El montaje en la protoboard luce así:
+El montaje en *protoboard* luce así:
 
-![](/img/rccar/shot6.jpg){.img-responsive}
-![](/img/rccar/shot7.jpg){.img-responsive}
+![](/img/rccar/shot6.jpg)
+![](/img/rccar/shot7.jpg)
 
 
 La alimentación la he tomado también del puerto paralelo como se puede ver, pero
@@ -71,28 +51,28 @@ tener un mayor alcance, para hacer esto debemos dejar conectado el cable a masa
 batería (tanto positivo como negativo).
 
 Aquí se ve como conecté en el puerto paralelo (usé el cable de una vieja
-impresora para facilitarme el puerto hasta la mesa, pero se puede hacer
-directamente en el puerto del mainboard):
+impresora para facilitarme el acceso al puerto, pero se puede hacer directamente
+en el puerto del mainboard):
 
-![](/img/rccar/shot8.jpg){.img-responsive}
+![](/img/rccar/shot8.jpg)
 
 
 # Software
 
-Mi auto RC funciona accionando cada par de ruedas laterales de forma
-independiente, es decir: para cada movimiento es necesario accionar
+Este auto RC en particular funciona accionando cada par de ruedas laterales de
+forma independiente, es decir: para cada movimiento es necesario accionar
 simultáneamente 2 interruptores en la combinación adecuada. Para dar marcha
 hacia adelante o atrás hay que accionar simultáneamente 2 interruptores del
 control, para girar se accionan 2 interruptores opuestos, de forma que un par de
 ruedas giren en un sentido y el otro par de ruedas en el sentido opuesto
 haciendo así girar el auto.
 
-El software que escribí hace trabajar a mi auto como se puede observar, más si
-se quiere usar un auto cuya dirección es distinta se debe adaptar el código.
+El software que escribí hace trabajar a el auto de esta forma. Si se quiere usar
+un auto cuya dirección es distinta se debe adaptar el código.
 
-Además el software está escrito para sistemas *Unix, yo específicamente he usado
-una distribución GNU/Linux. Recuerda asegurarte de tener instalada la librería
-*ncurses* en tu sistema.
+Además, el software está escrito para sistemas *Unix, yo específicamente he
+usado una distribución GNU/Linux. Recuerda asegurarte de tener instalada la
+librería *ncurses* en tu sistema.
 
 [Código en Github](https://github.com/alx741/rc_car_pc_control)
 
@@ -111,7 +91,6 @@ una distribución GNU/Linux. Recuerda asegurarte de tener instalada la librería
  *       Compiler:  g++
  *
  *         Author:  Daniel Campoverde Carrión [Alx741]
- *   Organization:  www.silly-bytes.blogspot.com
  *
  * ===========================================================================
  */
@@ -176,9 +155,9 @@ embargo lo precario del código y la falta de investigación sobre la librería 
 ha obligado a usar un mecanismo de *parada*, así pues si pulsamos la tecla
 dirección *adelante* el auto avanzará y no se detendrá hasta que pulsemos la
 barra espaciadora, y lo mismo sucederá con el resto de teclas. Quizás solucione
-este inconveniente usando SDL pero en otro momento será...
+este inconveniente usando SDL en otro momento.
 
-Nos ubicamos en el directorio del código y compilamos el código con (asegúrate
+Nos ubicamos en el directorio del código y compilamos con (asegúrate
 de obtener el *makefile* del repositorio en Github):
 
     $ make
@@ -188,10 +167,10 @@ Ejecutamos como root:
     # ./rc
 
 El programa esperará por nuestras pulsaciones en el teclado y sacara los bits
-pertinentes por el puerto paralelo, accionando nuestro auto RC.
+pertinentes por el puerto paralelo, accionando el auto RC.
 
-Como vemos en el código lo correcto para finalizar el programa es presionar la
-tecla `Esc` para que nuestra terminal vuelva a la normalidad.
+Como vemos en el código, lo correcto para finalizar el programa es presionar la
+tecla `Esc` para que la terminal vuelva a la normalidad.
 
 Aquí un video de el auto en acción:
 

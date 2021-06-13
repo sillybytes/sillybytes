@@ -1,23 +1,13 @@
 ---
 title: Moviendo un motor paso a paso con el puerto paralelo sin integrados
-    (Jugando con hardware)
 published: 2012-09-30
 ...
 
-![](/img/stepper/thumbnail.png){#thumbnail}\
-
-Esta vez vamos a jugar un poco con hardware, específicamente lo que haremos será
-mover un motor *PAP* (paso a paso) a través de la PC haciendo uso únicamente de
-transistores y sin usar ningún circuito integrado.
-
-Para empezar es conveniente documentarse un poco del funcionamiento de este tipo
-de motores: http://es.wikipedia.org/wiki/Motor_paso_a_paso
-
-Sabemos que para hacer girar un motor PAP Bipolar tenemos que dar pulsos
+Para rotar un motor PAP Bipolar tenemos que dar pulsos
 secuenciales en sus 4 cables (Que llamaremos A, B, C y D), pero alternando la
 polaridad, por lo que la circuito necesario se complica un poco, mientras que
-para los Unipolares este problema desaparece, así que empezaremos por jugar con
-los motores PAP Unipolares.
+para los Unipolares este problema desaparece, así que empezaremos con uno de
+estos.
 
 <!--more-->
 
@@ -25,27 +15,27 @@ los motores PAP Unipolares.
 
 Esquema de conexión en el puerto paralelo:
 
-![](/img/stepper/scheme1.png){.img-responsive}
+![](/img/stepper/scheme1.png)
 
-Me parece que es bastante evidente, pero vale aclarar que los pines del
-esquema son los correspondientes del puerto paralelo, y que estamos usando el
-nibble bajo del byte del puerto; además se puede ver como los 2 cables *comunes*
-del motor unipolar se conectan al positivo de la fuente de alimentación, la cual
-corresponde con la tensión que requiere nuestro motor (en mi caso 9V), y los
-cables A,B,C y D serán conectados al negativo de la fuente al saturarse los
-transistores con la señal del puerto.
+Merece la pena aclarar que los pines del esquema son los mismos correspondientes
+del puerto paralelo, y que estamos usando el nibble bajo del byte del puerto.
+Además, se puede ver como los 2 cables *comunes* del motor unipolar se conectan
+al positivo de la fuente de alimentación, la cual corresponde con la tensión que
+requiere nuestro motor (en mi caso 9V), y los cables A,B,C y D serán conectados
+al negativo de la fuente al saturarse los transistores con la señal del puerto.
 
-Aquí se puede apreciar de color Rojo los 8 pines de datos del puerto, de los
+Aquí se puede apreciar en color rojo los 8 pines de datos del puerto, de los
 cuales hemos usado 4 (del pin 2 al 5) es decir 4 bits.
 
-![](/img/stepper/scheme2.jpg){.img-responsive}
+![](/img/stepper/scheme2.jpg)
 
-Aquí se pude observar el circuito que yo he montado y he usado un cable de
+Aquí se pude observar el circuito montado y usando un cable de
 puerto paralelo de una vieja impresora.
 
-![](/img/stepper/shot1.jpg){.img-responsive}
-![](/img/stepper/shot2.jpg){.img-responsive}
-![](/img/stepper/shot3.jpg){.img-responsive}
+![](/img/stepper/thumbnail.png)
+![](/img/stepper/shot1.jpg)
+![](/img/stepper/shot2.jpg)
+![](/img/stepper/shot3.jpg)
 
 
 
@@ -59,12 +49,12 @@ el motor (Simple Step, Double Step, Half Step).
 
 ### Secuencias
 
-* Simple Step: `A-B-C-D`
-* Double Step: `AB-BC-CD-DA`
-* Half Step: `A-AB-B-BC-C-CD-D-DA`
+- Simple Step: `A-B-C-D`
+- Double Step: `AB-BC-CD-DA`
+- Half Step:   `A-AB-B-BC-C-CD-D-DA`
 
 El código no pretende ser un ejemplo de elegancia ni mucho menos, pero
-funciona. Es solamente una clase la cual usaremos con otro código para
+funciona. Es solamente una clase, la cual usaremos con otro código para
 controlar el motor.
 
 [Código en Github](https://github.com/alx741/pp_steppers/blob/master/unipolar.cpp)
@@ -194,7 +184,7 @@ motor_unipolar::motor_unipolar( int steps,  int type_step) : motor_steps(steps),
 
 
 
-    current_step = sequence;//colocamos el paso actual al principio de ka secuencia
+    current_step = sequence;//colocamos el paso actual al principio de la secuencia
 
 
 
@@ -312,16 +302,16 @@ int main(){
 
 Esquema de conexión en el puerto paralelo:
 
-![](/img/stepper/scheme3.png){.img-responsive}
+![](/img/stepper/scheme3.png)
 
 Aquí he implementado 2 *puentes H* de transistores para controlar ambas bobinas
-del motor alternando las polaridades usando nuevamente 4 pines de los 8 del
-puerto
+del motor, alternando las polaridades usando nuevamente 4 pines de los 8 del
+puerto.
 
 
 ## Código
 
-En este caso el código es más simple puesto que en los motores PAP Bipolares no
+En este caso el código es más simple ya que en los motores PAP Bipolares no
 tenemos distintos modos de paso.
 
 [Código en
@@ -475,12 +465,12 @@ else{backward_sequence();}
 
 # Haciendo girar el motor
 
-Ahora que tenemos las clases necesarias para mover el motor cuyo circuito ya
-tenemos montado en el puerto paralelo, usaremos un código que a su vez aproveche
-dichas clases para jugar con el motor.
+Ahora que tenemos las clases necesarias para mover el motor, cuyo circuito ya
+tenemos montado en el puerto paralelo, usaremos un programa que a su vez
+aproveche dichas clases para jugar con el motor.
 
-Así que ha manera de ejemplo yo he agregado la función `main()` para el fuente
-de *unipolar.cpp*, quedando así:
+Así que ha manera de ejemplo, he agregado la función `main()` para la fuente de
+*unipolar.cpp*, quedando así:
 
 [Código en Github](https://github.com/alx741/pp_steppers/blob/master/rotate.cpp)
 

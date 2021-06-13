@@ -163,7 +163,7 @@ get the idea.
 
 This is how it will look like for a PostgreSQL Database where only the user and
 password are different between the development and production servers (be sure
-to keep the quotes!).
+to keep the quotes).
 
 ```
 env:
@@ -235,7 +235,7 @@ is not recognized". It makes sense if you think about it, *Nginx* will redirect
 the connection to `127.0.0.1:4321` so *Keter* can handle it, but there is no
 application that responds to `127.0.0.1:4321`, and notice the port number here,
 as it is significant for *Keter* when trying to find a corresponding
-application!
+application.
 
 To fix this, we must allow our application to respond to `127.0.0.1:4321` as
 well:

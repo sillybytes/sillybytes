@@ -3,25 +3,26 @@ title: Código fuente vs código objeto, una falsa dicotomía
 published: 2013-01-14
 ...
 
-Esta es la traducción al español del articulo "Source vs Object
-code: a false dichotomy" por David S. Touretzky.
+Esta es la traducción al español del artículo [*"Source vs Object code: a false
+dichotomy"*](https://www.cs.cmu.edu/~dst/DeCSS/object-code.txt) por David S.
+Touretzky.
 
 La noción de código fuente y código objeto como clases opuestas de código de
 computador es una falsa dicotomía común entre no-programadores. El entendimiento
 publico general es que un programa de computadora es escrito como "Código
 Fuente" el cual es legible por humanos y no inmediatamente ejecutable por la
-maquina.  El código fuente está supuesto a contener nombres de variables con
+maquina. El código fuente está supuesto a contener nombres de variables con
 significados claros y útiles comentarios únicamente para ser leídos por los
-humanos.  Una pieza de software llamada "compilador" debe convertir el código
+humanos. Una pieza de software llamada "compilador" debe convertir el código
 fuente en código objeto para que el programa pueda ser ejecutado.  El código
 objeto no puede ser leído por los humanos; es una secuencia de bytes que
-codifican una seria de instrucciones de maquina que serán ejecutadas por l
+codifican una serie de instrucciones de maquina que serán ejecutadas por el
 microprocesador cuando este corre (ejecuta) el programa.
 
 <!--more-->
 
 Estas afirmaciones no son exactamente falsas; son de echo la forma usual de
-explicar como una computadora funciona. Sin embargo, cualquier intento de dar
+explicar cómo una computadora funciona. Sin embargo, cualquier intento de dar
 verdaderas distinciones entre "código fuente" y "código objeto", o entre el
 código que es y que no es ejecutable, de inmediato presenta dificultades por que
 estas dicotomías son solo una conveniente ficción. Los científicos de la
@@ -42,28 +43,28 @@ directamente ejecutable por un microprocesador.
 En resumen, los programas atraviesan una serie de transformaciones de lenguajes
 de niveles altos a niveles inferiores. El código assembly que produce un
 compilador de C como "código objeto" es el código fuente para el ensamblador. El
-compilador de C de GNU (gcc) arroja código en assembly en lugar de un binario si
+compilador de C de GNU (GCC) arroja código en assembly en lugar de un binario si
 el usuario lo requiere con la opción -S.
 
 2) Incluso el código binario maquina es perfectamente legible por humanos. Fue
 diseñado por humanos después de todo. Puede ser tedioso de leer, pero se puede
 facilitar la tarea usando un desensamblador para traducir las instrucciones a
 una forma simbólica en lenguaje assembly. Por ejemplo la instrucción de pentium
-"add 7 al registro AL" se escribe 0000010000000111 en código maquina; pero es
+"sumar 7 al registro AL" se escribe 0000010000000111 en código maquina; pero es
 escrito "ADD AL,7" en código simbólico.
 
-3) Los programas legibles por humanos no tienen necesariamente que ser
-compilados para poder ser ejecutados. La compilación es un proceso que
-transforma el programa en una forma en la que pueda ser ejecutado de forma más
-eficiente. Sin embargo una pieza de software llamada "interprete" puede ejecutar
-el código fuente directamente sin compilar. Los programas corren más lento
-cuando esta siendo ejecutados por un interprete que cuando son compilados en
-instrucciones de maquina que el microprocesador puede ejecutar directamente.
-Pero corren!. Y los interpretes tiene algunas ventajas:  son más fáciles de
-escribir que los compiladores, y son mejores para propósitos de depuración.
+3) Los programas legibles por humanos no necesariamente deben ser compilados
+para poder ser ejecutados. La compilación es un proceso que transforma el
+programa en una forma en la que pueda ser ejecutado de forma más eficiente. Sin
+embargo, una pieza de software llamada "interprete" puede ejecutar el código
+fuente directamente sin compilar. Los programas corren más lento cuando esta
+siendo ejecutados por un interprete que cuando son compilados en instrucciones
+de maquina que el microprocesador puede ejecutar directamente. Pero corren!. Y
+los interpretes tiene algunas ventajas: son más fáciles de escribir que los
+compiladores, y son mejores para propósitos de depuración.
 
-Existe un interprete de C  llamado EIC disponible en:
-http://eic.sourceforge.net/ , también existen otros interpretes de C y C++
+Existe un interprete de C llamado EIC disponible en: http://eic.sourceforge.net,
+también existen otros interpretes de C y C++.
 
 
 4) El código binario "de maquina" no es necesariamente ejecutable por el
@@ -71,17 +72,17 @@ microprocesador de una computadora. Lenguajes como Java y Perl compilan a lo que
 es llamado 'Byte Code', o "Código de maquina virtual". Este es código binario
 para un idealizado e imaginario procesador que no corresponde con la
 arquitectura de un procesador comercial particular, como las arquitecturas
-Pentium, Sparc, o PowerPC. Elcódigo de maquina virtual tiene que ser ejecutado
+Pentium, Sparc, o PowerPC. El código de maquina virtual tiene que ser ejecutado
 por una pieza de software llamada "interprete de código de byte (Byte code)" el
 cual simula el procesador imaginario. La ventaja de este enfoque es que permite
 la rápida implementación de Java o Perl para nuevas arquitecturas, por que el
-mismo compilador puede ser usado. Solo un nuevo interprete de byte code es
-necesario. El interprete de byte code es más fácil de escribir que los
+mismo compilador puede ser usado. Solo un nuevo interprete de *byte code* es
+necesario. El interprete de *byte code* es más fácil de escribir que los
 compiladores.
 
-Otro enfoque tomado por algunas implementaciones es compilar una parte del byte
-code de Java en instrucciones nativas de maquina, cuando esta pieza se ejecuta.
-En este ámbito el byte code de Java se vuelve el "código fuente" y las
+Otro enfoque tomado por algunas implementaciones es compilar una parte del *byte
+code* de Java en instrucciones nativas de maquina, cuando esta pieza se ejecuta.
+En este ámbito el *byte code* de Java se vuelve el "código fuente" y las
 instrucciones nativas son el "código objeto".
 
 5) El "código binario ejecutable" algunas veces no lo es. Consideremos un
@@ -94,7 +95,7 @@ directamente ejecutable. Pero no todo está perdido.
 El propietario del SPARC o PowerPC puede construir un emulador de Pentium, para
 simular el funcionamiento de un procesador Pentium. Y además debe construir una
 pequeña porción de un emulador de Windows para manejar las llamadas al sistema.
-Y en ese punto se podría ejecutar el programa. un enfoque alternativo seria
+Y en ese punto se podría ejecutar el programa. Un enfoque alternativo seria
 escribir un traductor para transformar las instrucciones Pentium a código nativo
 de SPARC o PowerPC. Esta es una bien conocida técnica en la ciencia de la
 computación y no es técnicamente difícil.
@@ -102,18 +103,18 @@ computación y no es técnicamente difícil.
 
 6) El código binario ejecutable puede ser tan comprensible como el código en
 lenguaje simbólico, como el assembly o lenguajes de más alto nivel como C/C++ o
-Lisp. El apéndice A muestra un pequeño código en C para computar 5! (5
-factorial). El apendice B muestra el equivalente en assembly arrojado por gcc
-versión 2.95.3 en una Sun UltraSparc 170 corriendo Solaris. El apendice C es
-la salida binaria producida por el ensamblador (Mostrado en hexadecimal). El
+Lisp. El apéndice A muestra un pequeño código en C para computar `5!` (5
+factorial). El apéndice B muestra el equivalente en assembly generado por GCC
+versión 2.95.3 en una Sun UltraSparc 170 corriendo Solaris. El apéndice C es la
+salida binaria producida por el ensamblador (Mostrado en hexadecimal). El
 apéndice D es el resultado de desensamblar el código, volviendo a lenguaje
 assembly (Nótese que la linea 20 en el apéndice D contiene una instrucción de
 comparación de entero, "cmp %o0, 5". El equivalente hexadecimal es: 80a220055.
 El apéndice C muestra esta misma secuencia en la linea 000020. La misma
-instrucción, "cmp %o0, 5", también aparece en el apéndice B, dos lineas
-después de ".LL3". Y el equivalente en código C del apéndice A es "i6". [La
-discrepancia 6 vs 5 entre los códigos se debe a la implementación particular de
-gcc del FOR loop ].
+instrucción, "cmp %o0, 5", también aparece en el apéndice B, dos lineas después
+de ".LL3". Y el equivalente en código C del apéndice A es "i6". [La discrepancia
+6 vs 5 entre los códigos se debe a la implementación particular de GCC del For
+loop ].
 
 
 La lección que resulta de todo esto es:
@@ -153,7 +154,7 @@ void main(int argc, char *argv[]) {
 ```
 
 
-#### Apéndice B: Assembly, file fact.s (producido por: gcc -S fact.c)
+#### Apéndice B: Assembly, file fact.s (producido por: GCC -S fact.c)
 
 
 ```
