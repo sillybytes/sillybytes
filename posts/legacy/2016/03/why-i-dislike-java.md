@@ -57,7 +57,3 @@ to try and amend the language shortcomings.
 In the sense, it's almost as if the language is not appropriate for direct human
 use, instead, it requires an extra layer, an interface (the IDE) between the
 human and the language.
-
-<!-- TODO -->
-<!-- More on that in: [Why I hate -->
-<!-- IDEs](http://www.sillybytes.net/2016/03/why-do-i-hate-ides.html). -->

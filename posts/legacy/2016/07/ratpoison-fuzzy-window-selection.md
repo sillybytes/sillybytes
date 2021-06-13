@@ -48,6 +48,6 @@ esac
 This will use Ratpoison to prompt for a fuzzy string and will take you
 immediately to the matched window.
 
-But in order to invoke this, a Ratpoison mapping is required:
+In order to invoke this, a Ratpoison mapping is required:
 
     bind w exec window_select.sh fzf

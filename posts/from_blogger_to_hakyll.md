@@ -35,7 +35,7 @@ post in *markdown* only, and have them automatically generated.
 Blogger's custom CSS option, there are still some aspects that doesn't quite fit
 what I want.
 
-3. Preserve all the links to previous posts
+3. Preserve all the links to previous posts.
 
 # The initial setup
 
@@ -63,7 +63,7 @@ dedicated `docs` directory on it, so this is what we're going to use instead.
 
 I've created a `sillybytes`
 [repository](https://github.com/sillybytes/sillybytes) in the `sillybytes`
-organization. Then in `settings -> GitHub Pages -> Source` I've selected
+organization. Then in `settings → GitHub Pages → Source` I've selected
 `master branch /docs folder` as the page source.
 
 ## Hakyll site
@@ -126,7 +126,7 @@ And the generated site will now be on `docs`.
 
 ## Deploying
 
-The deployment process boils down to regenerating the site:
+The deployment process consists of regenerating the site:
 
     $ stack exec site rebuild
 
@@ -236,7 +236,7 @@ At this point a bigger problem arises. Given that we are serving the blog from
 `sillybytes.github.io/sillybytes` rather than a *CNAME* to just
 `sillybytes.github.io`. If you're fine with that, then you're done.
 
-I really wanted a proper *CNAME* record though, so I had to change the set up a
+I really wanted a proper *CNAME* record though, so I had to change the setup a
 bit:
 
 * Have two repositories: `sillybytes` for the sources, and

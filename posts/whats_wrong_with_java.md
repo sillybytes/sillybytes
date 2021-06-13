@@ -79,7 +79,7 @@ one of the most powerful constructs, they allow you to get closer to the machine
 and control its actions with scalpel precision; In Java you get your programs to
 crash due to *NULL* pointers while getting no benefit in exchange.
 
-But pointers in Java percolate up in even more creative ways, take for instance
+Pointers in Java percolate up in even more creative ways, take for instance
 the Equality comparison problem: When you perform equality comparison `==` what
 you're actually comparing is *pointer equality*, not *value equality* for which
 you need a special method `equal()`, this is a low level language trait that,
@@ -126,8 +126,8 @@ But that's pretty much as far as it gets. *C++11* on the other hand has the
 repetitive, deterministic tasks; Type inference is one of those tasks.
 
 Every time, everywhere a time annotation is needed, you provide one only if it's
-absolutely necessary to avoid ambiguity, otherwise, just use `auto` and let the
-compiler do it for you.
+necessary to avoid ambiguity, otherwise, just use `auto` and let the compiler do
+it for you.
 
 
 ## Resource un-safety
@@ -242,8 +242,8 @@ C++, in which case you inevitably conclude that it's just slow, very slow.
 # Java sits in a dead spot
 
 As we've seen, Java is mostly a low level programming language that doesn't
-really provide the benefits of one, while at the same time it pretends to be a
-high level language and fails miserably.
+really provide the benefits of one, while it pretends to be a high level
+language and fails miserably.
 
 This leads to the current situation:
 
@@ -257,9 +257,9 @@ This leads to the current situation:
 
 From the low level languages extreme, Java can perfectly be replaced by C++,
 Rust and others. Both of these languages provide low level capabilities, and are
-good for systems programming, while at the same time providing better high level
-traits like C++'s RAII or Rust's statically guaranteed safety. Both of these
-languages will avoid Java's `NullPointerException` and resource leaks.
+good for systems programming, while providing better high level traits like
+C++'s RAII or Rust's statically guaranteed safety. Both of these languages will
+avoid Java's `NullPointerException` and resource leaks.
 
 
 ## Java is a bad high level language

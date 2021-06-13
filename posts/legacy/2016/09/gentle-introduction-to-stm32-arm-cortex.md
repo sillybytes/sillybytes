@@ -33,8 +33,8 @@ so the series is *F1*.
 These chips are relatively inexpensive and widely available, often mounted in
 convenient development or breakout boards.
 
-Individual chips can be bought from electronic stores like Digi-Key or Mouser,
-but for the current purpose making your own PCB to mount them is quite
+Individual chips can be bought from electronic stores like Digi-Key or Mouser.
+For the current purpose though, making your own PCB to mount them is quite
 inconvenient.
 
 The other option is to get one of the nice development boards ST offers:
@@ -48,7 +48,7 @@ The other option is to get one of the nice development boards ST offers:
 
 Although these are cheap and amazing, we can go even cheaper with some breakout
 boards available on Ebay and others. You can get a STM32F103 chip in a nice
-board for less than $5 USD.
+board for less than $ 5 USD.
 
 ![](/img/stm32/shot2.png)
 ![](/img/stm32/shot3.png)
@@ -121,7 +121,7 @@ or built-in):
 - stlink
 
 You should be able to install them all of from your distribution repositories.
-But in case you can't find `stlink` on them, get it from the [GitHub
+In case you can't find `stlink` on them, get it from the [GitHub
 repository](https://github.com/texane/stlink).
 
 The `stlink` package provides these executables:

@@ -89,7 +89,7 @@ You can tune the level of paranoia with these arguments: `-weak`, `-standard`,
 
 [Valgrind](http://valgrind.org/) is a *profiling* program with more than a few
 neat tricks up its sleeve. In contrast to *splint*, it will use your
-**executable program** to help you find memory leaks, make it faster and more
+**executable program** to help you find memory leaks, make it faster and
 correct.
 
 When compiling your program use the `-g` compiler flag to include extra

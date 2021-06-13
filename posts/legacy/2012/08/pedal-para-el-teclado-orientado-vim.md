@@ -4,7 +4,7 @@ published: 2012-08-20
 ...
 
 I've seen a USB Vim pedal before that triggers the `i` key, so we're able to
-enter in *Insertion* mode with our foot. I want to build something similar, but
+enter *Insertion* mode with our foot. I want to build something similar, but
 focus on practical utility: trigger the `Esc` key, that is actually further
 away. And simplicity: use an old keyboard rather than a custom circuit.
 

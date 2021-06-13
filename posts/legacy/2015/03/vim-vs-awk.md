@@ -118,10 +118,10 @@ I would prefer over a couple of hours (or days!) of Awk scripting.
 That's correct, But this will only be a problem if the text processing is meant
 to be executed while working in a vim session. When you execute an Awk script in
 your shell you must wait for it or open a new terminal session in order to
-continue working. The exact same thing happens here. If you wrote a Vim script
-for a specific text processing task, you should execute it and wait for it or
-get another terminal while the processing takes place (or send it to the
-background of course).
+continue working. The same thing happens here. If you wrote a Vim script for a
+specific text processing task, you should execute it and wait for it or get
+another terminal while the processing takes place (or send it to the background
+of course).
 
 > But I'm not a Vim user and don't know how to use it
 
@@ -139,7 +139,7 @@ to...
 
 > Vim cannot be used in combination with other tools using pipes
 
-But it can!, you just need to use the `-` (dash) option, consider the following:
+Except it can!, you just need to use the `-` (dash) option, consider the following:
 
     cat file | grep -i hello | vim -c scriptCommand -
 

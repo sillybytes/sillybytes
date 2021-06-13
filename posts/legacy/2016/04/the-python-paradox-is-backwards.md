@@ -16,7 +16,7 @@ task, and that python knowledge wouldn't rank you higher for hiring, we can
 infer that it takes a truly passionate person, a hacker, to learn and use
 python.
 
-That was very true **12 years ago**, but now almost every single school and
+It was conceived **12 years ago**, but now almost every single school and
 university not only teaches python, but use it as the primary language,
 oftentimes as the only language!. Nowadays even some non-technical schools teach
 programming as a way of introducing their students to computing and logical
@@ -63,11 +63,11 @@ newer ones.
 
 These days, the C and C++ programming languages are very rarely used as teaching
 languages, and students will only get lots of Python and Java in the classrooms.
-I acknowledge that this might be very geographical sensitive and that schools
-and universities in different parts of the world will take different approaches,
-but still, Python gets far more attention for teaching than C or C++ does. Lots
-of students will get a C/C++ semester or so (Over simplified C/C++ in most
-cases), but then forget about it and continue to write Python or Java only.
+I acknowledge that this might be geographic sensitive and that schools and
+universities in different parts of the world will take different approaches, but
+still, Python gets far more attention for teaching than C or C++ does. Lots of
+students will get a C/C++ semester or so (Over simplified C/C++ in most cases),
+but then forget about it and continue to write Python or Java only.
 
 Now consider the fact that C/C++ are a fair amount harder to learn and use than
 python if it's the first time you get in touch with computer programming, and

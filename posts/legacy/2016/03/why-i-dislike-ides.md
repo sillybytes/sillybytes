@@ -3,7 +3,7 @@ title: Why I dislike IDEs
 published: 2016-03-16
 ...
 
-Let's start by taking off of the discussion some important points:
+Let's start by taking off the discussion some important points:
 
 - Using an IDE and taking advantage of what it has to offer doesn't mean you're
   a bad programmer, and using a good text editor doesn't mean you're a good one.
@@ -73,7 +73,7 @@ Let's start by taking off of the discussion some important points:
   script? Too bad, this codebase was created with the *XYZ* IDE, so using *it*
   is the only way to make it work. This also applies to the redistribution of
   software as *"IDE projects"*, making it cumbersome if not useless when you're
-  not using the exact same IDE or using an IDE at all.
+  not using the same IDE or using an IDE at all.
 
 - The programmer should be able to work without and IDE. This doesn't
   necessarily mean that you should not use one, but if you *could not* possibly
