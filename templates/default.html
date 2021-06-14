@@ -14,38 +14,10 @@
 
     <body>
 
-        <header>
-            <navbar class='navbar' role='navigation' aria-label='main navigation'>
-                <div class='navbar-brand'>
-                    <a class='navbar-item' href="/index.html">
-                        <b id="logo">Silly Bytes</b>
-                    </a>
-                </div>
-
-                <div class="navbar-end">
-                    <a href="/index.html" class="navbar-item">Home</a>
-                    <a href="/about.html" class="navbar-item">About</a>
-                </div>
-            </navbar>
-        </header>
-
+        $partial("templates/header.html")$
 
         <div id="main" class="container is-max-desktop">
             $body$
-
-            <nav class='pagination' role="navigatio" aria-label="pagination">
-                $if(previousPageNum)$
-                    <a href="$previousPageUrl$" class='pagination-previous'>Previous</a>
-                $else$
-                    <a class='pagination-previous' title='This is the first page' disabled>Previous</a>
-                $endif$
-
-                $if(nextPageNum)$
-                    <a href="$nextPageUrl$" class='pagination-next'>Next page</a>
-                $else$
-                    <a class='pagination-previous' title='This is the last page' disabled>Next page</a>
-                $endif$
-            </nav>
         </div>
 
     </body>
