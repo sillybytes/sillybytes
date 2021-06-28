@@ -17,7 +17,7 @@ software, and also like my maths and stats as well.
 - GitLab:  [gitlab/alx741](https://gitlab.com/alx741)
 - Twitter: [\@alx741alx](https://twitter.com/alx741alx)
 
-- Libera (and Freenode): *alx741*
+- Libera: *alx741*
 
 - GPG public key: [EB0E776276450F22](/public_key.asc)
 
