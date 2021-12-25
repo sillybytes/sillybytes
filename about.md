@@ -111,6 +111,10 @@ Check them out, pretty neat stuff in there:
 Here, have [an atom feed](https://sillybytes.net/atom.xml)
 
 
+# Support
+
+**XMR**: 86mFdeWs5a3QE4iPPs7okm2MNfVHEiu3RGmdam82cg7AdwtLjbYyh4SU4PaU9L2kqVRUmDF9E4QR2gVLw9D5Bnqc8N3AWbX
+
 # License
 
 ![](https://sillybytes.net/img/cc.png)
