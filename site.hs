@@ -34,6 +34,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "criptomonedas/img/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "about.md" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
