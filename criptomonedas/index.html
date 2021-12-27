@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang"es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        initial-scalable=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+
+    <div id="fullpage">
+
+
+
+
+
+        <div id="intro" class="section active">
+            <h1 id='section-header'>Criptomonedas</h1>
+            <h2>Una tecnología de intercambio monetario descentralizado con...</h2>
+            <img src="img/coins.png">
+        </div>
+
+
+
+
+
+        <div id="popularidad" class="section">
+            <div class='background_legend'>
+                <span>7 Mil</span>
+                <br>
+                <span>variantes</span>
+                <br>
+                <span>distintas</span>
+            </div>
+            <canvas id="chart-coins-by-year"></canvas>
+        </div>
+
+
+
+
+
+        <div id="usuarios" class="section">
+            <div class='background_legend'>
+                <span>280 Millones</span>
+                <br>
+                <span>de usuarios en</span>
+                <br>
+                <span>todo el mundo</span>
+            </div>
+            <canvas id="chart_users_by_continent"></canvas>
+        </div>
+
+
+
+
+
+        <div id="intro" class="section">
+            <h1>Y una historia de rápido crecimiento económico</h1>
+        </div>
+
+
+
+
+
+
+
+        <div id="historia" class="section">
+            <div>
+                <div id='date'>
+                    <span id='year'></span>
+                    <br>
+                    <span id='month'></span>
+                </div>
+
+                <canvas id="chart"></canvas>
+                <span id='ylabel'>Volumen de Transacciones (Millones)</span>
+                <span id='xlabel'>Monedas en Circulación (Millones)</span>
+                <span><button onclick="next()">Avanzar</button></span>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="section">
+            <h1 id='section-header'>Algoritmos Criptográficos</h1>
+            <h2>Aunque el principio de funcionamiento es similar para la mayoría de criptomonedas, se emplean distintos algoritmos para realizar el <i>hashing</i> subyacente</h2>
+        </div>
+
+
+
+
+        <div id="algoritmos" class="section">
+            <canvas id="chart_algoritmos"></canvas>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="section">
+            <h1 id='section-header'>Consenso y Minería</h1>
+            <h2>Sin embargo, no todas las criptomonedas adquieren su valor de la misma manera:</h2>
+        </div>
+
+
+
+
+
+        <div class="section">
+            <h1>Prueba de Trabajo</h1>
+            <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microchip" class="svg-inline--fa fa-microchip fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"></path></svg>
+            <h2>Emplea <em>trabajo computacional</em> para minar nuevas monedas</h2>
+            <h3>Resolviendo retos criptográficos mediante CPUs, GPUs y hardware dedicado</h3>
+        </div>
+
+
+
+
+
+        <div class="section">
+            <h1>Prueba de Participación</h1>
+            <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="coins" class="svg-inline--fa fa-coins fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"></path></svg>
+            <h2>Emplea <em>inversión de monedas existentes</em> para minar nuevas monedas</h2>
+            <h3>Invirtiendo valor en la red por tiempos extendidos</h3>
+        </div>
+
+
+
+
+
+        <div class="section">
+            <h1>Prueba de Espacio y Tiempo</h1>
+            <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hdd" class="svg-inline--fa fa-hdd fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M576 304v96c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48v-96c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48zm-48-80a79.557 79.557 0 0 1 30.777 6.165L462.25 85.374A48.003 48.003 0 0 0 422.311 64H153.689a48 48 0 0 0-39.938 21.374L17.223 230.165A79.557 79.557 0 0 1 48 224h480zm-48 96c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm-96 0c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32z"></path></svg>
+            <h2>Emplea <em>espacio de almacenamiento</em> para minar nuevas monedas</h2>
+            <h3>Usando almacenamiento no volátil de HDDs y SSDs</h3>
+        </div>
+
+
+
+
+
+        <div class="section">
+            <h1>Prueba de Cobertura</h1>
+            <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="wifi" class="svg-inline--fa fa-wifi fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M634.91 154.88C457.74-8.99 182.19-8.93 5.09 154.88c-6.66 6.16-6.79 16.59-.35 22.98l34.24 33.97c6.14 6.1 16.02 6.23 22.4.38 145.92-133.68 371.3-133.71 517.25 0 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.97c6.43-6.39 6.3-16.82-.36-22.98zM320 352c-35.35 0-64 28.65-64 64s28.65 64 64 64 64-28.65 64-64-28.65-64-64-64zm202.67-83.59c-115.26-101.93-290.21-101.82-405.34 0-6.9 6.1-7.12 16.69-.57 23.15l34.44 33.99c6 5.92 15.66 6.32 22.05.8 83.95-72.57 209.74-72.41 293.49 0 6.39 5.52 16.05 5.13 22.05-.8l34.44-33.99c6.56-6.46 6.33-17.06-.56-23.15z"></path></svg>
+            <h2>Emplea <em>cobertura de redes WiFi</em> para minar nuevas monedas</h2>
+            <h3>Usando puntos de acceso de red inalámbrica</h3>
+        </div>
+
+
+
+
+        <div class="section">
+            <h1 id='section-header'>Hardware de Minería</h1>
+            <h2>Cada una de estas formas de generar valor emplea tecnologías diferentes...</h2>
+        </div>
+
+
+
+
+        <div class="section">
+            <h1>Con consumos energéticos diferentes</h1>
+            <svg class="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="charging-station" class="svg-inline--fa fa-charging-station fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M336 448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h320c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm208-320V80c0-8.84-7.16-16-16-16s-16 7.16-16 16v48h-32V80c0-8.84-7.16-16-16-16s-16 7.16-16 16v48h-16c-8.84 0-16 7.16-16 16v32c0 35.76 23.62 65.69 56 75.93v118.49c0 13.95-9.5 26.92-23.26 29.19C431.22 402.5 416 388.99 416 372v-28c0-48.6-39.4-88-88-88h-8V64c0-35.35-28.65-64-64-64H96C60.65 0 32 28.65 32 64v352h288V304h8c22.09 0 40 17.91 40 40v24.61c0 39.67 28.92 75.16 68.41 79.01C481.71 452.05 520 416.41 520 372V251.93c32.38-10.24 56-40.17 56-75.93v-32c0-8.84-7.16-16-16-16h-16zm-283.91 47.76l-93.7 139c-2.2 3.33-6.21 5.24-10.39 5.24-7.67 0-13.47-6.28-11.67-12.92L167.35 224H108c-7.25 0-12.85-5.59-11.89-11.89l16-107C112.9 99.9 117.98 96 124 96h68c7.88 0 13.62 6.54 11.6 13.21L192 160h57.7c9.24 0 15.01 8.78 10.39 15.76z"></path></svg>
+            <h2>Lo que influye en el <em>costo</em> de minado y el <em>impacto medioambiental</em> causado</h2>
+            <h3>Desde puntos de acceso WiFi de bajo consumo y discos duros externos a trabajo intensivo en CPUs & GPUs, hasta hardware dedicado de alta potencia (ASIC)</h3>
+        </div>
+
+
+
+        <div id="energia" class="section">
+            <div class='background_legend'>
+                <span>Energía empleada</span>
+                <br>
+                <span>es muy diferente</span>
+                <br>
+                <span>entre monedas</span>
+            </div>
+            <canvas id="chart_energy"></canvas>
+            <span id='ylabel'>Watts</span>
+        </div>
+
+
+
+
+
+        <div class="section">
+            <h1 id='section-header'>Criptomonedas interesantes</h1>
+            <h2>De entre la miríada de opciones hay algunas <b>monedas destacables</b> por sus características de valor, eficiencia, privacidad, popularidad y costo de minería</h2>
+            <h3>Comparando los indices relativos de las métricas de cada una, descubrimos por qué son especiales</h3>
+        </div>
+
+
+
+
+        <div id="comparacion" class="section">
+            <canvas id="chart_comparacion"></canvas>
+        </div>
+
+
+        <div class="section">
+            <h1 id='section-header'>Visualización de Datos - UOC</h1>
+            <h2><b>Daniel Campoverde C.</b> 2021. Creative Commons Attribution 4.0 International</h2>
+            <h3>Código de esta visualización: <a target="_blank" href="https://github.com/alx741/UOC-visualizacion_datos-PRA/tree/master/vis">https://github.com/alx741/UOC-visualizacion_datos-PRA/tree/master/vis</a> </h3>
+        </div>
+
+
+
+        <div class="section">
+            <h1 id='section-header'>Fuentes de Datos</h1>
+            <h2>https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory</h2>
+            <h2>https://www.hashrates.com</h2>
+            <h2>https://wheretomine.io</h2>
+            <h2>https://coinmarketcap.com</h2>
+            <h2>https://coinmarketcap.com</h2>
+            <h2>https://www.minersforsale.net/prices</h2>
+            <h2>https://www.gemini.com</h2>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script src="bubbles.js"></script>
+
+</body>
+</html>

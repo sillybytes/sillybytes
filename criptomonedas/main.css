@@ -1,0 +1,140 @@
+body {
+    cursor: url(img/cursor.png), auto;
+}
+
+.background_legend {
+    font-family: sans-serif;
+    font-size: 160px;
+    font-weight: bold;
+    opacity: 0.1;
+    z-index: -1;
+    margin-top: 180px;
+    margin-left: 180px;
+    position: absolute;
+}
+
+#section-header {
+    display: block;
+    margin-left: 50px;
+    font-size: 5em;
+    color: #f4ad4e;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #555;
+    font-family: sans-serif;
+}
+
+h2 {
+    display: block;
+    margin-left: 50px;
+    font-size: 2em;
+    font-weight: normal;
+    color: gray;
+    font-family: sans-serif;
+}
+
+h2 em {
+    font-weight: normal;
+    font-style: normal;
+    color: teal;
+}
+
+h3 {
+    display: block;
+    margin-left: 50px;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.icon {
+    display: inline;
+    max-height: 35px;
+    margin-left: 40px;
+    color: teal;
+}
+
+#intro img {
+    display: inline-block;
+    max-height: 30vh;
+    margin-top: 50px;
+}
+
+#popularidad .background_legend {
+    font-size: 100px;
+}
+
+#algoritmos canvas {
+    max-height: 90vh;
+}
+
+#comparacion canvas {
+    max-height: 90vh;
+}
+
+#usuarios .background_legend {
+    font-size: 100px;
+    right: 80px;
+}
+
+#energia .background_legend {
+    font-size: 100px;
+}
+
+#energia #ylabel {
+    writing-mode: sideways-lr;
+    position: absolute;
+    top: 450px;
+    color: gray;
+    font-family: sans-serif;
+    left: 20px;
+}
+
+
+canvas {
+  display:inline;
+  padding: 30px;
+  padding-bottom: 0px;
+}
+
+#historia #date {
+    font-family: sans-serif;
+    font-size: 160px;
+    font-weight: bold;
+    opacity: 0.05;
+    z-index: -1;
+    margin-top: 180px;
+    margin-left: 180px;
+    position: absolute;
+}
+
+#historia #month {
+    font-size: 100px;
+}
+
+#historia #ylabel {
+    writing-mode: sideways-lr;
+    position: absolute;
+    top: 250px;
+    color: gray;
+    font-family: sans-serif;
+    left: 20px;
+}
+
+#historia #xlabel {
+    color: gray;
+    font-family: sans-serif;
+    margin-left: 40vw;
+}
+
+#historia button {
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 20px;
+}
