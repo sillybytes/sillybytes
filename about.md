@@ -11,13 +11,10 @@ software, and also like my maths and stats as well.
 
 ## Find me
 
-- Email: [alx@sillybytes.net](mailto:alx@sillybytes.net)
+- Email: alx *at* sillybytes *dot* net
 
 - GitHub:  [github/alx741](https://github.com/alx741)
 - GitLab:  [gitlab/alx741](https://gitlab.com/alx741)
-- Twitter: [\@alx741alx](https://twitter.com/alx741alx)
-
-- Libera: *alx741*
 
 - GPG public key: [EB0E776276450F22](/public_key.asc)
 
