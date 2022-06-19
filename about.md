@@ -114,8 +114,4 @@ Here, have [an atom feed](https://sillybytes.net/atom.xml)
 
 # License
 
-![](https://sillybytes.net/img/cc.png)
-
-[Silly Bytes](https://sillybytes.net) by Daniel Campoverde C. is licensed under
-a [Creative Commons Attribution-ShareAlike 3.0 Unported
-License](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Silly Bytes</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://sillybytes.net" property="cc:attributionName" rel="cc:attributionURL">Daniel Campoverde C.</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
