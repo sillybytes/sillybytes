@@ -46,7 +46,7 @@ I quite like are:
 
 ### The Venabili keyboard
 
-Take a look here: [venabili.sillybytes.net](https://venabili.sillybytes.net).
+Take a look at it's own front page here: [venabili.sillybytes.net](https://venabili.sillybytes.net).
 It's a custom mechanical keyboard developed from the ground up. I use it as my
 daily driver and couldn't be happier.
 
@@ -54,6 +54,9 @@ daily driver and couldn't be happier.
 
 
 ### Dors, the emotional robot
+
+Animatronics robot that natural language analyses real-time conversations with
+kids for psychological evaluations purposes.
 
 [https://github.com/alx741/dors](https://github.com/alx741/dors#readme)
 
