@@ -62,7 +62,8 @@ daily driver and couldn't be happier.
 
 ### Rune is Not Email
 
-Currently working on [this one](https://github.com/runeisnot-email), pretty exciting.
+Currently working on [this one](https://github.com/runeisnot-email), a privacy
+focused email-like system, pretty exciting.
 
 ![](https://raw.githubusercontent.com/runeisnot-email/rune-artwork/main/logo/brand_mark-brand_name-strapline.svg)
 
